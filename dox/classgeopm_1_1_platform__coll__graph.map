@@ -1,0 +1,6 @@
+<map id="geopm::Platform" name="geopm::Platform">
+<area shape="rect" id="node2" href="$classgeopm_1_1_phase.html" title="geopm::Phase" alt="" coords="32,92,139,117"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="5,5,147,31"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_platform_imp.html" title="geopm::PlatformImp" alt="" coords="179,92,320,117"/>
+<area shape="rect" id="node5" href="$classgeopm_1_1_platform_topology.html" title="geopm::PlatformTopology" alt="" coords="171,5,344,31"/>
+</map>

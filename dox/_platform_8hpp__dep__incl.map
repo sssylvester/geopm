@@ -1,0 +1,12 @@
+<map id="src/Platform.hpp" name="src/Platform.hpp">
+<area shape="rect" id="node2" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,152,131,177"/>
+<area shape="rect" id="node4" href="$_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="155,79,269,104"/>
+<area shape="rect" id="node6" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="292,152,433,177"/>
+<area shape="rect" id="node7" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="355,79,517,104"/>
+<area shape="rect" id="node8" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="457,152,575,177"/>
+<area shape="rect" id="node10" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="604,79,757,104"/>
+<area shape="rect" id="node3" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,225,131,251"/>
+<area shape="rect" id="node5" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="156,152,269,177"/>
+<area shape="rect" id="node9" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="600,152,761,177"/>
+<area shape="rect" id="node11" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="785,152,938,177"/>
+</map>

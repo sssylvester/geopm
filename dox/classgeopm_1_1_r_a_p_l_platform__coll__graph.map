@@ -1,0 +1,8 @@
+<map id="geopm::RAPLPlatform" name="geopm::RAPLPlatform">
+<area shape="rect" id="node2" href="$classgeopm_1_1_platform.html" title="geopm::Platform" alt="" coords="191,179,310,204"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_phase.html" title="geopm::Phase" alt="" coords="25,92,132,117"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="5,5,147,31"/>
+<area shape="rect" id="node5" href="$classgeopm_1_1_platform_imp.html" title="geopm::PlatformImp" alt="" coords="185,92,327,117"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_platform_topology.html" title="geopm::PlatformTopology" alt="" coords="171,5,344,31"/>
+<area shape="rect" id="node7" href="$structgeopm_1_1buffer__index__s.html" title="geopm::buffer_index_s" alt="" coords="334,179,490,204"/>
+</map>

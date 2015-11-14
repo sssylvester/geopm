@@ -1,0 +1,18 @@
+<map id="src/PlatformImp.hpp" name="src/PlatformImp.hpp">
+<area shape="rect" id="node2" href="$_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="384,79,502,104"/>
+<area shape="rect" id="node13" href="$_h_s_x_platform_imp_8hpp.html" title="src/HSXPlatformImp.hpp" alt="" coords="758,79,926,104"/>
+<area shape="rect" id="node15" href="$_i_v_t_platform_imp_8hpp.html" title="src/IVTPlatformImp.hpp" alt="" coords="950,79,1112,104"/>
+<area shape="rect" id="node17" href="$_platform_imp_8cpp.html" title="src/PlatformImp.cpp" alt="" coords="1136,79,1276,104"/>
+<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,225,131,251"/>
+<area shape="rect" id="node5" href="$_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="155,152,269,177"/>
+<area shape="rect" id="node7" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="292,225,433,251"/>
+<area shape="rect" id="node8" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="362,152,524,177"/>
+<area shape="rect" id="node9" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="457,225,575,251"/>
+<area shape="rect" id="node11" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="598,152,752,177"/>
+<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,299,131,324"/>
+<area shape="rect" id="node6" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="156,225,269,251"/>
+<area shape="rect" id="node10" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="776,225,937,251"/>
+<area shape="rect" id="node12" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="599,225,751,251"/>
+<area shape="rect" id="node14" href="$_h_s_x_platform_imp_8cpp.html" title="src/HSXPlatformImp.cpp" alt="" coords="826,152,993,177"/>
+<area shape="rect" id="node16" href="$_i_v_t_platform_imp_8cpp.html" title="src/IVTPlatformImp.cpp" alt="" coords="1068,152,1229,177"/>
+</map>
