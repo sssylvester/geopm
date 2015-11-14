@@ -14,7 +14,7 @@ geopm_omp.h - geopm interface for OpenMP
 <H2>SYNOPSIS</H2>
 
 <PRE>
-<B>#include &lt;<A HREF="file:///usr/include/geopm_omp.h">geopm_omp.h</A>&gt;</B>
+<B>#include &lt;<A HREF="https://github.com/geopm/geopm/blob/dev/src/geopm_omp.h">geopm_omp.h</A>&gt;</B>
 
 <B>Link with -lgeopm (MPI) or -lgeopmpolicy (non-MPI)</B>
 
@@ -33,14 +33,14 @@ environment.  This set of interfaces will grow in the future.
 <B>geopm_no_omp_cpu</B>()
 
 sets the
-<B><A HREF="/man/man2html?3+CPU_SET">CPU_SET</A></B>(3)
+<B><A HREF="CPU_SET.html">CPU_SET</A></B>(3)
 
 given by
 <I>no_omp</I>
 
 such that it includes all CPUs not used in an OpenMP parallel region.  This
 cpu mask can be used with
-<B><A HREF="/man/man2html?3+pthread_attr_setaffinity_np">pthread_attr_setaffinity_np</A></B>(3)
+<B><A HREF="pthread_attr_setaffinity_np.html">pthread_attr_setaffinity_np</A></B>(3)
 
 to modify the attributes passed to
 <B>geopm_ctl_pthread</B>()
@@ -62,31 +62,31 @@ Copyright (C) 2015 Intel Corporation. All rights reserved.
 <A NAME="lbAF">&nbsp;</A>
 <H2>SEE ALSO</H2>
 
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3),
+<B><A HREF="geopm.html">geopm</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3),
+<B><A HREF="geopmctl.html">geopmctl</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopmkey">geopmkey</A></B>(3),
+<B><A HREF="geopmkey.html">geopmkey</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopmpolicy">geopmpolicy</A></B>(3),
+<B><A HREF="geopmpolicy.html">geopmpolicy</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3),
+<B><A HREF="geopm_ctl_c.html">geopm_ctl_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_error">geopm_error</A></B>(3),
+<B><A HREF="geopm_error.html">geopm_error</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_omp">geopm_omp</A></B>(3),
+<B><A HREF="geopm_omp.html">geopm_omp</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3),
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_prof_c">geopm_prof_c</A></B>(3),
+<B><A HREF="geopm_prof_c.html">geopm_prof_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_version">geopm_version</A></B>(3),
+<B><A HREF="geopm_version.html">geopm_version</A></B>(3),
 
-<B><A HREF="/man/man2html?3+CPU_SET">CPU_SET</A></B>(3),
+<B><A HREF="CPU_SET.html">CPU_SET</A></B>(3),
 
-<B><A HREF="/man/man2html?3+pthread_setaffinity_np">pthread_setaffinity_np</A></B>(3),
+<B><A HREF="pthread_setaffinity_np.html">pthread_setaffinity_np</A></B>(3),
 
-<B><A HREF="/man/man2html?3+pthread_attr_setaffinity_np">pthread_attr_setaffinity_np</A></B>(3)
+<B><A HREF="pthread_attr_setaffinity_np.html">pthread_attr_setaffinity_np</A></B>(3)
 
 <P>
 

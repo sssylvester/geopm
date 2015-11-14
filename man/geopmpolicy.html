@@ -51,7 +51,7 @@ The
 <B>geopmpolicy</B>
 
 application can be used for five purposes: to create a
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 configuration file
 (<B>-c</B>),
@@ -61,7 +61,7 @@ enforce a static power policy
 
 save to a file the state of
 all MSR values that
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 may modify
 (<B>-s</B>),
@@ -88,23 +88,23 @@ with the
 <B>-e</B>
 
 option, and this file can also be used to configure
-<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3)
+<B><A HREF="geopmctl.html">geopmctl</A></B>(3)
 
 and the
-<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3)
+<B><A HREF="geopm_ctl_c.html">geopm_ctl_c</A></B>(3)
 
 interfaces.  Through this use of
 <B>geopmpolicy</B>
 
 a resource manager can configure
-<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3)
+<B><A HREF="geopmctl.html">geopmctl</A></B>(3)
 
 through a plug-in without introducing a linking dependency between geopm and
 the resource manager (as is required with the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 interface).  This enables a set of
-<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3)
+<B><A HREF="geopmctl.html">geopmctl</A></B>(3)
 
 features which can be described through a &quot;mode&quot; selection flag and a
 &quot;dictionary&quot; flag for modifying the behavior of the mode by matching key
@@ -131,7 +131,7 @@ Print brief summary of the command line usage information, then exit.
 <BR>
 
 Print version of
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 to standard output, then exit.
 <DT><B>-c</B>
@@ -140,7 +140,7 @@ to standard output, then exit.
 <BR>
 
 Create a
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 configuration file,
 <B>-f</B>
@@ -165,7 +165,7 @@ option.
 <BR>
 
 Create an in MSR save state file for all MSR values that
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 may modify.  The output file may be specified with the
 <B>-f</B>
@@ -232,7 +232,7 @@ file_path is an output file.  When used with
 <B>-e</B> or <B>-r</B>
 
 file_path is an input file.  This is a
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3)
+<B><A HREF="geopm.html">geopm</A></B>(3)
 
 configuration file when used with
 <B>-c</B> or <B>-e</B>
@@ -252,7 +252,7 @@ and an MSR save state file when used with
 <BR>
 
 Implements the GEOPM_MODE_TDP_BALANCE_STATIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>STATIC MODES</B>
@@ -270,7 +270,7 @@ All other keys are ignored.
 <BR>
 
 Implements the GEOPM_MODE_FREQ_UNIFORM_STATIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>STATIC MODES</B>
@@ -287,7 +287,7 @@ units of MHz.  All other keys are ignored.
 <BR>
 
 Implements the GEOPM_MODE_FREQ_HYBRID_STATIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>STATIC MODES</B>
@@ -305,7 +305,7 @@ maximum performance.  All other keys are ignored.
 
 <DD>
 Implements the GEOPM_MODE_PERF_BALANCE_DYNAMIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>DYNAMIC MODES</B>
@@ -320,7 +320,7 @@ compute nodes allocated to the job. All other keys are ignored.
 
 <DD>
 Implements the GEOPM_MODE_FREQ_UNIFORM_DYNAMIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>DYNAMIC MODES</B>
@@ -335,7 +335,7 @@ compute nodes allocated to the job. All other keys are ignored.
 
 <DD>
 Implements the GEOPM_MODE_FREQ_HYBRID_DYNAMIC mode described in the
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3)
 
 man page in the
 <B>DYNAMIC MODES</B>
@@ -404,23 +404,23 @@ Copyright (C) 2015 Intel Corporation. All rights reserved.
 <A NAME="lbAO">&nbsp;</A>
 <H2>SEE ALSO</H2>
 
-<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3),
+<B><A HREF="geopm.html">geopm</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3),
+<B><A HREF="geopm_ctl_c.html">geopm_ctl_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_error">geopm_error</A></B>(3),
+<B><A HREF="geopm_error.html">geopm_error</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_omp">geopm_omp</A></B>(3),
+<B><A HREF="geopm_omp.html">geopm_omp</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3),
+<B><A HREF="geopm_policy_c.html">geopm_policy_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_prof_c">geopm_prof_c</A></B>(3),
+<B><A HREF="geopm_prof_c.html">geopm_prof_c</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopm_version">geopm_version</A></B>(3),
+<B><A HREF="geopm_version.html">geopm_version</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3),
+<B><A HREF="geopmctl.html">geopmctl</A></B>(3),
 
-<B><A HREF="/man/man2html?3+geopmkey">geopmkey</A></B>(3)
+<B><A HREF="geopmkey.html">geopmkey</A></B>(3)
 
 <P>
 
