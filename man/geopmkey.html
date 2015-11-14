@@ -1,0 +1,104 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of GEOPMKEY</TITLE>
+</HEAD><BODY>
+<H1>GEOPMKEY</H1>
+Section: GEOPM (3)<BR>Updated: 2015-10-16<BR><A HREF="#index">Index</A>
+<A HREF="/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+geopmkey - generate shared memory keys for geopm
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<P>
+<B>geopmkey</B> [<B>--version</B>] [<B>--help</B>]
+
+<P>
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<P>
+Creates a temporary file and prints the name of this file to standard output.
+This file can be used to produce unique shared memory keys for use with geopm
+enabled applications.  The file's first line is the control key and the second
+line is the sample key.  The keys are of the form /&lt;PID&gt;-&lt;type&gt;-&lt;mkstemp&gt;
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<DL COMPACT>
+<DT><B>--version</B>
+
+<DD>
+Print version of geopm to standard output, then exit.
+<DT><B>--help</B>
+
+<DD>
+Print brief summary of the command line usage information, then exit.
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>EXAMPLE</H2>
+
+$ keyfile=$(geopmkey)
+<BR>
+
+$ cat $keyfile
+<BR>
+
+/555-sample-a9b8c7
+<BR>
+
+/555-control-a9b8c7
+<BR>
+
+$ geopmctl -k $(grep control $keyfile) \
+<BR>
+
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-s&nbsp;$(grep&nbsp;sample&nbsp;$keyfile)
+<A NAME="lbAG">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright (C) 2015 Intel Corporation. All rights reserved.
+<A NAME="lbAH">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_error">geopm_error</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_omp">geopm_omp</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_prof_c">geopm_prof_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_version">geopm_version</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmpolicy">geopmpolicy</A></B>(3)
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">EXAMPLE</A><DD>
+<DT><A HREF="#lbAG">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAH">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:45:14 GMT, November 14, 2015
+</BODY>
+</HTML>

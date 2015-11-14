@@ -1,0 +1,81 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of GEOPM_VERSION</TITLE>
+</HEAD><BODY>
+<H1>GEOPM_VERSION</H1>
+Section: GEOPM (3)<BR>Updated: 2015-10-16<BR><A HREF="#index">Index</A>
+<A HREF="/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+geopm_version - geopm library version
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<PRE>
+<B>#include &lt;<A HREF="file:///usr/include/geopm.h">geopm.h</A>&gt;</B>
+
+<B>Link with -lgeopm (MPI) or -lgeopmpolicy (non-MPI)</B>
+
+<B>const char *geopm_version(void);</B>
+
+</PRE><A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<P>
+
+Returns a human readable string describing the version of the geopm library
+linked to the calling application.  The form is &lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;HOTFIX&gt; for
+released versions and &lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;HOTFIX&gt;+dev&lt;COUNT&gt;g&lt;HASH&gt; for
+development snapshots.  MAJOR is the major revision number, MINOR is the minor
+revision number, HOTFIX is the hotfix iteration, COUNT is the number of git
+commits since the tagged release and HASH is the git SHA-1 hash of the last
+commit.  For example &quot;0.0.1&quot; is a release version, &quot;0.0.1+dev21g986987f&quot; is a
+development snapshot 21 commits away from the 0.0.1 release with the git SHA-1
+that begins with &quot;986987f&quot;.
+<A NAME="lbAE">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright (C) 2015 Intel Corporation. All rights reserved.
+<A NAME="lbAF">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_error">geopm_error</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_omp">geopm_omp</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_prof_c">geopm_prof_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmctl">geopmctl</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmkey">geopmkey</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmpolicy">geopmpolicy</A></B>(3)
+
+<B><A HREF="/man/man2html?1+git-describe">git-describe</A></B>(1)
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAF">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:46:49 GMT, November 14, 2015
+</BODY>
+</HTML>

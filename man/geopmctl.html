@@ -1,0 +1,133 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of GEOPMCTL</TITLE>
+</HEAD><BODY>
+<H1>GEOPMCTL</H1>
+Section: GEOPM (3)<BR>Updated: 2015-10-16<BR><A HREF="#index">Index</A>
+<A HREF="/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+geopmctl - geopm runtime mpi application
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<P>
+<B>geopmctl</B>[<B>--help</B>] [<B>--version</B>]
+
+<BR>
+
+<B>        </B>(<B>-c</B> policy_config | <B>-k</B> policy_key)
+
+<BR>
+
+<B>        </B>[<B>-s</B> sample_key] [<B>-r</B> report]
+
+<P>
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<P>
+The geopmctl application runs concurrently with a computational MPI
+application to manage power settings on compute nodes allocated to the
+computation MPI application.
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<DL COMPACT>
+<DT><B>--help</B>
+
+<DD>
+Print brief summary of the command line usage information, then exit.
+<DT><B>--version</B>
+
+<DD>
+Print version of geopm to standard output, then exit.
+<DT><B>-c</B> policy_config
+
+<DD>
+Policy configuration file which may be created with the
+<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+
+interface or the
+<B><A HREF="/man/man2html?3+geopmpolicy">geopmpolicy</A></B>(3)
+
+application.  If
+<B>-c</B>
+
+is specified then
+<B>-k</B>
+
+should not be specified.  If both are specified
+<B>-k</B>
+
+is ignored and a warning is printed.
+<DT><B>-k</B> control_key
+
+<DD>
+POSIX shared memory key which determines policy for geopmctl.  See
+<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3)
+
+for information on how to create and modify a shared memory region for
+control.
+<DT><B>-s</B> sample_key
+
+<DD>
+POSIX shared memory key referencing memory written to by the compute
+application to provide the geopmctl application with performance profile
+information.  See
+<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3)
+
+for information on how to create the sample shared memory region for
+profile feedback.
+<DT><B>-r</B> report
+
+<DD>
+Output text file that will hold the human readable report when program
+terminates.
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright (C) 2015 Intel Corporation. All rights reserved.
+<A NAME="lbAG">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<B><A HREF="/man/man2html?3+geopm">geopm</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_ctl_c">geopm_ctl_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_omp">geopm_omp</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_error">geopm_error</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_policy_c">geopm_policy_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_prof_c">geopm_prof_c</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopm_version">geopm_version</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmkey">geopmkey</A></B>(3),
+
+<B><A HREF="/man/man2html?3+geopmpolicy">geopmpolicy</A></B>(3)
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAG">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:44:11 GMT, November 14, 2015
+</BODY>
+</HTML>
