@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -124,31 +125,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef GEOPM_OMP_H_INCLUDE</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define GEOPM_OMP_H_INCLUDE</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifndef __linux__</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structcpu__set__t.html">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcpu__set__t.html">cpu_set_t</a> {</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">   38</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[512];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <a class="code" href="geopm__omp_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef _GNU_SOURCE</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define _GNU_SOURCE</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;sched.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm__omp_8h.html#ad78da4e0f88b23422b36732ce26d2dc8">geopm_no_omp_cpu</a>(<span class="keywordtype">int</span> num_cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *no_omp);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structcpu__set__t_html"><div class="ttname"><a href="structcpu__set__t.html">cpu_set_t</a></div><div class="ttdef"><b>Definition:</b> geopm_omp.h:37</div></div>
-<div class="ttc" id="geopm__omp_8h_html_accb04d9888b6f0aa9a48c5d8a6d9b1d9"><div class="ttname"><a href="geopm__omp_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a></div><div class="ttdeci">struct cpu_set_t cpu_set_t</div></div>
-<div class="ttc" id="geopm__omp_8h_html_ad78da4e0f88b23422b36732ce26d2dc8"><div class="ttname"><a href="geopm__omp_8h.html#ad78da4e0f88b23422b36732ce26d2dc8">geopm_no_omp_cpu</a></div><div class="ttdeci">int geopm_no_omp_cpu(int num_cpu, cpu_set_t *no_omp)</div><div class="ttdef"><b>Definition:</b> geopm_omp.c:61</div></div>
-<div class="ttc" id="structcpu__set__t_html_ada08807f7e4d5a4ffcb64b0112b0cd05"><div class="ttname"><a href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">cpu_set_t::x</a></div><div class="ttdeci">long int x[512]</div><div class="ttdef"><b>Definition:</b> geopm_omp.h:38</div></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="geopm__sched_8h.html">geopm_sched.h</a>&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">int</span> <a class="code" href="geopm__omp_8h.html#ad78da4e0f88b23422b36732ce26d2dc8">geopm_no_omp_cpu</a>(<span class="keywordtype">int</span> num_cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *no_omp);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structcpu__set__t_html"><div class="ttname"><a href="structcpu__set__t.html">cpu_set_t</a></div><div class="ttdef"><b>Definition:</b> geopm_sched.h:34</div></div>
+<div class="ttc" id="geopm__omp_8h_html_ad78da4e0f88b23422b36732ce26d2dc8"><div class="ttname"><a href="geopm__omp_8h.html#ad78da4e0f88b23422b36732ce26d2dc8">geopm_no_omp_cpu</a></div><div class="ttdeci">int geopm_no_omp_cpu(int num_cpu, cpu_set_t *no_omp)</div><div class="ttdef"><b>Definition:</b> geopm_omp.c:62</div></div>
+<div class="ttc" id="geopm__sched_8h_html"><div class="ttname"><a href="geopm__sched_8h.html">geopm_sched.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

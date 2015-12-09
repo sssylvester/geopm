@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -97,12 +98,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;pthread.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="geopm__policy_8h_source.html">geopm_policy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for geopm.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="geopm_8h__incl.png" border="0" usemap="#src_2geopm_8h" alt=""/></div>
 <map name="src_2geopm_8h" id="src_2geopm_8h">
-<area shape="rect" id="node6" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="358,79,472,104"/>
+<area shape="rect" id="node6" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="430,79,544,104"/>
+<area shape="rect" id="node7" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="220,79,354,104"/>
+<area shape="rect" id="node8" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="234,152,340,177"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -112,8 +116,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <map name="src_2geopm_8hdep" id="src_2geopm_8hdep">
 <area shape="rect" id="node2" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="5,79,130,104"/>
 <area shape="rect" id="node3" href="geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="154,79,315,104"/>
-<area shape="rect" id="node4" href="_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="339,79,442,104"/>
-<area shape="rect" id="node5" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="466,79,571,104"/>
+<area shape="rect" id="node4" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="339,79,445,104"/>
 </map>
 </div>
 </div>
@@ -121,7 +124,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac4aae902bd8ffa88912433999c51e97d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97d">geopm_const_e</a> { <a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97da2696784d30d69d9acfc8db48090c50eb">GEOPM_CONST_DEFAULT_CTL_NUM_LEVEL</a> = 3
+<tr class="memitem:ac4aae902bd8ffa88912433999c51e97d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97d">geopm_const_e</a> { <a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97da2696784d30d69d9acfc8db48090c50eb">GEOPM_CONST_DEFAULT_CTL_NUM_LEVEL</a> = 3, 
+<a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97dac41b44a19ed3c1ac0de6e3c93bf46704">GEOPM_CONST_PROF_SAMPLE_PERIOD</a> = 64, 
+<a class="el" href="geopm_8h.html#ac4aae902bd8ffa88912433999c51e97da6b092586eb7ee549477dc90645a57d94">GEOPM_CONST_SHMEM_REGION_SIZE</a> = 4096
  }<tr class="separator:ac4aae902bd8ffa88912433999c51e97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a8000f28a00b7ca5b5ca15500b37f1cc0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a8000f28a00b7ca5b5ca15500b37f1cc0">geopm_sample_reduce_e</a> { <a class="el" href="geopm_8h.html#a8000f28a00b7ca5b5ca15500b37f1cc0afca1a26c10c97e708240c34808b7ae70">GEOPM_SAMPLE_REDUCE_THREAD</a> = 1, 
@@ -132,8 +137,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afccb4725d95f9044ac5845a52f486e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#afccb4725d95f9044ac5845a52f486e5c">geopm_ctl_create</a> (struct geopm_policy_c *policy, struct geopm_prof_c *prof, MPI_Comm comm, struct geopm_ctl_c **ctl)</td></tr>
-<tr class="separator:afccb4725d95f9044ac5845a52f486e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaac970bd9ac6b8b6d37a2284737c466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#afaac970bd9ac6b8b6d37a2284737c466">geopm_ctl_create</a> (struct geopm_policy_c *policy, const char *shm_key, MPI_Comm comm, struct geopm_ctl_c **ctl)</td></tr>
+<tr class="separator:afaac970bd9ac6b8b6d37a2284737c466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2009b6e7edf6c1bf1eb9d248bf119b58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a2009b6e7edf6c1bf1eb9d248bf119b58">geopm_ctl_destroy</a> (struct geopm_ctl_c *ctl)</td></tr>
 <tr class="separator:a2009b6e7edf6c1bf1eb9d248bf119b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb33d8c5560a12783add529e4c52b8af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#abb33d8c5560a12783add529e4c52b8af">geopm_ctl_step</a> (struct geopm_ctl_c *ctl)</td></tr>
@@ -144,30 +149,28 @@ Functions</h2></td></tr>
 <tr class="separator:a8396119bec8b18f8de3932755aaf0179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fe7be6e07e7a2a7f31aa6c2362ad55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a86fe7be6e07e7a2a7f31aa6c2362ad55">geopm_ctl_spawn</a> (struct geopm_ctl_c *ctl)</td></tr>
 <tr class="separator:a86fe7be6e07e7a2a7f31aa6c2362ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b400c6e06dfbbcca723edaf5f8191fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a1b400c6e06dfbbcca723edaf5f8191fb">geopm_prof_create</a> (const char *name, int sample_reduce, const char *sample_key, struct geopm_prof_c **prof)</td></tr>
-<tr class="separator:a1b400c6e06dfbbcca723edaf5f8191fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a5a7d4691de6748c2c601d12130f12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a13a5a7d4691de6748c2c601d12130f12">geopm_prof_create</a> (const char *name, size_t table_size, const char *shm_key, MPI_Comm comm, struct geopm_prof_c **prof)</td></tr>
+<tr class="separator:a13a5a7d4691de6748c2c601d12130f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f90119ba6c15a0e88fbffa12224c790"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a7f90119ba6c15a0e88fbffa12224c790">geopm_prof_destroy</a> (struct geopm_prof_c *prof)</td></tr>
 <tr class="separator:a7f90119ba6c15a0e88fbffa12224c790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae326ea824ee59a072d11b05beb1b5425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#ae326ea824ee59a072d11b05beb1b5425">geopm_prof_register</a> (struct geopm_prof_c *prof, const char *region_name, long policy_hint, int *region_id)</td></tr>
-<tr class="separator:ae326ea824ee59a072d11b05beb1b5425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097abf5ac937733556f15f0b2b9e3efe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a097abf5ac937733556f15f0b2b9e3efe">geopm_prof_enter</a> (struct geopm_prof_c *prof, int region_id)</td></tr>
-<tr class="separator:a097abf5ac937733556f15f0b2b9e3efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b6eacfc812521de0cd618b11cde64b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a60b6eacfc812521de0cd618b11cde64b">geopm_prof_exit</a> (struct geopm_prof_c *prof, int region_id)</td></tr>
-<tr class="separator:a60b6eacfc812521de0cd618b11cde64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1582904f464976be866702cad011f1ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a1582904f464976be866702cad011f1ba">geopm_prof_progress</a> (struct geopm_prof_c *prof, int region_id, double fraction)</td></tr>
-<tr class="separator:a1582904f464976be866702cad011f1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e244d63e87a37bb8ec58e2f8aef2001"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a7e244d63e87a37bb8ec58e2f8aef2001">geopm_prof_region</a> (struct geopm_prof_c *prof, const char *region_name, long policy_hint, uint64_t *region_id)</td></tr>
+<tr class="separator:a7e244d63e87a37bb8ec58e2f8aef2001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b79a41fd00af21ce30b2ca687d8e0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a94b79a41fd00af21ce30b2ca687d8e0e">geopm_prof_enter</a> (struct geopm_prof_c *prof, uint64_t region_id)</td></tr>
+<tr class="separator:a94b79a41fd00af21ce30b2ca687d8e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5c19ead7b41bcfadf5e9c4ab4f3514"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a0f5c19ead7b41bcfadf5e9c4ab4f3514">geopm_prof_exit</a> (struct geopm_prof_c *prof, uint64_t region_id)</td></tr>
+<tr class="separator:a0f5c19ead7b41bcfadf5e9c4ab4f3514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ebb30507f2ff672f0cda34a4623056"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#ac4ebb30507f2ff672f0cda34a4623056">geopm_prof_progress</a> (struct geopm_prof_c *prof, uint64_t region_id, double fraction)</td></tr>
+<tr class="separator:ac4ebb30507f2ff672f0cda34a4623056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8caf0dea9fd075aeb1e2b249cf745ad6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a8caf0dea9fd075aeb1e2b249cf745ad6">geopm_prof_outer_sync</a> (struct geopm_prof_c *prof)</td></tr>
 <tr class="separator:a8caf0dea9fd075aeb1e2b249cf745ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397cc7e60a72e1413041228cc7c0c70d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a397cc7e60a72e1413041228cc7c0c70d">geopm_prof_sample</a> (struct geopm_prof_c *prof)</td></tr>
-<tr class="separator:a397cc7e60a72e1413041228cc7c0c70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996ea33beb576e31cc4f16b8fb1c96ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a996ea33beb576e31cc4f16b8fb1c96ee">geopm_prof_sample</a> (struct geopm_prof_c *prof, uint64_t region_id)</td></tr>
+<tr class="separator:a996ea33beb576e31cc4f16b8fb1c96ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c312bfae2943724b4d3a61d92fc18d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a23c312bfae2943724b4d3a61d92fc18d">geopm_prof_enable</a> (struct geopm_prof_c *prof, const char *feature_name)</td></tr>
 <tr class="separator:a23c312bfae2943724b4d3a61d92fc18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a950ba06ba888d3bf3245b98ca3330826"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a950ba06ba888d3bf3245b98ca3330826">geopm_prof_disable</a> (struct geopm_prof_c *prof, const char *feature_name)</td></tr>
 <tr class="separator:a950ba06ba888d3bf3245b98ca3330826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802708ced5a5828c42be2af11e5f34ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a802708ced5a5828c42be2af11e5f34ce">geopm_prof_print</a> (struct geopm_prof_c *prof, int depth)</td></tr>
-<tr class="separator:a802708ced5a5828c42be2af11e5f34ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44db4a04d2699d1264c4c18799068a41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a44db4a04d2699d1264c4c18799068a41">geopm_prof_fprint</a> (struct geopm_prof_c *prof, int depth, FILE *fid)</td></tr>
-<tr class="separator:a44db4a04d2699d1264c4c18799068a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58148e604d0b8da9075ced986d82588c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a58148e604d0b8da9075ced986d82588c">geopm_prof_print</a> (struct geopm_prof_c *prof, const char *file_name, int depth)</td></tr>
+<tr class="separator:a58148e604d0b8da9075ced986d82588c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a265dfe990c3d34dc70fa520274eba7d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#a265dfe990c3d34dc70fa520274eba7d0">geopm_num_nodes</a> (MPI_Comm comm, int *num_nodes)</td></tr>
 <tr class="separator:a265dfe990c3d34dc70fa520274eba7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6413d8a046ae897350da12ac493292e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm_8h.html#ad6413d8a046ae897350da12ac493292e">geopm_comm_split_ppn1</a> (MPI_Comm comm, MPI_Comm *ppn1_comm)</td></tr>
@@ -191,6 +194,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac4aae902bd8ffa88912433999c51e97da2696784d30d69d9acfc8db48090c50eb"></a>GEOPM_CONST_DEFAULT_CTL_NUM_LEVEL&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac4aae902bd8ffa88912433999c51e97dac41b44a19ed3c1ac0de6e3c93bf46704"></a>GEOPM_CONST_PROF_SAMPLE_PERIOD&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac4aae902bd8ffa88912433999c51e97da6b092586eb7ee549477dc90645a57d94"></a>GEOPM_CONST_SHMEM_REGION_SIZE&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -243,7 +250,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afccb4725d95f9044ac5845a52f486e5c"></a>
+<a class="anchor" id="afaac970bd9ac6b8b6d37a2284737c466"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -256,8 +263,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct geopm_prof_c *&#160;</td>
-          <td class="paramname"><em>prof</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>shm_key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -441,7 +448,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1b400c6e06dfbbcca723edaf5f8191fb"></a>
+<a class="anchor" id="a13a5a7d4691de6748c2c601d12130f12"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -454,14 +461,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sample_reduce</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>table_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>sample_key</em>, </td>
+          <td class="paramname"><em>shm_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -547,7 +560,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a097abf5ac937733556f15f0b2b9e3efe"></a>
+<a class="anchor" id="a94b79a41fd00af21ce30b2ca687d8e0e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -560,7 +573,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>region_id</em>&#160;</td>
         </tr>
         <tr>
@@ -573,7 +586,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a60b6eacfc812521de0cd618b11cde64b"></a>
+<a class="anchor" id="a0f5c19ead7b41bcfadf5e9c4ab4f3514"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -586,40 +599,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>region_id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a44db4a04d2699d1264c4c18799068a41"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int geopm_prof_fprint </td>
-          <td>(</td>
-          <td class="paramtype">struct geopm_prof_c *&#160;</td>
-          <td class="paramname"><em>prof</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>depth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>fid</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -647,7 +628,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a802708ced5a5828c42be2af11e5f34ce"></a>
+<a class="anchor" id="a58148e604d0b8da9075ced986d82588c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -656,6 +637,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">struct geopm_prof_c *&#160;</td>
           <td class="paramname"><em>prof</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -673,7 +660,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1582904f464976be866702cad011f1ba"></a>
+<a class="anchor" id="ac4ebb30507f2ff672f0cda34a4623056"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -686,7 +673,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>region_id</em>, </td>
         </tr>
         <tr>
@@ -705,12 +692,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae326ea824ee59a072d11b05beb1b5425"></a>
+<a class="anchor" id="a7e244d63e87a37bb8ec58e2f8aef2001"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm_prof_register </td>
+          <td class="memname">int geopm_prof_region </td>
           <td>(</td>
           <td class="paramtype">struct geopm_prof_c *&#160;</td>
           <td class="paramname"><em>prof</em>, </td>
@@ -730,7 +717,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
+          <td class="paramtype">uint64_t *&#160;</td>
           <td class="paramname"><em>region_id</em>&#160;</td>
         </tr>
         <tr>
@@ -743,7 +730,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a397cc7e60a72e1413041228cc7c0c70d"></a>
+<a class="anchor" id="a996ea33beb576e31cc4f16b8fb1c96ee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -751,8 +738,18 @@ Functions</h2></td></tr>
           <td class="memname">int geopm_prof_sample </td>
           <td>(</td>
           <td class="paramtype">struct geopm_prof_c *&#160;</td>
-          <td class="paramname"><em>prof</em></td><td>)</td>
+          <td class="paramname"><em>prof</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>region_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

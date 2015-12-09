@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -95,20 +96,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform.  
+ <a href="classgeopm_1_1_platform_topology.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_platform_topology_8hpp_source.html">PlatformTopology.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a19080812ae634c524c2b6e9bc42c837c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a19080812ae634c524c2b6e9bc42c837c">PlatformTopology</a> ()</td></tr>
+<tr class="memdesc:a19080812ae634c524c2b6e9bc42c837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor initializes and builds the hwloc tree.  <a href="#a19080812ae634c524c2b6e9bc42c837c">More...</a><br /></td></tr>
 <tr class="separator:a19080812ae634c524c2b6e9bc42c837c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5085bcdd550b0c70ff376029407d09af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a5085bcdd550b0c70ff376029407d09af">~PlatformTopology</a> ()</td></tr>
+<tr class="memdesc:a5085bcdd550b0c70ff376029407d09af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor destoys the hwloc tree.  <a href="#a5085bcdd550b0c70ff376029407d09af">More...</a><br /></td></tr>
 <tr class="separator:a5085bcdd550b0c70ff376029407d09af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a0106e1a1f49efb65c0d628120dbd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a69a0106e1a1f49efb65c0d628120dbd6">num_domain</a> (int domain_type) const </td></tr>
+<tr class="memdesc:a69a0106e1a1f49efb65c0d628120dbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retreive the count of a specific hwloc resource type.  <a href="#a69a0106e1a1f49efb65c0d628120dbd6">More...</a><br /></td></tr>
 <tr class="separator:a69a0106e1a1f49efb65c0d628120dbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#aa73ee1d775f6c98e6681e69ceee68e2e">domain_by_type</a> (int type, std::vector&lt; hwloc_obj_t &gt; &amp;domain) const </td></tr>
+<tr class="memdesc:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve all members of a specific hwloc resource type.  <a href="#aa73ee1d775f6c98e6681e69ceee68e2e">More...</a><br /></td></tr>
 <tr class="separator:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a19080812ae634c524c2b6e9bc42c837c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -121,6 +131,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor initializes and builds the hwloc tree. </p>
 
 </div>
 </div>
@@ -136,6 +148,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default destructor destoys the hwloc tree. </p>
 
 </div>
 </div>
@@ -164,6 +178,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Retrieve all members of a specific hwloc resource type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Enum of type domain_type_e representing the type of resource to query. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">domain</td><td>Vector containing all hwloc resources of the requested type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a69a0106e1a1f49efb65c0d628120dbd6"></a>
@@ -179,6 +202,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retreive the count of a specific hwloc resource type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_type</td><td>Enum of type domain_type_e representing the type of resource to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Count of the specified resource type. </dd></dl>
 
 </div>
 </div>

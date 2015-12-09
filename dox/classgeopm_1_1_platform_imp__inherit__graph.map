@@ -1,4 +1,4 @@
 <map id="geopm::PlatformImp" name="geopm::PlatformImp">
-<area shape="rect" id="node2" href="$classgeopm_1_1_h_s_x_platform_imp.html" title="geopm::HSXPlatformImp" alt="" coords="5,79,174,104"/>
-<area shape="rect" id="node3" href="$classgeopm_1_1_i_v_t_platform_imp.html" title="geopm::IVTPlatformImp" alt="" coords="198,79,360,104"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_h_s_x_platform_imp.html" title="This class provides a concrete platform implementation of Haswell E processors. (cpuid 0x63F)..." alt="" coords="5,79,174,104"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_i_v_t_platform_imp.html" title="This class provides a concrete platform implementation of Sandybridge E and IvyBridge E processors..." alt="" coords="198,79,360,104"/>
 </map>

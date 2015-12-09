@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -79,7 +80,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">geopm Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h2>DISCLAIMER </h2>
+<p>SEE COPYING FILE FOR LICENSE INFORMATION.</p>
+<h2>LAST UPDATE </h2>
+<p>Christopher Cantalupo <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'top'+'he'+'r.m'+'.c'+'ant'+'al'+'upo'+'@i'+'nte'+'l.'+'com'; return false;">chris<span style="display: none;">.nosp@m.</span>toph<span style="display: none;">.nosp@m.</span>er.m.<span style="display: none;">.nosp@m.</span>cant<span style="display: none;">.nosp@m.</span>alupo<span style="display: none;">.nosp@m.</span>@int<span style="display: none;">.nosp@m.</span>el.co<span style="display: none;">.nosp@m.</span>m</a> 2015 October 16</p>
+<h2>SUMMARY </h2>
+<p>Global Energy Optimization Power Management (GEOPM) is an extensible power management framework targeting high performance computing. The library can be extended to support new control algorithms and new hardware power management features. The GEOPM package provides built in features ranging from static management of power policy for each individual compute node, to dynamic coordination of power policy and performance across all of the compute nodes hosting one MPI job on a portion of a distributed computing system. The dynamic coordination is implemented as a hierarchical control system for scalable communication and decentralized control. The hierarchical control system can optimize for various objective functions including maximizing global application performance within a power bound. The root of the control hierarchy tree can communicate through shared memory with the system resource management daemon to extend the hierarchy above the individual MPI job level and enable management of system power resources for multiple MPI jobs and multiple users by the system resource manager. The geopm package provides the libgeopm library, the libgeopmpolicy library, the geopmctl application and the geopmpolicy application. The libgeopm library can be called within MPI applications to enable application feedback for informing the control decisions. If modification of the target application is not desired then the geopmctl application can be run concurrently with the target application. In this case, target application feedback is inferred by querying the hardware through Model Specific Registers (MSRs). With either method (libgeopm or geopmctl), the control hierarchy tree writes processor power policy through MSRs to enact policy decisions. The libgeopmpolicy library is used by a resource manager to set energy policy control parameters for MPI jobs. Some features of libgeopmpolicy are availble through the geopmpolicy application including support for static control.</p>
+<h2>BUILD REQUIREMENTS </h2>
+<p>The geopm package requires a compiler that supports the MPI 2.2 and C++11 standards. These requirements can be met by using GCC version 4.7 or greater and installing the openmpi-devel package version 1.7 or greater on RHEL or SLES Linux. Additionally building the geopm package requires the json-c library and the hwloc library.</p>
+<p>SuSE: </p><pre class="fragment">zypper install openmpi-devel libjson-c-devel hwloc-devel
+</pre><p>RHEL: </p><pre class="fragment">yum install openmpi-devel json-c-devel hwloc-devel
+</pre><p>Alternatively these can be installed from source, and an alternate MPI implementation to OpenMPI can be selected. See </p><pre class="fragment">./configure --help
+</pre><p>for details on how to use non-standard install locations for build requirements through the </p><pre class="fragment">./configure --with-&lt;feature&gt;
+</pre><p>options.</p>
+<h2>BUILD INSTRUCTIONS </h2>
+<p>To build all targets and install it in a "build/geopm" subdirectory of your home directory run the following commands: </p><pre class="fragment">./autogen.sh
+./configure --prefix=$HOME/build/geopm
+make
+make install
+</pre><p>An RPM can be created on a RHEL or SuSE system with the </p><pre class="fragment">make rpm
+</pre><p>target. Note that the &ndash;with-mpi-bin option may be required to inform configure about the location of the MPI compiler wrappers. The following command may be sufficient to determine the location: </p><pre class="fragment">dirname $(find /usr -name mpicc)
+</pre><p>To build in an environment without support for OpenMP (i.e. clang on Mac OS X) use the </p><pre class="fragment">./configure --disable-openmp
+</pre><p>option. The </p><pre class="fragment">./configure --disable-mpi
+</pre><p>option can be used to build only targets which do not require MPI. By default MPI targets are built.</p>
+<h2>RUN REQUIREMENTS </h2>
+<p>We are targeting SLES12 and RHEL7 distributions for functional runtime support. The msr-safe kernel driver must be loaded at runtime to support user level read and write of white-listed MSRs. The source code for the driver can be found here: <a href="https://github.com/scalability-llnl/msr-safe">https://github.com/scalability-llnl/msr-safe</a>.</p>
+<p>Alternately you can run geopm as root with the standard msr driver loaded: </p><pre class="fragment">modprobe msr
+</pre><p>Note that other Linux mechanisms for power management can interfere with geopm, and these must be disabled. We suggest the following: </p><pre class="fragment">echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+</pre><p>and adding "intel_pstate=disable" to the kernel command line through grub2.</p>
+<h2>TESTING </h2>
+<p>From within the source code directory, tests can be executed with the "make check" target. Some tests must be run as MPI applications, and in order support these tests you must define the "MPIEXEC" environment variable to whatever is appropriate for your your MPI runtime (default is mpiexec). The tests assume that this application will respect the '-n' flag to set the number of MPI processes. Note that '-n' is defined by the MPI standard. Each MPI dependent test is run with 16 MPI processes.</p>
+<h2>STATUS </h2>
+<p>This software is pre-alpha quality and largely incomplete. The software is being provided for collaborative purposes. The static modes are supported by geopmpolicy and libgeopmpolicy. The MPI runtime support of the geopmctl and libgeopm is incomplete.</p>
+<p>Test coverage is limited. The line coverage results from gcov as reported by gcovr for a recent build are below:</p>
+<p><b>GCC Code Coverage Report</b></p>
+<p><b>Directory: src</b> </p><table class="doxtable">
+<tr>
+<th>File </th><th>Lines </th><th>Exec </th><th>Cover  </th></tr>
+<tr>
+<td><a class="el" href="_circular_buffer_8cpp.html">CircularBuffer.cpp</a> </td><td>38 </td><td>38 </td><td>100% </td></tr>
+<tr>
+<td><a class="el" href="_circular_buffer_8hpp.html">CircularBuffer.hpp</a> </td><td>1 </td><td>1 </td><td>100% </td></tr>
+<tr>
+<td><a class="el" href="_controller_8cpp.html">Controller.cpp</a> </td><td>100 </td><td>1 </td><td>1% </td></tr>
+<tr>
+<td><a class="el" href="_decider_8cpp.html">Decider.cpp</a> </td><td>73 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="_exception_8cpp.html">Exception.cpp</a> </td><td>76 </td><td>68 </td><td>89% </td></tr>
+<tr>
+<td><a class="el" href="_exception_8hpp.html">Exception.hpp</a> </td><td>1 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="_global_policy_8cpp.html">GlobalPolicy.cpp</a> </td><td>401 </td><td>319 </td><td>79% </td></tr>
+<tr>
+<td><a class="el" href="_h_s_x_platform_imp_8cpp.html">HSXPlatformImp.cpp</a> </td><td>127 </td><td>2 </td><td>1% </td></tr>
+<tr>
+<td><a class="el" href="_i_v_t_platform_imp_8cpp.html">IVTPlatformImp.cpp</a> </td><td>130 </td><td>3 </td><td>2% </td></tr>
+<tr>
+<td><a class="el" href="_observation_8cpp.html">Observation.cpp</a> </td><td>87 </td><td>75 </td><td>86% </td></tr>
+<tr>
+<td><a class="el" href="_observation_8hpp.html">Observation.hpp</a> </td><td>2 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="_platform_8cpp.html">Platform.cpp</a> </td><td>152 </td><td>22 </td><td>14% </td></tr>
+<tr>
+<td><a class="el" href="_platform_factory_8cpp.html">PlatformFactory.cpp</a> </td><td>59 </td><td>41 </td><td>69% </td></tr>
+<tr>
+<td><a class="el" href="_platform_imp_8cpp.html">PlatformImp.cpp</a> </td><td>90 </td><td>58 </td><td>64% </td></tr>
+<tr>
+<td><a class="el" href="_platform_topology_8cpp.html">PlatformTopology.cpp</a> </td><td>22 </td><td>7 </td><td>31% </td></tr>
+<tr>
+<td><a class="el" href="_policy_8cpp.html">Policy.cpp</a> </td><td>58 </td><td>1 </td><td>1% </td></tr>
+<tr>
+<td><a class="el" href="_power_model_8cpp.html">PowerModel.cpp</a> </td><td>12 </td><td>3 </td><td>25% </td></tr>
+<tr>
+<td><a class="el" href="_profile_8cpp.html">Profile.cpp</a> </td><td>97 </td><td>1 </td><td>1% </td></tr>
+<tr>
+<td><a class="el" href="_r_a_p_l_platform_8cpp.html">RAPLPlatform.cpp</a> </td><td>65 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="_region_8cpp.html">Region.cpp</a> </td><td>25 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="_tree_communicator_8cpp.html">TreeCommunicator.cpp</a> </td><td>220 </td><td>179 </td><td>81% </td></tr>
+<tr>
+<td><a class="el" href="geopm__ctl__spawn_8c.html">geopm_ctl_spawn.c</a> </td><td>2 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td><a class="el" href="geopm__policy__message_8c.html">geopm_policy_message.c</a> </td><td>9 </td><td>9 </td><td>100% </td></tr>
+<tr>
+<td><a class="el" href="geopm__version_8c.html">geopm_version.c</a> </td><td>2 </td><td>0 </td><td>0% </td></tr>
+<tr>
+<td>TOTAL </td><td>1849 </td><td>828 </td><td>44% </td></tr>
+</table>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

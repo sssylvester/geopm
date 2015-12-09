@@ -1,4 +1,5 @@
 <map id="src/geopm_omp.c" name="src/geopm_omp.c">
-<area shape="rect" id="node2" href="$geopm__omp_8h.html" title="geopm_omp.h" alt="" coords="5,79,112,104"/>
-<area shape="rect" id="node3" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="135,79,243,104"/>
+<area shape="rect" id="node2" href="$geopm__omp_8h.html" title="geopm_omp.h" alt="" coords="10,79,117,104"/>
+<area shape="rect" id="node4" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="140,79,248,104"/>
+<area shape="rect" id="node3" href="$geopm__sched_8h.html" title="geopm_sched.h" alt="" coords="5,152,122,177"/>
 </map>

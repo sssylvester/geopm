@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -92,14 +93,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Profile.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;forward_list&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;mpi.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="geopm__time_8h_source.html">geopm_time.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shared_memory_8hpp_source.html">SharedMemory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_locking_hash_table_8hpp_source.html">LockingHashTable.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Profile.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_profile_8hpp__incl.png" border="0" usemap="#src_2_profile_8hpp" alt=""/></div>
+<map name="src_2_profile_8hpp" id="src_2_profile_8hpp">
+<area shape="rect" id="node8" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="44,152,150,177"/>
+<area shape="rect" id="node11" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="236,79,371,104"/>
+<area shape="rect" id="node13" href="_shared_memory_8hpp.html" title="SharedMemory.hpp" alt="" coords="1196,152,1333,177"/>
+<area shape="rect" id="node15" href="_locking_hash_table_8hpp.html" title="LockingHashTable.hpp" alt="" coords="649,79,805,104"/>
+<area shape="rect" id="node21" href="geopm__hash_8h.html" title="geopm_hash.h" alt="" coords="562,152,671,177"/>
+<area shape="rect" id="node23" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="864,152,970,177"/>
+<area shape="rect" id="node25" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="863,225,971,251"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_profile_8hpp__dep__incl.png" border="0" usemap="#src_2_profile_8hppdep" alt=""/></div>
 <map name="src_2_profile_8hppdep" id="src_2_profile_8hppdep">
 <area shape="rect" id="node2" href="_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,79,131,104"/>
-<area shape="rect" id="node3" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="55,152,180,177"/>
-<area shape="rect" id="node4" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="206,79,312,104"/>
+<area shape="rect" id="node4" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="155,79,261,104"/>
+<area shape="rect" id="node3" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,152,131,177"/>
 </map>
 </div>
 </div>
@@ -108,6 +133,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html">geopm::Profile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables application profiling and application feadback to the control algorithm.  <a href="classgeopm_1_1_profile.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html">geopm::ProfileRankSampler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves sample data from a single application rank through a shared memory interface.  <a href="classgeopm_1_1_profile_rank_sampler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html">geopm::ProfileSampler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves sample data from the set of application ranks on a single node.  <a href="classgeopm_1_1_profile_sampler.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

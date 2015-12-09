@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopmpolicy(3) - geopm configuration creator and static mode enforcer</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#OPTIONS">OPTIONS</a>
+    <a href="#MODES">MODES</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopmpolicy(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopmpolicy(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopmpolicy</code> - <span class="man-whatis">geopm configuration creator and static mode enforcer</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<dl>
+<dt><code>CREATE CONFIGURATION:</code></dt><dd><p><code>geopmpolicy</code> <code>-c</code> <code>-f</code> output <code>-m</code> mode <code>-d</code> key0:value0,key1:value1...</p></dd>
+<dt><code>ENFORCE POLICY:</code></dt><dd><p><code>geopmpolicy</code> <code>-e</code> (<code>-f</code> input | <code>-m</code> mode <code>-d</code> key0:value0,key1:value1...)</p></dd>
+<dt><code>SAVE MSR:</code></dt><dd><p><code>geopmpolicy</code> <code>-s</code> [<code>-f</code> output]</p></dd>
+<dt><code>RESTORE MSR:</code></dt><dd><p><code>geopmpolicy</code> <code>-r</code> [<code>-f</code> input]</p></dd>
+<dt><code>CREATE MSR WHITELIST:</code></dt><dd><p><code>geopmpolicy</code> <code>-w</code> [<code>-f</code> output]</p></dd>
+<dt><code>PRINT VERSION OR HELP:</code></dt><dd><p><code>geopmpolicy --version</code> | <code>--help</code></p></dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>The <code>geopmpolicy</code> application can be used for five purposes: to create a
+<strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> configuration file (<code>-c</code>), enforce a static power policy
+(<code>-e</code>), save to a file the state of all MSR values that <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>
+may modify (<code>-s</code>), restore the MSR values from a saved state file
+(<code>-r</code>), or create a MSR whitelist for the Linux MSR driver (<code>-w</code>).
+The geopmpolicy application also respects the standard <code>--version</code>
+and <code>--help</code> options for printing the geopm version or a brief message
+about usage.  The output from using the <code>-c</code> option to create a
+configuration file can be used as the input for a subsequent call to
+<code>geopmpolicy</code> with the <code>-e</code> option, and this file can also be used to
+configure <strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong> and the <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>  interfaces.  Through
+this use of <code>geopmpolicy</code> a resource manager can configure <strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>
+through a plug-in without introducing a linking dependency between geopm and
+the resource manager (as is required with the <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>
+interface).  This enables a set of <strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong> features which can be
+described through a "mode" selection flag and a "dictionary" flag for
+modifying the behavior of the mode by matching key strings to value strings.
+<code>geopmpolicy</code> can also be used to enforce static power modes described in the
+<a href="#MODES" title="MODES" data-bare-link="true">MODES</a> sections below.</p>
+
+<h2 id="OPTIONS">OPTIONS</h2>
+
+<dl>
+<dt class="flush"><code>--help</code></dt><dd><p><br /> Print brief summary of the command line usage information, then exit.</p></dd>
+<dt><code>--version</code></dt><dd><p>Print version of <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> to standard output, then exit.</p></dd>
+<dt class="flush"><code>-c</code></dt><dd><p><br /> Create a <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> configuration file, <code>-f</code> must be specified when
+using this option which gives the path to the output configuration file.</p></dd>
+<dt class="flush"><code>-e</code></dt><dd><p><br /> Enforce a static power mode, this mode can be specified with the <code>-m</code> and
+<code>-d</code> options or the <code>-f</code> option.</p></dd>
+<dt class="flush"><code>-s</code></dt><dd><p><br /> Create an MSR save state file for all MSR values that <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>  may
+modify.  The output file may be specified with the <code>-f</code> option.</p></dd>
+<dt class="flush"><code>-r</code></dt><dd><p><br /> Restore the MSR values that are recored in an existing MSR save state file.
+The input file may be specified with the <code>-f</code> option.</p></dd>
+<dt class="flush"><code>-w</code></dt><dd><p><br /> Create a Linux MSR driver whitelist file for the current platform, if <code>-f</code>
+is not specified when using this option, the whitelist will be printed to
+stdout.  This whitelist is the minimum set of MSR register privileges required
+to enable all geopm functionality.  Enabling user access to these registers
+may have security implications on a multi-user system.  Each line of the
+whitelist output ends with a name describing the register as derived from the
+Intel (R) Software Developer's Manual.  Please cross-reference Intel (R)
+Software Developer's Manual to get details about the security implications of
+the whitelist before enabling user access.</p></dd>
+<dt class="flush"><code>-m</code> mode</dt><dd><p><br /> Power management mode, must be one of those described in the <a href="#MODES" title="MODES" data-bare-link="true">MODES</a> section
+below.  The static modes do not require the geopm runtime to be running
+concurrently with the primary computational application, where as dynamic
+modes do have a runtime requirement on geopm.</p></dd>
+<dt><code>-d</code> key0:value0,key1:value1</dt><dd><p>Specifies a dictionary of key value pairs which modify the behavior of a
+mode.  The key and value options for each mode are described in the
+<a href="#MODES" title="MODES" data-bare-link="true">MODES</a> sections below.</p></dd>
+<dt><code>-f</code> file_path</dt><dd><p>When used with <code>-c</code> or <code>-s</code> file_path is an output file.  When used with
+<code>-e</code> or <code>-r</code> file_path is an input file.  This is a <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> configuration
+file when used with <code>-c</code> or <code>-e</code> and an MSR save state file when used with <code>-s</code>
+or <code>-r</code>.</p></dd>
+</dl>
+
+
+<h2 id="MODES">MODES</h2>
+
+<dl>
+<dt><code>tdp_balance_static</code></dt><dd><p>Implements the GEOPM_MODE_TDP_BALANCE_STATIC mode described in the
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>STATIC MODES</code> section.  The
+only key required to be passed to the <code>-d</code> flag is the <em>tdp_percent</em>
+key which has a value that is the percent (0-100) of the Thermal
+Design Power at which to run each processor under RAPL control.  All
+other keys are ignored.</p></dd>
+<dt><code>freq_uniform_static</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_UNIFORM_STATIC mode described in the
+<strong>geopm_policy_c(3</strong>) man page in the <code>STATIC MODES</code> section.  The
+only key required to be passed to the <code>-d</code> flag is the <em>cpu_mhz</em> key
+which has a value that is the CPU frequency in units of MHz.  All other
+keys are ignored.</p></dd>
+<dt><code>freq_hybrid_static</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_HYBRID_STATIC mode described in the
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>STATIC MODES</code> section.  There
+are three keys required to be passed to the <code>-d</code> flag for the freq_hybrid
+mode: <em>cpu_mhz</em> giving operating frequency for constrained CPUs in units
+of MHz, <em>num_cpu_max_perf</em> giving the number of CPUs per node running at
+maximum performance, and <em>affinity</em> which can have a value of "compact"
+or "scatter" describing the distribution of the constrained CPUs. In most
+cases this will match the openmp environment. All other keys are ignored.</p></dd>
+<dt><code>perf_balance_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_PERF_BALANCE_DYNAMIC mode described in the
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>DYNAMIC MODES</code> section.  The
+only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
+which is the power budget in units of Watts for all compute nodes
+allocated to the job. All other keys are ignored.</p></dd>
+<dt><code>freq_uniform_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_UNIFORM_DYNAMIC mode described in the
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>  man page in the <code>DYNAMIC MODES</code> section.  The
+only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
+which is the power budget in units of Watts for all compute nodes
+allocated to the job. All other keys are ignored.</p></dd>
+<dt><code>freq_hybrid_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_HYBRID_DYNAMIC mode described in the
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>DYNAMIC MODES</code> section.  There
+are three keys required to be passed to the <code>-d</code> flag for the freq_hybrid
+mode: <em>power_budget</em> which is the power budget in units of Watts for all
+compute nodes allocated to the job, <em>num_cpu_max_perf</em> giving the number
+of CPUs running at maximum performance, and <em>affinity</em> which can have a
+value of "compact" or "scatter" describing the distribution of the non-maximum
+performance CPUs. In most cases this will match the openmp environment. All
+other keys are ignored.</p></dd>
+</dl>
+
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
+
+<dl>
+<dt>Create a configuration file which disables power management with RAPL:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m tdp_balance_static \ <br />
+-d tdp_percent:100</p></dd>
+<dt>Create a configuration file for a fixed frequency of 1.5 GHz:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m freq_uniform_static \ <br />
+-d cpu_freq:1500</p></dd>
+<dt>Create a configuration file for a hybrid frequency of 2.5 GHz where 4 cores are unconstrained and using scatter distribution:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m freq_hybrid_static \ <br />
+-d cpu_freq:2500,num_cpu_max_perf:4,affinity:scatter</p></dd>
+<dt>Create a configuration file for all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m tdp_balance_static \ <br />
+-d tdp_percent:75</p></dd>
+<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+-d power_budget:1000000</p></dd>
+<dt>Enforce a static policy defined in a preexisting configuration file:</dt><dd><p>$ geopmpolicy -e -f geopm.conf</p></dd>
+<dt>Enforce a static policy where all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -e -m tdp_balance_static -d tdp_percent:75</p></dd>
+<dt>Save off the current state of the system MSRs:</dt><dd><p>$ geopmpolicy -s -f geopm_restore.log</p></dd>
+<dt>Restore the system MSRs to their previous state:</dt><dd><p>$ geopmpolicy -r -f geopm_restore.log</p></dd>
+<dt>Output a MSR whitelist file for use with the Linux MSR driver:</dt><dd><p>$ geopmpolicy -w -f msr_whitelist.conf</p></dd>
+</dl>
+
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>January 2016</li>
+    <li class='tr'>geopmpolicy(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

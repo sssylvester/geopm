@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -108,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47e99c92337ad771149e46fecc4c2ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be2686230462da4b1fae3d820a5e6eb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a6be2686230462da4b1fae3d820a5e6eb">~Policy</a> ()</td></tr>
 <tr class="separator:a6be2686230462da4b1fae3d820a5e6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa57be7c9ee3d238056f631dc9ac23c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a5fa57be7c9ee3d238056f631dc9ac23c">operator==</a> (const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;other) const </td></tr>
+<tr class="separator:a5fa57be7c9ee3d238056f631dc9ac23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd19dc177f9b034c6ac20b5664f456dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#afd19dc177f9b034c6ac20b5664f456dd">clear</a> (void)</td></tr>
 <tr class="separator:afd19dc177f9b034c6ac20b5664f456dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a810922a48fc8846c7e51715f2e5d4f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a810922a48fc8846c7e51715f2e5d4f37">update</a> (int domain, double <a class="el" href="classgeopm_1_1_policy.html#abc20b27abc8eb2e0198ed763af1b27d3">target</a>)</td></tr>
@@ -120,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abc20b27abc8eb2e0198ed763af1b27d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f1ab43ab6d0cbddeeca9cf1e998b602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a6f1ab43ab6d0cbddeeca9cf1e998b602">target</a> (int domain, double &amp;target)</td></tr>
 <tr class="separator:a6f1ab43ab6d0cbddeeca9cf1e998b602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd614dd3aff951349149bf5f5ac2a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a0cd614dd3aff951349149bf5f5ac2a57">policy_message</a> (int regionid, std::vector&lt; <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt; message) const </td></tr>
+<tr class="separator:a0cd614dd3aff951349149bf5f5ac2a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7657e4732390f6f43bad949629ae9e06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a7657e4732390f6f43bad949629ae9e06">num_domain</a> (void) const </td></tr>
 <tr class="separator:a7657e4732390f6f43bad949629ae9e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08fe36283067467bf05c5e1056241f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#ac08fe36283067467bf05c5e1056241f2">valid_target</a> (std::map&lt; int, double &gt; &amp;<a class="el" href="classgeopm_1_1_policy.html#abc20b27abc8eb2e0198ed763af1b27d3">target</a>) const </td></tr>
@@ -127,6 +132,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a96fd7758139454b32cfadd729c644493"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a96fd7758139454b32cfadd729c644493">m_mode</a></td></tr>
+<tr class="separator:a96fd7758139454b32cfadd729c644493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901df73a1a0cfa9f04df390af818ccc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a901df73a1a0cfa9f04df390af818ccc2">m_num_sample</a></td></tr>
+<tr class="separator:a901df73a1a0cfa9f04df390af818ccc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed9e69d5f5c0872f178a69872c14448"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#afed9e69d5f5c0872f178a69872c14448">m_budget</a></td></tr>
+<tr class="separator:afed9e69d5f5c0872f178a69872c14448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e57d13209442b8e39785571643f84f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a72e57d13209442b8e39785571643f84f">m_flags</a></td></tr>
+<tr class="separator:a72e57d13209442b8e39785571643f84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da883b3368ec668a697145d3faeab74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#a8da883b3368ec668a697145d3faeab74">m_goal</a></td></tr>
+<tr class="separator:a8da883b3368ec668a697145d3faeab74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed035ed706e87a2c2a3dd08df14e39d4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#aed035ed706e87a2c2a3dd08df14e39d4">m_target</a></td></tr>
 <tr class="separator:aed035ed706e87a2c2a3dd08df14e39d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc7fc8dce687840bbc242f1c897e36c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_policy.html#afcc7fc8dce687840bbc242f1c897e36c">m_updated</a></td></tr>
@@ -230,6 +245,48 @@ Protected Attributes</h2></td></tr>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5fa57be7c9ee3d238056f631dc9ac23c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::Policy::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0cd614dd3aff951349149bf5f5ac2a57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Policy::policy_message </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>regionid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -353,6 +410,106 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="afed9e69d5f5c0872f178a69872c14448"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Policy::m_budget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a72e57d13209442b8e39785571643f84f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Policy::m_flags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8da883b3368ec668a697145d3faeab74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Policy::m_goal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a96fd7758139454b32cfadd729c644493"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Policy::m_mode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a901df73a1a0cfa9f04df390af818ccc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Policy::m_num_sample</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aed035ed706e87a2c2a3dd08df14e39d4"></a>
 <div class="memitem">
 <div class="memproto">

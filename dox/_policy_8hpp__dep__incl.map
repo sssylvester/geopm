@@ -1,14 +1,22 @@
 <map id="src/Policy.hpp" name="src/Policy.hpp">
-<area shape="rect" id="node2" href="$_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="339,79,457,104"/>
-<area shape="rect" id="node5" href="$_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="137,152,251,177"/>
-<area shape="rect" id="node11" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="613,152,767,177"/>
-<area shape="rect" id="node13" href="$_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="531,79,633,104"/>
-<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="143,225,269,251"/>
-<area shape="rect" id="node7" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="434,225,575,251"/>
-<area shape="rect" id="node8" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="377,152,539,177"/>
-<area shape="rect" id="node9" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="292,225,410,251"/>
-<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="143,299,268,324"/>
-<area shape="rect" id="node6" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="5,225,119,251"/>
-<area shape="rect" id="node10" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="599,225,760,251"/>
-<area shape="rect" id="node12" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="784,225,937,251"/>
+<area shape="rect" id="node2" href="$_region_8hpp.html" title="src/Region.hpp" alt="" coords="304,79,415,104"/>
+<area shape="rect" id="node3" href="$_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="447,225,565,251"/>
+<area shape="rect" id="node10" href="$_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="854,299,968,324"/>
+<area shape="rect" id="node16" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="5,299,159,324"/>
+<area shape="rect" id="node21" href="$_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="685,79,788,104"/>
+<area shape="rect" id="node5" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="510,445,636,471"/>
+<area shape="rect" id="node18" href="$_power_model_8hpp.html" title="src/PowerModel.hpp" alt="" coords="233,152,376,177"/>
+<area shape="rect" id="node20" href="$_region_8cpp.html" title="src/Region.cpp" alt="" coords="451,152,561,177"/>
+<area shape="rect" id="node4" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="481,299,643,324"/>
+<area shape="rect" id="node7" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="610,372,751,397"/>
+<area shape="rect" id="node8" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="418,372,535,397"/>
+<area shape="rect" id="node9" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="232,372,393,397"/>
+<area shape="rect" id="node6" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="510,519,635,544"/>
+<area shape="rect" id="node11" href="$_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="912,372,1070,397"/>
+<area shape="rect" id="node12" href="$_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="938,445,1095,471"/>
+<area shape="rect" id="node13" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="775,372,888,397"/>
+<area shape="rect" id="node14" href="$_governing_decider_8hpp.html" title="src/GoverningDecider.hpp" alt="" coords="1145,372,1320,397"/>
+<area shape="rect" id="node15" href="$_governing_decider_8cpp.html" title="src/GoverningDecider.cpp" alt="" coords="1145,445,1320,471"/>
+<area shape="rect" id="node17" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="6,372,158,397"/>
+<area shape="rect" id="node19" href="$_power_model_8cpp.html" title="src/PowerModel.cpp" alt="" coords="234,225,376,251"/>
 </map>

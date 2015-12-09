@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopm_ctl_c(3) - geopm power controller structure</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#ERRORS">ERRORS</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopm_ctl_c(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopm_ctl_c(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopm_ctl_c</code> - <span class="man-whatis">geopm power controller structure</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><strong>#include <a href="https://github.com/geopm/geopm/blob/dev/src/geopm.h">&lt;geopm.h></a></strong></p>
+
+<p><code>Link with -lgeopm</code></p>
+
+<dl>
+<dt><code>int geopm_ctl_create(</code></dt><dd><p><code>const char *</code><em>policy_config</em>, <br />
+<code>const char *</code><em>policy_key</em>, <br />
+<code>struct geopm_prof_c *</code><em>sample_prof</em>, <br />
+<code>MPI_Comm</code> <em>comm</em>, <br />
+<code>struct geopm_ctl_c **</code><em>ctl</em>);</p></dd>
+<dt><code>int geopm_ctl_destroy(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>);</p></dd>
+<dt><code>int geopm_ctl_step(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>);</p></dd>
+<dt><code>int geopm_ctl_run(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>);</p></dd>
+<dt><code>int geopm_ctl_pthread(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>, <br />
+<code>const pthread_attr_t *</code><em>attr</em>, <br />
+<code>pthread_t *</code><em>thread</em>);</p></dd>
+<dt><code>int geopm_ctl_spawn(</code></dt><dd><p><code>struct geopm_ctl_c *</code><em>ctl</em>);</p></dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>The geopm_ctl_c structure is used to lauch or step the global energy
+optimization power management algorithm.  There are several ways to enable
+control: explicit stepping of the control algorithm by the application under
+control, running the control algorithm as a distinct processes from the
+application under control, running the control algorithm as a separate pthread
+owned by the application process under control, or the application under
+control can spawn a new MPI communicator that runs the control algorithm in
+conjunction with its own distinct MPI_COMM_WORLD.  Each of these methods has
+different requirements and trade offs.</p>
+
+<dl>
+<dt><code>geopm_ctl_create</code>()</dt><dd><p>creates a geopm_ctl_c object which is an opaque structure that holds the
+state used for control.  An error will occur and an error code returned if
+both <em>policy_config</em> and <em>policy_key</em> are specified or both are unspecified.
+The number of levels of the hierarchy tree is determined by the <em>num_level</em>
+parameter.  If zero is specified for the number of levels an optimal value
+will be guessed based on the size of the MPI communicator passed by the <em>comm</em>
+parameter.  The power management is implemented as a hierarchical control
+system which is based on a balanced tree where the number of children that a
+node in the tree has is a function of its depth in the tree.  The output of
+<code>MPI_Dims_create</code>() will be used to help determine the structure of the tree.
+The power   management policy is determined in one of two ways: statically
+with a configuration file or dynamically controlled by the resource manager
+through shared memory.  See the <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page for more details
+about how to create the configuration file or shared memory region.  The
+<em>policy_config</em> input parameter is a path to a policy configuration file.  The
+<em>policy_key</em> parameter is the POSIX shared memory key referencing a shared
+memory region on the root node of the communicator under control which is
+passed as the <em>comm</em>.
+Note that either <em>policy_config</em> or <em>policy_key</em> must be NULL, and the other
+must be specified.  An error will occur and an error code returned if neither
+or both of these parameters are passed as NULL.  The control algorithm relies
+on feedback about the application profile.  If the control is being executed
+in the application process then the <em>sample_prof</em> parameter provides a handle
+to obtain the profile information.  See <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong> for information on
+how to create this structure.  In this case the <em>sample_key</em> should be passed
+as NULL.  If the control process is distinct from the process providing profile
+information then the <em>sample_key</em>  references a POSIX shared memory region that
+the profiling process writes to. In this case the <em>sample_prof</em> should be passed
+as NULL.  Note that either <em>sample_prof</em> or <em>sample_key</em> must be NULL, and the
+other must be specified.  An error will occur and an error code returned if
+neither or both of these parameters are passed as NULL. The result of calling
+this function is to produce the controller structure, <em>ctl</em> which is used to
+execute the control algorithm with one of the other functions described in this
+man page.</p></dd>
+<dt><code>geopm_ctl_destroy</code>()</dt><dd><p>destroys all resources associated with the <em>ctl</em> structure which allocated by a
+previous call to <code>geopm_ctl_create</code>().</p></dd>
+<dt><code>geopm_ctl_step</code>()</dt><dd><p>is called to execute one step in the hierarchical control algorithm by the
+application process.  The call is a blocking call for those processes that are
+the lowest MPI rank on the compute node and a no-op for those that are not.  A
+call to this function sends samples up the tree, then policies down the
+tree, and finally if the policy has been changed for the node of the calling
+process then the policy is enforced by writing MSR values.  When this function
+is being called by the application under control the profile feedback is
+acquired directly.  In this case the <em>ctl</em> structure must have been created
+with the <em>sample_prof</em> specified, otherwise an error occurs and an error
+code is returned.</p></dd>
+<dt><code>geopm_ctl_run</code>()</dt><dd><p>steps the control algorithm continuously until the kill signal is received.
+Since this is a blocking call that never returns, it is intended that
+profiling information is provided through POSIX shared memory.  When used in
+this way the <em>ctl</em> structure must have been created with the <em>sample_key</em>
+specified.</p></dd>
+<dt><code>geopm_ctl_pthread</code>()</dt><dd><p>creates a POSIX thread running the control algorithm continuously until the
+thread is killed.  This is intended to be called by the application under
+control and so the profile feedback is acquired directly.  In this case the
+<em>ctl</em> structure must have been created with <em>sample_prof</em> specified.  With
+this method of launch the supporting MPI implementation must be enabled for
+<code>MPI_THREAD_MULTIPLE</code> using <code>MPI_Init_thread</code>().</p></dd>
+<dt><code>geopm_ctl_spawn</code>()</dt><dd><p>use <code>MPI_Comm_spawn</code>() to spawn a new communicator with one process per compute
+node.  The geopmctl application will be spawned on this communicator which
+will rely on profile information read from POSIX shared memory.  For this
+reason the <em>ctl</em> structure must have been created with the <em>sample_key</em>
+specified, otherwise an error occurs and an error code is returned.</p></dd>
+</dl>
+
+
+<h2 id="ERRORS">ERRORS</h2>
+
+<p>All functions described on this man page return an error code.  See
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong> for a full description of the error numbers and
+how to convert them to strings.</p>
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>January 2016</li>
+    <li class='tr'>geopm_ctl_c(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

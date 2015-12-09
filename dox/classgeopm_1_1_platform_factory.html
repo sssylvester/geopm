@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -95,24 +96,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hardware the runtime is operating on. The factory also loads plugins at creation to provide extensibility to other platforms.  
+ <a href="classgeopm_1_1_platform_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_platform_factory_8hpp_source.html">PlatformFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa1c08636db50afdc266afb707b88fc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#aaa1c08636db50afdc266afb707b88fc6">PlatformFactory</a> ()</td></tr>
-<tr class="memdesc:aaa1c08636db50afdc266afb707b88fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a> constructor.  <a href="#aaa1c08636db50afdc266afb707b88fc6">More...</a><br /></td></tr>
+<tr class="memdesc:aaa1c08636db50afdc266afb707b88fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Default constructor.  <a href="#aaa1c08636db50afdc266afb707b88fc6">More...</a><br /></td></tr>
 <tr class="separator:aaa1c08636db50afdc266afb707b88fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152e009c40b12621d73e381320a38715"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a152e009c40b12621d73e381320a38715">PlatformFactory</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> &gt; <a class="el" href="classgeopm_1_1_platform_factory.html#a3012441e05fa3bf3a8b0b4056bbf101a">platform</a>, std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt; platform_imp)</td></tr>
+<tr class="memitem:a152e009c40b12621d73e381320a38715"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a152e009c40b12621d73e381320a38715">PlatformFactory</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> &gt; <a class="el" href="classgeopm_1_1_platform_factory.html#aa8dfb5ed3ed41d4156dc8bb6d95da490">platform</a>, std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt; platform_imp)</td></tr>
+<tr class="memdesc:a152e009c40b12621d73e381320a38715"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Testing constructor.  <a href="#a152e009c40b12621d73e381320a38715">More...</a><br /></td></tr>
 <tr class="separator:a152e009c40b12621d73e381320a38715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0cfba98ef67d8b803a9fbc3fc6b91a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#ade0cfba98ef67d8b803a9fbc3fc6b91a">~PlatformFactory</a> ()</td></tr>
-<tr class="memdesc:ade0cfba98ef67d8b803a9fbc3fc6b91a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a> destructor.  <a href="#ade0cfba98ef67d8b803a9fbc3fc6b91a">More...</a><br /></td></tr>
+<tr class="memdesc:ade0cfba98ef67d8b803a9fbc3fc6b91a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Default destructor.  <a href="#ade0cfba98ef67d8b803a9fbc3fc6b91a">More...</a><br /></td></tr>
 <tr class="separator:ade0cfba98ef67d8b803a9fbc3fc6b91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3012441e05fa3bf3a8b0b4056bbf101a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform.html">Platform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a3012441e05fa3bf3a8b0b4056bbf101a">platform</a> (int level)</td></tr>
-<tr class="separator:a3012441e05fa3bf3a8b0b4056bbf101a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cabb2e563f5d40b32ad0a137290131f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a7cabb2e563f5d40b32ad0a137290131f">register_platform</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> &gt; <a class="el" href="classgeopm_1_1_platform_factory.html#a3012441e05fa3bf3a8b0b4056bbf101a">platform</a>, std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt; platform_imp)</td></tr>
-<tr class="separator:a7cabb2e563f5d40b32ad0a137290131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dfb5ed3ed41d4156dc8bb6d95da490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform.html">Platform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#aa8dfb5ed3ed41d4156dc8bb6d95da490">platform</a> ()</td></tr>
+<tr class="memdesc:aa8dfb5ed3ed41d4156dc8bb6d95da490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an abstract <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> pointer to a concrete platform.  <a href="#aa8dfb5ed3ed41d4156dc8bb6d95da490">More...</a><br /></td></tr>
+<tr class="separator:aa8dfb5ed3ed41d4156dc8bb6d95da490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8239e5d6bc9ff0a37d7e2a180b537a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a8239e5d6bc9ff0a37d7e2a180b537a21">register_platform</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> &gt; <a class="el" href="classgeopm_1_1_platform_factory.html#aa8dfb5ed3ed41d4156dc8bb6d95da490">platform</a>)</td></tr>
+<tr class="memdesc:a8239e5d6bc9ff0a37d7e2a180b537a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete Platforms register with the factory through this API.  <a href="#a8239e5d6bc9ff0a37d7e2a180b537a21">More...</a><br /></td></tr>
+<tr class="separator:a8239e5d6bc9ff0a37d7e2a180b537a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ffd82b627cad4015169c9509d47001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_factory.html#a19ffd82b627cad4015169c9509d47001">register_platform</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt; platform_imp)</td></tr>
+<tr class="memdesc:a19ffd82b627cad4015169c9509d47001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete PlatformImps register with the factory through this API.  <a href="#a19ffd82b627cad4015169c9509d47001">More...</a><br /></td></tr>
+<tr class="separator:a19ffd82b627cad4015169c9509d47001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hardware the runtime is operating on. The factory also loads plugins at creation to provide extensibility to other platforms. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaa1c08636db50afdc266afb707b88fc6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +138,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a> constructor. </p>
+<p><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Default constructor. </p>
 
 </div>
 </div>
@@ -154,6 +166,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Testing constructor. </p>
+<p>This constructor takes in a specifc Platform/PlatformImp pair and does not load plugins. It is intended to be used for testing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">platform</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">platform_imp</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ade0cfba98ef67d8b803a9fbc3fc6b91a"></a>
@@ -177,29 +198,30 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a> destructor. </p>
+<p><a class="el" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard...">PlatformFactory</a> Default destructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3012441e05fa3bf3a8b0b4056bbf101a"></a>
+<a class="anchor" id="aa8dfb5ed3ed41d4156dc8bb6d95da490"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classgeopm_1_1_platform.html">Platform</a> * geopm::PlatformFactory::platform </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns an abstract <a class="el" href="classgeopm_1_1_platform.html">Platform</a> reference to a concrete platform. The concrete <a class="el" href="classgeopm_1_1_platform.html">Platform</a> is specific to the underlying hardware it is being run on. throws a std::invalid_argument if no acceptable <a class="el" href="classgeopm_1_1_platform.html">Platform</a> is found. </p>
+
+<p>Returns an abstract <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> pointer to a concrete platform. </p>
+<p>The <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> pointer held by the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> is initialized to the appropriate object dependent on the underlying hardware. The concrete <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> is specific to the underlying class of hardware it is being run on. throws a std::invalid_argument if no acceptable Platform/PlatformImp pair is found. </p>
 
 </div>
 </div>
-<a class="anchor" id="a7cabb2e563f5d40b32ad0a137290131f"></a>
+<a class="anchor" id="a8239e5d6bc9ff0a37d7e2a180b537a21"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -207,22 +229,43 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void geopm::PlatformFactory::register_platform </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> &gt;&#160;</td>
-          <td class="paramname"><em>platform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>platform</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt;&#160;</td>
-          <td class="paramname"><em>platform_imp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Concrete Platforms register with the factory through this API. The unique_ptr assures that the object cannot be destroyed before it is copied. </p>
+
+<p>Concrete Platforms register with the factory through this API. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">platform</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a19ffd82b627cad4015169c9509d47001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::PlatformFactory::register_platform </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> &gt;&#160;</td>
+          <td class="paramname"><em>platform_imp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concrete PlatformImps register with the factory through this API. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">platform_imp</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

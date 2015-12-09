@@ -1,9 +1,19 @@
 <map id="geopm::Controller" name="geopm::Controller">
-<area shape="rect" id="node2" href="$classgeopm_1_1_global_policy.html" title="geopm::GlobalPolicy" alt="" coords="36,192,179,217"/>
-<area shape="rect" id="node5" href="$classgeopm_1_1_tree_communicator.html" title="geopm::TreeCommunicator" alt="" coords="124,279,307,304"/>
-<area shape="rect" id="node3" href="$structgeopm__policy__shmem__s.html" title="geopm_policy_shmem_s" alt="" coords="23,92,192,117"/>
-<area shape="rect" id="node4" href="$structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="18,5,197,31"/>
-<area shape="rect" id="node6" href="$classgeopm_1_1_profile.html" title="geopm::Profile" alt="" coords="331,279,439,304"/>
-<area shape="rect" id="node7" href="$classgeopm_1_1_leaf_decider.html" title="geopm::LeafDecider" alt="" coords="462,279,604,304"/>
-<area shape="rect" id="node8" href="$classgeopm_1_1_decider.html" title="geopm::Decider" alt="" coords="475,192,591,217"/>
+<area shape="rect" id="node2" href="$structgeopm__time__s.html" title="geopm_time_s" alt="" coords="1012,10,1121,35"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im..." alt="" coords="688,171,807,197"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_region.html" title="This class encapsulates all state data for a specific application execution region. " alt="" coords="346,158,457,183"/>
+<area shape="rect" id="node5" href="$structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="5,85,185,110"/>
+<area shape="rect" id="node11" href="$structgeopm__policy__shmem__s.html" title="geopm_policy_shmem_s" alt="" coords="317,66,486,91"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_policy.html" title="geopm::Policy" alt="" coords="42,151,147,177"/>
+<area shape="rect" id="node7" href="$classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="24,201,166,226"/>
+<area shape="rect" id="node8" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="331,225,472,250"/>
+<area shape="rect" id="node9" href="$classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="9,250,181,275"/>
+<area shape="rect" id="node10" href="$classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g..." alt="" coords="676,66,819,91"/>
+<area shape="rect" id="node17" href="$classgeopm_1_1_tree_communicator.html" title="Class which enables inter&#45;process communication for geopm. " alt="" coords="975,59,1158,85"/>
+<area shape="rect" id="node12" href="$classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard..." alt="" coords="985,233,1149,258"/>
+<area shape="rect" id="node13" href="$classgeopm_1_1_decider_factory.html" title="geopm::DeciderFactory" alt="" coords="987,282,1147,307"/>
+<area shape="rect" id="node14" href="$classgeopm_1_1_profile_sampler.html" title="Retrieves sample data from the set of application ranks on a single node. " alt="" coords="988,331,1145,357"/>
+<area shape="rect" id="node15" href="$structgeopm__ctl__message__s.html" title="geopm_ctl_message_s" alt="" coords="668,306,827,331"/>
+<area shape="rect" id="node16" href="$classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="667,355,828,381"/>
+<area shape="rect" id="node18" href="$classgeopm_1_1_decider.html" title="geopm::Decider" alt="" coords="1009,381,1124,406"/>
 </map>

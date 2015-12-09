@@ -1,18 +1,16 @@
 var searchData=
 [
-  ['parse_5fhw_5ftopology',['parse_hw_topology',['../classgeopm_1_1_platform_imp.html#ade1299e904d4e6f8a5bae2c3b156f445',1,'geopm::PlatformImp']]],
-  ['phase',['Phase',['../classgeopm_1_1_phase.html#a6eba5f61259957540ff88f8442aed69a',1,'geopm::Phase']]],
-  ['phase_5fbegin',['phase_begin',['../classgeopm_1_1_platform.html#a1444d38373cc080e91884f3304085a57',1,'geopm::Platform']]],
-  ['phase_5fend',['phase_end',['../classgeopm_1_1_platform.html#acd0f8c39f6d66e4ab44fa47ff3306e81',1,'geopm::Platform']]],
-  ['platform',['platform',['../classgeopm_1_1_platform_factory.html#a3012441e05fa3bf3a8b0b4056bbf101a',1,'geopm::PlatformFactory::platform()'],['../classgeopm_1_1_platform.html#adcb008b6fb08f56f8bcbe8b1bbc86996',1,'geopm::Platform::Platform()']]],
-  ['platformfactory',['PlatformFactory',['../classgeopm_1_1_platform_factory.html#aaa1c08636db50afdc266afb707b88fc6',1,'geopm::PlatformFactory::PlatformFactory()'],['../classgeopm_1_1_platform_factory.html#a152e009c40b12621d73e381320a38715',1,'geopm::PlatformFactory::PlatformFactory(std::unique_ptr&lt; Platform &gt; platform, std::unique_ptr&lt; PlatformImp &gt; platform_imp)']]],
-  ['platformimp',['PlatformImp',['../classgeopm_1_1_platform_imp.html#a3f4b86c5e5f96550da62e0bfac560b9f',1,'geopm::PlatformImp']]],
-  ['platformtopology',['PlatformTopology',['../classgeopm_1_1_platform_topology.html#a19080812ae634c524c2b6e9bc42c837c',1,'geopm::PlatformTopology']]],
-  ['policy',['Policy',['../classgeopm_1_1_policy.html#a948b4888de3c954ce2a442cf5daf7e70',1,'geopm::Policy::Policy()'],['../classgeopm_1_1_policy.html#a051beaa9c088c11c6233fbd2b5fa4df0',1,'geopm::Policy::Policy(int num_domain)'],['../classgeopm_1_1_policy.html#a47e99c92337ad771149e46fecc4c2ad9',1,'geopm::Policy::Policy(const std::vector&lt; double &gt; &amp;target)']]],
-  ['policy_5fmessage',['policy_message',['../classgeopm_1_1_global_policy.html#ab224b56ff801afeb0834d5b95f7e23f6',1,'geopm::GlobalPolicy']]],
-  ['power',['power',['../classgeopm_1_1_power_model.html#ad3268fdcd9077792577b4b0adb9a446a',1,'geopm::PowerModel']]],
-  ['power_5fmodel',['power_model',['../classgeopm_1_1_platform.html#aa2fe5e365cabde1e0527fecd86a38b1a',1,'geopm::Platform']]],
-  ['powermodel',['PowerModel',['../classgeopm_1_1_power_model.html#acdb0918fda1b76afb80d7aa9a49c51d5',1,'geopm::PowerModel']]],
-  ['profile',['Profile',['../classgeopm_1_1_profile.html#a941cd4ad28330b53191bb4793ade6445',1,'geopm::Profile']]],
-  ['pthread',['pthread',['../classgeopm_1_1_controller.html#ac4623ffb30c3c735b7928f5abe7efe8a',1,'geopm::Controller']]]
+  ['observation',['Observation',['../classgeopm_1_1_observation.html#a9a50c26fec683a3d08f622f1505fb93d',1,'geopm::Observation']]],
+  ['observation_5finsert',['observation_insert',['../classgeopm_1_1_region.html#af1aff7cf6c4618c94f1c4f0672e2d606',1,'geopm::Region']]],
+  ['observation_5fintegrate_5ftime',['observation_integrate_time',['../classgeopm_1_1_region.html#a3c12e9dadc7165439c39001e83f407fe',1,'geopm::Region']]],
+  ['observation_5fmax',['observation_max',['../classgeopm_1_1_region.html#a7c84318a5cdd9d75fc623ce298af9232',1,'geopm::Region']]],
+  ['observation_5fmean',['observation_mean',['../classgeopm_1_1_region.html#a5765848e8203b7c5e4ff284b0d541b2f',1,'geopm::Region']]],
+  ['observation_5fmedian',['observation_median',['../classgeopm_1_1_region.html#a0d3777efa1a8952fc5cb6f10405ed0f8',1,'geopm::Region']]],
+  ['observation_5fmin',['observation_min',['../classgeopm_1_1_region.html#ae6bdf57478841c9c12ab5e42ba4d7ae5',1,'geopm::Region']]],
+  ['observation_5fstddev',['observation_stddev',['../classgeopm_1_1_region.html#a11470943ee2ba59157f7c9daba9ef545',1,'geopm::Region']]],
+  ['observe',['observe',['../classgeopm_1_1_platform.html#a32031baafb9dfa153086c4ba40c09273',1,'geopm::Platform::observe(struct geopm_sample_message_s &amp;sample) const '],['../classgeopm_1_1_platform.html#a63681250fb8e8ce8cd70d9c8d0a8c2dd',1,'geopm::Platform::observe(const std::vector&lt; struct geopm_sample_message_s &gt; &amp;sample) const '],['../classgeopm_1_1_platform.html#ab18cc5a003f9ba5264b714500074c796',1,'geopm::Platform::observe(void)=0'],['../classgeopm_1_1_r_a_p_l_platform.html#a7957c511ef9042858f2a4bc3ccb1519f',1,'geopm::RAPLPlatform::observe()']]],
+  ['open_5fmsr',['open_msr',['../classgeopm_1_1_platform_imp.html#a993749c91f61307c5e090166dfa0a197',1,'geopm::PlatformImp']]],
+  ['open_5frecv',['open_recv',['../classgeopm_1_1_tree_communicator_level.html#a1e789133452d437831bebe4c25f5174a',1,'geopm::TreeCommunicatorLevel']]],
+  ['operator_3d_3d',['operator==',['../classgeopm_1_1_policy.html#a5fa57be7c9ee3d238056f631dc9ac23c',1,'geopm::Policy']]],
+  ['outer_5fsync',['outer_sync',['../classgeopm_1_1_profile.html#abd5b59960396b88f4fc8d086dbeac57a',1,'geopm::Profile']]]
 ];

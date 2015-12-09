@@ -1,9 +1,8 @@
 <map id="src/geopm_policy.h" name="src/geopm_policy.h">
-<area shape="rect" id="node2" href="$geopm_8h.html" title="src/geopm.h" alt="" coords="205,79,300,104"/>
-<area shape="rect" id="node4" href="$geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="5,152,166,177"/>
-<area shape="rect" id="node7" href="$geopmpolicy__main_8c.html" title="src/geopmpolicy_main.c" alt="" coords="323,79,488,104"/>
-<area shape="rect" id="node8" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="512,79,654,104"/>
-<area shape="rect" id="node3" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="190,152,315,177"/>
-<area shape="rect" id="node5" href="$_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="338,152,441,177"/>
-<area shape="rect" id="node6" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="465,152,571,177"/>
+<area shape="rect" id="node2" href="$geopm_8h.html" title="src/geopm.h" alt="" coords="178,79,273,104"/>
+<area shape="rect" id="node4" href="$geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="285,152,446,177"/>
+<area shape="rect" id="node6" href="$geopmpolicy__main_8c.html" title="src/geopmpolicy_main.c" alt="" coords="384,79,549,104"/>
+<area shape="rect" id="node7" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="573,79,714,104"/>
+<area shape="rect" id="node3" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="5,152,130,177"/>
+<area shape="rect" id="node5" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="155,152,261,177"/>
 </map>

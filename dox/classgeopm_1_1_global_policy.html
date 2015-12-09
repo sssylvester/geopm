@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -97,6 +98,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Encapsulates the power policy that is applied across the entire MPI job allocation being managed by geopm.  
+ <a href="classgeopm_1_1_global_policy.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_global_policy_8hpp_source.html">GlobalPolicy.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for geopm::GlobalPolicy:</div>
@@ -111,83 +115,121 @@ Collaboration diagram for geopm::GlobalPolicy:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c109b4b728f217121ad999b4c58d0f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a8c109b4b728f217121ad999b4c58d0f2">GlobalPolicy</a> (const std::string in_config, const std::string out_config)</td></tr>
+<tr class="memdesc:a8c109b4b728f217121ad999b4c58d0f2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> constructor. Only one of in_config or out_config can be non-empty.  <a href="#a8c109b4b728f217121ad999b4c58d0f2">More...</a><br /></td></tr>
 <tr class="separator:a8c109b4b728f217121ad999b4c58d0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aede560cb29f11b7810b7b87961d499"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a1aede560cb29f11b7810b7b87961d499">~GlobalPolicy</a> ()</td></tr>
+<tr class="memdesc:a1aede560cb29f11b7810b7b87961d499"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> destructor.  <a href="#a1aede560cb29f11b7810b7b87961d499">More...</a><br /></td></tr>
 <tr class="separator:a1aede560cb29f11b7810b7b87961d499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18170de45f7c5ccd43987b0473a1b1dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a18170de45f7c5ccd43987b0473a1b1dd">mode</a> (void) const </td></tr>
+<tr class="memdesc:a18170de45f7c5ccd43987b0473a1b1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy power mode.  <a href="#a18170de45f7c5ccd43987b0473a1b1dd">More...</a><br /></td></tr>
 <tr class="separator:a18170de45f7c5ccd43987b0473a1b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2e6202cc53733c1ff94067a0dffd37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aed2e6202cc53733c1ff94067a0dffd37">frequency_mhz</a> (void) const </td></tr>
+<tr class="memdesc:aed2e6202cc53733c1ff94067a0dffd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy frequency.  <a href="#aed2e6202cc53733c1ff94067a0dffd37">More...</a><br /></td></tr>
 <tr class="separator:aed2e6202cc53733c1ff94067a0dffd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f20c51da3a618ace9aef50a16d92c22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a3f20c51da3a618ace9aef50a16d92c22">tdp_percent</a> (void) const </td></tr>
+<tr class="memdesc:a3f20c51da3a618ace9aef50a16d92c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy tdp percentage.  <a href="#a3f20c51da3a618ace9aef50a16d92c22">More...</a><br /></td></tr>
 <tr class="separator:a3f20c51da3a618ace9aef50a16d92c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ad665c66744bf0028160e0aa0561bbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a2ad665c66744bf0028160e0aa0561bbb">budget_watts</a> (void) const </td></tr>
+<tr class="memdesc:a2ad665c66744bf0028160e0aa0561bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy power budget.  <a href="#a2ad665c66744bf0028160e0aa0561bbb">More...</a><br /></td></tr>
 <tr class="separator:a2ad665c66744bf0028160e0aa0561bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e20982d156c24300c1024e08850dfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a74e20982d156c24300c1024e08850dfa">affinity</a> (void) const </td></tr>
+<tr class="memdesc:a74e20982d156c24300c1024e08850dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy affinity. This is the cores that we will dynamically control. One of GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT or GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT.  <a href="#a74e20982d156c24300c1024e08850dfa">More...</a><br /></td></tr>
 <tr class="separator:a74e20982d156c24300c1024e08850dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad30589c95a7838a907abe2a59970e80d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ad30589c95a7838a907abe2a59970e80d">goal</a> (void) const </td></tr>
+<tr class="memdesc:ad30589c95a7838a907abe2a59970e80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy power goal, One of GEOPM_FLAGS_GOAL_CPU_EFFICIENCY, GEOPM_FLAGS_GOAL_NETWORK_EFFICIENCY, or GEOPM_FLAGS_GOAL_MEMORY_EFFICIENCY.  <a href="#ad30589c95a7838a907abe2a59970e80d">More...</a><br /></td></tr>
 <tr class="separator:ad30589c95a7838a907abe2a59970e80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68de7c2a986992198b86ebd9abc1ae40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a68de7c2a986992198b86ebd9abc1ae40">num_max_perf</a> (void) const </td></tr>
+<tr class="memdesc:a68de7c2a986992198b86ebd9abc1ae40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of 'big' cores.  <a href="#a68de7c2a986992198b86ebd9abc1ae40">More...</a><br /></td></tr>
 <tr class="separator:a68de7c2a986992198b86ebd9abc1ae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61187a2449571f7ca1add88ad64fefa9"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a61187a2449571f7ca1add88ad64fefa9">flags</a> (void) const </td></tr>
+<tr class="memdesc:a61187a2449571f7ca1add88ad64fefa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy flags.  <a href="#a61187a2449571f7ca1add88ad64fefa9">More...</a><br /></td></tr>
 <tr class="separator:a61187a2449571f7ca1add88ad64fefa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab224b56ff801afeb0834d5b95f7e23f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ab224b56ff801afeb0834d5b95f7e23f6">policy_message</a> (struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_message) const </td></tr>
+<tr class="memdesc:ab224b56ff801afeb0834d5b95f7e23f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a policy message from the policy object.  <a href="#ab224b56ff801afeb0834d5b95f7e23f6">More...</a><br /></td></tr>
 <tr class="separator:ab224b56ff801afeb0834d5b95f7e23f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863ff4a0677afde1419f783c35e89592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a863ff4a0677afde1419f783c35e89592">mode</a> (int mode)</td></tr>
+<tr class="memdesc:a863ff4a0677afde1419f783c35e89592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy power mode.  <a href="#a863ff4a0677afde1419f783c35e89592">More...</a><br /></td></tr>
 <tr class="separator:a863ff4a0677afde1419f783c35e89592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada9552df6b65a1d8690d70a44307e849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ada9552df6b65a1d8690d70a44307e849">frequency_mhz</a> (int frequency)</td></tr>
+<tr class="memdesc:ada9552df6b65a1d8690d70a44307e849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy frequency.  <a href="#ada9552df6b65a1d8690d70a44307e849">More...</a><br /></td></tr>
 <tr class="separator:ada9552df6b65a1d8690d70a44307e849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a406db85f994ce65acadf599953b85262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a406db85f994ce65acadf599953b85262">tdp_percent</a> (int percentage)</td></tr>
+<tr class="memdesc:a406db85f994ce65acadf599953b85262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy tdp percentage.  <a href="#a406db85f994ce65acadf599953b85262">More...</a><br /></td></tr>
 <tr class="separator:a406db85f994ce65acadf599953b85262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b864b6275bd080aa7cd8ff26d6231ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a6b864b6275bd080aa7cd8ff26d6231ed">budget_watts</a> (int budget)</td></tr>
+<tr class="memdesc:a6b864b6275bd080aa7cd8ff26d6231ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy power budget.  <a href="#a6b864b6275bd080aa7cd8ff26d6231ed">More...</a><br /></td></tr>
 <tr class="separator:a6b864b6275bd080aa7cd8ff26d6231ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab77a05f8aba26c47fd60b197bed666c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aab77a05f8aba26c47fd60b197bed666c">affinity</a> (int cpu_affinity)</td></tr>
+<tr class="memdesc:aab77a05f8aba26c47fd60b197bed666c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy affinity. This is the cores that we will dynamically control. One of GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT or GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT.  <a href="#aab77a05f8aba26c47fd60b197bed666c">More...</a><br /></td></tr>
 <tr class="separator:aab77a05f8aba26c47fd60b197bed666c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc1e87d0a57fd08424e049be84a201db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#afc1e87d0a57fd08424e049be84a201db">goal</a> (int geo_goal)</td></tr>
+<tr class="memdesc:afc1e87d0a57fd08424e049be84a201db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy power goal. One of GEOPM_FLAGS_GOAL_CPU_EFFICIENCY, GEOPM_FLAGS_GOAL_NETWORK_EFFICIENCY, or GEOPM_FLAGS_GOAL_MEMORY_EFFICIENCY.  <a href="#afc1e87d0a57fd08424e049be84a201db">More...</a><br /></td></tr>
 <tr class="separator:afc1e87d0a57fd08424e049be84a201db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5cb44116185661cf8953c52a87d472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a4d5cb44116185661cf8953c52a87d472">num_max_perf</a> (int num_big_cores)</td></tr>
+<tr class="memdesc:a4d5cb44116185661cf8953c52a87d472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of 'big' cores.  <a href="#a4d5cb44116185661cf8953c52a87d472">More...</a><br /></td></tr>
 <tr class="separator:a4d5cb44116185661cf8953c52a87d472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107776876cd23d6c2870b47861e9eecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a107776876cd23d6c2870b47861e9eecc">write</a> (void)</td></tr>
+<tr class="memdesc:a107776876cd23d6c2870b47861e9eecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write out a policy file from the current state.  <a href="#a107776876cd23d6c2870b47861e9eecc">More...</a><br /></td></tr>
 <tr class="separator:a107776876cd23d6c2870b47861e9eecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cc89987204b9d317e96a1d3e3c65d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a9cc89987204b9d317e96a1d3e3c65d75">read</a> (void)</td></tr>
+<tr class="memdesc:a9cc89987204b9d317e96a1d3e3c65d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a policy file and set our current state.  <a href="#a9cc89987204b9d317e96a1d3e3c65d75">More...</a><br /></td></tr>
 <tr class="separator:a9cc89987204b9d317e96a1d3e3c65d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2f7aea07dd37d6e795058ef68a65ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aaa2f7aea07dd37d6e795058ef68a65ec">enforce_static_mode</a> ()</td></tr>
+<tr class="memdesc:aaa2f7aea07dd37d6e795058ef68a65ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforce one of the static modes: GEOPM_MODE_TDP_BALANCE_STATIC, GEOPM_MODE_FREQ_UNIFORM_STATIC, or GEOPM_MODE_FREQ_HYBRID_STATIC.  <a href="#aaa2f7aea07dd37d6e795058ef68a65ec">More...</a><br /></td></tr>
 <tr class="separator:aaa2f7aea07dd37d6e795058ef68a65ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6226190980d594eae31756f2d90419f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a6226190980d594eae31756f2d90419f7">affinity_string</a> (int value, std::string &amp;name)</td></tr>
+<tr class="memdesc:a6226190980d594eae31756f2d90419f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take in an affinity enum and fill in its string representation.  <a href="#a6226190980d594eae31756f2d90419f7">More...</a><br /></td></tr>
 <tr class="separator:a6226190980d594eae31756f2d90419f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aed20f0455ebb8e297a55a321bec41c50"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aed20f0455ebb8e297a55a321bec41c50">m_in_config</a></td></tr>
+<tr class="memdesc:aed20f0455ebb8e297a55a321bec41c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">input file name  <a href="#aed20f0455ebb8e297a55a321bec41c50">More...</a><br /></td></tr>
 <tr class="separator:aed20f0455ebb8e297a55a321bec41c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ebccb0863f33dc471de81c29ca70e6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ac5ebccb0863f33dc471de81c29ca70e6">m_out_config</a></td></tr>
+<tr class="memdesc:ac5ebccb0863f33dc471de81c29ca70e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">output file name  <a href="#ac5ebccb0863f33dc471de81c29ca70e6">More...</a><br /></td></tr>
 <tr class="separator:ac5ebccb0863f33dc471de81c29ca70e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7cdb5d94ac53ad0a6d67a37abd5769"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ada7cdb5d94ac53ad0a6d67a37abd5769">m_mode</a></td></tr>
+<tr class="memdesc:ada7cdb5d94ac53ad0a6d67a37abd5769"><td class="mdescLeft">&#160;</td><td class="mdescRight">power mode  <a href="#ada7cdb5d94ac53ad0a6d67a37abd5769">More...</a><br /></td></tr>
 <tr class="separator:ada7cdb5d94ac53ad0a6d67a37abd5769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8db93057abb8d47c909447097c07efa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ac8db93057abb8d47c909447097c07efa">m_power_budget_watts</a></td></tr>
+<tr class="memdesc:ac8db93057abb8d47c909447097c07efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">power budget in watts  <a href="#ac8db93057abb8d47c909447097c07efa">More...</a><br /></td></tr>
 <tr class="separator:ac8db93057abb8d47c909447097c07efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9811e93b72d96751354548e91ae197"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#adb9811e93b72d96751354548e91ae197">m_flags</a></td></tr>
+<tr class="memdesc:adb9811e93b72d96751354548e91ae197"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags encapsulates frequency, number of 'big'cpus, 'small' core affinity, tdp percentage, and power goal  <a href="#adb9811e93b72d96751354548e91ae197">More...</a><br /></td></tr>
 <tr class="separator:adb9811e93b72d96751354548e91ae197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ace8b6eb030b40b0f52433bfcf7e5871e">m_is_shm_in</a></td></tr>
+<tr class="memdesc:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if reading policy from shared memory, else false  <a href="#ace8b6eb030b40b0f52433bfcf7e5871e">More...</a><br /></td></tr>
 <tr class="separator:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44479f62ebf184fd3870328711b7ecde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a44479f62ebf184fd3870328711b7ecde">m_is_shm_out</a></td></tr>
+<tr class="memdesc:a44479f62ebf184fd3870328711b7ecde"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if outputting policy to shared memory, else false  <a href="#a44479f62ebf184fd3870328711b7ecde">More...</a><br /></td></tr>
 <tr class="separator:a44479f62ebf184fd3870328711b7ecde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc06a7219da3536f37e498a96e7726d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#abc06a7219da3536f37e498a96e7726d1">m_do_read</a></td></tr>
+<tr class="memdesc:abc06a7219da3536f37e498a96e7726d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the input file is valid, else false  <a href="#abc06a7219da3536f37e498a96e7726d1">More...</a><br /></td></tr>
 <tr class="separator:abc06a7219da3536f37e498a96e7726d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aa5bda90ebc84d5a6b3a65f0e390edf4b">m_do_write</a></td></tr>
+<tr class="memdesc:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the output file is valid, else false  <a href="#aa5bda90ebc84d5a6b3a65f0e390edf4b">More...</a><br /></td></tr>
 <tr class="separator:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5633b15c95e3568a517ee68d2a013415"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a5633b15c95e3568a517ee68d2a013415">m_policy_shmem_in</a></td></tr>
+<tr class="memdesc:a5633b15c95e3568a517ee68d2a013415"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if reading in from shared memory  <a href="#a5633b15c95e3568a517ee68d2a013415">More...</a><br /></td></tr>
 <tr class="separator:a5633b15c95e3568a517ee68d2a013415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad891bd78831f771e7fb29ade9abaffad"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ad891bd78831f771e7fb29ade9abaffad">m_policy_shmem_out</a></td></tr>
+<tr class="memdesc:ad891bd78831f771e7fb29ade9abaffad"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if writing out to shared memory  <a href="#ad891bd78831f771e7fb29ade9abaffad">More...</a><br /></td></tr>
 <tr class="separator:ad891bd78831f771e7fb29ade9abaffad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="memItemLeft" align="right" valign="top">std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a84a0ccc307df1b97b3f02bdf6204bf04">m_config_file_in</a></td></tr>
+<tr class="memdesc:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="mdescLeft">&#160;</td><td class="mdescRight">file stream for input file  <a href="#a84a0ccc307df1b97b3f02bdf6204bf04">More...</a><br /></td></tr>
 <tr class="separator:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a211c685b0367524f3ffa3f5d3a0b335f"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a211c685b0367524f3ffa3f5d3a0b335f">m_config_file_out</a></td></tr>
+<tr class="memdesc:a211c685b0367524f3ffa3f5d3a0b335f"><td class="mdescLeft">&#160;</td><td class="mdescRight">file stream for output file  <a href="#a211c685b0367524f3ffa3f5d3a0b335f">More...</a><br /></td></tr>
 <tr class="separator:a211c685b0367524f3ffa3f5d3a0b335f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Encapsulates the power policy that is applied across the entire MPI job allocation being managed by geopm. </p>
+<p>The C++ implementation of the resource manager interface to the GEOPM policy. The class methods support the C interface defined for use with the geopm_policy_c structure and are named accordingly. The geopm_policy_c structure is an opaque reference to the <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">geopm::GlobalPolicy</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8c109b4b728f217121ad999b4c58d0f2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,6 +254,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> constructor. Only one of in_config or out_config can be non-empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_config</td><td>Name of a policy configuration file to be read in. The object state will be initialized from the policy in the file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out_config</td><td>Name of a policy configuration file to be written. The contents of the file will be obtained from the object's state. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a1aede560cb29f11b7810b7b87961d499"></a>
@@ -235,6 +286,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> destructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -252,6 +305,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the policy affinity. This is the cores that we will dynamically control. One of GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT or GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT. </p>
+<dl class="section return"><dt>Returns</dt><dd>enum power affinity </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aab77a05f8aba26c47fd60b197bed666c"></a>
@@ -267,6 +323,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the policy affinity. This is the cores that we will dynamically control. One of GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT or GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cpu_affinity</td><td>enum power affinity </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -302,6 +366,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Take in an affinity enum and fill in its string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the enum value of the affinity. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>the string representation of the affinity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2ad665c66744bf0028160e0aa0561bbb"></a>
@@ -317,6 +390,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the policy power budget. </p>
+<dl class="section return"><dt>Returns</dt><dd>power budget in watts </dd></dl>
 
 </div>
 </div>
@@ -334,6 +410,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the policy power budget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">budget</td><td>power budget in watts </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aaa2f7aea07dd37d6e795058ef68a65ec"></a>
@@ -348,6 +432,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enforce one of the static modes: GEOPM_MODE_TDP_BALANCE_STATIC, GEOPM_MODE_FREQ_UNIFORM_STATIC, or GEOPM_MODE_FREQ_HYBRID_STATIC. </p>
 
 </div>
 </div>
@@ -365,6 +451,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the policy flags. </p>
+<dl class="section return"><dt>Returns</dt><dd>32-bit flags </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aed2e6202cc53733c1ff94067a0dffd37"></a>
@@ -380,6 +469,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the policy frequency. </p>
+<dl class="section return"><dt>Returns</dt><dd>frequency in MHz </dd></dl>
 
 </div>
 </div>
@@ -397,6 +489,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the policy frequency. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>frequency in MHz </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ad30589c95a7838a907abe2a59970e80d"></a>
@@ -412,6 +512,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the policy power goal, One of GEOPM_FLAGS_GOAL_CPU_EFFICIENCY, GEOPM_FLAGS_GOAL_NETWORK_EFFICIENCY, or GEOPM_FLAGS_GOAL_MEMORY_EFFICIENCY. </p>
+<dl class="section return"><dt>Returns</dt><dd>enum power goal </dd></dl>
 
 </div>
 </div>
@@ -429,6 +532,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the policy power goal. One of GEOPM_FLAGS_GOAL_CPU_EFFICIENCY, GEOPM_FLAGS_GOAL_NETWORK_EFFICIENCY, or GEOPM_FLAGS_GOAL_MEMORY_EFFICIENCY. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">geo_goal</td><td>enum power goal </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a18170de45f7c5ccd43987b0473a1b1dd"></a>
@@ -444,6 +555,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the policy power mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>geopm_policy_mode_e power mode </dd></dl>
 
 </div>
 </div>
@@ -461,6 +575,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the policy power mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>geopm_policy_mode_e power mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a68de7c2a986992198b86ebd9abc1ae40"></a>
@@ -476,6 +598,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the number of 'big' cores. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of cores where we will run unconstrained power. </dd></dl>
 
 </div>
 </div>
@@ -493,6 +618,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the number of 'big' cores. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_big_cores</td><td>of cores where we will run unconstrained power. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ab224b56ff801afeb0834d5b95f7e23f6"></a>
@@ -508,6 +641,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get a policy message from the policy object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">policy_message</td><td>structure to be filled in </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -525,6 +666,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Read in a policy file and set our current state. </p>
+
 </div>
 </div>
 <a class="anchor" id="a3f20c51da3a618ace9aef50a16d92c22"></a>
@@ -540,6 +683,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the policy tdp percentage. </p>
+<dl class="section return"><dt>Returns</dt><dd>tdp percentage between 0-100 </dd></dl>
 
 </div>
 </div>
@@ -557,6 +703,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the policy tdp percentage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percentage</td><td>tdp percentage between 0-100 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a107776876cd23d6c2870b47861e9eecc"></a>
@@ -572,6 +726,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Write out a policy file from the current state. </p>
 
 </div>
 </div>
@@ -594,6 +750,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>file stream for input file </p>
+
 </div>
 </div>
 <a class="anchor" id="a211c685b0367524f3ffa3f5d3a0b335f"></a>
@@ -613,6 +771,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>file stream for output file </p>
 
 </div>
 </div>
@@ -634,6 +794,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>true if the input file is valid, else false </p>
+
 </div>
 </div>
 <a class="anchor" id="aa5bda90ebc84d5a6b3a65f0e390edf4b"></a>
@@ -653,6 +815,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>true if the output file is valid, else false </p>
 
 </div>
 </div>
@@ -674,6 +838,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>flags encapsulates frequency, number of 'big'cpus, 'small' core affinity, tdp percentage, and power goal </p>
+
 </div>
 </div>
 <a class="anchor" id="aed20f0455ebb8e297a55a321bec41c50"></a>
@@ -693,6 +859,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>input file name </p>
 
 </div>
 </div>
@@ -714,6 +882,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>true if reading policy from shared memory, else false </p>
+
 </div>
 </div>
 <a class="anchor" id="a44479f62ebf184fd3870328711b7ecde"></a>
@@ -733,6 +903,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>true if outputting policy to shared memory, else false </p>
 
 </div>
 </div>
@@ -754,6 +926,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>power mode </p>
+
 </div>
 </div>
 <a class="anchor" id="ac5ebccb0863f33dc471de81c29ca70e6"></a>
@@ -773,6 +947,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>output file name </p>
 
 </div>
 </div>
@@ -794,6 +970,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>structure to use if reading in from shared memory </p>
+
 </div>
 </div>
 <a class="anchor" id="ad891bd78831f771e7fb29ade9abaffad"></a>
@@ -814,6 +992,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>structure to use if writing out to shared memory </p>
+
 </div>
 </div>
 <a class="anchor" id="ac8db93057abb8d47c909447097c07efa"></a>
@@ -833,6 +1013,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>power budget in watts </p>
 
 </div>
 </div>

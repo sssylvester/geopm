@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['name_5fmax',['NAME_MAX',['../_exception_8cpp.html#ac64541bdd81c961304b9babef1402640',1,'NAME_MAX():&#160;Exception.cpp'],['../_h_s_x_platform_imp_8hpp.html#ac64541bdd81c961304b9babef1402640',1,'NAME_MAX():&#160;HSXPlatformImp.hpp'],['../_i_v_t_platform_imp_8hpp.html#ac64541bdd81c961304b9babef1402640',1,'NAME_MAX():&#160;IVTPlatformImp.hpp'],['../_platform_imp_8hpp.html#ac64541bdd81c961304b9babef1402640',1,'NAME_MAX():&#160;PlatformImp.hpp']]]
+  ['geopm_5fconst_5fmax_5fnum_5fcpu',['GEOPM_CONST_MAX_NUM_CPU',['../geopm__message_8h.html#a755017dd816ccb93b184a4f60ede2fe9',1,'geopm_message.h']]],
+  ['geopm_5fglobal_5fpolicy_5fidentifier',['GEOPM_GLOBAL_POLICY_IDENTIFIER',['../geopm__message_8h.html#a13341285070927ad2383bf5eccd23c70',1,'geopm_message.h']]],
+  ['geopm_5fhash_5ftable_5fdepth_5fmax',['GEOPM_HASH_TABLE_DEPTH_MAX',['../_locking_hash_table_8hpp.html#ae51bcb1e386ea8af124d1d0ecb7a6f76',1,'LockingHashTable.hpp']]]
 ];

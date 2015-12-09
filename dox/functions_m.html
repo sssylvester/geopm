@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -85,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li class="current"><a href="functions_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
@@ -119,14 +121,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_agg_stats
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#abe8d18f596d09e796f333f807ecc72b4">geopm::ProfileRankSampler</a>
+</li>
+<li>m_budget
+: <a class="el" href="classgeopm_1_1_policy.html#afed9e69d5f5c0872f178a69872c14448">geopm::Policy</a>
+</li>
 <li>m_buffer
 : <a class="el" href="classgeopm_1_1_circular_buffer.html#afa26f4a8e3ca195a3d5338220cded43f">geopm::CircularBuffer</a>
 </li>
 <li>m_buffer_index
 : <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#abde0735f6e2d081de87f504bbacd2524">geopm::RAPLPlatform</a>
 </li>
+<li>m_buffer_size
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#ae58271629ea06e3c75d25c84364e87ce">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
 <li>m_child_sample
-: <a class="el" href="classgeopm_1_1_controller.html#aa2448eba47f3bd67755ead01aa519cf6">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_region.html#a054da75ce888294552cbf6b235163cd0">geopm::Region</a>
 </li>
 <li>m_comm
 : <a class="el" href="classgeopm_1_1_tree_communicator.html#acc376ec702c5185399a04a4976c19272">geopm::TreeCommunicator</a>
@@ -144,14 +155,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_cpu_file_descs
 : <a class="el" href="classgeopm_1_1_platform_imp.html#a315523c6db721ce2b1ef19d56de46f7a">geopm::PlatformImp</a>
 </li>
-<li>m_cur_phase
-: <a class="el" href="classgeopm_1_1_platform.html#a471266549b49f1cdbfe0ab844d6ef4c5">geopm::Platform</a>
+<li>m_cpu_list
+: <a class="el" href="classgeopm_1_1_profile.html#a6fae07636fc5b6e8c2bef2b7a70310c6">geopm::Profile</a>
 </li>
-<li>m_curr_phase
-: <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a0febbb37cdcba3d3b4098f966cdb0281">geopm::RAPLPlatform</a>
+<li>m_ctl_msg
+: <a class="el" href="classgeopm_1_1_profile.html#a1297958d68ab4cf391361445cc345af2">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_profile_sampler.html#ab23bdbf7544dedfd0d9ca449461d9f24">geopm::ProfileSampler</a>
+</li>
+<li>m_ctl_shmem
+: <a class="el" href="classgeopm_1_1_profile.html#a2e042a6f7c16ae0cd3f96f2f31cddbcb">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_profile_sampler.html#ab9556118bd58d494791defe1dabbb925">geopm::ProfileSampler</a>
+</li>
+<li>m_curr_region
+: <a class="el" href="classgeopm_1_1_platform.html#a0ef22c5fc623e815ab4e539a3aca2544">geopm::Platform</a>
+</li>
+<li>m_curr_region_id
+: <a class="el" href="classgeopm_1_1_profile.html#aa0bd17deb0d7a10d9e5def1280768b3d">geopm::Profile</a>
 </li>
 <li>m_data
 : <a class="el" href="classgeopm_1_1_observation.html#aa6b9a0675e0d779abedb89636fed640d">geopm::Observation</a>
+</li>
+<li>m_decider_factory
+: <a class="el" href="classgeopm_1_1_controller.html#ab205c6df7b2ded8f0e78b9a7aa5a753d">geopm::Controller</a>
 </li>
 <li>m_do_read
 : <a class="el" href="classgeopm_1_1_global_policy.html#abc06a7219da3536f37e498a96e7726d1">geopm::GlobalPolicy</a>
@@ -172,22 +197,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>m_flags
 : <a class="el" href="classgeopm_1_1_global_policy.html#adb9811e93b72d96751354548e91ae197">geopm::GlobalPolicy</a>
+, <a class="el" href="classgeopm_1_1_policy.html#a72e57d13209442b8e39785571643f84f">geopm::Policy</a>
 </li>
 <li>m_global_policy
 : <a class="el" href="classgeopm_1_1_controller.html#af1fa25f7bbb4fffea059692b1621af73">geopm::Controller</a>
 , <a class="el" href="classgeopm_1_1_tree_communicator.html#abda9b15e5fa8043dc137abcfb24752f4">geopm::TreeCommunicator</a>
 </li>
+<li>m_goal
+: <a class="el" href="classgeopm_1_1_policy.html#a8da883b3368ec668a697145d3faeab74">geopm::Policy</a>
+</li>
 <li>m_head
 : <a class="el" href="classgeopm_1_1_circular_buffer.html#a7f2dd879a6de97ddbfeeebed54d4e4ad">geopm::CircularBuffer</a>
 </li>
 <li>m_hint
-: <a class="el" href="classgeopm_1_1_phase.html#aa8ebe9284fc905d0a1f867fcd6971fff">geopm::Phase</a>
+: <a class="el" href="classgeopm_1_1_region.html#a27bc4427e843a1ddf3db3ddb6cfdbac6">geopm::Region</a>
 </li>
-<li>m_hyperthreads
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a6dc521a89ce33015eab735e199451953">geopm::PlatformImp</a>
+<li>m_hw_cpus
+: <a class="el" href="classgeopm_1_1_platform_imp.html#a376b3d3052b8911d6fdcaa58aee2573c">geopm::PlatformImp</a>
 </li>
 <li>m_identifier
-: <a class="el" href="classgeopm_1_1_phase.html#a9421d5e454e56774b0728873c8c73ffd">geopm::Phase</a>
+: <a class="el" href="classgeopm_1_1_region.html#a77da388bf1e59e0e6fee8f74b9fae96d">geopm::Region</a>
 </li>
 <li>m_imp
 : <a class="el" href="classgeopm_1_1_platform.html#acead0dfa84c0a25b51d6e68566625459">geopm::Platform</a>
@@ -198,25 +227,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_is_converged
 : <a class="el" href="classgeopm_1_1_decider.html#a6635a5229b2466df845f8a42fd001dfa">geopm::Decider</a>
 </li>
+<li>m_is_name_finished
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#aeb5ce34ee5fe4f1c7a08eee47d496f74">geopm::ProfileRankSampler</a>
+</li>
+<li>m_is_node_root
+: <a class="el" href="classgeopm_1_1_controller.html#a7b63ed01701b82fa53146eec4a33f62c">geopm::Controller</a>
+</li>
+<li>m_is_pshared
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#aaa215e7cdf1a89813b10db348ad42b2f">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
 <li>m_is_shm_in
 : <a class="el" href="classgeopm_1_1_global_policy.html#ace8b6eb030b40b0f52433bfcf7e5871e">geopm::GlobalPolicy</a>
 </li>
 <li>m_is_shm_out
 : <a class="el" href="classgeopm_1_1_global_policy.html#a44479f62ebf184fd3870328711b7ecde">geopm::GlobalPolicy</a>
 </li>
+<li>m_key_map
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#a9e5b415b100dad08b18c96caf7262d79">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
+<li>m_key_map_last
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#a1bc51e9329bf0c1e27409fd392dbee2d">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
+<li>m_key_map_lock
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#aecbf3ac59fb5510c0e03c3011c9e7e3a">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
+<li>m_key_set
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#aac512880bd1c9ee9b63cfe1a8292e752">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
 <li>m_last_policy
-: <a class="el" href="classgeopm_1_1_controller.html#ad868abee179998b79a040a1462e1b434">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_region.html#a8597eee1674d71eb5c99022a9e77fc15">geopm::Region</a>
 </li>
 <li>m_leaf_decider
-: <a class="el" href="classgeopm_1_1_controller.html#a6128ccd70b5e2231bc8b087fd19ec529">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_controller.html#a288954b2fd72438f0003a0a2e7ed2767">geopm::Controller</a>
 </li>
 <li>m_level
 : <a class="el" href="classgeopm_1_1_platform.html#a9bd8fc952a3501f70b8cd4572b3298e5">geopm::Platform</a>
 , <a class="el" href="classgeopm_1_1_tree_communicator.html#abae91f113f478e4e9a7e2495591382c7">geopm::TreeCommunicator</a>
 </li>
+<li>m_logical_cpus
+: <a class="el" href="classgeopm_1_1_platform_imp.html#a496582d5e634ac362f8e09ff07e079ee">geopm::PlatformImp</a>
+</li>
+<li>m_mask
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#a821d6f2ffcad9ddb3147395d51612cae">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
 <li>m_max_dram_watts
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#af43c06e7f68400e7202367f1d70edc20">geopm::HSXPlatformImp</a>
 , <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a3e8bef110ecb42db76ca48234f635b00">geopm::IVTPlatformImp</a>
+</li>
+<li>m_max_fanout
+: <a class="el" href="classgeopm_1_1_controller.html#af2c04c55dea5c648b4c129219defcfac">geopm::Controller</a>
 </li>
 <li>m_max_pkg_watts
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a786784c641b220130ce690460cd5d262">geopm::HSXPlatformImp</a>
@@ -243,6 +302,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>m_mode
 : <a class="el" href="classgeopm_1_1_global_policy.html#ada7cdb5d94ac53ad0a6d67a37abd5769">geopm::GlobalPolicy</a>
+, <a class="el" href="classgeopm_1_1_policy.html#a96fd7758139454b32cfadd729c644493">geopm::Policy</a>
 </li>
 <li>m_msr_offset_map
 : <a class="el" href="classgeopm_1_1_platform_imp.html#ac3428cd77f42ba1e24180b011d97c9cc">geopm::PlatformImp</a>
@@ -250,32 +310,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_msr_path
 : <a class="el" href="classgeopm_1_1_platform_imp.html#a9cecff1fd9fb4ec00104b487d9a3ac45">geopm::PlatformImp</a>
 </li>
-<li>m_name
-: <a class="el" href="classgeopm_1_1_phase.html#ad916f42764c1d580906133f9a3410afd">geopm::Phase</a>
-, <a class="el" href="classgeopm_1_1_profile.html#a691a0af71ca6df47adf040c03fcb340a">geopm::Profile</a>
-</li>
-<li>m_num_children
-: <a class="el" href="classgeopm_1_1_tree_decider.html#a14b8a76203054ae22706d4d1bed8e6dd">geopm::TreeDecider</a>
+<li>m_name_set
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a83e2b3f582ea5b9309d78caeffd53305">geopm::ProfileRankSampler</a>
 </li>
 <li>m_num_cpu
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a78e951376a581f6e54ae0fca369925e2">geopm::PlatformImp</a>
-, <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a022837f98b358e3ddaa0de9d857abbcd">geopm::RAPLPlatform</a>
+: <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a022837f98b358e3ddaa0de9d857abbcd">geopm::RAPLPlatform</a>
 </li>
 <li>m_num_domains
 : <a class="el" href="classgeopm_1_1_platform.html#ad99515ee2f50d2d1ce1e788cf451ca56">geopm::Platform</a>
+</li>
+<li>m_num_enter
+: <a class="el" href="classgeopm_1_1_profile.html#a1db6ed50d5f09fc59c82508d23e35d19">geopm::Profile</a>
 </li>
 <li>m_num_level
 : <a class="el" href="classgeopm_1_1_tree_communicator.html#a240e3d2688561ae94681fdb2fac88b02">geopm::TreeCommunicator</a>
 </li>
 <li>m_num_package
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a7636adb42d27924a2be4a023531f349a">geopm::PlatformImp</a>
-, <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a8dc996cf7fff27d46beffa050b38f197">geopm::RAPLPlatform</a>
+: <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a8dc996cf7fff27d46beffa050b38f197">geopm::RAPLPlatform</a>
 </li>
-<li>m_num_tile
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a3b6035e8294867fa99577ffd440ee5be">geopm::PlatformImp</a>
+<li>m_num_progress
+: <a class="el" href="classgeopm_1_1_profile.html#a0f24f35044e78a305c7e8610511b69c3">geopm::Profile</a>
+</li>
+<li>m_num_sample
+: <a class="el" href="classgeopm_1_1_policy.html#a901df73a1a0cfa9f04df390af818ccc2">geopm::Policy</a>
 </li>
 <li>m_obs
-: <a class="el" href="classgeopm_1_1_phase.html#a4e58e09cd6c4208b76a9b3df950d46df">geopm::Phase</a>
+: <a class="el" href="classgeopm_1_1_region.html#ab6406ace3a8b23ced7cc976a391e02f0">geopm::Region</a>
 </li>
 <li>m_observe_msr_offsets
 : <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a23a720d93d013b7a8596399eef579859">geopm::RAPLPlatform</a>
@@ -283,21 +343,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_out_config
 : <a class="el" href="classgeopm_1_1_global_policy.html#ac5ebccb0863f33dc471de81c29ca70e6">geopm::GlobalPolicy</a>
 </li>
-<li>m_phase
-: <a class="el" href="classgeopm_1_1_controller.html#a65a6d506a04716e721c523804895f582">geopm::Controller</a>
-</li>
-<li>m_phase_policy_msg_map
-: <a class="el" href="classgeopm_1_1_decider.html#a5dacd21de2cf41a017bd02cf8104de5c">geopm::Decider</a>
+<li>m_packages
+: <a class="el" href="classgeopm_1_1_platform_imp.html#af162f71cc3b87b2550acdf3c40ce45a0">geopm::PlatformImp</a>
 </li>
 <li>m_platform
-: <a class="el" href="classgeopm_1_1_controller.html#a0699352fbd493f9146c72749030f8052">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_controller.html#a061adb8f9b697b20c200c547e9b679db">geopm::Controller</a>
+</li>
+<li>m_platform_factory
+: <a class="el" href="classgeopm_1_1_controller.html#adb73712010487454c92ef4694570bffc">geopm::Controller</a>
 </li>
 <li>m_platform_id
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a3ad92dfc8ef849ba1f65c2fae8bcd922">geopm::HSXPlatformImp</a>
 , <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a1b5b50d6f856d4537f8d766ec6b937b6">geopm::IVTPlatformImp</a>
 </li>
 <li>m_policy
-: <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a63c68e3d6f06e65a32285b88ebd0ad23">geopm::TreeCommunicatorLevel</a>
+: <a class="el" href="classgeopm_1_1_region.html#a14bbd326e1edcc94318e0f7eeb1ce72b">geopm::Region</a>
+, <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a63c68e3d6f06e65a32285b88ebd0ad23">geopm::TreeCommunicatorLevel</a>
 </li>
 <li>m_policy_mailbox
 : <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a78571209b749e2b41f59f9f8e9cb460e">geopm::TreeCommunicatorLevel</a>
@@ -325,14 +386,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a8d57cd1df1795aeffa589b0ea53a8853">geopm::HSXPlatformImp</a>
 , <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ae042cbdc642c6fa4312647c958c34cb7">geopm::IVTPlatformImp</a>
 </li>
-<li>m_profile
-: <a class="el" href="classgeopm_1_1_controller.html#a034e4114e6789d71a35257c4d0134f16">geopm::Controller</a>
+<li>m_prof_name
+: <a class="el" href="classgeopm_1_1_profile.html#a018a100fe7d6d9634b1c36ccaf493b1c">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a8632a338c663f79b6d292a8ff19b7ce0">geopm::ProfileRankSampler</a>
+</li>
+<li>m_progress
+: <a class="el" href="classgeopm_1_1_profile.html#a065ce30f8fb9a9ba2181916ae7135338">geopm::Profile</a>
+</li>
+<li>m_ptr
+: <a class="el" href="classgeopm_1_1_shared_memory.html#a7b59dd4ac6effe6a03e8e2aed3af6bf7">geopm::SharedMemory</a>
+, <a class="el" href="classgeopm_1_1_shared_memory_user.html#a55174e81747135044e3bca624859e9de">geopm::SharedMemoryUser</a>
 </li>
 <li>m_rank
-: <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a9779608c7d53269c4b7a49df25caf7c1">geopm::TreeCommunicatorLevel</a>
+: <a class="el" href="classgeopm_1_1_profile.html#a61529110bd308c1abcaeecbf7e01dafb">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a9779608c7d53269c4b7a49df25caf7c1">geopm::TreeCommunicatorLevel</a>
 </li>
-<li>m_sample_key
-: <a class="el" href="classgeopm_1_1_profile.html#ac019932184b7df51d8e0ff4326c30f31">geopm::Profile</a>
+<li>m_rank_sampler
+: <a class="el" href="classgeopm_1_1_profile_sampler.html#ad2fdfb1a369caea530056d6c845ab00d">geopm::ProfileSampler</a>
+</li>
+<li>m_region
+: <a class="el" href="classgeopm_1_1_controller.html#abc02384c6bb6287aa452554a0fb257c0">geopm::Controller</a>
+</li>
+<li>m_region_entry
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ae414bb75ffa52407d4c366f37205b9a7">geopm::ProfileRankSampler</a>
+</li>
+<li>m_region_policy_msg_map
+: <a class="el" href="classgeopm_1_1_decider.html#abfdd6e69b59ff5cf86878824c851122f">geopm::Decider</a>
+</li>
+<li>m_report_name
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a78df1945cacd2e6d294e9032ab1a1d13">geopm::ProfileRankSampler</a>
 </li>
 <li>m_sample_mailbox
 : <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a65725592fab28c822568a803fa16f9d0">geopm::TreeCommunicatorLevel</a>
@@ -341,23 +423,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_tree_communicator.html#a82c217b1b421adcf43f90b7238ba1522">geopm::TreeCommunicator</a>
 , <a class="el" href="classgeopm_1_1_tree_communicator_level.html#aed121956a8df676b0ef94a5f5bef32dd">geopm::TreeCommunicatorLevel</a>
 </li>
-<li>m_sample_reduce
-: <a class="el" href="classgeopm_1_1_profile.html#a8c82c0fafd495644eb3023745f859093">geopm::Profile</a>
-</li>
 <li>m_sample_request
 : <a class="el" href="classgeopm_1_1_tree_communicator_level.html#ac7efd914833744412942e31fa56a82ab">geopm::TreeCommunicatorLevel</a>
+</li>
+<li>m_sampler
+: <a class="el" href="classgeopm_1_1_controller.html#acb8a5a7efc1a39ee72780f81d054a220">geopm::Controller</a>
+</li>
+<li>m_shm_comm
+: <a class="el" href="classgeopm_1_1_profile.html#a20a92efed06f2089b91e5a0f781fc6d9">geopm::Profile</a>
+</li>
+<li>m_shm_key
+: <a class="el" href="classgeopm_1_1_shared_memory.html#af59b325cbf268d877543ad580213f28c">geopm::SharedMemory</a>
+, <a class="el" href="classgeopm_1_1_shared_memory_user.html#adfe3890ad56cfe58343c92cad1bfb9c6">geopm::SharedMemoryUser</a>
+</li>
+<li>m_shm_rank
+: <a class="el" href="classgeopm_1_1_profile.html#a9e908c5cd7dc553fe37a0f31f1f30699">geopm::Profile</a>
 </li>
 <li>m_signal_names
 : <a class="el" href="classgeopm_1_1_power_model.html#ad943e908f51702c1aeb3d321115805ae">geopm::PowerModel</a>
 </li>
 <li>m_size
-: <a class="el" href="classgeopm_1_1_tree_communicator_level.html#aef5645ccdc5d8e069c157e11f56f71f7">geopm::TreeCommunicatorLevel</a>
+: <a class="el" href="classgeopm_1_1_shared_memory.html#a71b9a74a5a0fd4c6b8b548817fec43b9">geopm::SharedMemory</a>
+, <a class="el" href="classgeopm_1_1_shared_memory_user.html#a86e9743931db64177c366be25f515946">geopm::SharedMemoryUser</a>
+, <a class="el" href="classgeopm_1_1_tree_communicator_level.html#aef5645ccdc5d8e069c157e11f56f71f7">geopm::TreeCommunicatorLevel</a>
 </li>
 <li>m_split_policy
-: <a class="el" href="classgeopm_1_1_controller.html#a462cd1f5503f27d110614564a17426ff">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_region.html#ab1e7b7c83ed0001786ba16aa1ab21eb8">geopm::Region</a>
+</li>
+<li>m_table
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#a1f4a287806cbc567ae1827bc73458dbb">geopm::LockingHashTable&lt; type &gt;</a>
+, <a class="el" href="classgeopm_1_1_profile.html#ac9d231da3565339273939a54fc752bb3">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a9f919b316ec2dd42e018c0de9334d370">geopm::ProfileRankSampler</a>
+</li>
+<li>m_table_buffer
+: <a class="el" href="classgeopm_1_1_profile.html#ae8963688f134e9bb9387694212f1c08d">geopm::Profile</a>
+</li>
+<li>m_table_length
+: <a class="el" href="classgeopm_1_1_locking_hash_table.html#a2a496a0cfd9edd2462398d245cc3d7c9">geopm::LockingHashTable&lt; type &gt;</a>
+</li>
+<li>m_table_shmem
+: <a class="el" href="classgeopm_1_1_profile.html#a9ad34df0dc5bac8298a7fa648d4db7bf">geopm::Profile</a>
+, <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a4348a96bb0a507cd6b608d80e304f994">geopm::ProfileRankSampler</a>
+</li>
+<li>m_table_size
+: <a class="el" href="classgeopm_1_1_profile_sampler.html#a028032c7686114bce1082e6616357139">geopm::ProfileSampler</a>
 </li>
 <li>m_target
 : <a class="el" href="classgeopm_1_1_policy.html#aed035ed706e87a2c2a3dd08df14e39d4">geopm::Policy</a>
+</li>
+<li>m_tiles
+: <a class="el" href="classgeopm_1_1_platform_imp.html#a44082c159720b0e3d00fc19b3e0ff484">geopm::PlatformImp</a>
+</li>
+<li>m_time_zero
+: <a class="el" href="classgeopm_1_1_controller.html#a0f90c803bdc18946546be53061026350">geopm::Controller</a>
 </li>
 <li>m_topology
 : <a class="el" href="classgeopm_1_1_platform_imp.html#ae4f2f56f40e9ed014b009a78902f87ee">geopm::PlatformImp</a>
@@ -366,7 +484,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_controller.html#ad21f1d3f41803ae9429c05b0f1ebe092">geopm::Controller</a>
 </li>
 <li>m_tree_decider
-: <a class="el" href="classgeopm_1_1_controller.html#af908d08cf6544053f104bf60dd6a5be0">geopm::Controller</a>
+: <a class="el" href="classgeopm_1_1_controller.html#a7713f9ae4e908617f15b671ffa22de4d">geopm::Controller</a>
 </li>
 <li>m_updated
 : <a class="el" href="classgeopm_1_1_policy.html#afcc7fc8dce687840bbc242f1c897e36c">geopm::Policy</a>
@@ -405,6 +523,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>mpi_type_destroy()
 : <a class="el" href="classgeopm_1_1_tree_communicator.html#a373ccac40c8ab7ed1cab85081726c921">geopm::TreeCommunicator</a>
+</li>
+<li>msr_offset()
+: <a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">geopm::PlatformImp</a>
+</li>
+<li>msr_path()
+: <a class="el" href="classgeopm_1_1_platform_imp.html#abc7d023d5cb5897267967645c0e9510a">geopm::PlatformImp</a>
 </li>
 </ul>
 </div><!-- contents -->

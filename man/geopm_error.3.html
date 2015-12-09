@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopm_error(3) - geopm error handling</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#ERRORS-NUMBERS">ERRORS NUMBERS</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopm_error(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopm_error(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopm_error</code> - <span class="man-whatis">geopm error handling</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><strong>#include <a href="https://github.com/geopm/geopm/blob/dev/src/">&lt;geopm_error.h></a></strong></p>
+
+<p><code>Link with -lgeopm (MPI) or -lgeopmpolicy (non-MPI)</code></p>
+
+<dl>
+<dt><code>void geopm_error_message(</code></dt><dd><code>int</code> <em>err</em>, <br />
+<code>char *</code><em>msg</em>, <br />
+<code>size_t</code> <em>size</em>);</dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>All <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> C APIs which can have an error condition occur during
+runtime return an error number.  This is the way <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> handles
+errors, and almost all of the interfaces behave this way.  This man page
+describes how to interpret these returned error codes.  A returned error
+number of zero by a geopm API indicates success.  If the error number returned
+by a geopm API is positive then this indicates a generic system error, and if
+the error number is negative this indicates a <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> specific error has
+occurred.  Any non-zero error number can be converted into a descriptive string
+with the <strong>geopm_error_message()</strong> function.  The GEOPM specific error numbers
+are enumerated in the <em>geopm_error.h</em> header file and they are described below.
+The system error numbers are documented in the <strong><a class="man-ref" href="http://linux.die.net/man/3/errno">errno<span class="s">(3)</span></a></strong> man page.</p>
+
+<h2 id="ERRORS-NUMBERS">ERRORS NUMBERS</h2>
+
+<dl>
+<dt><code>GEOPM_ERROR_RUNTIME = -1</code></dt><dd><p>Runtime error</p></dd>
+<dt><code>GEOPM_ERROR_LOGIC = -2</code></dt><dd><p>Logic error</p></dd>
+<dt><code>GEOPM_ERROR_INVALID = -3</code></dt><dd><p>Invalid argument</p></dd>
+<dt><code>GEOPM_ERROR_POLICY_NULL = -4</code></dt><dd><p>The <code>geopm_policy_c</code> pointer is NULL, use <code>geopm_policy_create</code>()</p></dd>
+<dt><code>GEOPM_ERROR_FILE_PARSE = -5</code></dt><dd><p>Unable to parse input file</p></dd>
+<dt><code>GEOPM_ERROR_LEVEL_RANGE = -6</code></dt><dd><p>Control hierarchy level is out of range</p></dd>
+<dt><code>GEOPM_ERROR_CTL_COMM = -7</code></dt><dd><p>Communication error in control hierarchy</p></dd>
+<dt><code>GEOPM_ERROR_SAMPLE_INCOMPLETE = -8</code></dt><dd><p>All children have not sent all samples</p></dd>
+<dt><code>GEOPM_ERROR_POLICY_UNKNOWN = -9</code></dt><dd><p>No policy has been set</p></dd>
+<dt><code>GEOPM_ERROR_NOT_IMPLEMENTED = -10</code></dt><dd><p>Feature not yet implemented</p></dd>
+<dt><code>GEOPM_ERROR_NOT_TESTED = -11</code></dt><dd><p>Feature not yet tested</p></dd>
+<dt><code>GEOPM_ERROR_PLATFORM_UNSUPPORTED = -12</code></dt><dd><p>Current platform not supported or unrecognized</p></dd>
+<dt><code>GEOPM_ERROR_MSR_OPEN = -13</code></dt><dd><p>Could not open MSR device</p></dd>
+<dt><code>GEOPM_ERROR_MSR_READ = -14</code></dt><dd><p>Could not read from MSR device</p></dd>
+<dt><code>GEOPM_ERROR_MSR_WRITE = -15</code></dt><dd><p>Could not write to MSR device</p></dd>
+<dt><code>GEOPM_ERROR_OPENMP_UNSUPPORTED = -16</code></dt><dd><p>Not compiled with support for OpenMP</p></dd>
+<dt><code>GEOPM_ERROR_PROF_NULL = -17</code></dt><dd><p>The <code>geopm_prof_c</code> pointer is NULL, use <code>geopm_prof_create</code>()</p></dd>
+<dt><code>GEOPM_ERROR_DECIDER_UNSUPPORTED = -18</code></dt><dd><p>Specified decider not supported or unrecognized</p></dd>
+<dt><code>GEOPM_ERROR_FACTORY_NULL = -19</code></dt><dd><p>The <code>geopm_factory_c</code> pointer is NULL, pass in a valid factory object</p></dd>
+<dt><code>GEOPM_ERROR_SHUTDOWN = -20</code></dt><dd><p>Shutdown policy has been signaled</p></dd>
+</dl>
+
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong>
+<strong><a class="man-ref" href="http://linux.die.net/man/3/errno">errno<span class="s">(3)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>January 2016</li>
+    <li class='tr'>geopm_error(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<map id="src/geopm_message.h" name="src/geopm_message.h">
+<area shape="rect" id="node2" href="$geopm_8h.html" title="src/geopm.h" alt="" coords="91,79,186,104"/>
+<area shape="rect" id="node5" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="227,152,333,177"/>
+<area shape="rect" id="node6" href="$_tree_communicator_8hpp.html" title="src/TreeCommunicator.hpp" alt="" coords="408,79,589,104"/>
+<area shape="rect" id="node7" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="620,519,746,544"/>
+<area shape="rect" id="node8" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="459,152,640,177"/>
+<area shape="rect" id="node9" href="$_region_8hpp.html" title="src/Region.hpp" alt="" coords="1103,152,1214,177"/>
+<area shape="rect" id="node10" href="$_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="1127,299,1246,324"/>
+<area shape="rect" id="node12" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="745,445,887,471"/>
+<area shape="rect" id="node13" href="$_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="961,445,1079,471"/>
+<area shape="rect" id="node18" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="1946,445,2059,471"/>
+<area shape="rect" id="node20" href="$_governing_decider_8cpp.html" title="src/GoverningDecider.cpp" alt="" coords="1878,519,2053,544"/>
+<area shape="rect" id="node22" href="$_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="1338,445,1491,471"/>
+<area shape="rect" id="node26" href="$_policy_8hpp.html" title="src/Policy.hpp" alt="" coords="1294,79,1397,104"/>
+<area shape="rect" id="node28" href="$_global_policy_8hpp.html" title="src/GlobalPolicy.hpp" alt="" coords="714,79,856,104"/>
+<area shape="rect" id="node29" href="$_profile_8hpp.html" title="src/Profile.hpp" alt="" coords="277,79,384,104"/>
+<area shape="rect" id="node30" href="$geopm__policy__message_8c.html" title="src/geopm_policy_message.c" alt="" coords="2134,79,2330,104"/>
+<area shape="rect" id="node31" href="$geopmpolicy__main_8c.html" title="src/geopmpolicy_main.c" alt="" coords="2354,79,2518,104"/>
+<area shape="rect" id="node3" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="281,592,407,617"/>
+<area shape="rect" id="node4" href="$geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="42,152,203,177"/>
+<area shape="rect" id="node21" href="$_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="1338,372,1491,397"/>
+<area shape="rect" id="node23" href="$_power_model_8hpp.html" title="src/PowerModel.hpp" alt="" coords="1290,225,1433,251"/>
+<area shape="rect" id="node25" href="$_region_8cpp.html" title="src/Region.cpp" alt="" coords="1105,225,1215,251"/>
+<area shape="rect" id="node11" href="$_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="1106,372,1268,397"/>
+<area shape="rect" id="node15" href="$_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="1639,372,1753,397"/>
+<area shape="rect" id="node14" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="1153,445,1314,471"/>
+<area shape="rect" id="node16" href="$_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="1514,445,1672,471"/>
+<area shape="rect" id="node17" href="$_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="1572,519,1729,544"/>
+<area shape="rect" id="node19" href="$_governing_decider_8hpp.html" title="src/GoverningDecider.hpp" alt="" coords="1747,445,1922,471"/>
+<area shape="rect" id="node24" href="$_power_model_8cpp.html" title="src/PowerModel.cpp" alt="" coords="1290,299,1432,324"/>
+<area shape="rect" id="node27" href="$_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="1559,152,1662,177"/>
+</map>

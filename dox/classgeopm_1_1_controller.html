@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -97,45 +98,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Class used to launch or step the global energy optimization power management algorithm.  
+ <a href="classgeopm_1_1_controller.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_controller_8hpp_source.html">Controller.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for geopm::Controller:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_controller__coll__graph.png" border="0" usemap="#geopm_1_1_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_controller_coll__map" id="geopm_1_1_controller_coll__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_global_policy.html" title="geopm::GlobalPolicy" alt="" coords="36,192,179,217"/>
-<area shape="rect" id="node5" href="classgeopm_1_1_tree_communicator.html" title="geopm::TreeCommunicator" alt="" coords="124,279,307,304"/>
-<area shape="rect" id="node3" href="structgeopm__policy__shmem__s.html" title="geopm_policy_shmem_s" alt="" coords="23,92,192,117"/>
-<area shape="rect" id="node4" href="structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="18,5,197,31"/>
-<area shape="rect" id="node6" href="classgeopm_1_1_profile.html" title="geopm::Profile" alt="" coords="331,279,439,304"/>
-<area shape="rect" id="node7" href="classgeopm_1_1_leaf_decider.html" title="geopm::LeafDecider" alt="" coords="462,279,604,304"/>
-<area shape="rect" id="node8" href="classgeopm_1_1_decider.html" title="geopm::Decider" alt="" coords="475,192,591,217"/>
+<area shape="rect" id="node2" href="structgeopm__time__s.html" title="geopm_time_s" alt="" coords="1012,10,1121,35"/>
+<area shape="rect" id="node3" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im..." alt="" coords="688,171,807,197"/>
+<area shape="rect" id="node4" href="classgeopm_1_1_region.html" title="This class encapsulates all state data for a specific application execution region. " alt="" coords="346,158,457,183"/>
+<area shape="rect" id="node5" href="structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="5,85,185,110"/>
+<area shape="rect" id="node11" href="structgeopm__policy__shmem__s.html" title="geopm_policy_shmem_s" alt="" coords="317,66,486,91"/>
+<area shape="rect" id="node6" href="classgeopm_1_1_policy.html" title="geopm::Policy" alt="" coords="42,151,147,177"/>
+<area shape="rect" id="node7" href="classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="24,201,166,226"/>
+<area shape="rect" id="node8" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="331,225,472,250"/>
+<area shape="rect" id="node9" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="9,250,181,275"/>
+<area shape="rect" id="node10" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g..." alt="" coords="676,66,819,91"/>
+<area shape="rect" id="node17" href="classgeopm_1_1_tree_communicator.html" title="Class which enables inter&#45;process communication for geopm. " alt="" coords="975,59,1158,85"/>
+<area shape="rect" id="node12" href="classgeopm_1_1_platform_factory.html" title="Provides a factory abstraction for creating Platform/PlatformImp pairs suitable for the specific hard..." alt="" coords="985,233,1149,258"/>
+<area shape="rect" id="node13" href="classgeopm_1_1_decider_factory.html" title="geopm::DeciderFactory" alt="" coords="987,282,1147,307"/>
+<area shape="rect" id="node14" href="classgeopm_1_1_profile_sampler.html" title="Retrieves sample data from the set of application ranks on a single node. " alt="" coords="988,331,1145,357"/>
+<area shape="rect" id="node15" href="structgeopm__ctl__message__s.html" title="geopm_ctl_message_s" alt="" coords="668,306,827,331"/>
+<area shape="rect" id="node16" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="667,355,828,381"/>
+<area shape="rect" id="node18" href="classgeopm_1_1_decider.html" title="geopm::Decider" alt="" coords="1009,381,1124,406"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50658bb47e56a5c6d3bfe3036a5bb764"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a50658bb47e56a5c6d3bfe3036a5bb764">Controller</a> (const <a class="el" href="classgeopm_1_1_global_policy.html">GlobalPolicy</a> *global_policy, const <a class="el" href="classgeopm_1_1_profile.html">Profile</a> *profile, MPI_Comm comm)</td></tr>
-<tr class="separator:a50658bb47e56a5c6d3bfe3036a5bb764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29782bf611a1061384f799b9a0ab74e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a29782bf611a1061384f799b9a0ab74e2">Controller</a> (const <a class="el" href="classgeopm_1_1_global_policy.html">GlobalPolicy</a> *global_policy, const std::string &amp;shmem_base, MPI_Comm comm)</td></tr>
+<tr class="memdesc:a29782bf611a1061384f799b9a0ab74e2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> constructor.  <a href="#a29782bf611a1061384f799b9a0ab74e2">More...</a><br /></td></tr>
+<tr class="separator:a29782bf611a1061384f799b9a0ab74e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7120bc7bc5c6b006f259f72c59c40ca"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#aa7120bc7bc5c6b006f259f72c59c40ca">~Controller</a> ()</td></tr>
+<tr class="memdesc:aa7120bc7bc5c6b006f259f72c59c40ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> destructor, virtual.  <a href="#aa7120bc7bc5c6b006f259f72c59c40ca">More...</a><br /></td></tr>
 <tr class="separator:aa7120bc7bc5c6b006f259f72c59c40ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3c838ec3b608643e5b2a86227eeb4cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ab3c838ec3b608643e5b2a86227eeb4cf">run</a> (void)</td></tr>
+<tr class="memdesc:ab3c838ec3b608643e5b2a86227eeb4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run control algorithm.  <a href="#ab3c838ec3b608643e5b2a86227eeb4cf">More...</a><br /></td></tr>
 <tr class="separator:ab3c838ec3b608643e5b2a86227eeb4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ba16e56cfb95c8216d1d715bb860c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a7ba16e56cfb95c8216d1d715bb860c19">step</a> (void)</td></tr>
+<tr class="memdesc:a7ba16e56cfb95c8216d1d715bb860c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute one step in the hierarchical control algorithm.  <a href="#a7ba16e56cfb95c8216d1d715bb860c19">More...</a><br /></td></tr>
 <tr class="separator:a7ba16e56cfb95c8216d1d715bb860c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4623ffb30c3c735b7928f5abe7efe8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ac4623ffb30c3c735b7928f5abe7efe8a">pthread</a> (const pthread_attr_t *attr, pthread_t *thread)</td></tr>
+<tr class="memdesc:ac4623ffb30c3c735b7928f5abe7efe8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run control algorithm as a separate thread.  <a href="#ac4623ffb30c3c735b7928f5abe7efe8a">More...</a><br /></td></tr>
 <tr class="separator:ac4623ffb30c3c735b7928f5abe7efe8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc4e542b0bb2e87b217f5101dfaf07e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#aadc4e542b0bb2e87b217f5101dfaf07e">spawn</a> (void)</td></tr>
+<tr class="memdesc:aadc4e542b0bb2e87b217f5101dfaf07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run control algorithm on a separate MPI communicator.  <a href="#aadc4e542b0bb2e87b217f5101dfaf07e">More...</a><br /></td></tr>
 <tr class="separator:aadc4e542b0bb2e87b217f5101dfaf07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7322e7fd31287686d55a3df1e97b8c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ac7322e7fd31287686d55a3df1e97b8c1">num_level</a> (void)</td></tr>
-<tr class="separator:ac7322e7fd31287686d55a3df1e97b8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacbafea5516ec9a120a3b52e26373a3d"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#aacbafea5516ec9a120a3b52e26373a3d">leaf_decider</a> (const <a class="el" href="classgeopm_1_1_leaf_decider.html">LeafDecider</a> *leaf_decider)</td></tr>
-<tr class="separator:aacbafea5516ec9a120a3b52e26373a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f701b94fde7480dc207e5cb9b8d712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ad6f701b94fde7480dc207e5cb9b8d712">tree_decider</a> (int level, const <a class="el" href="classgeopm_1_1_tree_decider.html">TreeDecider</a> *tree_decider)</td></tr>
-<tr class="separator:ad6f701b94fde7480dc207e5cb9b8d712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5dd95469384f3bfe4cf0c3ea592456"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a5f5dd95469384f3bfe4cf0c3ea592456">num_level</a> (void) const </td></tr>
+<tr class="memdesc:a5f5dd95469384f3bfe4cf0c3ea592456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of levels in the control hierarchy.  <a href="#a5f5dd95469384f3bfe4cf0c3ea592456">More...</a><br /></td></tr>
+<tr class="separator:a5f5dd95469384f3bfe4cf0c3ea592456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3be45993aaee2ce1fcf50bf9df8ea071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a3be45993aaee2ce1fcf50bf9df8ea071">leaf_decider</a> (const <a class="el" href="classgeopm_1_1_leaf_decider.html">LeafDecider</a> *leaf_decider)</td></tr>
+<tr class="separator:a3be45993aaee2ce1fcf50bf9df8ea071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f701b94fde7480dc207e5cb9b8d712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ad6f701b94fde7480dc207e5cb9b8d712">tree_decider</a> (int level, const <a class="el" href="classgeopm_1_1_tree_decider.html">TreeDecider</a> *tree_decider)</td></tr>
+<tr class="separator:ad6f701b94fde7480dc207e5cb9b8d712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50210231b56b3b1c67ff66c51f76011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ad50210231b56b3b1c67ff66c51f76011">process_samples</a> (const int level, const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;sample)</td></tr>
+<tr class="separator:ad50210231b56b3b1c67ff66c51f76011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a69f971f19dc40619e9605b7a4cac94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a5a69f971f19dc40619e9605b7a4cac94">enforce_child_policy</a> (const int region_id, const int level, const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;policy)</td></tr>
+<tr class="separator:a5a69f971f19dc40619e9605b7a4cac94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e9a2752db6e14fb0a01fe3b6155d872"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a9e9a2752db6e14fb0a01fe3b6155d872">walk_down</a> (void)</td></tr>
 <tr class="separator:a9e9a2752db6e14fb0a01fe3b6155d872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18c42538180d99b9d874f88ab840b0c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a18c42538180d99b9d874f88ab840b0c2">walk_up</a> (void)</td></tr>
@@ -143,31 +168,40 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a7b63ed01701b82fa53146eec4a33f62c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a7b63ed01701b82fa53146eec4a33f62c">m_is_node_root</a></td></tr>
+<tr class="separator:a7b63ed01701b82fa53146eec4a33f62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c04c55dea5c648b4c129219defcfac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#af2c04c55dea5c648b4c129219defcfac">m_max_fanout</a></td></tr>
+<tr class="separator:af2c04c55dea5c648b4c129219defcfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f90c803bdc18946546be53061026350"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a0f90c803bdc18946546be53061026350">m_time_zero</a></td></tr>
+<tr class="separator:a0f90c803bdc18946546be53061026350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb7dfc43a0aba914f0b14ad3b08d821"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#afcb7dfc43a0aba914f0b14ad3b08d821">m_fan_out</a></td></tr>
 <tr class="separator:afcb7dfc43a0aba914f0b14ad3b08d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1fa25f7bbb4fffea059692b1621af73"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgeopm_1_1_global_policy.html">GlobalPolicy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#af1fa25f7bbb4fffea059692b1621af73">m_global_policy</a></td></tr>
 <tr class="separator:af1fa25f7bbb4fffea059692b1621af73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034e4114e6789d71a35257c4d0134f16"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgeopm_1_1_profile.html">Profile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a034e4114e6789d71a35257c4d0134f16">m_profile</a></td></tr>
-<tr class="separator:a034e4114e6789d71a35257c4d0134f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad21f1d3f41803ae9429c05b0f1ebe092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_tree_communicator.html">TreeCommunicator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ad21f1d3f41803ae9429c05b0f1ebe092">m_tree_comm</a></td></tr>
 <tr class="separator:ad21f1d3f41803ae9429c05b0f1ebe092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af908d08cf6544053f104bf60dd6a5be0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classgeopm_1_1_tree_decider.html">TreeDecider</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#af908d08cf6544053f104bf60dd6a5be0">m_tree_decider</a></td></tr>
-<tr class="separator:af908d08cf6544053f104bf60dd6a5be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6128ccd70b5e2231bc8b087fd19ec529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_leaf_decider.html">LeafDecider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a6128ccd70b5e2231bc8b087fd19ec529">m_leaf_decider</a></td></tr>
-<tr class="separator:a6128ccd70b5e2231bc8b087fd19ec529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0699352fbd493f9146c72749030f8052"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classgeopm_1_1_platform.html">Platform</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a0699352fbd493f9146c72749030f8052">m_platform</a></td></tr>
-<tr class="separator:a0699352fbd493f9146c72749030f8052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a6d506a04716e721c523804895f582"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::map&lt; long, <a class="el" href="classgeopm_1_1_phase.html">Phase</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a65a6d506a04716e721c523804895f582">m_phase</a></td></tr>
-<tr class="separator:a65a6d506a04716e721c523804895f582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462cd1f5503f27d110614564a17426ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a462cd1f5503f27d110614564a17426ff">m_split_policy</a></td></tr>
-<tr class="separator:a462cd1f5503f27d110614564a17426ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2448eba47f3bd67755ead01aa519cf6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#aa2448eba47f3bd67755ead01aa519cf6">m_child_sample</a></td></tr>
-<tr class="separator:aa2448eba47f3bd67755ead01aa519cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad868abee179998b79a040a1462e1b434"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ad868abee179998b79a040a1462e1b434">m_last_policy</a></td></tr>
-<tr class="separator:ad868abee179998b79a040a1462e1b434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7713f9ae4e908617f15b671ffa22de4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classgeopm_1_1_decider.html">Decider</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a7713f9ae4e908617f15b671ffa22de4d">m_tree_decider</a></td></tr>
+<tr class="separator:a7713f9ae4e908617f15b671ffa22de4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288954b2fd72438f0003a0a2e7ed2767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a288954b2fd72438f0003a0a2e7ed2767">m_leaf_decider</a></td></tr>
+<tr class="separator:a288954b2fd72438f0003a0a2e7ed2767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab205c6df7b2ded8f0e78b9a7aa5a753d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#ab205c6df7b2ded8f0e78b9a7aa5a753d">m_decider_factory</a></td></tr>
+<tr class="separator:ab205c6df7b2ded8f0e78b9a7aa5a753d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb73712010487454c92ef4694570bffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#adb73712010487454c92ef4694570bffc">m_platform_factory</a></td></tr>
+<tr class="separator:adb73712010487454c92ef4694570bffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061adb8f9b697b20c200c547e9b679db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform.html">Platform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#a061adb8f9b697b20c200c547e9b679db">m_platform</a></td></tr>
+<tr class="separator:a061adb8f9b697b20c200c547e9b679db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8a5a7efc1a39ee72780f81d054a220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_profile_sampler.html">ProfileSampler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#acb8a5a7efc1a39ee72780f81d054a220">m_sampler</a></td></tr>
+<tr class="separator:acb8a5a7efc1a39ee72780f81d054a220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc02384c6bb6287aa452554a0fb257c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::map&lt; long, <a class="el" href="classgeopm_1_1_region.html">Region</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_controller.html#abc02384c6bb6287aa452554a0fb257c0">m_region</a></td></tr>
+<tr class="separator:abc02384c6bb6287aa452554a0fb257c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a50658bb47e56a5c6d3bfe3036a5bb764"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class used to launch or step the global energy optimization power management algorithm. </p>
+<p>The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> class enables several methods of control: explicit stepping of the control algorithm by the application under control, running the control algorithm as a distinct processes from the application under control, running the control algorithm as a separate pthread owned by the application process under control, or the application under control can spawn a new MPI communicator that runs the control algorithm in conjunction with its own distinct MPI_COMM_WORLD. Each of these methods has different requirements and trade offs.</p>
+<p>The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> is the central execution class for the geopm runtime, and interacts with many other geopm classes and coordinates their actions. The controller gathers policy data from the <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a>, application profile data from the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> (through shared memory), and hardware profile information from the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a>. It uses the <a class="el" href="classgeopm_1_1_tree_communicator.html" title="Class which enables inter-process communication for geopm. ">TreeCommunicator</a> class to communicate policy and sample data between compute nodes.</p>
+<p>The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> class is the C++ implementation of the geopm_ctl_c interface. The class methods support the C interface defined for use with the geopm_ctl_c structure and are named accordingly. The geopm_ctl_c structure is an opaque reference to the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a29782bf611a1061384f799b9a0ab74e2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -180,8 +214,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgeopm_1_1_profile.html">Profile</a> *&#160;</td>
-          <td class="paramname"><em>profile</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shmem_base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,6 +230,19 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> constructor. </p>
+<p>The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> construction requires a reference to a <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> object, the shared memory key used to communicate with the application, and the MPI communicator that the controller is running on.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">global_policy</td><td>A reference to the <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> object used to configure policy for the entire allocation.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shmem_base</td><td>Shared memory key base string to which the rank ID is appended to denote the shared memory key that each computational application rank will write to.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">comm</td><td>The MPI communicator that supports the control messages. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>Do not hardcode leaf decider string. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Need to create tree decider(s) here and we need to get the name strings from the <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> object </dd></dl>
 
 </div>
 </div>
@@ -220,26 +267,76 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a> destructor, virtual. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aacbafea5516ec9a120a3b52e26373a3d"></a>
+<a class="anchor" id="a5a69f971f19dc40619e9605b7a4cac94"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const void geopm::Controller::leaf_decider </td>
+          <td class="memname">void geopm::Controller::enforce_child_policy </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>region_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3be45993aaee2ce1fcf50bf9df8ea071"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Controller::leaf_decider </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgeopm_1_1_leaf_decider.html">LeafDecider</a> *&#160;</td>
           <td class="paramname"><em>leaf_decider</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ac7322e7fd31287686d55a3df1e97b8c1"></a>
+<a class="anchor" id="a5f5dd95469384f3bfe4cf0c3ea592456"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -248,9 +345,47 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Number of levels in the control hierarchy. </p>
+<p>Returns the depth of the balanced tree used for hierarchical control. The tree always has a root and at least one set of children, so the minimum number of levels is two.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of hierarchy levels. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad50210231b56b3b1c67ff66c51f76011"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Controller::process_samples </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sample</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -279,6 +414,16 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Run control algorithm as a separate thread. </p>
+<p>Creates a POSIX thread running the control algorithm continuously until the shutdown signal is received. This is intended to be called by the application under control. With this method of launch the supporting MPI implementation must be enabled for MPI_THREAD_MULTIPLE using MPI_Init_thread().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>The POSIX thread attributes applied when thread is created.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">thread</td><td>Pointer to the POSIX thread that is created. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ab3c838ec3b608643e5b2a86227eeb4cf"></a>
@@ -294,6 +439,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Run control algorithm. </p>
+<p>Steps the control algorithm continuously until the shutdown signal is received. Since this is a blocking call that never returns, it is intended that profiling information is provided through POSIX shared memory. </p>
 
 </div>
 </div>
@@ -311,6 +459,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Run control algorithm on a separate MPI communicator. </p>
+<p>Uses MPI_Comm_spawn() to spawn a new communicator with one process per compute node. The geopmctl application will be spawned on this communicator which will communicate with the primary compute application through POSIX shared memory. </p>
+
 </div>
 </div>
 <a class="anchor" id="a7ba16e56cfb95c8216d1d715bb860c19"></a>
@@ -327,11 +478,17 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Execute one step in the hierarchical control algorithm. </p>
+<p>The call to <a class="el" href="classgeopm_1_1_controller.html#a7ba16e56cfb95c8216d1d715bb860c19" title="Execute one step in the hierarchical control algorithm. ">step()</a> is a blocking call for those processes that are the lowest MPI rank on the compute node (based on the communicator that was used to construct the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">Controller</a>) and a no-op for those that are not. A call to this method sends samples up the tree, then policies down the tree, and finally if the policy has been changed for the node of the calling process then the policy is enforced by writing MSR values. </p>
+
 </div>
 </div>
 <a class="anchor" id="ad6f701b94fde7480dc207e5cb9b8d712"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void geopm::Controller::tree_decider </td>
@@ -351,6 +508,11 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -376,6 +538,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000002">Bug:</a></b></dt><dd>Do calls to <a class="el" href="geopm__message_8h.html#ad34cef186059e1057c49bc873ebb01c8">geopm_is_policy_equal()</a> below belong inside of the <a class="el" href="classgeopm_1_1_decider.html">Decider</a>? </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000003">Bug:</a></b></dt><dd>Should m_last_policy be a <a class="el" href="classgeopm_1_1_decider.html">Decider</a> member variable? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Commenting out code here as we have not yet implemented a tree decider </dd></dl>
 
 </div>
 </div>
@@ -400,11 +565,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000004">Bug:</a></b></dt><dd>Process_samples has issues. ifdef out for now </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>We need to calculate the new per-child power budget for this region and send the new policies down to them. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>We need to sample from the application, sample from RAPL, sample from the MSRs and fuse all this data into a single sample using coherant time stamps to calculate elapsed values. We then pass this to the decider who will create a new per domain policy for the current region. Then we can enforce the policy by adjusting RAPL power domain limits. </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000005">Bug:</a></b></dt><dd>We should be getting fused samples from ???(TBD) </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aa2448eba47f3bd67755ead01aa519cf6"></a>
+<a class="anchor" id="ab205c6df7b2ded8f0e78b9a7aa5a753d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -412,7 +581,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&gt; geopm::Controller::m_child_sample</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a>* geopm::Controller::m_decider_factory</td>
         </tr>
       </table>
   </td>
@@ -464,7 +633,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad868abee179998b79a040a1462e1b434"></a>
+<a class="anchor" id="a7b63ed01701b82fa53146eec4a33f62c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -472,7 +641,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&gt; geopm::Controller::m_last_policy</td>
+          <td class="memname">bool geopm::Controller::m_is_node_root</td>
         </tr>
       </table>
   </td>
@@ -484,7 +653,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6128ccd70b5e2231bc8b087fd19ec529"></a>
+<a class="anchor" id="a288954b2fd72438f0003a0a2e7ed2767"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -492,7 +661,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_leaf_decider.html">LeafDecider</a>* geopm::Controller::m_leaf_decider</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_decider.html">Decider</a>* geopm::Controller::m_leaf_decider</td>
         </tr>
       </table>
   </td>
@@ -504,7 +673,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a65a6d506a04716e721c523804895f582"></a>
+<a class="anchor" id="af2c04c55dea5c648b4c129219defcfac"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -512,7 +681,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::map &lt;long, <a class="el" href="classgeopm_1_1_phase.html">Phase</a> *&gt; &gt; geopm::Controller::m_phase</td>
+          <td class="memname">int geopm::Controller::m_max_fanout</td>
         </tr>
       </table>
   </td>
@@ -524,7 +693,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0699352fbd493f9146c72749030f8052"></a>
+<a class="anchor" id="a061adb8f9b697b20c200c547e9b679db"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -532,7 +701,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classgeopm_1_1_platform.html">Platform</a> *&gt; geopm::Controller::m_platform</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_platform.html">Platform</a>* geopm::Controller::m_platform</td>
         </tr>
       </table>
   </td>
@@ -544,7 +713,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a034e4114e6789d71a35257c4d0134f16"></a>
+<a class="anchor" id="adb73712010487454c92ef4694570bffc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -552,7 +721,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgeopm_1_1_profile.html">Profile</a>* geopm::Controller::m_profile</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_platform_factory.html">PlatformFactory</a>* geopm::Controller::m_platform_factory</td>
         </tr>
       </table>
   </td>
@@ -564,7 +733,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a462cd1f5503f27d110614564a17426ff"></a>
+<a class="anchor" id="abc02384c6bb6287aa452554a0fb257c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -572,7 +741,47 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&gt; geopm::Controller::m_split_policy</td>
+          <td class="memname">std::vector&lt;std::map &lt;long, <a class="el" href="classgeopm_1_1_region.html">Region</a> *&gt; &gt; geopm::Controller::m_region</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb8a5a7efc1a39ee72780f81d054a220"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgeopm_1_1_profile_sampler.html">ProfileSampler</a>* geopm::Controller::m_sampler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f90c803bdc18946546be53061026350"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a> geopm::Controller::m_time_zero</td>
         </tr>
       </table>
   </td>
@@ -604,7 +813,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af908d08cf6544053f104bf60dd6a5be0"></a>
+<a class="anchor" id="a7713f9ae4e908617f15b671ffa22de4d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -612,7 +821,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classgeopm_1_1_tree_decider.html">TreeDecider</a> *&gt; geopm::Controller::m_tree_decider</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&gt; geopm::Controller::m_tree_decider</td>
         </tr>
       </table>
   </td>

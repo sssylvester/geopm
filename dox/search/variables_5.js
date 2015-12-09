@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['llc_5fvictims_5fbase',['llc_victims_base',['../structgeopm_1_1buffer__index__s.html#a4dd8c051b72e1da6faf880d52dfbefec',1,'geopm::buffer_index_s']]],
-  ['lock',['lock',['../structgeopm__policy__shmem__s.html#a48f048d7136fb484e801d9343b2dace3',1,'geopm_policy_shmem_s']]]
+  ['inst_5fretired_5fany_5fbase',['inst_retired_any_base',['../structgeopm_1_1buffer__index__s.html#afa74ca43addf45746f8f2a86f522294c',1,'geopm::buffer_index_s']]],
+  ['is_5finit',['is_init',['../structgeopm__policy__shmem__s.html#a75d6b41ce76378ffb81c7eadc79755fe',1,'geopm_policy_shmem_s::is_init()'],['../structgeopm__sample__shmem__s.html#acb7defc6bf0f80b911d13f1e4951e12c',1,'geopm_sample_shmem_s::is_init()']]]
 ];

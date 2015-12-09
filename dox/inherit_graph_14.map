@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgeopm_1_1_power_model.html" title="geopm::PowerModel" alt="" coords="5,5,149,31"/>
+<area shape="rect" id="node1" href="$classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="5,31,147,56"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_h_s_x_platform_imp.html" title="This class provides a concrete platform implementation of Haswell E processors. (cpuid 0x63F)..." alt="" coords="195,5,364,31"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_i_v_t_platform_imp.html" title="This class provides a concrete platform implementation of Sandybridge E and IvyBridge E processors..." alt="" coords="198,55,360,80"/>
 </map>

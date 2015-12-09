@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopm_prof_c(3) - geopm application profiling structure</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#ERRORS">ERRORS</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopm_prof_c(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopm_prof_c(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopm_prof_c</code> - <span class="man-whatis">geopm application profiling structure</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><strong>#include <a href="https://github.com/geopm/geopm/blob/dev/src/geopm.h">&lt;geopm.h></a></strong></p>
+
+<p><code>Link with -lgeopm</code></p>
+
+<dl>
+<dt><code>int geopm_prof_create(</code></dt><dd><p><code>const char *</code><em>name</em>, <br />
+<code>size_t</code> <em>table_size</em>, <br />
+<code>const char *</code><em>sample_key</em>, <br />
+<code>MPI_Comm</code> <em>comm</em>, <br />
+<code>struct geopm_prof_c **</code><em>prof</em>);</p></dd>
+<dt><code>int geopm_prof_destroy(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>);</p></dd>
+<dt><code>int geopm_prof_region(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>const char *</code><em>region_name</em>, <br />
+<code>long</code> <em>policy_hint</em>, <br />
+<code>uint64_t *</code><em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_enter(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>uint64_t</code> <em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_exit(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>uint64_t</code> <em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_progress(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>uint64_t</code> <em>region_id</em>, <br />
+<code>double</code> <em>fraction</em>);</p></dd>
+<dt><code>int geopm_prof_outer_sync(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>uint64_t</code> <em>region_id</em>);</p></dd>
+<dt><code>int geopm_prof_sample(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>);</p></dd>
+<dt><code>int geopm_prof_disable(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>const char *</code><em>feature_name</em>);</p></dd>
+<dt><code>int geopm_prof_print(</code></dt><dd><p><code>struct geopm_prof_c *</code><em>prof</em>, <br />
+<code>const char *</code><em>file_name</em>, <br />
+<code>int</code> <em>depth</em>);</p></dd>
+</dl>
+
+
+<p><code>HELPER FUNCTIONS:</code></p>
+
+<dl>
+<dt><code>int geopm_omp_sched_static_norm(</code></dt><dd><p><code>int</code> <em>num_iter</em>, <br />
+<code>int</code> <em>chunk_size</em>, <br />
+<code>int</code> <em>num_thread</em>, <br />
+<code>double *</code><em>norm</em>);</p></dd>
+<dt><code>double geopm_progress_threaded_min(</code></dt><dd><p><code>int</code> <em>num_thread</em>, <br />
+<code>size_t</code> <em>stride</em>, <br />
+<code>const uint32_t *</code><em>progress</em>, <br />
+<code>const double *</code><em>norm</em>);</p></dd>
+<dt><code>double geopm_progress_threaded_sum(</code></dt><dd><p><code>int</code> <em>num_thread</em>, <br />
+<code>size_t</code> <em>stride</em>, <br />
+<code>const uint32_t *</code><em>progress</em>, <br />
+<code>double</code> <em>norm</em>);</p></dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>The geopm_prof_c structure enables application profiling for geopm.
+The functions associated with he geopm_prof_c structure are described
+here.  These functions enable application feedback to the control
+algorithm for identifying regions of code, progress within regions,
+and global synchronization points in the application.  Regions of code
+define periods in the application during which control parameters are
+tuned with the expectation that control parameters for a region can be
+optimized independently of other regions.  In this way a region is
+associated with a set of control parameters which can be optimized,
+and future time intervals associated with the same region will benefit
+from the application of control parameters which were determined from
+tuning within previous occurrences of the region.  There are two
+competing motivations for defining a region within the application.
+The first is to identify a section of code that has distinct compute,
+memory or network characteristics.  The second is to avoid defining
+these regions such that they are nested within each other, as nested
+regions are ignored, and only the outer most region is used for tuning
+when nesting occurs.  Identifying progress within a region can be used
+to alleviate load imbalance in the application under the assumption
+that the region is bulk synchronous.  Under the assumption that the
+application employs an iterative algorithm which synchronizes
+periodically the user can alleviate load imbalance on larger time
+scales than the regions provide.  This is done by marking the end of
+the outer most loop, or the "outer synchronization point."</p>
+
+<dl>
+<dt><code>geopm_prof_create</code>()</dt><dd><p>creates a profile object <em>prof</em>. Requires a <em>name</em> which is
+displayed when the profile is printed.  The <em>sample_reduce</em>
+parameter determines the level of reduction that occurs when a
+sample is generated with the <code>geopm_prof_sample</code>() API.  If
+<em>sample_reduce</em> is 0, no reduction occurs when sampling and
+samples include thread specific information. If <em>sample_reduce</em> is
+1 then thread specific data is aggregated to the MPI rank level.
+If <em>sample_reduce</em> is 2 then data is aggregated to the compute
+node granularity over all MPI ranks on each compute node. If the
+<em>sample_key</em> is non-NULL then calls to <code>geopm_prof_sample</code>() will
+write the sampled data to POSIX shared memory associated with the
+given key to be read by an external control process running on the
+same compute node.</p></dd>
+<dt><code>geopm_prof_destroy</code>()</dt><dd><p>destroys all resources associated with the prof object.</p></dd>
+<dt><code>geopm_prof_register</code>()</dt><dd><p>registers an application region with the profile structure.  The
+<em>region_name</em> and <em>hint</em> are input parameters, and the <em>region_id</em>
+is returned.  If the region name has been previously registered, a
+call to this function will set the <em>region_id</em> but the state in
+the <em>prof</em> structure associated with the region is unmodified.
+The <em>region_name</em> is used to determine the output <em>region_id</em> and
+is also displayed in the profiling report to identify the region.
+The <em>hint</em> is one of the values given by the geopm_prof_hint_e
+enum defined in <em>geopm.h</em> which determines the initial control
+settings.</p></dd>
+<dt><code>geopm_prof_enter</code>()</dt><dd><p>is called by the compute application to mark the beginning of the
+profiled compute region associated with the <em>region_id</em>. If this
+call is made after entering a different region, but before exiting
+that region, the call is ignored and an error code is returned
+(i.e. nested regions are ignored).</p></dd>
+<dt><code>geopm_prof_exit</code>()</dt><dd><p>is called by compute application to mark the end of a compute
+region.  If this region is nested then the call is ignored and an
+error code is returned.</p></dd>
+<dt><code>geopm_prof_progress</code>()</dt><dd><p>is called by compute application in single threaded context to
+signal the fractional progress, <em>fraction</em> through the work
+required to complete the region where <em>fraction</em> is between 0 and 1.
+If the <em>region_id</em> does not match the <em>region_id</em> of the last
+call to geopm_prof_prof_enter() which was not nested, then this
+call is ignored and an error code is returned.</p></dd>
+<dt><code>geopm_prof_outer_sync</code>()</dt><dd><p>is called just prior to the highest level global synchronization
+point in an application.  This occurs in the application's
+outermost loop in an iterative algorithm just prior to the last
+synchronizing MPI call.  There should be just one place in an
+application code where this call occurs, and it should be called
+repeatedly inside of a loop.</p></dd>
+<dt><code>geopm_prof_sample</code>()</dt><dd><p>is called to derive a sample based on the profiling information
+collected.  This may aggregate data as specified by the
+<em>sample_reduce</em> parameters passed when the <em>prof</em> structure was
+created.</p></dd>
+<dt><code>geopm_prof_disable</code>()</dt><dd><p>is called at application start up to disable a profiling feature.
+By default all profiling features available on the system are
+enabled.  The set of all possible values for <em>feature_name</em> are:
+"instr", "flop", and "joules".</p></dd>
+<dt><code>geopm_prof_print</code>()</dt><dd><p>writes a profile report to standard output based on the data
+collected so far.  This is intended for use just prior to
+application termination.  All profile information above the
+specified <em>depth</em> in the control tree hierarchy is contained in
+the report.  A depth of 0 gives only statistics aggregated over
+all MPI processes.</p></dd>
+<dt><code>geopm_prof_fprint</code>()</dt><dd><p>writes the profile report to the file descriptor <em>fid</em> rather than
+standard output and is otherwise the same as <code>geopm_prof_print</code>().</p></dd>
+</dl>
+
+
+<p><code>HELPER FUNCTIONS:</code></p>
+
+<dl>
+<dt><code>geopm_num_node</code>()</dt><dd><p>sets <em>num_node</em> to the number of compute nodes associated with the
+communicator <em>comm</em>. A compute node is defined to be a shared
+memory coherency domain.  The product of the elements of <em>fan_out</em>
+passed to <code>geopm_ctl_create</code>() must equal <em>num_node</em>.</p></dd>
+<dt><code>geopm_no_omp_cpu</code>()</dt><dd><p> sets the <em>no_omp</em> <strong><a class="man-ref" href="http://linux.die.net/man/3/cpu_set">CPU_SET<span class="s">(3)</span></a></strong> allocated with <em>num_cpu</em> bits to
+ a mask which can be used with <strong><a class="man-ref" href="http://linux.die.net/man/3/pthread_attr_setaffinity_np">pthread_attr_setaffinity_np<span class="s">(3)</span></a></strong>
+ to bind the pthread created by <code>geopm_ctl_pthread</code>() to CPUs that
+ do not have an OpenMP thread affinity.  The mask generated when
+ OpenMP threads are not statically affinitized is unreliable.  The
+ <em>no_omp</em> mask is zeroed and an error code is returned when all
+ online CPUs have an OpenMP thread affinity.</p></dd>
+<dt><code>geopm_omp_sched_static_norm</code>()</dt><dd><p>calculates the <em>norm</em> array of length <em>num_thread</em> that can be
+used with <code>geopm_ctl_prof_progress_threaded_min</code>() in the case
+where a for loop is OpenMP parallel using the static scheduling
+algorithm with the specified <em>chunk_size</em>.  The <em>num_iter</em>
+parameter is the number of iterations specified in the for loop,
+and the <em>num_thread</em> parameter determines the number of OpenMP
+threads that are used to parallelize the loop.</p></dd>
+<dt><code>geopm_progress_threaded_min</code>()</dt><dd><p>is called by a compute application by one thread in a
+multi-threaded context using <em>num_thread</em> threads.  This function
+returns the fractional progress through the work required to
+complete the region.  The fractional progress is calculated as the
+minimum of the fractional progress of all of the threads that are
+given work, i.e. the minimum over all <em>i</em> of
+<em>progress</em>[<em>stride</em>*<em>i</em>]<em>norm</em>[<em>i</em>]. <br /> Note that the progress
+array is assumed to be strided where the separation in number of
+integers of valid progress is given by the parameter <em>stride</em>.
+The <em>stride</em> can be used to avoid performance loss due to false
+sharing since multiple threads must write to the progress array
+simultaneously.  On the x86 architecture it is recommended that a
+stride of 16 or greater is used to have each thread writing to a
+different 64 byte cache line.  The <em>norm</em> array is used to
+normalize the integer <em>progress</em> array such that each element of
+<em>norm</em> is the inverse of each strided value of the <em>progress</em>
+array upon completion of all work in the region.</p></dd>
+<dt><code>geopm_progress_threaded_sum</code>()</dt><dd><p>is called by a compute application by one thread in a
+multi-threaded context using <em>num_thread</em> threads.  This function
+is very much like <code>geopm_progress_threaded_min</code>() except that it
+sums the values in the <em>progress</em> array and multiplies the sum of
+the strided progress values by <em>norm</em> where <em>norm</em> is the inverse
+of the sum of all progress values upon completion of all work. The
+fractional progress is calculated as the sum of the progress of
+all of the threads that are given work normalized by the inverse
+of the amount of aggregate work assigned to all threads, <em>norm</em>.
+This can be less accurate for determining load imbalance than
+using <code>geopm_progress_threaded_min</code>() but is applicable in
+contexts where the amount of work assigned to each thread is not
+known in advance, e.g. OpenMP dynamic scheduling.  The progress
+array is assumed to be strided in the same way and for the same
+reasons as described above for <code>geopm_threaded_progress_min</code>().</p></dd>
+</dl>
+
+
+<h2 id="ERRORS">ERRORS</h2>
+
+<p>All functions described on this man page return an error code.  See
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong> for a full description of the error numbers and how
+to convert them to strings.</p>
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>January 2016</li>
+    <li class='tr'>geopm_prof_c(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['geopm_5fpolicy_5fconst_5finvalid_5ftarget',['GEOPM_POLICY_CONST_INVALID_TARGET',['../_policy_8cpp.html#add883692a8be04be0282d52786f46e07',1,'Policy.cpp']]],
-  ['geopm_5funknown_5fpolicy',['GEOPM_UNKNOWN_POLICY',['../geopm__policy__message_8c.html#a95606b2fa1c2054878ada1037a91123f',1,'GEOPM_UNKNOWN_POLICY():&#160;geopm_policy_message.c'],['../geopm__policy__message_8h.html#a95606b2fa1c2054878ada1037a91123f',1,'GEOPM_UNKNOWN_POLICY():&#160;geopm_policy_message.c']]]
+  ['flags',['flags',['../structgeopm__policy__message__s.html#aeda78a94c5f4e70f2b7e0f1bcfed49d0',1,'geopm_policy_message_s']]],
+  ['frequency',['frequency',['../structgeopm__sample__message__s.html#aea821c1ebf0aa169247045498c9e6144',1,'geopm_sample_message_s']]]
 ];

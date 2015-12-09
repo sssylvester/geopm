@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -120,35 +121,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY LOG OF THE USE</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;system_error&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="geopm__error_8h.html">geopm_error.h</a>&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegeopm.html">geopm</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespacegeopm.html#a048e7174c0b015980a677f8c06d2b1ab">exception_handler</a>(std::exception_ptr eptr);</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classgeopm_1_1_exception.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgeopm_1_1_exception.html">Exception</a>: <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keywordtype">int</span> err);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keyword">const</span> std::string &amp;what, <span class="keywordtype">int</span> err);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keywordtype">int</span> err, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keyword">const</span> std::string &amp;what, <span class="keywordtype">int</span> err, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgeopm_1_1_exception.html#aac1a45c9561f20839d7136647b8d7d93">~Exception</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classgeopm_1_1_exception.html#ae5246edeac2fda764c071570ff2bebda">err_value</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> m_err;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="classgeopm_1_1_exception_html"><div class="ttname"><a href="classgeopm_1_1_exception.html">geopm::Exception</a></div><div class="ttdef"><b>Definition:</b> Exception.hpp:40</div></div>
-<div class="ttc" id="namespacegeopm_html_a048e7174c0b015980a677f8c06d2b1ab"><div class="ttname"><a href="namespacegeopm.html#a048e7174c0b015980a677f8c06d2b1ab">geopm::exception_handler</a></div><div class="ttdeci">int exception_handler(std::exception_ptr eptr)</div><div class="ttdef"><b>Definition:</b> Exception.cpp:121</div></div>
-<div class="ttc" id="classgeopm_1_1_exception_html_a3e7da64e5eb1db72ff2e486931c33049"><div class="ttname"><a href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">geopm::Exception::Exception</a></div><div class="ttdeci">Exception()</div><div class="ttdef"><b>Definition:</b> Exception.cpp:171</div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef EXCEPTION_HPP_INCLUDE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define EXCEPTION_HPP_INCLUDE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;system_error&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="geopm__error_8h.html">geopm_error.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegeopm.html">geopm</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="namespacegeopm.html#a048e7174c0b015980a677f8c06d2b1ab">exception_handler</a>(std::exception_ptr eptr);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classgeopm_1_1_exception.html">   68</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgeopm_1_1_exception.html">Exception</a>: <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keywordtype">int</span> err);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keyword">const</span> std::string &amp;what, <span class="keywordtype">int</span> err);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keywordtype">int</span> err, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">Exception</a>(<span class="keyword">const</span> std::string &amp;what, <span class="keywordtype">int</span> err, <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgeopm_1_1_exception.html#aac1a45c9561f20839d7136647b8d7d93">~Exception</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classgeopm_1_1_exception.html#ae5246edeac2fda764c071570ff2bebda">err_value</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordtype">int</span> m_err;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    };</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classgeopm_1_1_exception_html"><div class="ttname"><a href="classgeopm_1_1_exception.html">geopm::Exception</a></div><div class="ttdoc">Class for all geopm specific exceptions. </div><div class="ttdef"><b>Definition:</b> Exception.hpp:68</div></div>
+<div class="ttc" id="namespacegeopm_html_a048e7174c0b015980a677f8c06d2b1ab"><div class="ttname"><a href="namespacegeopm.html#a048e7174c0b015980a677f8c06d2b1ab">geopm::exception_handler</a></div><div class="ttdeci">int exception_handler(std::exception_ptr eptr)</div><div class="ttdoc">Handle a thrown exception and return an error value. </div><div class="ttdef"><b>Definition:</b> Exception.cpp:136</div></div>
+<div class="ttc" id="classgeopm_1_1_exception_html_a3e7da64e5eb1db72ff2e486931c33049"><div class="ttname"><a href="classgeopm_1_1_exception.html#a3e7da64e5eb1db72ff2e486931c33049">geopm::Exception::Exception</a></div><div class="ttdeci">Exception()</div><div class="ttdoc">Empty constructor. </div><div class="ttdef"><b>Definition:</b> Exception.cpp:186</div></div>
 <div class="ttc" id="geopm__error_8h_html"><div class="ttname"><a href="geopm__error_8h.html">geopm_error.h</a></div></div>
 <div class="ttc" id="namespacegeopm_html"><div class="ttname"><a href="namespacegeopm.html">geopm</a></div><div class="ttdef"><b>Definition:</b> CircularBuffer.cpp:35</div></div>
-<div class="ttc" id="classgeopm_1_1_exception_html_ae5246edeac2fda764c071570ff2bebda"><div class="ttname"><a href="classgeopm_1_1_exception.html#ae5246edeac2fda764c071570ff2bebda">geopm::Exception::err_value</a></div><div class="ttdeci">int err_value(void) const </div><div class="ttdef"><b>Definition:</b> Exception.cpp:200</div></div>
-<div class="ttc" id="classgeopm_1_1_exception_html_aac1a45c9561f20839d7136647b8d7d93"><div class="ttname"><a href="classgeopm_1_1_exception.html#aac1a45c9561f20839d7136647b8d7d93">geopm::Exception::~Exception</a></div><div class="ttdeci">virtual ~Exception()</div><div class="ttdef"><b>Definition:</b> Exception.cpp:195</div></div>
+<div class="ttc" id="classgeopm_1_1_exception_html_ae5246edeac2fda764c071570ff2bebda"><div class="ttname"><a href="classgeopm_1_1_exception.html#ae5246edeac2fda764c071570ff2bebda">geopm::Exception::err_value</a></div><div class="ttdeci">int err_value(void) const </div><div class="ttdoc">Returns the integer error code associated with the exception. </div><div class="ttdef"><b>Definition:</b> Exception.cpp:215</div></div>
+<div class="ttc" id="classgeopm_1_1_exception_html_aac1a45c9561f20839d7136647b8d7d93"><div class="ttname"><a href="classgeopm_1_1_exception.html#aac1a45c9561f20839d7136647b8d7d93">geopm::Exception::~Exception</a></div><div class="ttdeci">virtual ~Exception()</div><div class="ttdoc">Exception destructor, virtual. </div><div class="ttdef"><b>Definition:</b> Exception.cpp:210</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
