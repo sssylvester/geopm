@@ -92,22 +92,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>MPI message structure for sending sample telemetry data up the tree.  
+ <a href="structgeopm__sample__message__s.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a109feeff335b9b624b3665e05dbf7e8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html#a109feeff335b9b624b3665e05dbf7e8c">rank</a></td></tr>
+<tr class="memdesc:a109feeff335b9b624b3665e05dbf7e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank identifier.  <a href="#a109feeff335b9b624b3665e05dbf7e8c">More...</a><br /></td></tr>
 <tr class="separator:a109feeff335b9b624b3665e05dbf7e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5de89cca90abc0cbee9470616277264b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html#a5de89cca90abc0cbee9470616277264b">region_id</a></td></tr>
+<tr class="memdesc:a5de89cca90abc0cbee9470616277264b"><td class="mdescLeft">&#160;</td><td class="mdescRight">64-bit unique application region identifier.  <a href="#a5de89cca90abc0cbee9470616277264b">More...</a><br /></td></tr>
 <tr class="separator:a5de89cca90abc0cbee9470616277264b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8f323b0bfd1ac3785048e3ce4dab065"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html#ad8f323b0bfd1ac3785048e3ce4dab065">runtime</a></td></tr>
+<tr class="memdesc:ad8f323b0bfd1ac3785048e3ce4dab065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed runtime of an application region.  <a href="#ad8f323b0bfd1ac3785048e3ce4dab065">More...</a><br /></td></tr>
 <tr class="separator:ad8f323b0bfd1ac3785048e3ce4dab065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2722daf4fbfd5de7f224219b5e17cba2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html#a2722daf4fbfd5de7f224219b5e17cba2">energy</a></td></tr>
+<tr class="memdesc:a2722daf4fbfd5de7f224219b5e17cba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy used during an application region.  <a href="#a2722daf4fbfd5de7f224219b5e17cba2">More...</a><br /></td></tr>
 <tr class="separator:a2722daf4fbfd5de7f224219b5e17cba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea821c1ebf0aa169247045498c9e6144"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html#aea821c1ebf0aa169247045498c9e6144">frequency</a></td></tr>
+<tr class="memdesc:aea821c1ebf0aa169247045498c9e6144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Average frequency during an application region.  <a href="#aea821c1ebf0aa169247045498c9e6144">More...</a><br /></td></tr>
 <tr class="separator:aea821c1ebf0aa169247045498c9e6144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>MPI message structure for sending sample telemetry data up the tree. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a2722daf4fbfd5de7f224219b5e17cba2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -117,6 +127,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Energy used during an application region. </p>
 
 </div>
 </div>
@@ -130,6 +142,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Average frequency during an application region. </p>
+
 </div>
 </div>
 <a class="anchor" id="a109feeff335b9b624b3665e05dbf7e8c"></a>
@@ -141,6 +155,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Rank identifier. </p>
 
 </div>
 </div>
@@ -154,6 +170,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>64-bit unique application region identifier. </p>
+
 </div>
 </div>
 <a class="anchor" id="ad8f323b0bfd1ac3785048e3ce4dab065"></a>
@@ -165,6 +183,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Elapsed runtime of an application region. </p>
 
 </div>
 </div>

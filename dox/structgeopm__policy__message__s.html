@@ -92,22 +92,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>MPI message structure for sending power policies down the tree.  
+ <a href="structgeopm__policy__message__s.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a99513e152355be37ef3db3f8cc0cff21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#a99513e152355be37ef3db3f8cc0cff21">region_id</a></td></tr>
-<tr class="separator:a99513e152355be37ef3db3f8cc0cff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ef8ac3a8a7928f07fb48d1c306504a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#a00ef8ac3a8a7928f07fb48d1c306504a">region_id</a></td></tr>
+<tr class="memdesc:a00ef8ac3a8a7928f07fb48d1c306504a"><td class="mdescLeft">&#160;</td><td class="mdescRight">64-bit unique application region identifier.  <a href="#a00ef8ac3a8a7928f07fb48d1c306504a">More...</a><br /></td></tr>
+<tr class="separator:a00ef8ac3a8a7928f07fb48d1c306504a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab373e5dda4f6413756fc8a9c94d4cf97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#ab373e5dda4f6413756fc8a9c94d4cf97">mode</a></td></tr>
+<tr class="memdesc:ab373e5dda4f6413756fc8a9c94d4cf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum power managment mode.  <a href="#ab373e5dda4f6413756fc8a9c94d4cf97">More...</a><br /></td></tr>
 <tr class="separator:ab373e5dda4f6413756fc8a9c94d4cf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda78a94c5f4e70f2b7e0f1bcfed49d0"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#aeda78a94c5f4e70f2b7e0f1bcfed49d0">flags</a></td></tr>
+<tr class="memdesc:aeda78a94c5f4e70f2b7e0f1bcfed49d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power policy attribute bitmask.  <a href="#aeda78a94c5f4e70f2b7e0f1bcfed49d0">More...</a><br /></td></tr>
 <tr class="separator:aeda78a94c5f4e70f2b7e0f1bcfed49d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7e8f98b3fef1d0dae242e0335bc05bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#aa7e8f98b3fef1d0dae242e0335bc05bb">num_sample</a></td></tr>
+<tr class="memdesc:aa7e8f98b3fef1d0dae242e0335bc05bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of samples to collect before sending a sample up the tree.  <a href="#aa7e8f98b3fef1d0dae242e0335bc05bb">More...</a><br /></td></tr>
 <tr class="separator:aa7e8f98b3fef1d0dae242e0335bc05bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d3e851d2b9aa9f727c1ea38b757ca60"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html#a6d3e851d2b9aa9f727c1ea38b757ca60">power_budget</a></td></tr>
+<tr class="memdesc:a6d3e851d2b9aa9f727c1ea38b757ca60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power budget in Watts.  <a href="#a6d3e851d2b9aa9f727c1ea38b757ca60">More...</a><br /></td></tr>
 <tr class="separator:a6d3e851d2b9aa9f727c1ea38b757ca60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>MPI message structure for sending power policies down the tree. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="aeda78a94c5f4e70f2b7e0f1bcfed49d0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -117,6 +127,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Power policy attribute bitmask. </p>
 
 </div>
 </div>
@@ -130,6 +142,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Enum power managment mode. </p>
+
 </div>
 </div>
 <a class="anchor" id="aa7e8f98b3fef1d0dae242e0335bc05bb"></a>
@@ -141,6 +155,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of samples to collect before sending a sample up the tree. </p>
 
 </div>
 </div>
@@ -154,17 +170,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Power budget in Watts. </p>
+
 </div>
 </div>
-<a class="anchor" id="a99513e152355be37ef3db3f8cc0cff21"></a>
+<a class="anchor" id="a00ef8ac3a8a7928f07fb48d1c306504a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm_policy_message_s::region_id</td>
+          <td class="memname">uint64_t geopm_policy_message_s::region_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>64-bit unique application region identifier. </p>
 
 </div>
 </div>

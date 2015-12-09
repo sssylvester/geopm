@@ -6,7 +6,7 @@ var searchData=
   ['raplplatform',['RAPLPlatform',['../classgeopm_1_1_r_a_p_l_platform.html#aad348c6c2e6a7bb205d097e05c867d33',1,'geopm::RAPLPlatform']]],
   ['read',['read',['../classgeopm_1_1_global_policy.html#a9cc89987204b9d317e96a1d3e3c65d75',1,'geopm::GlobalPolicy']]],
   ['read_5fmsr',['read_msr',['../classgeopm_1_1_platform_imp.html#aa727a2160ae29070d780ac261d30db05',1,'geopm::PlatformImp::read_msr(int device_type, int device_index, const std::string &amp;msr_name)'],['../classgeopm_1_1_platform_imp.html#a7d0b77739bf048db040d0e46da6f2b9c',1,'geopm::PlatformImp::read_msr(int device_type, int device_index, off_t msr_offset)']]],
-  ['region',['Region',['../classgeopm_1_1_region.html#a3506cdb3cfb39c3c6a9126e7c2a2b740',1,'geopm::Region::Region()'],['../classgeopm_1_1_profile.html#a19d1064314b81f776363d8bbc08c2993',1,'geopm::Profile::region()']]],
+  ['region',['region',['../classgeopm_1_1_profile.html#a19d1064314b81f776363d8bbc08c2993',1,'geopm::Profile::region()'],['../classgeopm_1_1_region.html#a3506cdb3cfb39c3c6a9126e7c2a2b740',1,'geopm::Region::Region()']]],
   ['region_5fbegin',['region_begin',['../classgeopm_1_1_platform.html#ac6789148cd1f672dd792117b3301b57b',1,'geopm::Platform']]],
   ['region_5fend',['region_end',['../classgeopm_1_1_platform.html#a20821577395b9a52a16ba3f7a8d5947e',1,'geopm::Platform']]],
   ['register_5fdecider',['register_decider',['../classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4',1,'geopm::DeciderFactory']]],

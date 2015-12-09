@@ -1,5 +1,5 @@
 <map id="geopm::Region" name="geopm::Region">
-<area shape="rect" id="node2" href="$structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="5,5,185,31"/>
+<area shape="rect" id="node2" href="$structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="5,5,185,31"/>
 <area shape="rect" id="node3" href="$classgeopm_1_1_policy.html" title="geopm::Policy" alt="" coords="209,5,314,31"/>
 <area shape="rect" id="node4" href="$classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="338,5,479,31"/>
 </map>

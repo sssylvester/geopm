@@ -1,4 +1,4 @@
 <map id="geopm::ProfileSampler" name="geopm::ProfileSampler">
-<area shape="rect" id="node2" href="$structgeopm__ctl__message__s.html" title="geopm_ctl_message_s" alt="" coords="5,5,164,31"/>
+<area shape="rect" id="node2" href="$structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="5,5,164,31"/>
 <area shape="rect" id="node3" href="$classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="188,5,349,31"/>
 </map>

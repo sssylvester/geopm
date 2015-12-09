@@ -150,16 +150,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPI message structure for sending power policies down the tree.  <a href="structgeopm__policy__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure intended to be shared between the resource manager and the geopm runtime in order to convey job wide power policy changes to the geopm runtime.  <a href="structgeopm__policy__shmem__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPI message structure for sending sample telemetry data up the tree.  <a href="structgeopm__sample__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure used to hold single profiling messages obtained from the application.  <a href="structgeopm__prof__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__ctl__message__s.html">geopm_ctl_message_s</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__sample__shmem__s.html">geopm_sample_shmem_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure intended to be shared between the geopm runtime and the application in order to convey status and control information.  <a href="structgeopm__ctl__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -207,7 +210,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="geopm__message_8h.html#a968a9d1196a9163f7ab218654dc8449da31c91362ed922611563226ea1d6295ef">GEOPM_FLAGS_GOAL_NETWORK_EFFICIENCY</a> = 1ULL &lt;&lt; 26, 
 <a class="el" href="geopm__message_8h.html#a968a9d1196a9163f7ab218654dc8449dae97535708da1f873d9dcc534d5e90d00">GEOPM_FLAGS_GOAL_MEMORY_EFFICIENCY</a> = 1ULL &lt;&lt; 27
 <br />
- }<tr class="separator:a968a9d1196a9163f7ab218654dc8449d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a968a9d1196a9163f7ab218654dc8449d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates power policy information as a 32-bit bitmask.  <a href="geopm__message_8h.html#a968a9d1196a9163f7ab218654dc8449d">More...</a><br /></td></tr>
+<tr class="separator:a968a9d1196a9163f7ab218654dc8449d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:accad7cac872dcec1ad28505e1cb917dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__message_8h.html#accad7cac872dcec1ad28505e1cb917dd">geopm_policy_mode_e</a> { <br />
 &#160;&#160;<a class="el" href="geopm__message_8h.html#accad7cac872dcec1ad28505e1cb917ddac2a3b09d8f72bf9de09756b22690948b">GEOPM_MODE_TDP_BALANCE_STATIC</a> = 1, 
@@ -219,13 +223,15 @@ Enumerations</h2></td></tr>
 <a class="el" href="geopm__message_8h.html#accad7cac872dcec1ad28505e1cb917ddacff0f9c34ec8f4a8ac146c93b12ecd8a">GEOPM_MODE_FREQ_HYBRID_DYNAMIC</a> = 6, 
 <a class="el" href="geopm__message_8h.html#accad7cac872dcec1ad28505e1cb917ddaeef396cc098ef86f559397770357560e">GEOPM_MODE_SHUTDOWN</a> = 255
 <br />
- }<tr class="separator:accad7cac872dcec1ad28505e1cb917dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:accad7cac872dcec1ad28505e1cb917dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum encompassing geopm power management modes.  <a href="geopm__message_8h.html#accad7cac872dcec1ad28505e1cb917dd">More...</a><br /></td></tr>
+<tr class="separator:accad7cac872dcec1ad28505e1cb917dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a2518948bee8fb864b4748db751375e8b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8b">geopm_policy_hint_e</a> { <a class="el" href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8ba2f7db4878f03f35e1d87101f02d0adab">GEOPM_POLICY_HINT_UNKNOWN</a> = 0, 
 <a class="el" href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8ba36372fcc23fe10988504f3224b8f7c1a">GEOPM_POLICY_HINT_COMPUTE</a> = 1, 
 <a class="el" href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8bab2d736682884870e1e4a4ff5262a664f">GEOPM_POLICY_HINT_MEMORY</a> = 2, 
 <a class="el" href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8ba6f8d6768a5b35d132768c6f871ddc724">GEOPM_POLICY_HINT_NETWORK</a> = 3
- }<tr class="separator:a2518948bee8fb864b4748db751375e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a2518948bee8fb864b4748db751375e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum encompassing application region characteristic hints.  <a href="geopm__message_8h.html#a2518948bee8fb864b4748db751375e8b">More...</a><br /></td></tr>
+<tr class="separator:a2518948bee8fb864b4748db751375e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:ace0982f639819f83028f3fd19bb74f7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__message_8h.html#ace0982f639819f83028f3fd19bb74f7a">geopm_status_e</a> { <br />
 &#160;&#160;<a class="el" href="geopm__message_8h.html#ace0982f639819f83028f3fd19bb74f7aae1ba8fa9e33b885026693ba556516e8a">GEOPM_STATUS_UNDEFINED</a> = 0, 
@@ -236,12 +242,14 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="geopm__message_8h.html#ace0982f639819f83028f3fd19bb74f7aac4388c2efbb9c85fa29a2a3ddd72f65c">GEOPM_STATUS_READY</a> = 4, 
 <a class="el" href="geopm__message_8h.html#ace0982f639819f83028f3fd19bb74f7aae3b61d1e1ffd1a3efc82ba23f867ec4d">GEOPM_STATUS_SHUTDOWN</a> = 5
 <br />
- }<tr class="separator:ace0982f639819f83028f3fd19bb74f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:ace0982f639819f83028f3fd19bb74f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum encompassing application and geopm runtime state.  <a href="geopm__message_8h.html#ace0982f639819f83028f3fd19bb74f7a">More...</a><br /></td></tr>
+<tr class="separator:ace0982f639819f83028f3fd19bb74f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad34cef186059e1057c49bc873ebb01c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__message_8h.html#ad34cef186059e1057c49bc873ebb01c8">geopm_is_policy_equal</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> *a, const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> *b)</td></tr>
+<tr class="memdesc:ad34cef186059e1057c49bc873ebb01c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two policy messages are equal.  <a href="#ad34cef186059e1057c49bc873ebb01c8">More...</a><br /></td></tr>
 <tr class="separator:ad34cef186059e1057c49bc873ebb01c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -286,6 +294,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Encapsulates power policy information as a 32-bit bitmask. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a968a9d1196a9163f7ab218654dc8449dabc943890d712c51f8cc98cfd7fc9629c"></a>GEOPM_FLAGS_SMALL_CPU_FREQ_100MHZ_1&#160;</td><td class="fielddoc">
 </td></tr>
@@ -356,6 +366,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum encompassing application region characteristic hints. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2518948bee8fb864b4748db751375e8ba2f7db4878f03f35e1d87101f02d0adab"></a>GEOPM_POLICY_HINT_UNKNOWN&#160;</td><td class="fielddoc">
 </td></tr>
@@ -378,6 +390,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum encompassing geopm power management modes. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917ddac2a3b09d8f72bf9de09756b22690948b"></a>GEOPM_MODE_TDP_BALANCE_STATIC&#160;</td><td class="fielddoc">
 </td></tr>
@@ -406,6 +420,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum encompassing application and geopm runtime state. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ace0982f639819f83028f3fd19bb74f7aae1ba8fa9e33b885026693ba556516e8a"></a>GEOPM_STATUS_UNDEFINED&#160;</td><td class="fielddoc">
 </td></tr>
@@ -447,6 +463,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check if two policy messages are equal. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Pointer to a policy message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Pointer to a policy message. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if policies are equal, else 0 </dd></dl>
 
 </div>
 </div>

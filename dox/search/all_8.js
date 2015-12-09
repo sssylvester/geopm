@@ -9,7 +9,7 @@ var searchData=
   ['integrate_5ftime',['integrate_time',['../classgeopm_1_1_observation.html#a68229cf03cb1a717f2819c5b7d23dfa0',1,'geopm::Observation']]],
   ['intensity',['intensity',['../classgeopm_1_1_power_model.html#a980e9716492aee7cec47acbc9c843a15',1,'geopm::PowerModel']]],
   ['is_5fconverged',['is_converged',['../classgeopm_1_1_decider.html#a9c7e9593a53336bb38513db0b2f52d84',1,'geopm::Decider']]],
-  ['is_5finit',['is_init',['../structgeopm__policy__shmem__s.html#a75d6b41ce76378ffb81c7eadc79755fe',1,'geopm_policy_shmem_s::is_init()'],['../structgeopm__sample__shmem__s.html#acb7defc6bf0f80b911d13f1e4951e12c',1,'geopm_sample_shmem_s::is_init()']]],
+  ['is_5finit',['is_init',['../structgeopm__policy__shmem__s.html#a75d6b41ce76378ffb81c7eadc79755fe',1,'geopm_policy_shmem_s']]],
   ['ivtplatformimp',['IVTPlatformImp',['../classgeopm_1_1_i_v_t_platform_imp.html',1,'geopm']]],
   ['ivtplatformimp',['IVTPlatformImp',['../classgeopm_1_1_i_v_t_platform_imp.html#a5cd9da50bf2d3ec5831c38827a620dc6',1,'geopm::IVTPlatformImp']]],
   ['ivtplatformimp_2ecpp',['IVTPlatformImp.cpp',['../_i_v_t_platform_imp_8cpp.html',1,'']]],

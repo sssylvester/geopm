@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Structure used to hold single profiling messages obtained from the application.  
+ <a href="structgeopm__prof__message__s.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for geopm_prof_message_s:</div>
@@ -105,15 +108,21 @@ Collaboration diagram for geopm_prof_message_s:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:adb3e7d103977bdcdc0766788297508c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__prof__message__s.html#adb3e7d103977bdcdc0766788297508c5">rank</a></td></tr>
+<tr class="memdesc:adb3e7d103977bdcdc0766788297508c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank identifier.  <a href="#adb3e7d103977bdcdc0766788297508c5">More...</a><br /></td></tr>
 <tr class="separator:adb3e7d103977bdcdc0766788297508c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302b3cbf6eafce83c22e853439d8b4d6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__prof__message__s.html#a302b3cbf6eafce83c22e853439d8b4d6">region_id</a></td></tr>
+<tr class="memdesc:a302b3cbf6eafce83c22e853439d8b4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">64-bit unique application region identifier.  <a href="#a302b3cbf6eafce83c22e853439d8b4d6">More...</a><br /></td></tr>
 <tr class="separator:a302b3cbf6eafce83c22e853439d8b4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ba434e0bcb8e9fe5e9aa979569de73"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__prof__message__s.html#a15ba434e0bcb8e9fe5e9aa979569de73">timestamp</a></td></tr>
+<tr class="memdesc:a15ba434e0bcb8e9fe5e9aa979569de73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp of when thi ssample was taken.  <a href="#a15ba434e0bcb8e9fe5e9aa979569de73">More...</a><br /></td></tr>
 <tr class="separator:a15ba434e0bcb8e9fe5e9aa979569de73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dbd72a10155ea533d13ddcd17d7cf44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__prof__message__s.html#a7dbd72a10155ea533d13ddcd17d7cf44">progress</a></td></tr>
+<tr class="memdesc:a7dbd72a10155ea533d13ddcd17d7cf44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Progress of the rank within the current region.  <a href="#a7dbd72a10155ea533d13ddcd17d7cf44">More...</a><br /></td></tr>
 <tr class="separator:a7dbd72a10155ea533d13ddcd17d7cf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure used to hold single profiling messages obtained from the application. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a7dbd72a10155ea533d13ddcd17d7cf44"></a>
 <div class="memitem">
 <div class="memproto">
@@ -123,6 +132,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Progress of the rank within the current region. </p>
 
 </div>
 </div>
@@ -136,6 +147,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Rank identifier. </p>
+
 </div>
 </div>
 <a class="anchor" id="a302b3cbf6eafce83c22e853439d8b4d6"></a>
@@ -148,6 +161,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>64-bit unique application region identifier. </p>
+
 </div>
 </div>
 <a class="anchor" id="a15ba434e0bcb8e9fe5e9aa979569de73"></a>
@@ -159,6 +174,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Timestamp of when thi ssample was taken. </p>
 
 </div>
 </div>

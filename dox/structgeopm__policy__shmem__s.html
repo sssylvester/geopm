@@ -92,26 +92,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Structure intended to be shared between the resource manager and the geopm runtime in order to convey job wide power policy changes to the geopm runtime.  
+ <a href="structgeopm__policy__shmem__s.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for geopm_policy_shmem_s:</div>
 <div class="dyncontent">
 <div class="center"><img src="structgeopm__policy__shmem__s__coll__graph.png" border="0" usemap="#geopm__policy__shmem__s_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm__policy__shmem__s_coll__map" id="geopm__policy__shmem__s_coll__map">
-<area shape="rect" id="node2" href="structgeopm__policy__message__s.html" title="geopm_policy_message_s" alt="" coords="5,5,185,31"/>
+<area shape="rect" id="node2" href="structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="5,5,185,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a75d6b41ce76378ffb81c7eadc79755fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__shmem__s.html#a75d6b41ce76378ffb81c7eadc79755fe">is_init</a></td></tr>
+<tr class="memdesc:a75d6b41ce76378ffb81c7eadc79755fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the geopm runtime know when the resource manager has initialized the power policy.  <a href="#a75d6b41ce76378ffb81c7eadc79755fe">More...</a><br /></td></tr>
 <tr class="separator:a75d6b41ce76378ffb81c7eadc79755fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48f048d7136fb484e801d9343b2dace3"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__shmem__s.html#a48f048d7136fb484e801d9343b2dace3">lock</a></td></tr>
+<tr class="memdesc:a48f048d7136fb484e801d9343b2dace3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock to ensure read/write consistency between thr resource manager and the geopm runtime.  <a href="#a48f048d7136fb484e801d9343b2dace3">More...</a><br /></td></tr>
 <tr class="separator:a48f048d7136fb484e801d9343b2dace3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753a5c658be59a1c4ce9979851cebd8b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__policy__shmem__s.html#a753a5c658be59a1c4ce9979851cebd8b">policy</a></td></tr>
+<tr class="memdesc:a753a5c658be59a1c4ce9979851cebd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the job power policy as given by the resource manager.  <a href="#a753a5c658be59a1c4ce9979851cebd8b">More...</a><br /></td></tr>
 <tr class="separator:a753a5c658be59a1c4ce9979851cebd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure intended to be shared between the resource manager and the geopm runtime in order to convey job wide power policy changes to the geopm runtime. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a75d6b41ce76378ffb81c7eadc79755fe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -121,6 +129,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enables the geopm runtime know when the resource manager has initialized the power policy. </p>
 
 </div>
 </div>
@@ -134,6 +144,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Lock to ensure read/write consistency between thr resource manager and the geopm runtime. </p>
+
 </div>
 </div>
 <a class="anchor" id="a753a5c658be59a1c4ce9979851cebd8b"></a>
@@ -145,6 +157,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Holds the job power policy as given by the resource manager. </p>
 
 </div>
 </div>
