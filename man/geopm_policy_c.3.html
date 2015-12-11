@@ -90,21 +90,20 @@
 <code>struct geopm_policy_c **</code><em>policy</em>);</p></dd>
 <dt><code>int geopm_policy_destroy(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>);</p></dd>
 <dt><code>int geopm_policy_power(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>double</code> <em>power_budget</em>);</p></dd>
+<code>int</code> <em>power_budget</em>);</p></dd>
 <dt><code>int geopm_policy_mode(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
 <code>int</code> <em>mode</em>);</p></dd>
 <dt><code>int geopm_policy_cpu_freq(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>int</code> _cpu_mhz);</p></dd>
+<code>int</code> <em>cpu_mhz</em>);</p></dd>
 <dt><code>int geopm_policy_full_perf(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>int</code> _num_cpu_full_perf);</p></dd>
+<code>int</code> <em>num_cpu_full_perf</em>);</p></dd>
 <dt><code>int geopm_policy_tdp_percent(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>int</code> _tdp_percent);</p></dd>
+<code>int</code> <em>percent</em>);</p></dd>
 <dt><code>int geopm_policy_affinity(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>int</code> _affinity);</p></dd>
+<code>int</code> <em>cpu_affinity</em>);</p></dd>
 <dt><code>int geopm_policy_goal(</code></dt><dd><p><code>struct geopm_policy_c *</code><em>policy</em>, <br />
-<code>int</code> _goal);</p></dd>
+<code>int</code> <em>geo_goal</em>);</p></dd>
 <dt><code>int geopm_policy_write(</code></dt><dd><p><code>const struct geopm_policy_c *</code><em>policy</em>);</p></dd>
-<dt><code>int geopm_policy_read(</code></dt><dd><p><code>const struct geopm_policy_c *</code><em>policy</em>);</p></dd>
 <dt><code>int geopm_policy_enforce_static(</code></dt><dd><p><code>const struct geopm_policy_c *</code><em>policy</em>);</p></dd>
 <dt><code>int geopm_platform_msr_save(</code></dt><dd><p><code>const char *</code><em>path</em>);</p></dd>
 <dt><code>int geopm_platform_msr_restore(</code></dt><dd><p><code>const char *</code><em>path</em>);</p></dd>
@@ -123,7 +122,7 @@ dynamically over the compute application runtime.  This interface can output
 a MSR whitelist file for use with the Linux MSR driver. For static policy
 control, this interface can be used to create a configuration file that is
 parsed by the geopm setup or geopm runtime.  For dynamic control, a daemon
-can use this interface to create and modify an interprocess shared memory
+can use this interface to create and modify an inter-process shared memory
 region on the compute node hosting the root MPI process of the compute
 application.  The shared memory region is monitored by the geopm runtime to
 enforce policy across the entire MPI job allocation.  All functions
@@ -134,8 +133,8 @@ success; see <a href="#ERRORS" title="ERRORS" data-bare-link="true">ERRORS</a> s
 <dt><code>geopm_policy_create</code>()</dt><dd><p>creates <em>policy</em>, an opaque pointer to a geopm_policy_c structure which can
 create a configuration file or a shared memory region to control the energy
 policy for an MPI job.  If <em>in_config</em> is not NULL then a configuration
-file or shared memory region can be read from when <em>policy</em> is passed to
-<code>geopm_policy_read()</code>. The string can contain either a config file path or
+file or shared memory region will be read in to initialize the state of the
+policy controller. The string can contain either a config file path or
 a POSIX shared memory key. If <em>out_config</em> is not NULL then a configuration
 file or shared memory region will be created and when <em>policy</em> is passed to
 <code>geopm_policy_write</code>() the current policy will be written to the region. The
@@ -157,27 +156,25 @@ the restricted CPUs.</p></dd>
 full performance for the <em>policy</em>. This parameter is used by
 <code>GEOPM_MODE_FREQ_HYBRID_STATIC</code> and <code>GEOPM_MODE_FREQ_HYBRID_DYNAMIC</code> for
 "big CPUs".</p></dd>
-<dt><code>geopm_policy_tdp_percent</code>()</dt><dd><p> sets the percent of Thermal Design Power, <em>tdp_percent</em> to give restricted
- CPUs under control under the <em>policy</em>.</p></dd>
-<dt><code>geopm_policy_affinity</code>()</dt><dd><p>sets the <em>affinity</em> for the <em>policy</em>. The affinity is used to place the
+<dt><code>geopm_policy_tdp_percent</code>()</dt><dd><p> sets the percent of Thermal Design Power, <em>percent</em> to give restricted
+ CPUs under control under the <em>policy</em>. This parameter is used by
+ <code>GEOPM_MODE_TDP_BALANCE_STATIC</code>.</p></dd>
+<dt><code>geopm_policy_affinity</code>()</dt><dd><p>sets the <em>cpu_affinity</em> for the <em>policy</em>. The affinity is used to place the
 unrestricted CPUs ("big CPUs") under control in the
 <code>GEOPM_MODE_FREQ_HYBRID_STATIC</code> and <code>GEOPM_MODE_FREQ_HYBRID_DYNAMIC</code> modes.
 The affinity options are discussed in the <a href="#AFFINITY" title="AFFINITY" data-bare-link="true">AFFINITY</a> section below.</p></dd>
-<dt><code>geopm_policy_goal</code>()</dt><dd><p>sets the <em>goal</em> for the <em>policy</em>.  The goal affects the behavior of the
+<dt><code>geopm_policy_goal</code>()</dt><dd><p>sets the <em>geo_goal</em> for the <em>policy</em>.  The goal affects the behavior of the
 policy when using dynamic power modes.  The goal options are discussed in
 the <a href="#GOALS" title="GOALS" data-bare-link="true">GOALS</a> section below.</p></dd>
 <dt><code>geopm_policy_write</code>()</dt><dd><p>writes the state stored in the <em>policy</em> to a configuration file or shared
 memory depending on the values passed to <code>geopm_policy_create</code>().</p></dd>
-<dt><code>geopm_policy_read</code>()</dt><dd><p>reads the state stored in a configuration file or shared memory depending
-on the values passed to <code>geopm_policy_create</code>() and records the read values
-to the <em>policy</em>.</p></dd>
-<dt><code>geopm_platform_msr_save</code>()</dt><dd><p>writes the state of all MSR values that <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> may modify to a file
+<dt><code>geopm_platform_msr_save</code>()</dt><dd><p>writes the state of all MSR values that <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> may modify to a file
 specified by <em>path</em> so that they can be restored at a later time.</p></dd>
 <dt><code>geopm_platform_msr_restore</code>()</dt><dd><p>reads a set of MSR values from a file specified by <em>path</em> and set the MSR
 values of the system to match those given in the file.</p></dd>
 <dt><code>geopm_platform_msr_whitelist</code>()</dt><dd><p>writes a MSR whitelist consisting of all MSR offsets and write masks needed
 for full operation of geopm power modes. It is intended to be used with the
-whitelisting feature of the Linux MSR driver. The whitelist is written out to
+white-listing feature of the Linux MSR driver. The whitelist is written out to
 <em>file_desc</em> which should be a valid file descriptor.</p></dd>
 <dt><code>geopm_policy_enforce_static</code>()</dt><dd><p>enforces the static policy described by the <em>policy</em> through modifying the
 system configuration (e.g. setting MSR values).</p></dd>
@@ -217,12 +214,12 @@ aggregate power bound.</p></dd>
 
 <p>The modes listed in this section are used to dynamically adapt power policy
 during application runtime and have a run time requirement on geopm. In these
-advanced modes, <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> dynamically manages the job to an aggregate power
+advanced modes, <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> dynamically manages the job to an aggregate power
 bound while redistributing power among the nodes to equalize performance or
 frequency across nodes, depending on the mode.</p>
 
 <dl>
-<dt><code>GEOPM_MODE_PERF_BALANCE_DYNAMIC</code></dt><dd><p>In this mode, <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> dynamically manages the job to an aggregate power
+<dt><code>GEOPM_MODE_PERF_BALANCE_DYNAMIC</code></dt><dd><p>In this mode, <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> dynamically manages the job to an aggregate power
 bound while leveraging global application awareness to maximize application
 performance. The geopm runtime tracks the application's critical path and
 continually redistributes power to steer power to the nodes on the critical
@@ -267,9 +264,9 @@ implemented).</p></dd>
 
 <dl>
 <dt><code>GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_COMPACT</code></dt><dd><p>The "small CPUs" are located nearby each other on the processor package.
-This should match the openmp runtime environment.</p></dd>
+This should match the OpenMP runtime environment.</p></dd>
 <dt><code>GEOPM_FLAGS_SMALL_CPU_TOPOLOGY_SCATTER</code></dt><dd><p>The "small CPUs" are located as far from each other as possible across the
-processor package.  This should match the openmp runtime environment.</p></dd>
+processor package.  This should match the OpenMP runtime environment.</p></dd>
 </dl>
 
 
@@ -285,20 +282,20 @@ convert them to strings.</p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>January 2016</li>
+    <li class='tc'>December 2015</li>
     <li class='tr'>geopm_policy_c(3)</li>
   </ol>
 

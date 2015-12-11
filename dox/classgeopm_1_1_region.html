@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1b0d71e1483771dfefbeea6f95973153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the power policy for this region.  <a href="#a1b0d71e1483771dfefbeea6f95973153">More...</a><br /></td></tr>
 <tr class="separator:a1b0d71e1483771dfefbeea6f95973153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4101948c23bd31034fb24877fefa97"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#afe4101948c23bd31034fb24877fefa97">last_policy</a> ()</td></tr>
-<tr class="memdesc:afe4101948c23bd31034fb24877fefa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve The last poicy message sent down for this region. Used to compare with new incoming message to see if the policy has changed.  <a href="#afe4101948c23bd31034fb24877fefa97">More...</a><br /></td></tr>
+<tr class="memdesc:afe4101948c23bd31034fb24877fefa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve The last policy message sent down for this region. Used to compare with new incoming message to see if the policy has changed.  <a href="#afe4101948c23bd31034fb24877fefa97">More...</a><br /></td></tr>
 <tr class="separator:afe4101948c23bd31034fb24877fefa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c285ff71f26768da48b6229101efea4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a2c285ff71f26768da48b6229101efea4">split_policy</a> (void)</td></tr>
 <tr class="memdesc:a2c285ff71f26768da48b6229101efea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split this regions power policy budget and create new policy messages for each child control domain.  <a href="#a2c285ff71f26768da48b6229101efea4">More...</a><br /></td></tr>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab6406ace3a8b23ced7cc976a391e02f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_observation.html">Observation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ab6406ace3a8b23ced7cc976a391e02f0">m_obs</a></td></tr>
-<tr class="memdesc:ab6406ace3a8b23ced7cc976a391e02f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the Obervation object which contains samples for this region.  <a href="#ab6406ace3a8b23ced7cc976a391e02f0">More...</a><br /></td></tr>
+<tr class="memdesc:ab6406ace3a8b23ced7cc976a391e02f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the <a class="el" href="classgeopm_1_1_observation.html">Observation</a> object which contains samples for this region.  <a href="#ab6406ace3a8b23ced7cc976a391e02f0">More...</a><br /></td></tr>
 <tr class="separator:ab6406ace3a8b23ced7cc976a391e02f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14bbd326e1edcc94318e0f7eeb1ce72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_policy.html">Policy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a14bbd326e1edcc94318e0f7eeb1ce72b">m_policy</a></td></tr>
 <tr class="memdesc:a14bbd326e1edcc94318e0f7eeb1ce72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the current power policy for this region.  <a href="#a14bbd326e1edcc94318e0f7eeb1ce72b">More...</a><br /></td></tr>
@@ -332,7 +332,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve The last poicy message sent down for this region. Used to compare with new incoming message to see if the policy has changed. </p>
+<p>Retrieve The last policy message sent down for this region. Used to compare with new incoming message to see if the policy has changed. </p>
 <dl class="section return"><dt>Returns</dt><dd>Saved policy message from last time one was sent. </dd></dl>
 
 </div>
@@ -709,7 +709,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold the Obervation object which contains samples for this region. </p>
+<p>Hold the <a class="el" href="classgeopm_1_1_observation.html">Observation</a> object which contains samples for this region. </p>
 
 </div>
 </div>

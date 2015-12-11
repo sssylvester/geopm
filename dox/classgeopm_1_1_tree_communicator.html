@@ -131,30 +131,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae37c2ba0330a88b57b2aba19cc007f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rank of the calling process among children with the same parent node.  <a href="#ae37c2ba0330a88b57b2aba19cc007f21">More...</a><br /></td></tr>
 <tr class="separator:ae37c2ba0330a88b57b2aba19cc007f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ed74b91976fadff03645569d357d760"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a8ed74b91976fadff03645569d357d760">level_size</a> (int level) const </td></tr>
-<tr class="memdesc:a8ed74b91976fadff03645569d357d760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of ranks that participate in the level.  <a href="#a8ed74b91976fadff03645569d357d760">More...</a><br /></td></tr>
+<tr class="memdesc:a8ed74b91976fadff03645569d357d760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of siblings at a level.  <a href="#a8ed74b91976fadff03645569d357d760">More...</a><br /></td></tr>
 <tr class="separator:a8ed74b91976fadff03645569d357d760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67fd0f7cf172a5a1948837723e1cfc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#af67fd0f7cf172a5a1948837723e1cfc4">send_sample</a> (int level, const struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;sample)</td></tr>
+<tr class="memdesc:af67fd0f7cf172a5a1948837723e1cfc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send sample up one level.  <a href="#af67fd0f7cf172a5a1948837723e1cfc4">More...</a><br /></td></tr>
 <tr class="separator:af67fd0f7cf172a5a1948837723e1cfc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2268258ebfea929e3a1812ca3dc5b262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a2268258ebfea929e3a1812ca3dc5b262">send_policy</a> (int level, const std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt; &amp;policy)</td></tr>
+<tr class="memdesc:a2268258ebfea929e3a1812ca3dc5b262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send policy down one level.  <a href="#a2268258ebfea929e3a1812ca3dc5b262">More...</a><br /></td></tr>
 <tr class="separator:a2268258ebfea929e3a1812ca3dc5b262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acac68262127d06d237432750b9a55487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#acac68262127d06d237432750b9a55487">get_sample</a> (int level, std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;sample)</td></tr>
+<tr class="memdesc:acac68262127d06d237432750b9a55487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get samples from children.  <a href="#acac68262127d06d237432750b9a55487">More...</a><br /></td></tr>
 <tr class="separator:acac68262127d06d237432750b9a55487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8adbb40a625187441638dfce1dc29dd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a8adbb40a625187441638dfce1dc29dd1">get_policy</a> (int level, struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy)</td></tr>
+<tr class="memdesc:a8adbb40a625187441638dfce1dc29dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get policy from parent.  <a href="#a8adbb40a625187441638dfce1dc29dd1">More...</a><br /></td></tr>
 <tr class="separator:a8adbb40a625187441638dfce1dc29dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:acdbe4b27513b7ac5505a1268248cf936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#acdbe4b27513b7ac5505a1268248cf936">mpi_type_create</a> (void)</td></tr>
+<tr class="memdesc:acdbe4b27513b7ac5505a1268248cf936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor helper to instantiate MPI types.  <a href="#acdbe4b27513b7ac5505a1268248cf936">More...</a><br /></td></tr>
 <tr class="separator:acdbe4b27513b7ac5505a1268248cf936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19792f4271c5764be0a64317c148e77d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a19792f4271c5764be0a64317c148e77d">comm_create</a> (const MPI_Comm &amp;comm)</td></tr>
+<tr class="memdesc:a19792f4271c5764be0a64317c148e77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor helper to instantiate sub-communicators.  <a href="#a19792f4271c5764be0a64317c148e77d">More...</a><br /></td></tr>
 <tr class="separator:a19792f4271c5764be0a64317c148e77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8470955fee16bc872eb526b35ee67fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a8470955fee16bc872eb526b35ee67fb4">level_create</a> (void)</td></tr>
+<tr class="memdesc:a8470955fee16bc872eb526b35ee67fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor helper to instantiate the level specific objects.  <a href="#a8470955fee16bc872eb526b35ee67fb4">More...</a><br /></td></tr>
 <tr class="separator:a8470955fee16bc872eb526b35ee67fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02d4256e8500b0dc0f631515cb9c57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#aa02d4256e8500b0dc0f631515cb9c57b">level_destroy</a> (void)</td></tr>
+<tr class="memdesc:aa02d4256e8500b0dc0f631515cb9c57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor helper to free resources of level specific objects.  <a href="#aa02d4256e8500b0dc0f631515cb9c57b">More...</a><br /></td></tr>
 <tr class="separator:aa02d4256e8500b0dc0f631515cb9c57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae465d897b43881e9d409f047772dd847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#ae465d897b43881e9d409f047772dd847">comm_destroy</a> (void)</td></tr>
+<tr class="memdesc:ae465d897b43881e9d409f047772dd847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor helper to free resources of sub-communicators.  <a href="#ae465d897b43881e9d409f047772dd847">More...</a><br /></td></tr>
 <tr class="separator:ae465d897b43881e9d409f047772dd847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a373ccac40c8ab7ed1cab85081726c921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#a373ccac40c8ab7ed1cab85081726c921">mpi_type_destroy</a> (void)</td></tr>
+<tr class="memdesc:a373ccac40c8ab7ed1cab85081726c921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor helper to free resources from MPI types.  <a href="#a373ccac40c8ab7ed1cab85081726c921">More...</a><br /></td></tr>
 <tr class="separator:a373ccac40c8ab7ed1cab85081726c921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -163,7 +173,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a240e3d2688561ae94681fdb2fac88b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of levels this rank participates in.  <a href="#a240e3d2688561ae94681fdb2fac88b02">More...</a><br /></td></tr>
 <tr class="separator:a240e3d2688561ae94681fdb2fac88b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae2d22eb3cbd901a8e0a5d3581d9c80b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#aae2d22eb3cbd901a8e0a5d3581d9c80b">m_fan_out</a></td></tr>
-<tr class="memdesc:aae2d22eb3cbd901a8e0a5d3581d9c80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tree fan out from root to leaf. Note levels go from leaf to root.  <a href="#aae2d22eb3cbd901a8e0a5d3581d9c80b">More...</a><br /></td></tr>
 <tr class="separator:aae2d22eb3cbd901a8e0a5d3581d9c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc376ec702c5185399a04a4976c19272"><td class="memItemLeft" align="right" valign="top">std::vector&lt; MPI_Comm &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator.html#acc376ec702c5185399a04a4976c19272">m_comm</a></td></tr>
 <tr class="separator:acc376ec702c5185399a04a4976c19272"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,6 +284,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor helper to instantiate sub-communicators. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae465d897b43881e9d409f047772dd847"></a>
@@ -298,6 +309,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor helper to free resources of sub-communicators. </p>
 
 </div>
 </div>
@@ -324,7 +337,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Record current policy for calling process rank on the level. Will post another receive for the next update if the root of the level has sent an update since last call. otherwise returns cached policy. If no policy has been sent since start-up throws A <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> with err_value() of GEOPM_ERROR_POLICY_UNKNOWN. </p>
+
+<p>Get policy from parent. </p>
+<p>Record current policy for calling process on the level. Will post another receive for the next update if the root of the level has sent an update since last call. otherwise returns cached policy. If no policy has been sent since start-up throws A <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> with err_value() of GEOPM_ERROR_POLICY_UNKNOWN.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>The level where the policy is being received.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">policy</td><td>The current policy message for the calling process at the given level. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -351,7 +373,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Called only by root process of the level. Returns samples from each member of the level. Throws <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> with err_value() of GEOPM_ERROR_SAMPLE_INCOMPLETE if message has not been received by all members of the level since last call. </p>
+
+<p>Get samples from children. </p>
+<p>Called only by root process of the level. Output is a vector of samples from each member of the level. Throws <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> with err_value() of GEOPM_ERROR_SAMPLE_INCOMPLETE if message has not been received by all members of the level since last call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>The level which is sending samples up.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sample</td><td>A vector of sample messages collected from the level. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -377,6 +408,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor helper to instantiate the level specific objects. </p>
+
 </div>
 </div>
 <a class="anchor" id="aa02d4256e8500b0dc0f631515cb9c57b"></a>
@@ -400,6 +433,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor helper to free resources of level specific objects. </p>
 
 </div>
 </div>
@@ -443,7 +478,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Number of ranks that participate in the level. </p>
+<p>Number of siblings at a level. </p>
+<p>Returns the number of siblings that a process participating in the responsibilities of the given level has associated with it. Note that if level is zero than this is the number of leaf level processes that report to a single aggregator at level one, and if level is <a class="el" href="classgeopm_1_1_tree_communicator.html#a6748ba46b17e1a2414cb3b481e915770" title="The level of root (maximum level for any rank). ">root_level()</a> the result is one. This is essentially the reverse of the fan out vector provided at construction with one appended to it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>The level of the tree to query.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of siblings. </dd></dl>
 
 </div>
 </div>
@@ -469,6 +512,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor helper to instantiate MPI types. </p>
+
 </div>
 </div>
 <a class="anchor" id="a373ccac40c8ab7ed1cab85081726c921"></a>
@@ -492,6 +537,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor helper to free resources from MPI types. </p>
 
 </div>
 </div>
@@ -558,7 +605,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Called only by root process of the level. Send policy to each member of the level. If no receive has been posted then the policy is not sent and no exception is thrown. </p>
+
+<p>Send policy down one level. </p>
+<p>Called only by a root process of the level. Send policy down to each member of the level. If no receive has been posted then the policy is not sent and no exception is thrown.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>The level to where the policy is being sent down.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>A vector of policies, one for each child node of the calling process to be sent. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -585,7 +641,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send sample to root of the level. If no receive has been posted samples are not sent and no exception is thrown. </p>
+
+<p>Send sample up one level. </p>
+<p>Send sample to root of the level. If no receive has been posted samples are not sent and no exception is thrown.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>The level that is sending the sample.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sample</td><td>The sample message sent from the local process. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -628,8 +693,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Tree fan out from root to leaf. Note levels go from leaf to root. </p>
+<p>Tree fan out from root to leaf. Note levels go from leaf to root </p>
 
 </div>
 </div>

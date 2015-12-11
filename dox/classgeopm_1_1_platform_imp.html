@@ -135,10 +135,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a61c7aadf5da29f72594f298c94d70d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of tiles present on the platform.  <a href="#a61c7aadf5da29f72594f298c94d70d3d">More...</a><br /></td></tr>
 <tr class="separator:a61c7aadf5da29f72594f298c94d70d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedee27e00325289ba505e31b7a2c707a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aedee27e00325289ba505e31b7a2c707a">hw_cpu</a> (void) const </td></tr>
-<tr class="memdesc:aedee27e00325289ba505e31b7a2c707a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of physical cpus present on the platform.  <a href="#aedee27e00325289ba505e31b7a2c707a">More...</a><br /></td></tr>
+<tr class="memdesc:aedee27e00325289ba505e31b7a2c707a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of physical CPUs present on the platform.  <a href="#aedee27e00325289ba505e31b7a2c707a">More...</a><br /></td></tr>
 <tr class="separator:aedee27e00325289ba505e31b7a2c707a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa90a020c3fe38027075e3fa9f92f2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a7fa90a020c3fe38027075e3fa9f92f2f">logical_cpu</a> (void) const </td></tr>
-<tr class="memdesc:a7fa90a020c3fe38027075e3fa9f92f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of logical cpus present on the platform.  <a href="#a7fa90a020c3fe38027075e3fa9f92f2f">More...</a><br /></td></tr>
+<tr class="memdesc:a7fa90a020c3fe38027075e3fa9f92f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of logical CPUs present on the platform.  <a href="#a7fa90a020c3fe38027075e3fa9f92f2f">More...</a><br /></td></tr>
 <tr class="separator:a7fa90a020c3fe38027075e3fa9f92f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fbab8b93b6dbada190e22345bd0249c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9fbab8b93b6dbada190e22345bd0249c">topology</a> (void) const </td></tr>
 <tr class="memdesc:a9fbab8b93b6dbada190e22345bd0249c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology tree for the platform.  <a href="#a9fbab8b93b6dbada190e22345bd0249c">More...</a><br /></td></tr>
@@ -186,7 +186,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a5bb1b65b1b38de16df4cabbf20a83d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a MSR special file.  <a href="#a5bb1b65b1b38de16df4cabbf20a83d40">More...</a><br /></td></tr>
 <tr class="separator:a5bb1b65b1b38de16df4cabbf20a83d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1299e904d4e6f8a5bae2c3b156f445"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ade1299e904d4e6f8a5bae2c3b156f445">parse_hw_topology</a> (void)</td></tr>
-<tr class="memdesc:ade1299e904d4e6f8a5bae2c3b156f445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup topology information to set member variables.  <a href="#ade1299e904d4e6f8a5bae2c3b156f445">More...</a><br /></td></tr>
+<tr class="memdesc:ade1299e904d4e6f8a5bae2c3b156f445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up topology information to set member variables.  <a href="#ade1299e904d4e6f8a5bae2c3b156f445">More...</a><br /></td></tr>
 <tr class="separator:ade1299e904d4e6f8a5bae2c3b156f445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa512121a19942a4c18c73207c351d4e4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aa512121a19942a4c18c73207c351d4e4">initialize_msrs</a> ()=0</td></tr>
 <tr class="memdesc:aa512121a19942a4c18c73207c351d4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the per cpu special files, initializes the MSR offset map, initialize RAPL, CBO and fixed counter MSRs.  <a href="#aa512121a19942a4c18c73207c351d4e4">More...</a><br /></td></tr>
@@ -204,10 +204,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ac3428cd77f42ba1e24180b011d97c9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of MSR string name to address offset.  <a href="#ac3428cd77f42ba1e24180b011d97c9cc">More...</a><br /></td></tr>
 <tr class="separator:ac3428cd77f42ba1e24180b011d97c9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496582d5e634ac362f8e09ff07e079ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a496582d5e634ac362f8e09ff07e079ee">m_logical_cpus</a></td></tr>
-<tr class="memdesc:a496582d5e634ac362f8e09ff07e079ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logical cpus.  <a href="#a496582d5e634ac362f8e09ff07e079ee">More...</a><br /></td></tr>
+<tr class="memdesc:a496582d5e634ac362f8e09ff07e079ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logical CPUs.  <a href="#a496582d5e634ac362f8e09ff07e079ee">More...</a><br /></td></tr>
 <tr class="separator:a496582d5e634ac362f8e09ff07e079ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376b3d3052b8911d6fdcaa58aee2573c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a376b3d3052b8911d6fdcaa58aee2573c">m_hw_cpus</a></td></tr>
-<tr class="memdesc:a376b3d3052b8911d6fdcaa58aee2573c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of hardware cpus.  <a href="#a376b3d3052b8911d6fdcaa58aee2573c">More...</a><br /></td></tr>
+<tr class="memdesc:a376b3d3052b8911d6fdcaa58aee2573c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of hardware CPUs.  <a href="#a376b3d3052b8911d6fdcaa58aee2573c">More...</a><br /></td></tr>
 <tr class="separator:a376b3d3052b8911d6fdcaa58aee2573c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44082c159720b0e3d00fc19b3e0ff484"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a44082c159720b0e3d00fc19b3e0ff484">m_tiles</a></td></tr>
 <tr class="memdesc:a44082c159720b0e3d00fc19b3e0ff484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tiles.  <a href="#a44082c159720b0e3d00fc19b3e0ff484">More...</a><br /></td></tr>
@@ -311,8 +311,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve the number of physical cpus present on the platform. </p>
-<dl class="section return"><dt>Returns</dt><dd>number of physical cpus. </dd></dl>
+<p>Retrieve the number of physical CPUs present on the platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of physical CPUs. </dd></dl>
 
 </div>
 </div>
@@ -383,8 +383,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve the number of logical cpus present on the platform. </p>
-<dl class="section return"><dt>Returns</dt><dd>number of logical cpus. </dd></dl>
+<p>Retrieve the number of logical CPUs present on the platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of logical CPUs. </dd></dl>
 
 </div>
 </div>
@@ -413,7 +413,7 @@ Protected Attributes</h2></td></tr>
 <p>Does this <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> support a specific platform. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">platform_id</td><td><a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> identifier specific to the underlying hradware. On x86 plaforms this can be obtained by the cpuid instruction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">platform_id</td><td><a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> identifier specific to the underlying hardware. On x86 platforms this can be obtained by the cpuid instruction. </td></tr>
   </table>
   </dd>
 </dl>
@@ -553,7 +553,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lookup topology information to set member variables. </p>
+<p>Look up topology information to set member variables. </p>
 
 </div>
 </div>
@@ -901,7 +901,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Number of hardware cpus. </p>
+<p>Number of hardware CPUs. </p>
 
 </div>
 </div>
@@ -923,7 +923,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Number of logical cpus. </p>
+<p>Number of logical CPUs. </p>
 
 </div>
 </div>

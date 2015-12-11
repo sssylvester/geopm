@@ -153,23 +153,27 @@ scales than the regions provide.  This is done by marking the end of
 the outer most loop, or the "outer synchronization point."</p>
 
 <dl>
-<dt><code>geopm_prof_create</code>()</dt><dd><p>creates a profile object <em>prof</em>. Requires a <em>name</em> which is
-displayed when the profile is printed.  The <em>sample_reduce</em>
-parameter determines the level of reduction that occurs when a
-sample is generated with the <code>geopm_prof_sample</code>() API.  If
-<em>sample_reduce</em> is 0, no reduction occurs when sampling and
-samples include thread specific information. If <em>sample_reduce</em> is
-1 then thread specific data is aggregated to the MPI rank level.
-If <em>sample_reduce</em> is 2 then data is aggregated to the compute
-node granularity over all MPI ranks on each compute node. If the
-<em>sample_key</em> is non-NULL then calls to <code>geopm_prof_sample</code>() will
-write the sampled data to POSIX shared memory associated with the
-given key to be read by an external control process running on the
-same compute node.</p></dd>
-<dt><code>geopm_prof_destroy</code>()</dt><dd><p>destroys all resources associated with the prof object.</p></dd>
-<dt><code>geopm_prof_register</code>()</dt><dd><p>registers an application region with the profile structure.  The
+<dt><code>geopm_prof_create</code>():</dt><dd><p></p>
+
+<p>creates a profile object, <em>prof</em>, which can be used in conjunction
+with all the other APIs described here.  The resources associated
+with the <em>prof</em> are released by passing it to
+<code>geopm_prof_destroy</code>().  Construction requires a <em>name</em> which is
+displayed when the profile is printed.  The <em>table_size</em> parameter
+determines the size in bytes of the shared memory region used to
+communicate between the calling process and the geopm control
+process (4096 is recommended).  If the <em>sample_key</em> is non-NULL
+and non-empty then calls to <code>geopm_prof_sample</code>() will write the
+sampled data to POSIX shared memory associated with the given key
+to be read by an external control process running on the same
+compute node. The <em>comm</em> is an MPI communicator that the calling
+MPI application is running on (probably MPI_COMM_WORLD).</p></dd>
+<dt><code>geopm_prof_destroy</code>()</dt><dd><p>releases all resources associated with the prof object.</p></dd>
+<dt><code>geopm_prof_register</code>():</dt><dd><p></p>
+
+<p>registers an application region with the profile structure.  The
 <em>region_name</em> and <em>hint</em> are input parameters, and the <em>region_id</em>
-is returned.  If the region name has been previously registered, a
+is output.  If the region name has been previously registered, a
 call to this function will set the <em>region_id</em> but the state in
 the <em>prof</em> structure associated with the region is unmodified.
 The <em>region_name</em> is used to determine the output <em>region_id</em> and
@@ -182,7 +186,7 @@ profiled compute region associated with the <em>region_id</em>. If this
 call is made after entering a different region, but before exiting
 that region, the call is ignored and an error code is returned
 (i.e. nested regions are ignored).</p></dd>
-<dt><code>geopm_prof_exit</code>()</dt><dd><p>is called by compute application to mark the end of a compute
+<dt><code>geopm_prof_exit</code>()</dt><dd><p>is called by the compute application to mark the end of a compute
 region.  If this region is nested then the call is ignored and an
 error code is returned.</p></dd>
 <dt><code>geopm_prof_progress</code>()</dt><dd><p>is called by compute application in single threaded context to
@@ -198,21 +202,19 @@ synchronizing MPI call.  There should be just one place in an
 application code where this call occurs, and it should be called
 repeatedly inside of a loop.</p></dd>
 <dt><code>geopm_prof_sample</code>()</dt><dd><p>is called to derive a sample based on the profiling information
-collected.  This may aggregate data as specified by the
-<em>sample_reduce</em> parameters passed when the <em>prof</em> structure was
-created.</p></dd>
+collected.  This may aggregate data.</p></dd>
 <dt><code>geopm_prof_disable</code>()</dt><dd><p>is called at application start up to disable a profiling feature.
 By default all profiling features available on the system are
 enabled.  The set of all possible values for <em>feature_name</em> are:
 "instr", "flop", and "joules".</p></dd>
-<dt><code>geopm_prof_print</code>()</dt><dd><p>writes a profile report to standard output based on the data
-collected so far.  This is intended for use just prior to
-application termination.  All profile information above the
-specified <em>depth</em> in the control tree hierarchy is contained in
-the report.  A depth of 0 gives only statistics aggregated over
+<dt><code>geopm_prof_print</code>()</dt><dd><p>writes a profile report to the file named <em>file_name</em> based on the
+data collected so far.  This is intended for use just prior to
+application termination, and the <em>prof</em> object is not valid after
+calling <code>geopm_prof_print</code>(), though it should still be destroyed
+by calling <code>geopm_prof_destroy</code>().  All profile information above
+the specified <em>depth</em> in the control tree hierarchy is contained
+in the report.  A depth of 0 gives only statistics aggregated over
 all MPI processes.</p></dd>
-<dt><code>geopm_prof_fprint</code>()</dt><dd><p>writes the profile report to the file descriptor <em>fid</em> rather than
-standard output and is otherwise the same as <code>geopm_prof_print</code>().</p></dd>
 </dl>
 
 
@@ -221,8 +223,7 @@ standard output and is otherwise the same as <code>geopm_prof_print</code>().</p
 <dl>
 <dt><code>geopm_num_node</code>()</dt><dd><p>sets <em>num_node</em> to the number of compute nodes associated with the
 communicator <em>comm</em>. A compute node is defined to be a shared
-memory coherency domain.  The product of the elements of <em>fan_out</em>
-passed to <code>geopm_ctl_create</code>() must equal <em>num_node</em>.</p></dd>
+memory coherency domain.</p></dd>
 <dt><code>geopm_no_omp_cpu</code>()</dt><dd><p> sets the <em>no_omp</em> <strong><a class="man-ref" href="http://linux.die.net/man/3/cpu_set">CPU_SET<span class="s">(3)</span></a></strong> allocated with <em>num_cpu</em> bits to
  a mask which can be used with <strong><a class="man-ref" href="http://linux.die.net/man/3/pthread_attr_setaffinity_np">pthread_attr_setaffinity_np<span class="s">(3)</span></a></strong>
  to bind the pthread created by <code>geopm_ctl_pthread</code>() to CPUs that
@@ -284,20 +285,20 @@ to convert them to strings.</p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>January 2016</li>
+    <li class='tc'>December 2015</li>
     <li class='tr'>geopm_prof_c(3)</li>
   </ol>
 

@@ -1,17 +1,17 @@
 <map id="src/GoverningDecider.cpp" name="src/GoverningDecider.cpp">
-<area shape="rect" id="node3" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="221,519,355,544"/>
-<area shape="rect" id="node9" href="$geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="806,152,922,177"/>
-<area shape="rect" id="node10" href="$_governing_decider_8hpp.html" title="GoverningDecider.hpp" alt="" coords="666,79,820,104"/>
-<area shape="rect" id="node26" href="$_exception_8hpp.html" title="Exception.hpp" alt="" coords="1266,372,1372,397"/>
-<area shape="rect" id="node6" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="235,592,341,617"/>
-<area shape="rect" id="node11" href="$_decider_8hpp.html" title="Decider.hpp" alt="" coords="690,152,782,177"/>
-<area shape="rect" id="node13" href="$_platform_8hpp.html" title="Platform.hpp" alt="" coords="637,225,734,251"/>
-<area shape="rect" id="node19" href="$_policy_8hpp.html" title="Policy.hpp" alt="" coords="758,445,840,471"/>
-<area shape="rect" id="node14" href="$_region_8hpp.html" title="Region.hpp" alt="" coords="833,372,922,397"/>
-<area shape="rect" id="node21" href="$_platform_imp_8hpp.html" title="PlatformImp.hpp" alt="" coords="480,372,600,397"/>
-<area shape="rect" id="node25" href="$_power_model_8hpp.html" title="PowerModel.hpp" alt="" coords="825,299,946,324"/>
-<area shape="rect" id="node16" href="$_observation_8hpp.html" title="Observation.hpp" alt="" coords="915,445,1034,471"/>
-<area shape="rect" id="node17" href="$_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="1063,519,1191,544"/>
-<area shape="rect" id="node24" href="$_platform_topology_8hpp.html" title="PlatformTopology.hpp" alt="" coords="432,445,581,471"/>
-<area shape="rect" id="node28" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="1266,519,1374,544"/>
+<area shape="rect" id="node3" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="1134,519,1269,544"/>
+<area shape="rect" id="node9" href="$geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="942,152,1058,177"/>
+<area shape="rect" id="node10" href="$_governing_decider_8hpp.html" title="GoverningDecider.hpp" alt="" coords="866,79,1020,104"/>
+<area shape="rect" id="node19" href="$_exception_8hpp.html" title="Exception.hpp" alt="" coords="1380,592,1486,617"/>
+<area shape="rect" id="node6" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="1148,592,1254,617"/>
+<area shape="rect" id="node11" href="$_decider_8hpp.html" title="Decider.hpp" alt="" coords="620,152,713,177"/>
+<area shape="rect" id="node13" href="$_platform_8hpp.html" title="Platform.hpp" alt="" coords="669,225,766,251"/>
+<area shape="rect" id="node22" href="$_policy_8hpp.html" title="Policy.hpp" alt="" coords="672,445,754,471"/>
+<area shape="rect" id="node14" href="$_region_8hpp.html" title="Region.hpp" alt="" coords="894,372,983,397"/>
+<area shape="rect" id="node24" href="$_platform_imp_8hpp.html" title="PlatformImp.hpp" alt="" coords="479,445,598,471"/>
+<area shape="rect" id="node28" href="$_power_model_8hpp.html" title="PowerModel.hpp" alt="" coords="755,299,877,324"/>
+<area shape="rect" id="node16" href="$_observation_8hpp.html" title="Observation.hpp" alt="" coords="879,445,998,471"/>
+<area shape="rect" id="node17" href="$_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="880,519,1008,544"/>
+<area shape="rect" id="node21" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="1397,665,1505,691"/>
+<area shape="rect" id="node27" href="$_platform_topology_8hpp.html" title="PlatformTopology.hpp" alt="" coords="144,519,293,544"/>
 </map>

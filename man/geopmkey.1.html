@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>geopmctl(3) - geopm runtime mpi application</title>
+  <title>geopmkey(1) - generate shared memory keys for geopm</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -57,76 +57,73 @@
     <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
     <a href="#OPTIONS">OPTIONS</a>
+    <a href="#EXAMPLE">EXAMPLE</a>
     <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
 
   <ol class='man-decor man-head man head'>
-    <li class='tl'>geopmctl(3)</li>
+    <li class='tl'>geopmkey(1)</li>
     <li class='tc'></li>
-    <li class='tr'>geopmctl(3)</li>
+    <li class='tr'>geopmkey(1)</li>
   </ol>
 
   <h2 id="NAME">NAME</h2>
 <p class="man-name">
-  <code>geopmctl</code> - <span class="man-whatis">geopm runtime mpi application</span>
+  <code>geopmkey</code> - <span class="man-whatis">generate shared memory keys for geopm</span>
 </p>
 
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-<dl>
-<dt><code>geopmctl</code> [<code>--help</code>] [<code>--version</code>]</dt><dd>(<code>-c</code> policy_config | <code>-k</code> policy_key) <br />
-[<code>-s</code> sample_key] [<code>-r</code> report]</dd>
-</dl>
-
+<p><code>geopmkey</code> [<code>--version</code>] [<code>--help</code>]</p>
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<pre><code>The geopmctl application runs concurrently with a computational MPI
-application to manage power settings on compute nodes allocated to the
-computation MPI application.
+<pre><code>Creates a temporary file and prints the name of this file to standard output.
+This file can be used to produce unique shared memory keys for use with geopm
+enabled applications.  The file's first line is the control key and the second
+line is the sample key.  The keys are of the form /&lt;PID>-&lt;type>-&lt;mkstemp>
 </code></pre>
 
 <h2 id="OPTIONS">OPTIONS</h2>
 
 <dl>
-<dt class="flush"><code>--help</code></dt><dd><p><br />Print brief summary of the command line usage information, then exit.</p></dd>
 <dt><code>--version</code></dt><dd><p>Print version of geopm to standard output, then exit.</p></dd>
-<dt><code>-c</code> policy_config</dt><dd><p>Policy configuration file which may be created with the
-<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> interface or the <strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong> application.
-If <code>-c</code> is specified then <code>-k</code>  should not be specified.  If both are
-specified <code>-k</code> is ignored and a warning is printed.</p></dd>
-<dt><code>-k</code> control_key</dt><dd><p>POSIX shared memory key which determines policy for geopmctl.  See
-<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> for information on how to create and modify a shared
-memory region for control.</p></dd>
-<dt><code>-s</code> sample_key</dt><dd><p>POSIX shared memory key referencing memory written to by the compute
-application to provide the geopmctl application with performance profile
-information.  See
-<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong> for information on how to create the sample shared
-memory region for profile feedback.</p></dd>
-<dt><code>-r</code> report</dt><dd><p>Output text file that will hold the human readable report when program
-terminates.</p></dd>
+<dt class="flush"><code>--help</code></dt><dd><p><br /> Print brief summary of the command line usage information, then exit.</p></dd>
 </dl>
 
+
+<h2 id="EXAMPLE">EXAMPLE</h2>
+
+<pre><code>$ keyfile=$(geopmkey)
+$ cat $keyfile
+/555-sample-a9b8c7
+/555-control-a9b8c7
+$ geopmctl -k $(grep control $keyfile) \
+           -s $(grep sample $keyfile)
+</code></pre>
 
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
 <p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
 
-<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>January 2016</li>
-    <li class='tr'>geopmctl(3)</li>
+    <li class='tc'>December 2015</li>
+    <li class='tr'>geopmkey(1)</li>
   </ol>
 
   </div>

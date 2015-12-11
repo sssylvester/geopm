@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='content-type' value='text/html;charset=utf8'>
   <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
-  <title>geopmkey(3) - generate shared memory keys for geopm</title>
+  <title>geopm(7) - global energy optimization power management</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -54,54 +54,51 @@
 
   <div class='man-navigation' style='display:none'>
     <a href="#NAME">NAME</a>
-    <a href="#SYNOPSIS">SYNOPSIS</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
-    <a href="#OPTIONS">OPTIONS</a>
-    <a href="#EXAMPLE">EXAMPLE</a>
     <a href="#COPYRIGHT">COPYRIGHT</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
 
   <ol class='man-decor man-head man head'>
-    <li class='tl'>geopmkey(3)</li>
+    <li class='tl'>geopm(7)</li>
     <li class='tc'></li>
-    <li class='tr'>geopmkey(3)</li>
+    <li class='tr'>geopm(7)</li>
   </ol>
 
   <h2 id="NAME">NAME</h2>
 <p class="man-name">
-  <code>geopmkey</code> - <span class="man-whatis">generate shared memory keys for geopm</span>
+  <code>geopm</code> - <span class="man-whatis">global energy optimization power management</span>
 </p>
-
-<h2 id="SYNOPSIS">SYNOPSIS</h2>
-
-<p><code>geopmkey</code> [<code>--version</code>] [<code>--help</code>]</p>
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<pre><code>Creates a temporary file and prints the name of this file to standard output.
-This file can be used to produce unique shared memory keys for use with geopm
-enabled applications.  The file's first line is the control key and the second
-line is the sample key.  The keys are of the form /&lt;PID>-&lt;type>-&lt;mkstemp>
-</code></pre>
-
-<h2 id="OPTIONS">OPTIONS</h2>
-
-<dl>
-<dt><code>--version</code></dt><dd><p>Print version of geopm to standard output, then exit.</p></dd>
-<dt class="flush"><code>--help</code></dt><dd><p><br /> Print brief summary of the command line usage information, then exit.</p></dd>
-</dl>
-
-
-<h2 id="EXAMPLE">EXAMPLE</h2>
-
-<pre><code>$ keyfile=$(geopmkey)
-$ cat $keyfile
-/555-sample-a9b8c7
-/555-control-a9b8c7
-$ geopmctl -k $(grep control $keyfile) \
-           -s $(grep sample $keyfile)
-</code></pre>
+<p>Global Energy Optimization Power Management (GEOPM) is an extensible power
+management framework targeting high performance computing.  The library can be
+extended to support new control algorithms and new hardware power management
+features.  The GEOPM package provides built in features ranging from static
+management of power policy for each individual compute node, to dynamic
+coordination of power policy and performance across all of the compute nodes
+hosting one MPI job on a portion of a distributed computing system.  The
+dynamic coordination is implemented as a hierarchical control system for
+scalable communication and decentralized control.  The hierarchical control
+system can optimize for various objective functions including maximizing
+global application performance within a power bound.  The root of the control
+hierarchy tree can communicate through shared memory with the system resource
+management daemon to extend the hierarchy above the individual MPI job level
+and enable management of system power resources for multiple MPI jobs and
+multiple users by the system resource manager.  The geopm package provides the
+libgeopm library, the libgeopmpolicy library, the geopmctl application and the
+geopmpolicy application.  The libgeopm library can be called within MPI
+applications to enable application feedback for informing the control
+decisions.  If modification of the target application is not desired then the
+geopmctl application can be run concurrently with the target application.  In
+this case, target application feedback is inferred by querying the hardware
+through Model Specific Registers (MSRs).  With either method (libgeopm or
+geopmctl), the control hierarchy tree writes processor power policy through
+MSRs to enact policy decisions.  The libgeopmpolicy library is used by a
+resource manager to set energy policy control parameters for MPI jobs.  Some
+features of libgeopmpolicy are available through the geopmpolicy application
+including support for static control.</p>
 
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
@@ -109,21 +106,21 @@ $ geopmctl -k $(grep control $keyfile) \
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<p><strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong></p>
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>January 2016</li>
-    <li class='tr'>geopmkey(3)</li>
+    <li class='tc'>December 2015</li>
+    <li class='tr'>geopm(7)</li>
   </ol>
 
   </div>

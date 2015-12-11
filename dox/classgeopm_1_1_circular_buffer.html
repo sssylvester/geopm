@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>geopm: geopm::CircularBuffer Class Reference</title>
+<title>geopm: geopm::CircularBuffer&lt; type &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,49 +93,72 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classgeopm_1_1_circular_buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">geopm::CircularBuffer Class Reference</div>  </div>
+<div class="title">geopm::CircularBuffer&lt; type &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Templated container for a circular buffer implementation.  
+ <a href="classgeopm_1_1_circular_buffer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_circular_buffer_8hpp_source.html">CircularBuffer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5387f118521d19a42905e41cc08a379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#ac5387f118521d19a42905e41cc08a379">CircularBuffer</a> (const unsigned int <a class="el" href="classgeopm_1_1_circular_buffer.html#af306771389e1c78c770236244e3ac42b">size</a>)</td></tr>
-<tr class="separator:ac5387f118521d19a42905e41cc08a379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2346e587ae9d3ae78df3992b33a63f7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a2346e587ae9d3ae78df3992b33a63f7d">~CircularBuffer</a> ()</td></tr>
-<tr class="separator:a2346e587ae9d3ae78df3992b33a63f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a909209e6ed05c7106c4b091c28c928bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a909209e6ed05c7106c4b091c28c928bc">set_capacity</a> (const unsigned int <a class="el" href="classgeopm_1_1_circular_buffer.html#af306771389e1c78c770236244e3ac42b">size</a>)</td></tr>
-<tr class="separator:a909209e6ed05c7106c4b091c28c928bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425d2bb9730327c129688819a6180ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a425d2bb9730327c129688819a6180ad9">clear</a> (void)</td></tr>
-<tr class="separator:a425d2bb9730327c129688819a6180ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af306771389e1c78c770236244e3ac42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#af306771389e1c78c770236244e3ac42b">size</a> (void) const </td></tr>
-<tr class="separator:af306771389e1c78c770236244e3ac42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8275b06063182a0c12779c019e0a1d8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a8275b06063182a0c12779c019e0a1d8d">capacity</a> (void) const </td></tr>
-<tr class="separator:a8275b06063182a0c12779c019e0a1d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a725b443515cc8c4774c6e235bef4f6a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a725b443515cc8c4774c6e235bef4f6a3">insert</a> (const double <a class="el" href="classgeopm_1_1_circular_buffer.html#a5916d2f0a6689b94e5e1eced8cb67310">value</a>)</td></tr>
-<tr class="separator:a725b443515cc8c4774c6e235bef4f6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5916d2f0a6689b94e5e1eced8cb67310"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a5916d2f0a6689b94e5e1eced8cb67310">value</a> (const unsigned int index) const </td></tr>
-<tr class="separator:a5916d2f0a6689b94e5e1eced8cb67310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ea349c8c5219e268b24df4c4d03cbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#af9ea349c8c5219e268b24df4c4d03cbe">CircularBuffer</a> (const unsigned int <a class="el" href="classgeopm_1_1_circular_buffer.html#a7764c8c9e882face8adbbe1fb83bae1b">size</a>)</td></tr>
+<tr class="memdesc:af9ea349c8c5219e268b24df4c4d03cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classgeopm_1_1_circular_buffer.html" title="Templated container for a circular buffer implementation. ">CircularBuffer</a> template.  <a href="#af9ea349c8c5219e268b24df4c4d03cbe">More...</a><br /></td></tr>
+<tr class="separator:af9ea349c8c5219e268b24df4c4d03cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d96222c70a885e459200b46374a9811"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a0d96222c70a885e459200b46374a9811">~CircularBuffer</a> ()</td></tr>
+<tr class="memdesc:a0d96222c70a885e459200b46374a9811"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_circular_buffer.html" title="Templated container for a circular buffer implementation. ">CircularBuffer</a> destructor, virtual.  <a href="#a0d96222c70a885e459200b46374a9811">More...</a><br /></td></tr>
+<tr class="separator:a0d96222c70a885e459200b46374a9811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3eb09455148dc7f36d5c441030e0686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#ae3eb09455148dc7f36d5c441030e0686">set_capacity</a> (const unsigned int <a class="el" href="classgeopm_1_1_circular_buffer.html#a7764c8c9e882face8adbbe1fb83bae1b">size</a>)</td></tr>
+<tr class="memdesc:ae3eb09455148dc7f36d5c441030e0686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-size the circular buffer.  <a href="#ae3eb09455148dc7f36d5c441030e0686">More...</a><br /></td></tr>
+<tr class="separator:ae3eb09455148dc7f36d5c441030e0686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb962f933f1848a9f8ff604652aaefd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#adb962f933f1848a9f8ff604652aaefd0">clear</a> (void)</td></tr>
+<tr class="memdesc:adb962f933f1848a9f8ff604652aaefd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all entries from the buffer.  <a href="#adb962f933f1848a9f8ff604652aaefd0">More...</a><br /></td></tr>
+<tr class="separator:adb962f933f1848a9f8ff604652aaefd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7764c8c9e882face8adbbe1fb83bae1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a7764c8c9e882face8adbbe1fb83bae1b">size</a> (void) const </td></tr>
+<tr class="memdesc:a7764c8c9e882face8adbbe1fb83bae1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the buffer contents.  <a href="#a7764c8c9e882face8adbbe1fb83bae1b">More...</a><br /></td></tr>
+<tr class="separator:a7764c8c9e882face8adbbe1fb83bae1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7775aa9d42727ed843fb3d85c787bf50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a7775aa9d42727ed843fb3d85c787bf50">capacity</a> (void) const </td></tr>
+<tr class="memdesc:a7775aa9d42727ed843fb3d85c787bf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capacity of the buffer.  <a href="#a7775aa9d42727ed843fb3d85c787bf50">More...</a><br /></td></tr>
+<tr class="separator:a7775aa9d42727ed843fb3d85c787bf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2d729e66d83f769c3ed96da67df374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#aef2d729e66d83f769c3ed96da67df374">insert</a> (const type <a class="el" href="classgeopm_1_1_circular_buffer.html#a8413f440a999c7bf368c9dd82cf09569">value</a>)</td></tr>
+<tr class="memdesc:aef2d729e66d83f769c3ed96da67df374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a value into the buffer.  <a href="#aef2d729e66d83f769c3ed96da67df374">More...</a><br /></td></tr>
+<tr class="separator:aef2d729e66d83f769c3ed96da67df374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8413f440a999c7bf368c9dd82cf09569"><td class="memItemLeft" align="right" valign="top">type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a8413f440a999c7bf368c9dd82cf09569">value</a> (const unsigned int index) const </td></tr>
+<tr class="memdesc:a8413f440a999c7bf368c9dd82cf09569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a value from the buffer.  <a href="#a8413f440a999c7bf368c9dd82cf09569">More...</a><br /></td></tr>
+<tr class="separator:a8413f440a999c7bf368c9dd82cf09569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afa26f4a8e3ca195a3d5338220cded43f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#afa26f4a8e3ca195a3d5338220cded43f">m_buffer</a></td></tr>
-<tr class="separator:afa26f4a8e3ca195a3d5338220cded43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2dd879a6de97ddbfeeebed54d4e4ad"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a7f2dd879a6de97ddbfeeebed54d4e4ad">m_head</a></td></tr>
-<tr class="separator:a7f2dd879a6de97ddbfeeebed54d4e4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57b39c9f9f4da680a0d308735bcf4772"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a57b39c9f9f4da680a0d308735bcf4772">m_count</a></td></tr>
-<tr class="separator:a57b39c9f9f4da680a0d308735bcf4772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d92ebc624ad58b5124a5e4d6d2a7d58"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a3d92ebc624ad58b5124a5e4d6d2a7d58">m_max_size</a></td></tr>
-<tr class="separator:a3d92ebc624ad58b5124a5e4d6d2a7d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb5cafc296566e569e914fd37564995"><td class="memItemLeft" align="right" valign="top">std::vector&lt; type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#aeeb5cafc296566e569e914fd37564995">m_buffer</a></td></tr>
+<tr class="memdesc:aeeb5cafc296566e569e914fd37564995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector holding the buffer data.  <a href="#aeeb5cafc296566e569e914fd37564995">More...</a><br /></td></tr>
+<tr class="separator:aeeb5cafc296566e569e914fd37564995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab370cbd69ba07c997852be6c2d6d6ab1"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#ab370cbd69ba07c997852be6c2d6d6ab1">m_head</a></td></tr>
+<tr class="memdesc:ab370cbd69ba07c997852be6c2d6d6ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the current head of the buffer.  <a href="#ab370cbd69ba07c997852be6c2d6d6ab1">More...</a><br /></td></tr>
+<tr class="separator:ab370cbd69ba07c997852be6c2d6d6ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5135de281bee8d21b064b45a471e3968"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#a5135de281bee8d21b064b45a471e3968">m_count</a></td></tr>
+<tr class="memdesc:a5135de281bee8d21b064b45a471e3968"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of valid entries in the buffer.  <a href="#a5135de281bee8d21b064b45a471e3968">More...</a><br /></td></tr>
+<tr class="separator:a5135de281bee8d21b064b45a471e3968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae719c3bba8aea2d16f878822316d207d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_circular_buffer.html#ae719c3bba8aea2d16f878822316d207d">m_max_size</a></td></tr>
+<tr class="memdesc:ae719c3bba8aea2d16f878822316d207d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current capacity of the buffer.  <a href="#ae719c3bba8aea2d16f878822316d207d">More...</a><br /></td></tr>
+<tr class="separator:ae719c3bba8aea2d16f878822316d207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac5387f118521d19a42905e41cc08a379"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class type&gt;<br />
+class geopm::CircularBuffer&lt; type &gt;</h3>
+
+<p>Templated container for a circular buffer implementation. </p>
+<p>The <a class="el" href="classgeopm_1_1_circular_buffer.html" title="Templated container for a circular buffer implementation. ">CircularBuffer</a> container implements a fixed size buffer. Once at capacity, any new insertions cause the oldest entry to be dropped. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af9ea349c8c5219e268b24df4c4d03cbe"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">geopm::CircularBuffer::CircularBuffer </td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::<a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a> </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
@@ -144,30 +167,53 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for the <a class="el" href="classgeopm_1_1_circular_buffer.html" title="Templated container for a circular buffer implementation. ">CircularBuffer</a> template. </p>
+<p>Creates an empty circular buffer with a set capacity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Requested capacity for the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a2346e587ae9d3ae78df3992b33a63f7d"></a>
+<a class="anchor" id="a0d96222c70a885e459200b46374a9811"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">geopm::CircularBuffer::~CircularBuffer </td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::~<a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classgeopm_1_1_circular_buffer.html" title="Templated container for a circular buffer implementation. ">CircularBuffer</a> destructor, virtual. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8275b06063182a0c12779c019e0a1d8d"></a>
+<a class="anchor" id="a7775aa9d42727ed843fb3d85c787bf50"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::CircularBuffer::capacity </td>
+          <td class="memname">int <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::capacity </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -176,14 +222,20 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Capacity of the buffer. </p>
+<p>Returns the current size of the circular buffer at the time of the call.</p>
+<dl class="section return"><dt>Returns</dt><dd>Capacity of the buffer. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a425d2bb9730327c129688819a6180ad9"></a>
+<a class="anchor" id="adb962f933f1848a9f8ff604652aaefd0"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::CircularBuffer::clear </td>
+          <td class="memname">void <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::clear </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -192,30 +244,45 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Clears all entries from the buffer. </p>
+
 </div>
 </div>
-<a class="anchor" id="a725b443515cc8c4774c6e235bef4f6a3"></a>
+<a class="anchor" id="aef2d729e66d83f769c3ed96da67df374"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::CircularBuffer::insert </td>
+          <td class="memname">void <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::insert </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const type&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Insert a value into the buffer. </p>
+<p>If the buffer is not full, the nae value is simply added to the buffer. It the buffer is at capacity, The head of the buffer is dropped and moved to the next oldest entry and the new value is then inserted at the end of the buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a909209e6ed05c7106c4b091c28c928bc"></a>
+<a class="anchor" id="ae3eb09455148dc7f36d5c441030e0686"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::CircularBuffer::set_capacity </td>
+          <td class="memname">void <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::set_capacity </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
@@ -224,14 +291,25 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Re-size the circular buffer. </p>
+<p>Resets the capacity of the circular buffer without modifying it's current contents.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Requested capacity for the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="af306771389e1c78c770236244e3ac42b"></a>
+<a class="anchor" id="a7764c8c9e882face8adbbe1fb83bae1b"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::CircularBuffer::size </td>
+          <td class="memname">int <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::size </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -240,14 +318,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Size of the buffer contents. </p>
+<p>Returns the number of items in the buffer. This value will be less than or equal to the current capacity of the buffer. </p><dl class="section return"><dt>Returns</dt><dd>Size of the buffer contents. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a5916d2f0a6689b94e5e1eced8cb67310"></a>
+<a class="anchor" id="a8413f440a999c7bf368c9dd82cf09569"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">double geopm::CircularBuffer::value </td>
+          <td class="memname">type <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::value </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -256,18 +339,30 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a value from the buffer. </p>
+<p>Accesses the contents of the circular buffer at a particular index. Valid indices range from 0 to [size-1]. Where size is the number of valid entries in the buffer. An attempt to retrieve a value for an out of bound index a <a class="el" href="classgeopm_1_1_exception.html" title="Class for all geopm specific exceptions. ">geopm::Exception</a> will be thrown with an error_value() of GEOPM_ERROR_INVALID.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Buffer index to retrieve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Value from the specified buffer index. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="afa26f4a8e3ca195a3d5338220cded43f"></a>
+<a class="anchor" id="aeeb5cafc296566e569e914fd37564995"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; geopm::CircularBuffer::m_buffer</td>
+          <td class="memname">std::vector&lt;type&gt; <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::m_buffer</td>
         </tr>
       </table>
   </td>
@@ -277,17 +372,21 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vector holding the buffer data. </p>
+
 </div>
 </div>
-<a class="anchor" id="a57b39c9f9f4da680a0d308735bcf4772"></a>
+<a class="anchor" id="a5135de281bee8d21b064b45a471e3968"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long geopm::CircularBuffer::m_count</td>
+          <td class="memname">unsigned long <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::m_count</td>
         </tr>
       </table>
   </td>
@@ -297,17 +396,21 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The number of valid entries in the buffer. </p>
+
 </div>
 </div>
-<a class="anchor" id="a7f2dd879a6de97ddbfeeebed54d4e4ad"></a>
+<a class="anchor" id="ab370cbd69ba07c997852be6c2d6d6ab1"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long geopm::CircularBuffer::m_head</td>
+          <td class="memname">unsigned long <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::m_head</td>
         </tr>
       </table>
   </td>
@@ -317,17 +420,21 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Index of the current head of the buffer. </p>
+
 </div>
 </div>
-<a class="anchor" id="a3d92ebc624ad58b5124a5e4d6d2a7d58"></a>
+<a class="anchor" id="ae719c3bba8aea2d16f878822316d207d"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t geopm::CircularBuffer::m_max_size</td>
+          <td class="memname">size_t <a class="el" href="classgeopm_1_1_circular_buffer.html">geopm::CircularBuffer</a>&lt; type &gt;::m_max_size</td>
         </tr>
       </table>
   </td>
@@ -337,11 +444,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Current capacity of the buffer. </p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_circular_buffer_8hpp_source.html">CircularBuffer.hpp</a></li>
-<li>src/<a class="el" href="_circular_buffer_8cpp.html">CircularBuffer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

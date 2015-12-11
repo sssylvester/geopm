@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Enables application profiling and application feadback to the control algorithm.  
+<p>Enables application profiling and application feedback to the control algorithm.  
  <a href="classgeopm_1_1_profile.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_profile_8hpp_source.html">Profile.hpp</a>&gt;</code></p>
@@ -117,10 +117,10 @@ Collaboration diagram for geopm::Profile:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a321eee8c9809e9c5a6a7fea3e9344bf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a321eee8c9809e9c5a6a7fea3e9344bf9">Profile</a> (const std::string prof_name, size_t table_size, const std::string shm_key_base, MPI_Comm comm)</td></tr>
-<tr class="memdesc:a321eee8c9809e9c5a6a7fea3e9344bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> constructor.  <a href="#a321eee8c9809e9c5a6a7fea3e9344bf9">More...</a><br /></td></tr>
+<tr class="memdesc:a321eee8c9809e9c5a6a7fea3e9344bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> constructor.  <a href="#a321eee8c9809e9c5a6a7fea3e9344bf9">More...</a><br /></td></tr>
 <tr class="separator:a321eee8c9809e9c5a6a7fea3e9344bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a4fa28352007c32aa9cd1c0a23dac5e2b">~Profile</a> ()</td></tr>
-<tr class="memdesc:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> destructor, virtual.  <a href="#a4fa28352007c32aa9cd1c0a23dac5e2b">More...</a><br /></td></tr>
+<tr class="memdesc:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> destructor, virtual.  <a href="#a4fa28352007c32aa9cd1c0a23dac5e2b">More...</a><br /></td></tr>
 <tr class="separator:a4fa28352007c32aa9cd1c0a23dac5e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19d1064314b81f776363d8bbc08c2993"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a19d1064314b81f776363d8bbc08c2993">region</a> (const std::string region_name, long policy_hint)</td></tr>
 <tr class="memdesc:a19d1064314b81f776363d8bbc08c2993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a region of code to be profiled.  <a href="#a19d1064314b81f776363d8bbc08c2993">More...</a><br /></td></tr>
@@ -156,10 +156,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a018a100fe7d6d9634b1c36ccaf493b1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a018a100fe7d6d9634b1c36ccaf493b1c">m_prof_name</a></td></tr>
-<tr class="memdesc:a018a100fe7d6d9634b1c36ccaf493b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the sring name of the profile.  <a href="#a018a100fe7d6d9634b1c36ccaf493b1c">More...</a><br /></td></tr>
+<tr class="memdesc:a018a100fe7d6d9634b1c36ccaf493b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the string name of the profile.  <a href="#a018a100fe7d6d9634b1c36ccaf493b1c">More...</a><br /></td></tr>
 <tr class="separator:a018a100fe7d6d9634b1c36ccaf493b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0bd17deb0d7a10d9e5def1280768b3d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#aa0bd17deb0d7a10d9e5def1280768b3d">m_curr_region_id</a></td></tr>
-<tr class="memdesc:aa0bd17deb0d7a10d9e5def1280768b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the 64 bit unique region identifier for the curret region.  <a href="#aa0bd17deb0d7a10d9e5def1280768b3d">More...</a><br /></td></tr>
+<tr class="memdesc:aa0bd17deb0d7a10d9e5def1280768b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the 64 bit unique region identifier for the current region.  <a href="#aa0bd17deb0d7a10d9e5def1280768b3d">More...</a><br /></td></tr>
 <tr class="separator:aa0bd17deb0d7a10d9e5def1280768b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1db6ed50d5f09fc59c82508d23e35d19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a1db6ed50d5f09fc59c82508d23e35d19">m_num_enter</a></td></tr>
 <tr class="memdesc:a1db6ed50d5f09fc59c82508d23e35d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the number of ranks that enter a region in order to keep track of nested regions.  <a href="#a1db6ed50d5f09fc59c82508d23e35d19">More...</a><br /></td></tr>
@@ -168,7 +168,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a0f24f35044e78a305c7e8610511b69c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the count of progress reports in order to create a sample when the count reaches some sample limit.  <a href="#a0f24f35044e78a305c7e8610511b69c3">More...</a><br /></td></tr>
 <tr class="separator:a0f24f35044e78a305c7e8610511b69c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a065ce30f8fb9a9ba2181916ae7135338"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a065ce30f8fb9a9ba2181916ae7135338">m_progress</a></td></tr>
-<tr class="memdesc:a065ce30f8fb9a9ba2181916ae7135338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the rank's current progress in the regon.  <a href="#a065ce30f8fb9a9ba2181916ae7135338">More...</a><br /></td></tr>
+<tr class="memdesc:a065ce30f8fb9a9ba2181916ae7135338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the rank's current progress in the region.  <a href="#a065ce30f8fb9a9ba2181916ae7135338">More...</a><br /></td></tr>
 <tr class="separator:a065ce30f8fb9a9ba2181916ae7135338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8963688f134e9bb9387694212f1c08d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#ae8963688f134e9bb9387694212f1c08d">m_table_buffer</a></td></tr>
 <tr class="memdesc:ae8963688f134e9bb9387694212f1c08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds a pointer to the shared memory region used for passing sample data to the geopm runtime.  <a href="#ae8963688f134e9bb9387694212f1c08d">More...</a><br /></td></tr>
@@ -195,13 +195,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a61529110bd308c1abcaeecbf7e01dafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process's rank in MPI_COMM_WORLD.  <a href="#a61529110bd308c1abcaeecbf7e01dafb">More...</a><br /></td></tr>
 <tr class="separator:a61529110bd308c1abcaeecbf7e01dafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile.html#a9e908c5cd7dc553fe37a0f31f1f30699">m_shm_rank</a></td></tr>
-<tr class="memdesc:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="mdescLeft">&#160;</td><td class="mdescRight">The processes rank in m_shm_comm.  <a href="#a9e908c5cd7dc553fe37a0f31f1f30699">More...</a><br /></td></tr>
+<tr class="memdesc:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process's rank in m_shm_comm.  <a href="#a9e908c5cd7dc553fe37a0f31f1f30699">More...</a><br /></td></tr>
 <tr class="separator:a9e908c5cd7dc553fe37a0f31f1f30699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Enables application profiling and application feadback to the control algorithm. </p>
-<p>The information gathered by the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> class identifies regions of code, progress within regions, and global synchronization points in the application. Regions of code define periods in the application during which control parameters are tuned with the expectation that control parameters for a region can be optimized independently of other regions. In this way a region is associated with a set of control parameters which can be optimized, and future time intervals associated with the same region will benefit from the application of control parameters which were determined from tuning within previous occurrences of the region. There are two competing motivations for defining a region within the application. The first is to identify a section of code that has distinct compute, memory or network characteristics. The second is toavoid defining these regions such that they are nested within each other, as nested regions are ignored, and only the outer most region is used for tuning when nesting occurs. Identifying progress within a region can be used to alleviate load imbalance in the application under the assumption that the region is bulk synchronous. Under the assumption that the application employs an iterative algorithm which synchronizes periodically the user can alleviate load imbalance on larger time scales than the regions provide. This is done by marking the end of the outer most loop, or the "outer synchronization point."</p>
-<p>The <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> class is the C++ implementation of the computational application side interface to the GEOPM profiler. The class methods support the C interface defined for use with the geopm_prof_c structure and are named accordingly. The geopm_prof_c structure is an opaque reference to the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> class. </p>
+<div class="textblock"><p>Enables application profiling and application feedback to the control algorithm. </p>
+<p>The information gathered by the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class identifies regions of code, progress within regions, and global synchronization points in the application. Regions of code define periods in the application during which control parameters are tuned with the expectation that control parameters for a region can be optimized independently of other regions. In this way a region is associated with a set of control parameters which can be optimized, and future time intervals associated with the same region will benefit from the application of control parameters which were determined from tuning within previous occurrences of the region. There are two competing motivations for defining a region within the application. The first is to identify a section of code that has distinct compute, memory or network characteristics. The second is to avoid defining these regions such that they are nested within each other, as nested regions are ignored, and only the outer most region is used for tuning when nesting occurs. Identifying progress within a region can be used to alleviate load imbalance in the application under the assumption that the region is bulk synchronous. Under the assumption that the application employs an iterative algorithm which synchronizes periodically the user can alleviate load imbalance on larger time scales than the regions provide. This is done by marking the end of the outer most loop, or the "outer synchronization point."</p>
+<p>The <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class is the C++ implementation of the computational application side interface to the GEOPM profiler. The class methods support the C interface defined for use with the geopm_prof_c structure and are named accordingly. The geopm_prof_c structure is an opaque reference to the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a321eee8c9809e9c5a6a7fea3e9344bf9"></a>
 <div class="memitem">
@@ -239,12 +239,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> constructor. </p>
-<p>The <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> object is used by the application to instrument regions of code and post profile information to a shared memory region to be read by the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> process.</p>
+<p><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> constructor. </p>
+<p>The <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> object is used by the application to instrument regions of code and post profile information to a shared memory region to be read by the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> process.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">prof_name</td><td>Name associated with the profile. This name will be printed in the header of the report.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">table_size</td><td>Size in bytes of shared memory region that will be used for posting updates. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is responsible for creating the shared memory region that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> object attaches to. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is the consumer of the posted data that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> produces.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">table_size</td><td>Size in bytes of shared memory region that will be used for posting updates. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is responsible for creating the shared memory region that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> object attaches to. The <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> is the consumer of the posted data that the <a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> produces.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">shm_key_base</td><td>String that is the base for the POSIX shared memory keys that have been created by the <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a>. There is one key created for each MPI rank in the communicator provided (comm), and each key is constructed by appending an underscore followed by a string representation of the integer MPI rank.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">comm</td><td>The application's MPI communicator. Each rank of this communicator will report to a separate shared memory region. One <a class="el" href="classgeopm_1_1_controller.html" title="Class used to launch or step the global energy optimization power management algorithm. ">geopm::Controller</a> on each compute node will consume the output from each rank running on the compute node. </td></tr>
   </table>
@@ -274,7 +274,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feadback to the control algorithm. ">Profile</a> destructor, virtual. </p>
+<p><a class="el" href="classgeopm_1_1_profile.html" title="Enables application profiling and application feedback to the control algorithm. ">Profile</a> destructor, virtual. </p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fill in rank affinity list. </p>
-<p>Uses hwloc to detemine the cpuset the current process is bound to. This information is used to fill in a set containg all cpus we can run on. This is used to comunicate with th egeopm runtime the number of ranks as well as their affinity masks. </p>
+<p>Uses hwloc to determine the cpuset the current process is bound to. This information is used to fill in a set containing all CPUs we can run on. This is used to communicate with the geopm runtime the number of ranks as well as their affinity masks. </p>
 
 </div>
 </div>
@@ -423,7 +423,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>The base file name for the output report. There may be suffixes appended to this name if multiple files are created.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">depth</td><td>Gives the depth in the control tree which is the finest granularity of the report. By default there are three levels in the higherarchy tree. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depth</td><td>Gives the depth in the control tree which is the finest granularity of the report. By default there are three levels in the hierarchy tree. </td></tr>
   </table>
   </dd>
 </dl>
@@ -613,7 +613,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Holds the 64 bit unique region identifier for the curret region. </p>
+<p>Holds the 64 bit unique region identifier for the current region. </p>
 
 </div>
 </div>
@@ -679,7 +679,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>holds the sring name of the profile. </p>
+<p>holds the string name of the profile. </p>
 
 </div>
 </div>
@@ -701,7 +701,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Holds the rank's current progress in the regon. </p>
+<p>Holds the rank's current progress in the region. </p>
 
 </div>
 </div>
@@ -767,7 +767,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The processes rank in m_shm_comm. </p>
+<p>The process's rank in m_shm_comm. </p>
 
 </div>
 </div>

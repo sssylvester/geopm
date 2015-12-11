@@ -87,13 +87,13 @@
 
 <h2 id="DESCRIPTION">DESCRIPTION</h2>
 
-<p>All <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> C APIs which can have an error condition occur during
-runtime return an error number.  This is the way <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> handles
+<p>All <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> C APIs which can have an error condition occur during
+runtime return an error number.  This is the way <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> handles
 errors, and almost all of the interfaces behave this way.  This man page
 describes how to interpret these returned error codes.  A returned error
 number of zero by a geopm API indicates success.  If the error number returned
 by a geopm API is positive then this indicates a generic system error, and if
-the error number is negative this indicates a <strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong> specific error has
+the error number is negative this indicates a <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> specific error has
 occurred.  Any non-zero error number can be converted into a descriptive string
 with the <strong>geopm_error_message()</strong> function.  The GEOPM specific error numbers
 are enumerated in the <em>geopm_error.h</em> header file and they are described below.
@@ -122,6 +122,7 @@ The system error numbers are documented in the <strong><a class="man-ref" href="
 <dt><code>GEOPM_ERROR_DECIDER_UNSUPPORTED = -18</code></dt><dd><p>Specified decider not supported or unrecognized</p></dd>
 <dt><code>GEOPM_ERROR_FACTORY_NULL = -19</code></dt><dd><p>The <code>geopm_factory_c</code> pointer is NULL, pass in a valid factory object</p></dd>
 <dt><code>GEOPM_ERROR_SHUTDOWN = -20</code></dt><dd><p>Shutdown policy has been signaled</p></dd>
+<dt><code>GEOPM_ERROR_TOO_MANY_COLLISIONS = -21</code></dt><dd><p>Too many collisions when inserting into hash table</p></dd>
 </dl>
 
 
@@ -131,21 +132,21 @@ The system error numbers are documented in the <strong><a class="man-ref" href="
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
-<p><strong><a class="man-ref" href="geopm.3.html">geopm<span class="s">(3)</span></a></strong>,
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmkey.3.html">geopmkey<span class="s">(3)</span></a></strong>,
+<strong><span class="man-ref">geopmkey<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmctl.3.html">geopmctl<span class="s">(3)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.3.html">geopmpolicy<span class="s">(3)</span></a></strong>
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong>
 <strong><a class="man-ref" href="http://linux.die.net/man/3/errno">errno<span class="s">(3)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>January 2016</li>
+    <li class='tc'>December 2015</li>
     <li class='tr'>geopm_error(3)</li>
   </ol>
 
