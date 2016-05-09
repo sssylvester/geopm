@@ -87,27 +87,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">geopm_policy.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for geopm_policy.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="geopm__policy_8h__incl.png" border="0" usemap="#src_2geopm__policy_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="geopm__policy_8h__dep__incl.png" border="0" usemap="#src_2geopm__policy_8hdep" alt=""/></div>
 <map name="src_2geopm__policy_8hdep" id="src_2geopm__policy_8hdep">
-<area shape="rect" id="node2" href="geopm_8h.html" title="src/geopm.h" alt="" coords="178,79,273,104"/>
-<area shape="rect" id="node4" href="geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="285,152,446,177"/>
-<area shape="rect" id="node6" href="geopmpolicy__main_8c.html" title="src/geopmpolicy_main.c" alt="" coords="384,79,549,104"/>
-<area shape="rect" id="node7" href="_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="573,79,714,104"/>
-<area shape="rect" id="node3" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="5,152,130,177"/>
-<area shape="rect" id="node5" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="155,152,261,177"/>
+<area shape="rect" id="node2" href="geopm_8h.html" title="src/geopm.h" alt="" coords="925,79,1020,104"/>
+<area shape="rect" id="node4" href="geopm__ctl__spawn_8c.html" title="src/geopm_ctl_spawn.c" alt="" coords="723,152,883,177"/>
+<area shape="rect" id="node8" href="_policy_flags_8hpp.html" title="src/PolicyFlags.hpp" alt="" coords="405,79,542,104"/>
+<area shape="rect" id="node14" href="_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="510,445,651,471"/>
+<area shape="rect" id="node32" href="geopmpolicy__main_8c.html" title="src/geopmpolicy_main.c" alt="" coords="1043,79,1208,104"/>
+<area shape="rect" id="node3" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="1259,519,1384,544"/>
+<area shape="rect" id="node5" href="geopm__pmpi_8c.html" title="src/geopm_pmpi.c" alt="" coords="907,152,1037,177"/>
+<area shape="rect" id="node6" href="_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="1062,152,1168,177"/>
+<area shape="rect" id="node7" href="_profile_thread_8cpp.html" title="src/ProfileThread.cpp" alt="" coords="1192,152,1340,177"/>
+<area shape="rect" id="node9" href="_policy_8hpp.html" title="src/Policy.hpp" alt="" coords="394,152,497,177"/>
+<area shape="rect" id="node29" href="_global_policy_8hpp.html" title="src/GlobalPolicy.hpp" alt="" coords="672,372,814,397"/>
+<area shape="rect" id="node31" href="_policy_flags_8cpp.html" title="src/PolicyFlags.cpp" alt="" coords="233,152,370,177"/>
+<area shape="rect" id="node10" href="_region_8hpp.html" title="src/Region.hpp" alt="" coords="361,225,472,251"/>
+<area shape="rect" id="node11" href="_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="321,299,439,324"/>
+<area shape="rect" id="node17" href="_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="157,372,310,397"/>
+<area shape="rect" id="node28" href="_policy_8cpp.html" title="src/Policy.cpp" alt="" coords="496,225,598,251"/>
+<area shape="rect" id="node13" href="_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="880,445,1006,471"/>
+<area shape="rect" id="node19" href="_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="1162,299,1276,324"/>
+<area shape="rect" id="node27" href="_region_8cpp.html" title="src/Region.cpp" alt="" coords="464,299,574,324"/>
+<area shape="rect" id="node12" href="_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="385,372,547,397"/>
+<area shape="rect" id="node15" href="_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="368,445,486,471"/>
+<area shape="rect" id="node16" href="_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="182,445,343,471"/>
+<area shape="rect" id="node18" href="_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="5,445,158,471"/>
+<area shape="rect" id="node20" href="_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="1240,372,1398,397"/>
+<area shape="rect" id="node21" href="_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="1267,445,1424,471"/>
+<area shape="rect" id="node22" href="_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="888,372,1001,397"/>
+<area shape="rect" id="node23" href="_balancing_decider_8hpp.html" title="plugin/BalancingDecider.hpp" alt="" coords="1025,372,1215,397"/>
+<area shape="rect" id="node25" href="_governing_decider_8hpp.html" title="plugin/GoverningDecider.hpp" alt="" coords="1472,372,1665,397"/>
+<area shape="rect" id="node24" href="_balancing_decider_8cpp.html" title="plugin/BalancingDecider.cpp" alt="" coords="1029,445,1219,471"/>
+<area shape="rect" id="node26" href="_governing_decider_8cpp.html" title="plugin/GoverningDecider.cpp" alt="" coords="1472,445,1665,471"/>
+<area shape="rect" id="node30" href="_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="675,445,856,471"/>
 </map>
 </div>
 </div>
 <p><a href="geopm__policy_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2518948bee8fb864b4748db751375e8b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8b">geopm_policy_hint_e</a> { <a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8ba2f7db4878f03f35e1d87101f02d0adab">GEOPM_POLICY_HINT_UNKNOWN</a> = 0, 
+<a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8ba36372fcc23fe10988504f3224b8f7c1a">GEOPM_POLICY_HINT_COMPUTE</a> = 1, 
+<a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8bab2d736682884870e1e4a4ff5262a664f">GEOPM_POLICY_HINT_MEMORY</a> = 2, 
+<a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8ba6f8d6768a5b35d132768c6f871ddc724">GEOPM_POLICY_HINT_NETWORK</a> = 3
+ }<tr class="memdesc:a2518948bee8fb864b4748db751375e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum encompassing application region characteristic hints.  <a href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8b">More...</a><br /></td></tr>
+<tr class="separator:a2518948bee8fb864b4748db751375e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:accad7cac872dcec1ad28505e1cb917dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dd">geopm_policy_mode_e</a> { <br />
+&#160;&#160;<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dda9fe5eed6df8cfb4ab36375f22d7fc72b">GEOPM_POLICY_MODE_TDP_BALANCE_STATIC</a> = 1, 
+<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dda669e862c51a826be676e5f2d83ea9fa7">GEOPM_POLICY_MODE_FREQ_UNIFORM_STATIC</a> = 2, 
+<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917ddad8a6fc13a80418b2a3980c366b544925">GEOPM_POLICY_MODE_FREQ_HYBRID_STATIC</a> = 3, 
+<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917ddac7476fb836d82c50c3fa98d829af5e55">GEOPM_POLICY_MODE_PERF_BALANCE_DYNAMIC</a> = 4, 
+<br />
+&#160;&#160;<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dda7d683998a8d18bfc794047144f92ea0a">GEOPM_POLICY_MODE_FREQ_UNIFORM_DYNAMIC</a> = 5, 
+<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917ddaa6040351fcef2bc8f0d27882313ffaaf">GEOPM_POLICY_MODE_FREQ_HYBRID_DYNAMIC</a> = 6, 
+<a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dda25650101e3aee43ac9ebdab5ddba00c1">GEOPM_POLICY_MODE_SHUTDOWN</a> = 255
+<br />
+ }<tr class="memdesc:accad7cac872dcec1ad28505e1cb917dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum encompassing geopm power management modes.  <a href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dd">More...</a><br /></td></tr>
+<tr class="separator:accad7cac872dcec1ad28505e1cb917dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a9642df9ae96a12bd87ef90d1ec5e1d10"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a9642df9ae96a12bd87ef90d1ec5e1d10">geopm_policy_affinity_e</a> { <a class="el" href="geopm__policy_8h.html#a9642df9ae96a12bd87ef90d1ec5e1d10a0dbda27fec1f44109af97b34312be77b">GEOPM_POLICY_AFFINITY_COMPACT</a>, 
+<a class="el" href="geopm__policy_8h.html#a9642df9ae96a12bd87ef90d1ec5e1d10aaae4a1174e4ae0a5ef279ceee41c807a">GEOPM_POLICY_AFFINITY_SCATTER</a>
+ }<tr class="separator:a9642df9ae96a12bd87ef90d1ec5e1d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a495b36f63edc898d0411cbc101436e4f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a495b36f63edc898d0411cbc101436e4f">geopm_policy_goal_e</a> { <a class="el" href="geopm__policy_8h.html#a495b36f63edc898d0411cbc101436e4fa5752c490757841d5340e5c30b574c800">GEOPM_POLICY_GOAL_CPU_EFFICIENCY</a>, 
+<a class="el" href="geopm__policy_8h.html#a495b36f63edc898d0411cbc101436e4fafe65086aa4fa6d95cf1bcaacd52bece0">GEOPM_POLICY_GOAL_NETWORK_EFFICIENCY</a>, 
+<a class="el" href="geopm__policy_8h.html#a495b36f63edc898d0411cbc101436e4fa18b964647c9617f35e8c5c02a92d911c">GEOPM_POLICY_GOAL_MEMORY_EFFICIENCY</a>
+ }<tr class="separator:a495b36f63edc898d0411cbc101436e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a27e503540e1a6f74a64da0d310c182a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a27e503540e1a6f74a64da0d310c182a7">geopm_policy_create</a> (const char *in_config, const char *out_config, struct geopm_policy_c **policy)</td></tr>
@@ -128,6 +192,12 @@ Functions</h2></td></tr>
 <tr class="separator:a8b427bf5935557f6b0b411b2a3d1527f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd571ec3e034344664e95333d740860"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#affd571ec3e034344664e95333d740860">geopm_policy_goal</a> (struct geopm_policy_c *policy, int goal)</td></tr>
 <tr class="separator:affd571ec3e034344664e95333d740860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a89dd7df6820d3f795db3c3065fb3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a58a89dd7df6820d3f795db3c3065fb3a">geopm_policy_tree_decider</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:a58a89dd7df6820d3f795db3c3065fb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32b11bc958cf790da7548b11303203f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#ae32b11bc958cf790da7548b11303203f">geopm_policy_leaf_decider</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:ae32b11bc958cf790da7548b11303203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321d5749e044267160ce80231a474b36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a321d5749e044267160ce80231a474b36">geopm_policy_platform</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:a321d5749e044267160ce80231a474b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1530657286cfe34d83fea5c95f61c052"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a1530657286cfe34d83fea5c95f61c052">geopm_policy_write</a> (const struct geopm_policy_c *policy)</td></tr>
 <tr class="separator:a1530657286cfe34d83fea5c95f61c052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b7840cfbb4c0e294a9d1e88826fbff0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#a2b7840cfbb4c0e294a9d1e88826fbff0">geopm_policy_enforce_static</a> (const struct geopm_policy_c *policy)</td></tr>
@@ -139,6 +209,99 @@ Functions</h2></td></tr>
 <tr class="memitem:aebfa0c979911715dc9f4ff6adf3f08de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__policy_8h.html#aebfa0c979911715dc9f4ff6adf3f08de">geopm_platform_msr_whitelist</a> (FILE *file_desc)</td></tr>
 <tr class="separator:aebfa0c979911715dc9f4ff6adf3f08de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a9642df9ae96a12bd87ef90d1ec5e1d10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="geopm__policy_8h.html#a9642df9ae96a12bd87ef90d1ec5e1d10">geopm_policy_affinity_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9642df9ae96a12bd87ef90d1ec5e1d10a0dbda27fec1f44109af97b34312be77b"></a>GEOPM_POLICY_AFFINITY_COMPACT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9642df9ae96a12bd87ef90d1ec5e1d10aaae4a1174e4ae0a5ef279ceee41c807a"></a>GEOPM_POLICY_AFFINITY_SCATTER&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a495b36f63edc898d0411cbc101436e4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="geopm__policy_8h.html#a495b36f63edc898d0411cbc101436e4f">geopm_policy_goal_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a495b36f63edc898d0411cbc101436e4fa5752c490757841d5340e5c30b574c800"></a>GEOPM_POLICY_GOAL_CPU_EFFICIENCY&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a495b36f63edc898d0411cbc101436e4fafe65086aa4fa6d95cf1bcaacd52bece0"></a>GEOPM_POLICY_GOAL_NETWORK_EFFICIENCY&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a495b36f63edc898d0411cbc101436e4fa18b964647c9617f35e8c5c02a92d911c"></a>GEOPM_POLICY_GOAL_MEMORY_EFFICIENCY&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a2518948bee8fb864b4748db751375e8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="geopm__policy_8h.html#a2518948bee8fb864b4748db751375e8b">geopm_policy_hint_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum encompassing application region characteristic hints. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2518948bee8fb864b4748db751375e8ba2f7db4878f03f35e1d87101f02d0adab"></a>GEOPM_POLICY_HINT_UNKNOWN&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2518948bee8fb864b4748db751375e8ba36372fcc23fe10988504f3224b8f7c1a"></a>GEOPM_POLICY_HINT_COMPUTE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2518948bee8fb864b4748db751375e8bab2d736682884870e1e4a4ff5262a664f"></a>GEOPM_POLICY_HINT_MEMORY&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2518948bee8fb864b4748db751375e8ba6f8d6768a5b35d132768c6f871ddc724"></a>GEOPM_POLICY_HINT_NETWORK&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="accad7cac872dcec1ad28505e1cb917dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="geopm__policy_8h.html#accad7cac872dcec1ad28505e1cb917dd">geopm_policy_mode_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum encompassing geopm power management modes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917dda9fe5eed6df8cfb4ab36375f22d7fc72b"></a>GEOPM_POLICY_MODE_TDP_BALANCE_STATIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917dda669e862c51a826be676e5f2d83ea9fa7"></a>GEOPM_POLICY_MODE_FREQ_UNIFORM_STATIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917ddad8a6fc13a80418b2a3980c366b544925"></a>GEOPM_POLICY_MODE_FREQ_HYBRID_STATIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917ddac7476fb836d82c50c3fa98d829af5e55"></a>GEOPM_POLICY_MODE_PERF_BALANCE_DYNAMIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917dda7d683998a8d18bfc794047144f92ea0a"></a>GEOPM_POLICY_MODE_FREQ_UNIFORM_DYNAMIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917ddaa6040351fcef2bc8f0d27882313ffaaf"></a>GEOPM_POLICY_MODE_FREQ_HYBRID_DYNAMIC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="accad7cac872dcec1ad28505e1cb917dda25650101e3aee43ac9ebdab5ddba00c1"></a>GEOPM_POLICY_MODE_SHUTDOWN&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a29296d21dead3ce13139931952e55ccd"></a>
 <div class="memitem">
@@ -356,6 +519,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae32b11bc958cf790da7548b11303203f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_leaf_decider </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af9a47060682fd68f8817cd0388071e0d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -371,6 +560,32 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a321d5749e044267160ce80231a474b36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_platform </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -423,6 +638,32 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tdp_percent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a89dd7df6820d3f795db3c3065fb3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_tree_decider </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

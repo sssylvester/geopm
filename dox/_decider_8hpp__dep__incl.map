@@ -2,8 +2,10 @@
 <area shape="rect" id="node2" href="$_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="38,79,197,104"/>
 <area shape="rect" id="node5" href="$_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="155,152,312,177"/>
 <area shape="rect" id="node6" href="$_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="270,79,384,104"/>
-<area shape="rect" id="node7" href="$_governing_decider_8hpp.html" title="src/GoverningDecider.hpp" alt="" coords="407,79,583,104"/>
+<area shape="rect" id="node7" href="$_balancing_decider_8hpp.html" title="plugin/BalancingDecider.hpp" alt="" coords="408,79,598,104"/>
+<area shape="rect" id="node9" href="$_governing_decider_8hpp.html" title="plugin/GoverningDecider.hpp" alt="" coords="622,79,816,104"/>
 <area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,152,131,177"/>
 <area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,225,131,251"/>
-<area shape="rect" id="node8" href="$_governing_decider_8cpp.html" title="src/GoverningDecider.cpp" alt="" coords="408,152,582,177"/>
+<area shape="rect" id="node8" href="$_balancing_decider_8cpp.html" title="plugin/BalancingDecider.cpp" alt="" coords="408,152,598,177"/>
+<area shape="rect" id="node10" href="$_governing_decider_8cpp.html" title="plugin/GoverningDecider.cpp" alt="" coords="623,152,815,177"/>
 </map>

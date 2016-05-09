@@ -1,4 +1,3 @@
 <map id="geopm::GoverningDecider" name="geopm::GoverningDecider">
-<area shape="rect" id="node2" href="$classgeopm_1_1_leaf_decider.html" title="geopm::LeafDecider" alt="" coords="23,79,165,104"/>
-<area shape="rect" id="node3" href="$classgeopm_1_1_decider.html" title="geopm::Decider" alt="" coords="36,5,152,31"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. " alt="" coords="36,5,152,31"/>
 </map>

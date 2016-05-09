@@ -55,6 +55,11 @@
   <div class='man-navigation' style='display:none'>
     <a href="#NAME">NAME</a>
     <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#INTEGRATION-WITH-PMPI">INTEGRATION WITH PMPI</a>
+    <a href="#LAUNCHING-THE-RUNTIME">LAUNCHING THE RUNTIME</a>
+    <a href="#INTERPRETING-THE-REPORT">INTERPRETING THE REPORT</a>
+    <a href="#INTERPRETING-THE-TRACE">INTERPRETING THE TRACE</a>
+    <a href="#ENVIRONMENT">ENVIRONMENT</a>
     <a href="#COPYRIGHT">COPYRIGHT</a>
     <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
@@ -100,15 +105,145 @@ resource manager to set energy policy control parameters for MPI jobs.  Some
 features of libgeopmpolicy are available through the geopmpolicy application
 including support for static control.</p>
 
+<h2 id="INTEGRATION-WITH-PMPI">INTEGRATION WITH PMPI</h2>
+
+<p>Linking to libgeopm will define symbols that intercept the MPI
+interface through PMPI.  This can be disabled with the configure time
+option <code>--disable-pmpi</code>, but is enabled by default.  When using the
+geopm PMPI interposition other profilers which use the same method
+will be in conflict.  The geopm runtime can create a application
+performance profile report and a trace of the application runtime.  As
+such, geopm serves the role of an application profiler in addition to
+management of power resources.  The report is generated with the
+<code>geopm_prof_print</code>() interface described in <code>geopm_prof_c</code>(3).  To
+enable the generation of the application trace see the <code>GEOPM_TRACE</code>
+environment variable below.</p>
+
+<h2 id="LAUNCHING-THE-RUNTIME">LAUNCHING THE RUNTIME</h2>
+
+<p>There are many ways to launch the geopm runtime programatically (see
+<code>geopm_ctl_c</code>(3)), or by command line (see
+<code>geopmctl</code>(1)). Alternatively the PMPI interposition by geopm enables
+the geopm runtime to be launched implicitly by the MPI runtime.  This
+launch method is enabled by the <code>GEOPM_PMPI_CTL</code> environment variable
+documented below.  The PMPI method for launching the geopm runtime is
+a simple way to get started using geopm and is recommended for first
+time users.</p>
+
+<h2 id="INTERPRETING-THE-REPORT">INTERPRETING THE REPORT</h2>
+
+<p>If the application calls the <code>geopm_prof_print</code>() documented in the
+<code>geopm_prof_c</code>(3) man page then a report will be generated.  In the
+current implementation there is a separate report file for each
+compute node.  These report files give information about runtime and
+energy use for each region marked in the code.  Additionally time
+spent in calls to MPI is reported.  In the future the report will be
+aggregated to a single file and may contain more data describing the
+application.</p>
+
+<p>It is important to note that per-region accounting in the report
+includes only time spent in the region by all MPI ranks concurrently
+on each compute node.  During the time when two ranks on a compute
+node are not in the same marked region, the data collected is
+attributed to code not marked to be within a region.  See the
+<code>GEOPM_REGION_BARRIER</code> environment variable for more information about
+debugging issues related region synchronicity.  In the future the
+scope of this requirement may change from all ranks on a node to all
+ranks running within the same domain of control.</p>
+
+<h2 id="INTERPRETING-THE-TRACE">INTERPRETING THE TRACE</h2>
+
+<p>If the <code>GEOPM_TRACE</code> environment variable is set (see below) then a
+trace file with time ordered information about the application runtime
+is generated.  A separate trace file is generated for each compute
+node and each file is a pipe (the <code>|</code> character) delimited ASCII
+table. The first row of the file gives a description of each field.  A
+simple method for selecting fields from the trace file is with the
+<code>awk</code> command:</p>
+
+<pre><code>$ awk -F| '{print $1, $2, $12}' &lt; geopm_trace-host0
+</code></pre>
+
+<p>will print a subset of the fields in the trace file called
+"geopm_trace-host0".</p>
+
+<h2 id="ENVIRONMENT">ENVIRONMENT</h2>
+
+<dl>
+<dt><code>GEOPM_TRACE</code></dt><dd><p>Enables geopm tracing capability.  Setting this variable enables
+the creation of a trace output file. The value of the variable
+is used as the base of the output trace file path.  Currently one
+trace file is generated per compute node.  The file names of each
+trace are constructed by appending the node's hostname to base
+name given by the environment variable (separated by a '-').</p></dd>
+<dt><code>GEOPM_SHMKEY</code></dt><dd><p>Override the default shared memory key base.  The shared memory
+key base prefixes all shared memory keys used by geopm to
+communicate between the compute application and the geopm runtime.
+The default key base is '/geopm-default', this can be overridden
+by the environment variable, and the environment can be overridden
+by specifying a non-null and matching shm_key parameter to
+<code>geopm_ctl_create</code>() and <code>geopm_prof_create</code>().  The base key is
+extended for each shared memory region used by the runtime.  A
+simple command to clean up after an aborted job:</p>
+
+<p><code>$ test -n "$GEOPM_SHMKEY" &amp;&amp; rm -f /dev/shm${GEOPM_SHMKEY}* || rm -f /dev/shm/geopm-default*</code></p></dd>
+<dt><code>GEOPM_POLICY</code></dt><dd><p>Defines the default policy. The value is either a shared memory
+key or json file path.  This environment variable must be set when
+launching the geopm controller through the PMPI interface (see
+GEOPM_PMPI_CTL environment variable below).  A shared memory key
+must begin with the '/' character and have no other occurrence of
+the '/' character.  All other values are assumed to refer to a
+json file path.  When using a shared memory policy the resource
+manager creates the shared memory region and dynamically controls
+the global policy by modifying the region at runtime.</p></dd>
+<dt><code>GEOPM_PMPI_CTL</code></dt><dd><p>When set to 'process' or 'pthread' this environment variable
+enables the launch of the geopm controller through the PMPI
+wrappers: in particular the wrappers for MPI_Init() or
+MPI_Init_thread().  In the case of specifying 'process' the
+controller will run as separate processes on a split off
+communicator comprised of the lowest rank on each node.
+Additionally through interception with the PMPI wrappers, the
+application MPI_COMM_WORLD appears to have one fewer rank per node
+than was allocated to the job.  In the case of specifying
+'pthread' the lowest rank on each node will launch a pthread
+running the controller.  The pthread launch mechanism requires an
+MPI runtime that can support MPI_THREAD_MULTIPLE.</p></dd>
+<dt><code>GEOPM_PLUGIN_PATH</code></dt><dd><p>The search path for geopm plugins.  It is a colon-separated list
+of directories used by geopm to search for shared objects which
+contain geopm plugins.  A zero-length directory name indicates the
+current working directory.  A zero-length directory is inferred by
+a leading or trailing colon or two adjacent colons.  The default
+search location is always searched and is determined at library
+configuration time and by way of the 'pkglib' variable (typically
+/usr/lib64/geopm/).</p></dd>
+<dt><code>GEOPM_REGION_BARRIER</code></dt><dd><p>Enables a node local MPI_Barrier() at time of calling
+<code>geopm_region_enter</code>() or <code>geopm_region_exit</code>() for all
+application ranks that share a node.  Since the geopm controller
+only considers a region to be entered when all ranks on a node
+have entered the region, enabling this feature forces control
+throughout all of the time every rank spends in a region.  This
+feature is primarily used for debugging purposes.  WARNING: If all
+regions marked in the application are not entered synchronously by
+all ranks on a node then enabling this feature will cause a
+deadlock and the application will hang.</p></dd>
+<dt><code>GEOPM_ERROR_AFFINITY_IGNORE</code></dt><dd><p>If set, errors of the type GEOPM_ERROR_AFFINITY are ignored by
+geopm.  This is useful for testing on systems where CPU affinity
+requirements cannot be met (e.g. Mac OS X). See <code>geopm_error</code>(3)
+for more information on this error condition.</p></dd>
+</dl>
+
+
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
-<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+<p>Copyright (C) 2015, 2016, Intel Corporation. All rights reserved.</p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
 <p><strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
+<strong><span class="man-ref">geopm_comm<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><span class="man-ref">geopm_fortran<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
@@ -119,7 +254,7 @@ including support for static control.</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>December 2015</li>
+    <li class='tc'>May 2016</li>
     <li class='tr'>geopm(7)</li>
   </ol>
 

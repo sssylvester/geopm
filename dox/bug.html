@@ -81,19 +81,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_bug000001"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a29782bf611a1061384f799b9a0ab74e2">geopm::Controller::Controller</a>  (const <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> *global_policy, const std::string &amp;shmem_base, MPI_Comm comm)</dt>
-<dd>Do not hardcode leaf decider string.  </dd>
-<dt><a class="anchor" id="_bug000002"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a9e9a2752db6e14fb0a01fe3b6155d872">geopm::Controller::walk_down</a>  (void)</dt>
-<dd><p class="startdd">Do calls to <a class="el" href="geopm__message_8h.html#ad34cef186059e1057c49bc873ebb01c8" title="Check if two policy messages are equal. ">geopm_is_policy_equal()</a> below belong inside of the <a class="el" href="classgeopm_1_1_decider.html">Decider</a>? </p>
-<p class="enddd">Should m_last_policy be a <a class="el" href="classgeopm_1_1_decider.html">Decider</a> member variable?  </p>
-</dd>
-<dt><a class="anchor" id="_bug000004"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a18c42538180d99b9d874f88ab840b0c2">geopm::Controller::walk_up</a>  (void)</dt>
-<dd><p class="startdd">Process_samples has issues. ifdef out for now </p>
-<p class="enddd">We should be getting fused samples from ???(TBD)  </p>
-</dd>
-<dt><a class="anchor" id="_bug000006"></a>Member <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a8ced5ae998fb576afe201e4b4933982b">geopm::HSXPlatformImp::cbo_counters_init</a>  ()</dt>
+<dt><a class="anchor" id="_bug000001"></a>Member <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a8ced5ae998fb576afe201e4b4933982b">geopm::HSXPlatformImp::cbo_counters_init</a>  ()</dt>
 <dd>is this needed???  </dd>
-<dt><a class="anchor" id="_bug000007"></a>Member <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ac5b013b5840b773ec7bb6866ccf15b54">geopm::IVTPlatformImp::cbo_counters_init</a>  ()</dt>
+<dt><a class="anchor" id="_bug000002"></a>Member <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ac5b013b5840b773ec7bb6866ccf15b54">geopm::IVTPlatformImp::cbo_counters_init</a>  ()</dt>
 <dd>is this needed??? </dd>
 </dl>
 </div></div><!-- contents -->

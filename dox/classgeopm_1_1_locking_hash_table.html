@@ -108,18 +108,19 @@ Collaboration diagram for geopm::LockingHashTable&lt; type &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_locking_hash_table__coll__graph.png" border="0" usemap="#geopm_1_1_locking_hash_table_3_01type_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_locking_hash_table_3_01type_01_4_coll__map" id="geopm_1_1_locking_hash_table_3_01type_01_4_coll__map">
-<area shape="rect" id="node2" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="geopm::LockingHashTable\l\&lt; type \&gt;::table_entry_s" alt="" coords="5,5,184,44"/>
+<area shape="rect" id="node2" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="5,5,184,44"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html">table_entry_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to hold state for a single table entry.  <a href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87495c9825486aaa9e69475e3184af49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a87495c9825486aaa9e69475e3184af49">LockingHashTable</a> (size_t size, void *buffer)</td></tr>
+<tr class="memitem:a87495c9825486aaa9e69475e3184af49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a87495c9825486aaa9e69475e3184af49">LockingHashTable</a> (size_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84">size</a>, void *buffer)</td></tr>
 <tr class="memdesc:a87495c9825486aaa9e69475e3184af49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classgeopm_1_1_locking_hash_table.html" title="Templated container for multi-threaded or multi-process producer consumer data exchange. ">LockingHashTable</a> template.  <a href="#a87495c9825486aaa9e69475e3184af49">More...</a><br /></td></tr>
 <tr class="separator:a87495c9825486aaa9e69475e3184af49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b7743c2157294c1a8e3de73ae32206"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a22b7743c2157294c1a8e3de73ae32206">~LockingHashTable</a> ()</td></tr>
@@ -137,6 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a102a414c443114e4db63458e1019215e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a102a414c443114e4db63458e1019215e">capacity</a> (void) const </td></tr>
 <tr class="memdesc:a102a414c443114e4db63458e1019215e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of entries the table can hold.  <a href="#a102a414c443114e4db63458e1019215e">More...</a><br /></td></tr>
 <tr class="separator:a102a414c443114e4db63458e1019215e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083b721cd56ed567727b00e9d7fd0c84"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84">size</a> (void) const </td></tr>
+<tr class="separator:a083b721cd56ed567727b00e9d7fd0c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeee8e97724e289d543340ac5bca72fc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#aeee8e97724e289d543340ac5bca72fc6">dump</a> (typename std::vector&lt; std::pair&lt; uint64_t, type &gt; &gt;::iterator content, size_t &amp;length)</td></tr>
 <tr class="memdesc:aeee8e97724e289d543340ac5bca72fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all table entries into a vector and delete all entries.  <a href="#aeee8e97724e289d543340ac5bca72fc6">More...</a><br /></td></tr>
 <tr class="separator:aeee8e97724e289d543340ac5bca72fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +152,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a63a1e62d3c241276441e03d049e01922"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a63a1e62d3c241276441e03d049e01922">sticky</a> (const type &amp;value)</td></tr>
+<tr class="separator:a63a1e62d3c241276441e03d049e01922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9169f4ba7a25bd3b9d3d958c84ddff"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#abd9169f4ba7a25bd3b9d3d958c84ddff">hash</a> (uint64_t <a class="el" href="classgeopm_1_1_locking_hash_table.html#ac37a748e51f287418726c1162dddb283">key</a>) const </td></tr>
 <tr class="separator:abd9169f4ba7a25bd3b9d3d958c84ddff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0130f4c53999fc7a4197716840e9543b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_locking_hash_table.html#a0130f4c53999fc7a4197716840e9543b">table_length</a> (size_t buffer_size) const </td></tr>
@@ -491,6 +496,52 @@ template&lt;class type &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a083b721cd56ed567727b00e9d7fd0c84"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classgeopm_1_1_locking_hash_table.html">geopm::LockingHashTable</a>&lt; type &gt;::size </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63a1e62d3c241276441e03d049e01922"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgeopm_1_1_locking_hash_table.html">geopm::LockingHashTable</a>&lt; type &gt;::sticky </td>
+          <td>(</td>
+          <td class="paramtype">const type &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classgeopm_1_1_profile_table.html#a359146c2b1d4368e606ab758fa0888c7">geopm::ProfileTable</a>.</p>
 
 </div>
 </div>

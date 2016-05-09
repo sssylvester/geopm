@@ -114,12 +114,8 @@ Collaboration diagram for geopm::Platform:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_platform__coll__graph.png" border="0" usemap="#geopm_1_1_platform_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_platform_coll__map" id="geopm_1_1_platform_coll__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_region.html" title="This class encapsulates all state data for a specific application execution region. " alt="" coords="250,92,361,117"/>
-<area shape="rect" id="node3" href="structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="5,5,185,31"/>
-<area shape="rect" id="node4" href="classgeopm_1_1_policy.html" title="geopm::Policy" alt="" coords="209,5,314,31"/>
-<area shape="rect" id="node5" href="classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="338,5,479,31"/>
-<area shape="rect" id="node6" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="474,92,615,117"/>
-<area shape="rect" id="node7" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="503,5,676,31"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp..." alt="" coords="21,92,162,117"/>
+<area shape="rect" id="node3" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform..." alt="" coords="5,5,178,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -128,38 +124,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adcb008b6fb08f56f8bcbe8b1bbc86996"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#adcb008b6fb08f56f8bcbe8b1bbc86996">Platform</a> ()</td></tr>
 <tr class="memdesc:adcb008b6fb08f56f8bcbe8b1bbc86996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#adcb008b6fb08f56f8bcbe8b1bbc86996">More...</a><br /></td></tr>
 <tr class="separator:adcb008b6fb08f56f8bcbe8b1bbc86996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e69d7429411954c50d137f590156bb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a7e69d7429411954c50d137f590156bb6">Platform</a> (int control_domain_type)</td></tr>
+<tr class="separator:a7e69d7429411954c50d137f590156bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dfd75042d12c316932ccf9bf74f7dad"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a3dfd75042d12c316932ccf9bf74f7dad">~Platform</a> ()</td></tr>
 <tr class="memdesc:a3dfd75042d12c316932ccf9bf74f7dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a3dfd75042d12c316932ccf9bf74f7dad">More...</a><br /></td></tr>
 <tr class="separator:a3dfd75042d12c316932ccf9bf74f7dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a091a34281dab3f32bb4db8a195805f51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a091a34281dab3f32bb4db8a195805f51">set_implementation</a> (<a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> *platform_imp)</td></tr>
 <tr class="memdesc:a091a34281dab3f32bb4db8a195805f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set our member variable pointing to a <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> object.  <a href="#a091a34281dab3f32bb4db8a195805f51">More...</a><br /></td></tr>
 <tr class="separator:a091a34281dab3f32bb4db8a195805f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6789148cd1f672dd792117b3301b57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ac6789148cd1f672dd792117b3301b57b">region_begin</a> (<a class="el" href="classgeopm_1_1_region.html">Region</a> *region)</td></tr>
-<tr class="memdesc:ac6789148cd1f672dd792117b3301b57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current region to add telemetry to.  <a href="#ac6789148cd1f672dd792117b3301b57b">More...</a><br /></td></tr>
-<tr class="separator:ac6789148cd1f672dd792117b3301b57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20821577395b9a52a16ba3f7a8d5947e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a20821577395b9a52a16ba3f7a8d5947e">region_end</a> (void)</td></tr>
-<tr class="memdesc:a20821577395b9a52a16ba3f7a8d5947e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that the current region has ended.  <a href="#a20821577395b9a52a16ba3f7a8d5947e">More...</a><br /></td></tr>
-<tr class="separator:a20821577395b9a52a16ba3f7a8d5947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00c694cc423f86d52ce216e02a9591b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_region.html">Region</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a00c694cc423f86d52ce216e02a9591b3">cur_region</a> (void) const </td></tr>
-<tr class="memdesc:a00c694cc423f86d52ce216e02a9591b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the current region object.  <a href="#a00c694cc423f86d52ce216e02a9591b3">More...</a><br /></td></tr>
-<tr class="separator:a00c694cc423f86d52ce216e02a9591b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69096b20468b47949ba08a5b9af7d74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ae69096b20468b47949ba08a5b9af7d74">num_domain</a> (void) const </td></tr>
 <tr class="memdesc:ae69096b20468b47949ba08a5b9af7d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of power domains.  <a href="#ae69096b20468b47949ba08a5b9af7d74">More...</a><br /></td></tr>
 <tr class="separator:ae69096b20468b47949ba08a5b9af7d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61e00213cca3fda23b34d8159b567a8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a61e00213cca3fda23b34d8159b567a8f">domain_index</a> (int domain_type, std::vector&lt; int &gt; &amp;domain_index) const </td></tr>
-<tr class="separator:a61e00213cca3fda23b34d8159b567a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c49ab3938d994bd27c7f892f3739974"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a6c49ab3938d994bd27c7f892f3739974">level</a> (void) const </td></tr>
-<tr class="separator:a6c49ab3938d994bd27c7f892f3739974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9c66735d9942efb3bc06d88260fe8d9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ac9c66735d9942efb3bc06d88260fe8d9">name</a> (void) const </td></tr>
-<tr class="separator:ac9c66735d9942efb3bc06d88260fe8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a3d0ad4322d6a8b4704542802f7e54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a62a3d0ad4322d6a8b4704542802f7e54">buffer_index</a> (hwloc_obj_t domain, const std::vector&lt; std::string &gt; &amp;signal_names, std::vector&lt; int &gt; &amp;buffer_index) const </td></tr>
-<tr class="separator:a62a3d0ad4322d6a8b4704542802f7e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32031baafb9dfa153086c4ba40c09273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a32031baafb9dfa153086c4ba40c09273">observe</a> (struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;<a class="el" href="classgeopm_1_1_platform.html#ae7fc4c22dc7fd7fa61e854a08ad02a51">sample</a>) const </td></tr>
-<tr class="separator:a32031baafb9dfa153086c4ba40c09273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63681250fb8e8ce8cd70d9c8d0a8c2dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a63681250fb8e8ce8cd70d9c8d0a8c2dd">observe</a> (const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;<a class="el" href="classgeopm_1_1_platform.html#ae7fc4c22dc7fd7fa61e854a08ad02a51">sample</a>) const </td></tr>
-<tr class="separator:a63681250fb8e8ce8cd70d9c8d0a8c2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2fe5e365cabde1e0527fecd86a38b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#aa2fe5e365cabde1e0527fecd86a38b1a">power_model</a> (int domain_type) const </td></tr>
-<tr class="separator:aa2fe5e365cabde1e0527fecd86a38b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edeaedf0919318663ec742f910fbf0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a1edeaedf0919318663ec742f910fbf0d">name</a> (std::string &amp;plat_name) const </td></tr>
+<tr class="memdesc:a1edeaedf0919318663ec742f910fbf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the string name of the hw platform.  <a href="#a1edeaedf0919318663ec742f910fbf0d">More...</a><br /></td></tr>
+<tr class="separator:a1edeaedf0919318663ec742f910fbf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ed1b5340119f66211e93e88c64e2a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a18ed1b5340119f66211e93e88c64e2a6">tdp_limit</a> (int percentage) const </td></tr>
 <tr class="memdesc:a18ed1b5340119f66211e93e88c64e2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the power limit of the CPUs to a percentage of Thermal Design Power (TDP).  <a href="#a18ed1b5340119f66211e93e88c64e2a6">More...</a><br /></td></tr>
 <tr class="separator:a18ed1b5340119f66211e93e88c64e2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,40 +153,48 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af259ffe831d041f4c18bf44f4e055c18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#af259ffe831d041f4c18bf44f4e055c18">write_msr_whitelist</a> (FILE *file_desc) const </td></tr>
 <tr class="memdesc:af259ffe831d041f4c18bf44f4e055c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a MSR whitelist for use with the Linux MSR driver.  <a href="#af259ffe831d041f4c18bf44f4e055c18">More...</a><br /></td></tr>
 <tr class="separator:af259ffe831d041f4c18bf44f4e055c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18cc5a003f9ba5264b714500074c796"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ab18cc5a003f9ba5264b714500074c796">observe</a> (void)=0</td></tr>
-<tr class="memdesc:ab18cc5a003f9ba5264b714500074c796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record telemetry from counters and RAPL MSRs.  <a href="#ab18cc5a003f9ba5264b714500074c796">More...</a><br /></td></tr>
-<tr class="separator:ab18cc5a003f9ba5264b714500074c796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bdb29df8f04eaef3b872932450c9705"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a3bdb29df8f04eaef3b872932450c9705">model_supported</a> (int platform_id) const  =0</td></tr>
-<tr class="memdesc:a3bdb29df8f04eaef3b872932450c9705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> support a specific platform.  <a href="#a3bdb29df8f04eaef3b872932450c9705">More...</a><br /></td></tr>
-<tr class="separator:a3bdb29df8f04eaef3b872932450c9705"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7fc4c22dc7fd7fa61e854a08ad02a51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ae7fc4c22dc7fd7fa61e854a08ad02a51">sample</a> (struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;sample) const  =0</td></tr>
-<tr class="memdesc:ae7fc4c22dc7fd7fa61e854a08ad02a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a telemetry sample.  <a href="#ae7fc4c22dc7fd7fa61e854a08ad02a51">More...</a><br /></td></tr>
-<tr class="separator:ae7fc4c22dc7fd7fa61e854a08ad02a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a815542a73cab4b919396e772c63b77ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a815542a73cab4b919396e772c63b77ca">enforce_policy</a> (const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;policy) const  =0</td></tr>
-<tr class="memdesc:a815542a73cab4b919396e772c63b77ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforce a static power management mode including tdp_balance_static, freq_uniform_static, and freq_hybrid_static.  <a href="#a815542a73cab4b919396e772c63b77ca">More...</a><br /></td></tr>
-<tr class="separator:a815542a73cab4b919396e772c63b77ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1880f20ae2a79e72e2d2213af4e99048"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a1880f20ae2a79e72e2d2213af4e99048">topology</a> () const </td></tr>
-<tr class="memdesc:a1880f20ae2a79e72e2d2213af4e99048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology of the current platform.  <a href="#a1880f20ae2a79e72e2d2213af4e99048">More...</a><br /></td></tr>
-<tr class="separator:a1880f20ae2a79e72e2d2213af4e99048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b1d029b201b926fecd10c75e0a0b7b"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a84b1d029b201b926fecd10c75e0a0b7b">capacity</a> (void)=0</td></tr>
+<tr class="memdesc:a84b1d029b201b926fecd10c75e0a0b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of MSR values returned from <a class="el" href="classgeopm_1_1_platform.html#adb22f194d2e6169264a903161632ec07" title="Record telemetry from counters and RAPL MSRs. ">sample()</a>.  <a href="#a84b1d029b201b926fecd10c75e0a0b7b">More...</a><br /></td></tr>
+<tr class="separator:a84b1d029b201b926fecd10c75e0a0b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb22f194d2e6169264a903161632ec07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#adb22f194d2e6169264a903161632ec07">sample</a> (std::vector&lt; struct <a class="el" href="structgeopm__msr__message__s.html">geopm_msr_message_s</a> &gt; &amp;msr_values)=0</td></tr>
+<tr class="memdesc:adb22f194d2e6169264a903161632ec07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record telemetry from counters and RAPL MSRs.  <a href="#adb22f194d2e6169264a903161632ec07">More...</a><br /></td></tr>
+<tr class="separator:adb22f194d2e6169264a903161632ec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcafaa5d748075e4a595296a7e8617c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#aafcafaa5d748075e4a595296a7e8617c">model_supported</a> (int platform_id, const std::string &amp;description) const  =0</td></tr>
+<tr class="memdesc:aafcafaa5d748075e4a595296a7e8617c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> support a specific platform.  <a href="#aafcafaa5d748075e4a595296a7e8617c">More...</a><br /></td></tr>
+<tr class="separator:aafcafaa5d748075e4a595296a7e8617c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086a490850553278b90a2988d9dc555a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a086a490850553278b90a2988d9dc555a">enforce_policy</a> (uint64_t region_id, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;policy) const  =0</td></tr>
+<tr class="memdesc:a086a490850553278b90a2988d9dc555a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforce a static power management mode including tdp_balance_static, freq_uniform_static, and freq_hybrid_static.  <a href="#a086a490850553278b90a2988d9dc555a">More...</a><br /></td></tr>
+<tr class="separator:a086a490850553278b90a2988d9dc555a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d975868dcc4f15b48658a7bb7834f2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ad6d975868dcc4f15b48658a7bb7834f2">topology</a> (void) const </td></tr>
+<tr class="memdesc:ad6d975868dcc4f15b48658a7bb7834f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology of the current platform.  <a href="#ad6d975868dcc4f15b48658a7bb7834f2">More...</a><br /></td></tr>
+<tr class="separator:ad6d975868dcc4f15b48658a7bb7834f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811faa406939db7b9d06397c6bdf173b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a811faa406939db7b9d06397c6bdf173b">init_transform</a> (const std::vector&lt; int &gt; &amp;cpu_rank)</td></tr>
+<tr class="memdesc:a811faa406939db7b9d06397c6bdf173b"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the signal transformation matrix. Initialize the matrix that transforms the per package, per-cpu, and per-rank signals into the domain of control.  <a href="#a811faa406939db7b9d06397c6bdf173b">More...</a><br /></td></tr>
+<tr class="separator:a811faa406939db7b9d06397c6bdf173b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc1fff750c59a3be9bdc73193851fd8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#abcc1fff750c59a3be9bdc73193851fd8">num_control_domain</a> (void) const </td></tr>
+<tr class="memdesc:abcc1fff750c59a3be9bdc73193851fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of control domains.  <a href="#abcc1fff750c59a3be9bdc73193851fd8">More...</a><br /></td></tr>
+<tr class="separator:abcc1fff750c59a3be9bdc73193851fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec5059500ab5360301c2d425b2a6fb0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a0ec5059500ab5360301c2d425b2a6fb0">control_latency_ms</a> (void) const </td></tr>
+<tr class="separator:a0ec5059500ab5360301c2d425b2a6fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000f72f7b4773d088622fd41dae85871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a000f72f7b4773d088622fd41dae85871">transform_rank_data</a> (uint64_t region_id, const struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a> &amp;aligned_time, const std::vector&lt; double &gt; &amp;aligned_data, std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;telemetry)</td></tr>
+<tr class="separator:a000f72f7b4773d088622fd41dae85871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:acead0dfa84c0a25b51d6e68566625459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform_imp.html">PlatformImp</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#acead0dfa84c0a25b51d6e68566625459">m_imp</a></td></tr>
 <tr class="memdesc:acead0dfa84c0a25b51d6e68566625459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to a <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> object that supports the target hardware platform.  <a href="#acead0dfa84c0a25b51d6e68566625459">More...</a><br /></td></tr>
 <tr class="separator:acead0dfa84c0a25b51d6e68566625459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef22c5fc623e815ab4e539a3aca2544"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_region.html">Region</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a0ef22c5fc623e815ab4e539a3aca2544">m_curr_region</a></td></tr>
-<tr class="memdesc:a0ef22c5fc623e815ab4e539a3aca2544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the application region object that is currently executing.  <a href="#a0ef22c5fc623e815ab4e539a3aca2544">More...</a><br /></td></tr>
-<tr class="separator:a0ef22c5fc623e815ab4e539a3aca2544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dacb3e96f07477c70508478be2e5d7a"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a4dacb3e96f07477c70508478be2e5d7a">m_power_model</a></td></tr>
-<tr class="memdesc:a4dacb3e96f07477c70508478be2e5d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from a power domain type to its corresponding <a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> object.  <a href="#a4dacb3e96f07477c70508478be2e5d7a">More...</a><br /></td></tr>
-<tr class="separator:a4dacb3e96f07477c70508478be2e5d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad99515ee2f50d2d1ce1e788cf451ca56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ad99515ee2f50d2d1ce1e788cf451ca56">m_num_domains</a></td></tr>
-<tr class="memdesc:ad99515ee2f50d2d1ce1e788cf451ca56"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of power domains.  <a href="#ad99515ee2f50d2d1ce1e788cf451ca56">More...</a><br /></td></tr>
-<tr class="separator:ad99515ee2f50d2d1ce1e788cf451ca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4deb4f08e5f73e2f2f7922e633ef088"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ab4deb4f08e5f73e2f2f7922e633ef088">m_window_size</a></td></tr>
-<tr class="separator:ab4deb4f08e5f73e2f2f7922e633ef088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd8fc952a3501f70b8cd4572b3298e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a9bd8fc952a3501f70b8cd4572b3298e5">m_level</a></td></tr>
-<tr class="separator:a9bd8fc952a3501f70b8cd4572b3298e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89adc8aa4d421d1f1c742ef2ab3c864"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ac89adc8aa4d421d1f1c742ef2ab3c864">m_num_domain</a></td></tr>
+<tr class="memdesc:ac89adc8aa4d421d1f1c742ef2ab3c864"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of power domains.  <a href="#ac89adc8aa4d421d1f1c742ef2ab3c864">More...</a><br /></td></tr>
+<tr class="separator:ac89adc8aa4d421d1f1c742ef2ab3c864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311dadb92ab256034349369c9a56acde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a311dadb92ab256034349369c9a56acde">m_control_domain_type</a></td></tr>
+<tr class="memdesc:a311dadb92ab256034349369c9a56acde"><td class="mdescLeft">&#160;</td><td class="mdescRight">The geopm_domain_type_e of the finest domain of control on the hw platform.  <a href="#a311dadb92ab256034349369c9a56acde">More...</a><br /></td></tr>
+<tr class="separator:a311dadb92ab256034349369c9a56acde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7267851af8971707d9a33c589657d052"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#a7267851af8971707d9a33c589657d052">m_rank_cpu</a></td></tr>
+<tr class="memdesc:a7267851af8971707d9a33c589657d052"><td class="mdescLeft">&#160;</td><td class="mdescRight">The matrix that transforms the per package, per-cpu, and per-rank signals into the domain of control.  <a href="#a7267851af8971707d9a33c589657d052">More...</a><br /></td></tr>
+<tr class="separator:a7267851af8971707d9a33c589657d052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d4d796a5198e52fe5e9f655da39023"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform.html#ac6d4d796a5198e52fe5e9f655da39023">m_num_rank</a></td></tr>
+<tr class="separator:ac6d4d796a5198e52fe5e9f655da39023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides an abstraction of specific functionality and attributes of classes of hardware implementations. It holds the implementation of the specific hardware platform and knows how to interact with it. </p>
@@ -227,6 +213,28 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e69d7429411954c50d137f590156bb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">geopm::Platform::Platform </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>control_domain_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">control_domain_type</td><td>enum geopm_domain_type_e describing the finest grain domain of control. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -256,44 +264,40 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a62a3d0ad4322d6a8b4704542802f7e54"></a>
+<a class="anchor" id="a84b1d029b201b926fecd10c75e0a0b7b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::Platform::buffer_index </td>
+          <td class="memname">virtual size_t geopm::Platform::capacity </td>
           <td>(</td>
-          <td class="paramtype">hwloc_obj_t&#160;</td>
-          <td class="paramname"><em>domain</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>signal_names</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>buffer_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Number of MSR values returned from <a class="el" href="classgeopm_1_1_platform.html#adb22f194d2e6169264a903161632ec07" title="Record telemetry from counters and RAPL MSRs. ">sample()</a>. </p>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ab9d0588d2a1b0259597e13db2766dac8">geopm::RAPLPlatform</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a00c694cc423f86d52ce216e02a9591b3"></a>
+<a class="anchor" id="a0ec5059500ab5360301c2d425b2a6fb0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_region.html">Region</a> * geopm::Platform::cur_region </td>
+          <td class="memname">double geopm::Platform::control_latency_ms </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -302,38 +306,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve the current region object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the current region object. </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="a61e00213cca3fda23b34d8159b567a8f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Platform::domain_index </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>domain_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>domain_index</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a815542a73cab4b919396e772c63b77ca"></a>
+<a class="anchor" id="a086a490850553278b90a2988d9dc555a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,9 +318,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void geopm::Platform::enforce_policy </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
-          <td class="paramname"><em>policy</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>region_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -358,28 +343,37 @@ Protected Attributes</h2></td></tr>
 <p>Enforce a static power management mode including tdp_balance_static, freq_uniform_static, and freq_hybrid_static. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>A <a class="el" href="classgeopm_1_1_policy.html">Policy</a> object containing the policy information to be enforced. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>A <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a> object containing the policy information to be enforced. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a131044d080dde970ad7eb71068a97ebf">geopm::RAPLPlatform</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a506a2f0e1c81fbe658b049e3ee5ce387">geopm::RAPLPlatform</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6c49ab3938d994bd27c7f892f3739974"></a>
+<a class="anchor" id="a811faa406939db7b9d06397c6bdf173b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::Platform::level </td>
+          <td class="memname">void geopm::Platform::init_transform </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cpu_rank</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>initialize the signal transformation matrix. Initialize the matrix that transforms the per package, per-cpu, and per-rank signals into the domain of control. </p>
+<p>signals are expected as follows: /// per socket signals /// PKG_ENERGY /// PP0_ENERGY /// DRAM_ENERGY /// followed by per cpu signals /// FREQUENCY /// INST_RETIRED /// CLK_UNHALTED_CORE /// CLK_UNHALTED_REF /// LLC_VICTIMS /// followed by per rank signals /// PROGRESS /// RUNTIME ///</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cpu_rank</td><td>The mapping from cpu index to rank id. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -425,7 +419,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3bdb29df8f04eaef3b872932450c9705"></a>
+<a class="anchor" id="aafcafaa5d748075e4a595296a7e8617c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -436,8 +430,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool geopm::Platform::model_supported </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>platform_id</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>platform_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -451,21 +455,41 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">platform_id</td><td><a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> identifier specific to the underlying hardware. On x86 platforms this can be obtained by the cpuid instruction. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>description string that can be used to determine if the platform can fulfill the requirements of the request. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if this <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> supports platform_id, else false. </dd></dl>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#acc9f10f56f5166036b8bf6e4099e2d9b">geopm::RAPLPlatform</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a3664461688d016916c9848a33405f183">geopm::RAPLPlatform</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac9c66735d9942efb3bc06d88260fe8d9"></a>
+<a class="anchor" id="a1edeaedf0919318663ec742f910fbf0d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string geopm::Platform::name </td>
+          <td class="memname">void geopm::Platform::name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>plat_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the string name of the hw platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>The hw platform name. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abcc1fff750c59a3be9bdc73193851fd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Platform::num_control_domain </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -473,6 +497,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieve the number of control domains. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of control domains on the hw platform. </dd></dl>
 
 </div>
 </div>
@@ -492,124 +519,6 @@ Protected Attributes</h2></td></tr>
 
 <p>Retrieve the number of power domains. </p>
 <dl class="section return"><dt>Returns</dt><dd>Number of power domains. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a32031baafb9dfa153086c4ba40c09273"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Platform::observe </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a63681250fb8e8ce8cd70d9c8d0a8c2dd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Platform::observe </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab18cc5a003f9ba5264b714500074c796"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void geopm::Platform::observe </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Record telemetry from counters and RAPL MSRs. </p>
-
-<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a7957c511ef9042858f2a4bc3ccb1519f">geopm::RAPLPlatform</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa2fe5e365cabde1e0527fecd86a38b1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> * geopm::Platform::power_model </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>domain_type</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac6789148cd1f672dd792117b3301b57b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Platform::region_begin </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_region.html">Region</a> *&#160;</td>
-          <td class="paramname"><em>region</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the current region to add telemetry to. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">region</td><td>A pointer to the current <a class="el" href="classgeopm_1_1_region.html" title="This class encapsulates all state data for a specific application execution region. ">Region</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a20821577395b9a52a16ba3f7a8d5947e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Platform::region_end </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Signal that the current region has ended. </p>
 
 </div>
 </div>
@@ -637,7 +546,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7fc4c22dc7fd7fa61e854a08ad02a51"></a>
+<a class="anchor" id="adb22f194d2e6169264a903161632ec07"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -647,9 +556,9 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void geopm::Platform::sample </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::vector&lt; struct <a class="el" href="structgeopm__msr__message__s.html">geopm_msr_message_s</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>msr_values</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -659,15 +568,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieve a telemetry sample. </p>
+<p>Record telemetry from counters and RAPL MSRs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">sample</td><td>Sample message in which to store the sample. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msr_values</td><td>MSR structures in which to save values. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ab465c7101d5207701df3aba7dc6226d3">geopm::RAPLPlatform</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#a4ce4efdf89c5f9882e2454fbc03eeba9">geopm::RAPLPlatform</a>.</p>
 
 </div>
 </div>
@@ -753,12 +662,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1880f20ae2a79e72e2d2213af4e99048"></a>
+<a class="anchor" id="ad6d975868dcc4f15b48658a7bb7834f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a> geopm::Platform::topology </td>
+          <td class="memname">const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a> * geopm::Platform::topology </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -769,6 +678,45 @@ Protected Attributes</h2></td></tr>
 
 <p>Retrieve the topology of the current platform. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgeopm_1_1_platform_topology.html" title="This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform...">PlatformTopology</a> object containing the current topology information. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a000f72f7b4773d088622fd41dae85871"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Platform::transform_rank_data </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>region_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>aligned_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aligned_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>assumes domain of control is the package </dd></dl>
 
 </div>
 </div>
@@ -797,7 +745,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a0ef22c5fc623e815ab4e539a3aca2544"></a>
+<a class="anchor" id="a311dadb92ab256034349369c9a56acde"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -805,7 +753,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_region.html">Region</a>* geopm::Platform::m_curr_region</td>
+          <td class="memname">int geopm::Platform::m_control_domain_type</td>
         </tr>
       </table>
   </td>
@@ -815,7 +763,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pointer to the application region object that is currently executing. </p>
+<p>The geopm_domain_type_e of the finest domain of control on the hw platform. </p>
 
 </div>
 </div>
@@ -841,7 +789,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9bd8fc952a3501f70b8cd4572b3298e5"></a>
+<a class="anchor" id="ac89adc8aa4d421d1f1c742ef2ab3c864"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -849,27 +797,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::Platform::m_level</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad99515ee2f50d2d1ce1e788cf451ca56"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int geopm::Platform::m_num_domains</td>
+          <td class="memname">int geopm::Platform::m_num_domain</td>
         </tr>
       </table>
   </td>
@@ -883,7 +811,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4dacb3e96f07477c70508478be2e5d7a"></a>
+<a class="anchor" id="ac6d4d796a5198e52fe5e9f655da39023"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -891,7 +819,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;int, <a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> *&gt; geopm::Platform::m_power_model</td>
+          <td class="memname">int geopm::Platform::m_num_rank</td>
         </tr>
       </table>
   </td>
@@ -901,11 +829,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Map from a power domain type to its corresponding <a class="el" href="classgeopm_1_1_power_model.html">PowerModel</a> object. </p>
-
 </div>
 </div>
-<a class="anchor" id="ab4deb4f08e5f73e2f2f7922e633ef088"></a>
+<a class="anchor" id="a7267851af8971707d9a33c589657d052"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -913,7 +839,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::Platform::m_window_size</td>
+          <td class="memname">std::vector&lt;std::vector&lt;int&gt; &gt; geopm::Platform::m_rank_cpu</td>
         </tr>
       </table>
   </td>
@@ -922,6 +848,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The matrix that transforms the per package, per-cpu, and per-rank signals into the domain of control. </p>
 
 </div>
 </div>

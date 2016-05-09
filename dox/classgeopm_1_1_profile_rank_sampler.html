@@ -106,11 +106,12 @@ Collaboration diagram for geopm::ProfileRankSampler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_profile_rank_sampler__coll__graph.png" border="0" usemap="#geopm_1_1_profile_rank_sampler_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_profile_rank_sampler_coll__map" id="geopm_1_1_profile_rank_sampler_coll__map">
-<area shape="rect" id="node2" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="327,6,495,31"/>
-<area shape="rect" id="node3" href="structgeopm__time__s.html" title="geopm_time_s" alt="" coords="40,6,149,31"/>
-<area shape="rect" id="node4" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="297,55,524,94"/>
-<area shape="rect" id="node5" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="geopm::LockingHashTable\l\&lt; type \&gt;::table_entry_s" alt="" coords="5,55,184,94"/>
-<area shape="rect" id="node6" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="330,118,491,143"/>
+<area shape="rect" id="node2" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. " alt="" coords="5,205,173,231"/>
+<area shape="rect" id="node3" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="31,112,140,137"/>
+<area shape="rect" id="node4" href="classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica..." alt="" coords="204,205,343,231"/>
+<area shape="rect" id="node5" href="classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="164,105,391,144"/>
+<area shape="rect" id="node6" href="structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="188,5,367,44"/>
+<area shape="rect" id="node7" href="classgeopm_1_1_shared_memory.html" title="This class encapsulates the creation of inter&#45;process shared memory. " alt="" coords="366,205,527,231"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -122,31 +123,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab103861ea35221152e9cddf089f87c0c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ab103861ea35221152e9cddf089f87c0c">~ProfileRankSampler</a> ()</td></tr>
 <tr class="memdesc:ab103861ea35221152e9cddf089f87c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html" title="Retrieves sample data from a single application rank through a shared memory interface. ">ProfileRankSampler</a> destructor.  <a href="#ab103861ea35221152e9cddf089f87c0c">More...</a><br /></td></tr>
 <tr class="separator:ab103861ea35221152e9cddf089f87c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad045fd3586a28ee0ae9ddc996130f848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ad045fd3586a28ee0ae9ddc996130f848">rank_sample</a> (std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator content_begin, size_t &amp;length)</td></tr>
-<tr class="memdesc:ad045fd3586a28ee0ae9ddc996130f848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the samples present in the hash table.  <a href="#ad045fd3586a28ee0ae9ddc996130f848">More...</a><br /></td></tr>
-<tr class="separator:ad045fd3586a28ee0ae9ddc996130f848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceadb0ae2bdf5b9a24cf1389e40c9ab7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#aceadb0ae2bdf5b9a24cf1389e40c9ab7">sample</a> (std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator content_begin, size_t &amp;length)</td></tr>
+<tr class="memdesc:aceadb0ae2bdf5b9a24cf1389e40c9ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the samples present in the hash table.  <a href="#aceadb0ae2bdf5b9a24cf1389e40c9ab7">More...</a><br /></td></tr>
+<tr class="separator:aceadb0ae2bdf5b9a24cf1389e40c9ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06df8c668692b15cd2fad8a04760ed4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ac06df8c668692b15cd2fad8a04760ed4">capacity</a> (void)</td></tr>
 <tr class="memdesc:ac06df8c668692b15cd2fad8a04760ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the maximum capacity of the hash table.  <a href="#ac06df8c668692b15cd2fad8a04760ed4">More...</a><br /></td></tr>
 <tr class="separator:ac06df8c668692b15cd2fad8a04760ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1adaaafafd0c692c37ebd786c2e2472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#aa1adaaafafd0c692c37ebd786c2e2472">report</a> (std::ofstream &amp;file_desc)</td></tr>
 <tr class="memdesc:aa1adaaafafd0c692c37ebd786c2e2472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out a detailed post-runtime report.  <a href="#aa1adaaafafd0c692c37ebd786c2e2472">More...</a><br /></td></tr>
 <tr class="separator:aa1adaaafafd0c692c37ebd786c2e2472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25fa8333cec99f358f11e0d4ae66160f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a25fa8333cec99f358f11e0d4ae66160f">name_fill</a> (void)</td></tr>
-<tr class="memdesc:a25fa8333cec99f358f11e0d4ae66160f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve region names from the application process.  <a href="#a25fa8333cec99f358f11e0d4ae66160f">More...</a><br /></td></tr>
-<tr class="separator:a25fa8333cec99f358f11e0d4ae66160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e154c4f1bb5ef82629504e005d572c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a69e154c4f1bb5ef82629504e005d572c">name_fill</a> (std::set&lt; std::string &gt; &amp;name_set)</td></tr>
+<tr class="memdesc:a69e154c4f1bb5ef82629504e005d572c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve region names from the application process.  <a href="#a69e154c4f1bb5ef82629504e005d572c">More...</a><br /></td></tr>
+<tr class="separator:a69e154c4f1bb5ef82629504e005d572c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85aa0f991549cd5458e8771dcb93360d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a85aa0f991549cd5458e8771dcb93360d">report_name</a> (std::string &amp;report_str)</td></tr>
+<tr class="separator:a85aa0f991549cd5458e8771dcb93360d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af9f6ee3fbea9b7a5599b82aab27b10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a9af9f6ee3fbea9b7a5599b82aab27b10">profile_name</a> (std::string &amp;prof_str)</td></tr>
+<tr class="separator:a9af9f6ee3fbea9b7a5599b82aab27b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a4348a96bb0a507cd6b608d80e304f994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_shared_memory.html">SharedMemory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a4348a96bb0a507cd6b608d80e304f994">m_table_shmem</a></td></tr>
 <tr class="separator:a4348a96bb0a507cd6b608d80e304f994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f919b316ec2dd42e018c0de9334d370"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_locking_hash_table.html">LockingHashTable</a>&lt; struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a9f919b316ec2dd42e018c0de9334d370">m_table</a></td></tr>
-<tr class="memdesc:a9f919b316ec2dd42e018c0de9334d370"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash table which stores application process samples.  <a href="#a9f919b316ec2dd42e018c0de9334d370">More...</a><br /></td></tr>
-<tr class="separator:a9f919b316ec2dd42e018c0de9334d370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ef1b99600c3a6e3e41344f6eab763f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_profile_table.html">ProfileTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a80ef1b99600c3a6e3e41344f6eab763f">m_table</a></td></tr>
+<tr class="memdesc:a80ef1b99600c3a6e3e41344f6eab763f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hash table which stores application process samples.  <a href="#a80ef1b99600c3a6e3e41344f6eab763f">More...</a><br /></td></tr>
+<tr class="separator:a80ef1b99600c3a6e3e41344f6eab763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe8d18f596d09e796f333f807ecc72b4"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#abe8d18f596d09e796f333f807ecc72b4">m_agg_stats</a></td></tr>
 <tr class="separator:abe8d18f596d09e796f333f807ecc72b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae414bb75ffa52407d4c366f37205b9a7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ae414bb75ffa52407d4c366f37205b9a7">m_region_entry</a></td></tr>
 <tr class="memdesc:ae414bb75ffa52407d4c366f37205b9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the initial state of the last region entered.  <a href="#ae414bb75ffa52407d4c366f37205b9a7">More...</a><br /></td></tr>
 <tr class="separator:ae414bb75ffa52407d4c366f37205b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e506442d4f3c8487b0c5d7f2e49c5c1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a3e506442d4f3c8487b0c5d7f2e49c5c1">m_outer_sync_entry</a></td></tr>
+<tr class="memdesc:a3e506442d4f3c8487b0c5d7f2e49c5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the initial state of the last region entered.  <a href="#a3e506442d4f3c8487b0c5d7f2e49c5c1">More...</a><br /></td></tr>
+<tr class="separator:a3e506442d4f3c8487b0c5d7f2e49c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8632a338c663f79b6d292a8ff19b7ce0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a8632a338c663f79b6d292a8ff19b7ce0">m_prof_name</a></td></tr>
 <tr class="memdesc:a8632a338c663f79b6d292a8ff19b7ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the profile name string.  <a href="#a8632a338c663f79b6d292a8ff19b7ce0">More...</a><br /></td></tr>
 <tr class="separator:a8632a338c663f79b6d292a8ff19b7ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,15 +254,15 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a25fa8333cec99f358f11e0d4ae66160f"></a>
+<a class="anchor" id="a69e154c4f1bb5ef82629504e005d572c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool geopm::ProfileRankSampler::name_fill </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>name_set</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -266,12 +274,69 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad045fd3586a28ee0ae9ddc996130f848"></a>
+<a class="anchor" id="a9af9f6ee3fbea9b7a5599b82aab27b10"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::ProfileRankSampler::rank_sample </td>
+          <td class="memname">void geopm::ProfileRankSampler::profile_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>prof_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1adaaafafd0c692c37ebd786c2e2472"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileRankSampler::report </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>file_desc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print out a detailed post-runtime report. </p>
+<p>Handshakes with the application process to retrieve region names and prints a report of per region statistics of the runtime characteristics of that region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_desc</td><td>File descriptor to write the report out to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a85aa0f991549cd5458e8771dcb93360d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileRankSampler::report_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>report_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aceadb0ae2bdf5b9a24cf1389e40c9ab7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileRankSampler::sample </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; std::pair&lt; uint64_t, struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> &gt; &gt;::iterator&#160;</td>
           <td class="paramname"><em>content_begin</em>, </td>
@@ -296,31 +361,6 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">content_begin</td><td>Vector iterator at which to begin inserting sample messages.</td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">length</td><td>The number of samples that were inserted. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aa1adaaafafd0c692c37ebd786c2e2472"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::ProfileRankSampler::report </td>
-          <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
-          <td class="paramname"><em>file_desc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Print out a detailed post-runtime report. </p>
-<p>Handshakes with the application process to retrieve region names and prints a report of per region statistics of the runtime characteristics of that region.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file_desc</td><td>File descriptor to write the report out to. </td></tr>
   </table>
   </dd>
 </dl>
@@ -393,6 +433,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3e506442d4f3c8487b0c5d7f2e49c5c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a> geopm::ProfileRankSampler::m_outer_sync_entry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Holds the initial state of the last region entered. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8632a338c663f79b6d292a8ff19b7ce0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -459,7 +521,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f919b316ec2dd42e018c0de9334d370"></a>
+<a class="anchor" id="a80ef1b99600c3a6e3e41344f6eab763f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -467,7 +529,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_locking_hash_table.html">LockingHashTable</a>&lt;struct <a class="el" href="structgeopm__prof__message__s.html">geopm_prof_message_s</a>&gt; geopm::ProfileRankSampler::m_table</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_profile_table.html">ProfileTable</a> geopm::ProfileRankSampler::m_table</td>
         </tr>
       </table>
   </td>

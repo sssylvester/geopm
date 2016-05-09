@@ -96,24 +96,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Factory object managing decider objects.  
+ <a href="classgeopm_1_1_decider_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_decider_factory_8hpp_source.html">DeciderFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abc63a278317b35e752696f22ece89916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">DeciderFactory</a> ()</td></tr>
-<tr class="memdesc:abc63a278317b35e752696f22ece89916"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a> constructors.  <a href="#abc63a278317b35e752696f22ece89916">More...</a><br /></td></tr>
+<tr class="memdesc:abc63a278317b35e752696f22ece89916"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> default constructor.  <a href="#abc63a278317b35e752696f22ece89916">More...</a><br /></td></tr>
 <tr class="separator:abc63a278317b35e752696f22ece89916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c86f59f66d3fce467cc281bf0bcb74c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider_factory.html#a6c86f59f66d3fce467cc281bf0bcb74c">DeciderFactory</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_decider.html">Decider</a> &gt; <a class="el" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>)</td></tr>
+<tr class="memdesc:a6c86f59f66d3fce467cc281bf0bcb74c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> Testing constructor.  <a href="#a6c86f59f66d3fce467cc281bf0bcb74c">More...</a><br /></td></tr>
 <tr class="separator:a6c86f59f66d3fce467cc281bf0bcb74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c8e9522a8419ba05facf0d5a52e6c0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider_factory.html#aa3c8e9522a8419ba05facf0d5a52e6c0">~DeciderFactory</a> ()</td></tr>
-<tr class="memdesc:aa3c8e9522a8419ba05facf0d5a52e6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a> destructor.  <a href="#aa3c8e9522a8419ba05facf0d5a52e6c0">More...</a><br /></td></tr>
+<tr class="memdesc:aa3c8e9522a8419ba05facf0d5a52e6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> destructor, virtual.  <a href="#aa3c8e9522a8419ba05facf0d5a52e6c0">More...</a><br /></td></tr>
 <tr class="separator:aa3c8e9522a8419ba05facf0d5a52e6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31fa11874600fe47db5a1616e28910f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:ab31fa11874600fe47db5a1616e28910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an abstract <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> pointer to a concrete decider.  <a href="#ab31fa11874600fe47db5a1616e28910f">More...</a><br /></td></tr>
 <tr class="separator:ab31fa11874600fe47db5a1616e28910f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab26707391950878dd47400227a10e0e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4">register_decider</a> (std::unique_ptr&lt; <a class="el" href="classgeopm_1_1_decider.html">Decider</a> &gt; <a class="el" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>)</td></tr>
+<tr class="memdesc:ab26707391950878dd47400227a10e0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete Deciders register with the factory through this API.  <a href="#ab26707391950878dd47400227a10e0e4">More...</a><br /></td></tr>
 <tr class="separator:ab26707391950878dd47400227a10e0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory object managing decider objects. </p>
+<p>The <a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> manages all instances of <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> objects. During construction the factory creates instances of all built in <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> classes as well as any <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> plugins present on the system. All Deciders then register themselves with the factory. The factory returns an appropriate <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> object when queried with a description string. The factory deletes all <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> objects on destruction. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abc63a278317b35e752696f22ece89916"></a>
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +136,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a> constructors. </p>
+<p><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> default constructor. </p>
 
 </div>
 </div>
@@ -144,6 +153,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> Testing constructor. </p>
+<p>This constructor takes in a specific <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> object and does not load plugins. It is intended to be used for testing. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">decider</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -168,7 +185,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a> destructor. </p>
+<p><a class="el" href="classgeopm_1_1_decider_factory.html" title="Factory object managing decider objects. ">DeciderFactory</a> destructor, virtual. </p>
 
 </div>
 </div>
@@ -186,7 +203,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns an abstract <a class="el" href="classgeopm_1_1_decider.html">Decider</a> reference to a concrete decider. throws a std::invalid_argument if no acceptable <a class="el" href="classgeopm_1_1_decider.html">Decider</a> is found. </p>
+
+<p>Returns an abstract <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> pointer to a concrete decider. </p>
+<p>The concrete <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> is specific to the description string passed in to select it. throws a std::invalid_argument if no acceptable <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> is found.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">description</td><td>The descrition string corresponding to the desired <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -203,7 +228,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Concrete Deciders register with the factory through this API. The unique_ptr assures that the object cannot be destroyed before it is copied. </p>
+
+<p>Concrete Deciders register with the factory through this API. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">decider</td><td>The unique_ptr to a <a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> object assures that the object cannot be destroyed before it is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

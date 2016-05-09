@@ -1,6 +1,9 @@
 <map id="geopm::Profile" name="geopm::Profile">
-<area shape="rect" id="node2" href="$structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="317,5,476,31"/>
-<area shape="rect" id="node3" href="$classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="283,55,510,93"/>
-<area shape="rect" id="node4" href="$structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="geopm::LockingHashTable\l\&lt; type \&gt;::table_entry_s" alt="" coords="5,55,184,93"/>
-<area shape="rect" id="node5" href="$classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="302,117,491,143"/>
+<area shape="rect" id="node2" href="$classgeopm_1_1_profile_table.html" title="ProfileTable class is a specific instantiation of the LockingHashTable class for dealing with applica..." alt="" coords="668,12,807,37"/>
+<area shape="rect" id="node3" href="$classgeopm_1_1_locking_hash_table.html" title="geopm::LockingHashTable\l\&lt; struct geopm_prof_message_s \&gt;" alt="" coords="283,5,510,44"/>
+<area shape="rect" id="node4" href="$structgeopm_1_1_locking_hash_table_1_1table__entry__s.html" title="structure to hold state for a single table entry. " alt="" coords="5,5,184,44"/>
+<area shape="rect" id="node5" href="$structgeopm__ctl__message__s.html" title="Structure intended to be shared between the geopm runtime and the application in order to convey stat..." alt="" coords="658,61,816,87"/>
+<area shape="rect" id="node6" href="$classgeopm_1_1_sample_scheduler.html" title="SampleSchecduler class encapsulates functionality to schedule and regulate the frequency of applicati..." alt="" coords="650,111,825,136"/>
+<area shape="rect" id="node7" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="342,111,451,136"/>
+<area shape="rect" id="node8" href="$classgeopm_1_1_shared_memory_user.html" title="This class encapsulates attaching to inter&#45;process shared memory. " alt="" coords="643,163,832,188"/>
 </map>

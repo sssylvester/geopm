@@ -81,14 +81,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a29782bf611a1061384f799b9a0ab74e2">geopm::Controller::Controller</a>  (const <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> *global_policy, const std::string &amp;shmem_base, MPI_Comm comm)</dt>
-<dd>Need to create tree decider(s) here and we need to get the name strings from the <a class="el" href="classgeopm_1_1_global_policy.html" title="Encapsulates the power policy that is applied across the entire MPI job allocation being managed by g...">GlobalPolicy</a> object  </dd>
-<dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a9e9a2752db6e14fb0a01fe3b6155d872">geopm::Controller::walk_down</a>  (void)</dt>
-<dd>Commenting out code here as we have not yet implemented a tree decider  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Member <a class="el" href="classgeopm_1_1_controller.html#a18c42538180d99b9d874f88ab840b0c2">geopm::Controller::walk_up</a>  (void)</dt>
-<dd><p class="startdd">We need to calculate the new per-child power budget for this region and send the new policies down to them. </p>
-<p class="enddd">We need to sample from the application, sample from RAPL, sample from the MSRs and fuse all this data into a single sample using coherant time stamps to calculate elapsed values. We then pass this to the decider who will create a new per domain policy for the current region. Then we can enforce the policy by adjusting RAPL power domain limits. </p>
-</dd>
+<dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classgeopm_1_1_platform.html#a000f72f7b4773d088622fd41dae85871">geopm::Platform::transform_rank_data</a>  (uint64_t region_id, const struct <a class="el" href="structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. ">geopm_time_s</a> &amp;aligned_time, const std::vector&lt; double &gt; &amp;aligned_data, std::vector&lt; struct geopm_telemetry_message_s &gt; &amp;telemetry)</dt>
+<dd>assumes domain of control is the package  </dd>
+<dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classgeopm_1_1_profile.html#a19d1064314b81f776363d8bbc08c2993">geopm::Profile::region</a>  (const std::string region_name, long policy_hint)</dt>
+<dd>Record policy hint when registering a region.  </dd>
+<dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classgeopm_1_1_region.html#a969d6e9153c258529c2f6f53845c4499">geopm::Region::update_domain_sample</a>  (const struct <a class="el" href="structgeopm__telemetry__message__s.html" title="Structure used to hold aligned telemetry data from application profiling and msr data. ">geopm_telemetry_message_s</a> &amp;telemetry, int domain_idx)</dt>
+<dd>why does the <a class="el" href="classgeopm_1_1_region.html" title="This class encapsulates all recorded data for a specific application execution region. ">Region</a> get telemetry data for a different region id?  </dd>
+<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classgeopm_1_1_sample_regulator.html#aa4418ca1ff91866ede5a2764b8c262ee">geopm::SampleRegulator::insert</a>  (std::vector&lt; std::pair&lt; uint64_t, struct geopm_prof_message_s &gt; &gt;::const_iterator prof_sample_begin, std::vector&lt; std::pair&lt; uint64_t, struct geopm_prof_message_s &gt; &gt;::const_iterator prof_sample_end)</dt>
+<dd>: FIXME <a class="el" href="structgeopm__prof__message__s.html" title="Structure used to hold single profiling messages obtained from the application. ">geopm_prof_message_s</a> does not contain runtime  </dd>
+<dt><a class="anchor" id="_todo000002"></a>globalScope&gt; Member <a class="el" href="_profile_8cpp.html#a088312b99568b91fda0737778d75612a">geopm_prof_create</a>  (const char *name, const char *shm_key, MPI_Comm comm, struct geopm_prof_c **prof)</dt>
+<dd>Code below is not thread safe, do we need a lock?  </dd>
+<dt><a class="anchor" id="_todo000003"></a>globalScope&gt; Member <a class="el" href="_profile_8cpp.html#a8c7a6139bd88437a6fb3af0954d51f9a">geopm_prof_default</a>  (struct geopm_prof_c *prof)</dt>
+<dd>Code below is not thread safe, do we need a lock? </dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->

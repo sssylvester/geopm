@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopm_comm(3) - geopm mpi communicator manipulation</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#ERRORS">ERRORS</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopm_comm(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopm_comm(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopm_comm</code> - <span class="man-whatis">geopm mpi communicator manipulation</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><strong>#include <a href="https://github.com/geopm/geopm/blob/dev/src/geopm.h">&lt;geopm.h></a></strong></p>
+
+<p><code>Link with -lgeopm</code></p>
+
+<dl>
+<dt><code>int geopm_comm_num_node(</code></dt><dd><p><code>MPI_Comm</code> <em>comm</em>, <br />
+<code>int *</code><em>num_node</em>);</p></dd>
+<dt><code>int geopm_comm_split(</code></dt><dd><p><code>MPI_Comm</code> <em>comm</em>, <br />
+<code>MPI_Comm *</code><em>split_comm</em>, <br />
+<code>int *</code><em>is_ctl_comm</em>);</p></dd>
+<dt><code>int geopm_comm_split_ppn1(</code></dt><dd><p><code>MPI_Comm</code> <em>comm</em>, <br />
+<code>MPI_Comm *</code><em>ppn1_comm</em>);</p></dd>
+<dt><code>int geopm_comm_split_shared(</code></dt><dd><p><code>MPI_Comm</code> <em>comm</em>, <br />
+<code>MPI_Comm *</code><em>split_comm</em>);</p></dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>Interfaces for MPI communicator use by geopm.</p>
+
+<dl>
+<dt><code>geopm_comm_num_node</code>()</dt><dd><p>sets <em>num_node</em> to the number of compute nodes associated with the
+communicator <em>comm</em>. A compute node is defined to be a shared
+memory coherency domain.</p></dd>
+<dt><code>geopm_comm_split</code>()</dt><dd><p>splits the input communicator <em>comm</em> into two: one which is
+comprised of the the lowest rank on each compute node (the
+controller communicator), and the other comprised of the rest (the
+application communicator).  The <em>split_comm</em> will is the former if
+<em>is_ctl_comm</em> is non-zero and the the latter otherwise.</p></dd>
+<dt><code>geopm_comm_split_ppn1</code>()</dt><dd><p>is the same as <code>geopm_comm_split</code>() except that the output split
+communicator <em>ppn1_comm</em> is set to MPI_COMM_NULL unless the
+calling process is the lowest rank on the node then it will be set
+to the controller communicator.</p></dd>
+<dt><code>geopm_comm_split_shared</code>()</dt><dd><p>creates a new communicator <em>split_comm</em> which is comprised of all
+of the ranks that share the same compute node as the calling
+process and are a member of the input communicator <em>comm</em>.</p></dd>
+</dl>
+
+
+<h2 id="ERRORS">ERRORS</h2>
+
+<p>All functions described on this man page return an error code.  See
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong> for a full description of the error numbers and how
+to convert them to strings.</p>
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015, 2016, Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
+<strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><span class="man-ref">geopm_fortran<span class="s">(3)</span></span></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>May 2016</li>
+    <li class='tr'>geopm_comm(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

@@ -107,28 +107,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;system_error&gt;</code><br />
-<code>#include &quot;<a class="el" href="geopm__error_8h_source.html">geopm_error.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_tree_communicator_8hpp_source.html">TreeCommunicator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_global_policy_8hpp_source.html">GlobalPolicy.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shared_memory_8hpp_source.html">SharedMemory.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TreeCommunicator.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_tree_communicator_8cpp__incl.png" border="0" usemap="#src_2_tree_communicator_8cpp" alt=""/></div>
 <map name="src_2_tree_communicator_8cpp" id="src_2_tree_communicator_8cpp">
-<area shape="rect" id="node14" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="771,152,879,177"/>
-<area shape="rect" id="node16" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="931,79,1037,104"/>
-<area shape="rect" id="node18" href="_tree_communicator_8hpp.html" title="TreeCommunicator.hpp" alt="" coords="1357,79,1517,104"/>
-<area shape="rect" id="node21" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="1225,152,1359,177"/>
-<area shape="rect" id="node26" href="_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="1162,79,1283,104"/>
-<area shape="rect" id="node23" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="1294,225,1400,251"/>
+<area shape="rect" id="node14" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="1564,79,1670,104"/>
+<area shape="rect" id="node18" href="_tree_communicator_8hpp.html" title="TreeCommunicator.hpp" alt="" coords="881,79,1041,104"/>
+<area shape="rect" id="node21" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="794,152,929,177"/>
+<area shape="rect" id="node27" href="_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="1217,79,1338,104"/>
+<area shape="rect" id="node32" href="_shared_memory_8hpp.html" title="SharedMemory.hpp" alt="" coords="1403,79,1541,104"/>
+<area shape="rect" id="node16" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="1610,152,1718,177"/>
+<area shape="rect" id="node23" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="912,225,1018,251"/>
+<area shape="rect" id="node28" href="geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="1202,152,1318,177"/>
+<area shape="rect" id="node29" href="_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="1342,152,1458,177"/>
+<area shape="rect" id="node30" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="1343,225,1457,251"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_tree_communicator_level.html">geopm::TreeCommunicatorLevel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_tree_communicator_level.html" title="TreeCommunicatorLevel class encapsulates communication functionality on a per-level basis...">TreeCommunicatorLevel</a> class encapsulates communication functionality on a per-level basis.  <a href="classgeopm_1_1_tree_communicator_level.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -145,14 +151,142 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acf7551b75b10dbf1ace5b5a00027c23a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#acf7551b75b10dbf1ace5b5a00027c23a">geopm_num_node</a> (MPI_Comm comm, int *num_node)</td></tr>
-<tr class="separator:acf7551b75b10dbf1ace5b5a00027c23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8266fe51dbff341ed0149594c2cbc492"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#a8266fe51dbff341ed0149594c2cbc492">geopm_comm_num_node</a> (MPI_Comm comm, int *num_node)</td></tr>
+<tr class="separator:a8266fe51dbff341ed0149594c2cbc492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60447c6b1b87cf8dbd7d8353023d07ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#a60447c6b1b87cf8dbd7d8353023d07ab">geopm_comm_num_node_f</a> (int comm, int *num_node)</td></tr>
+<tr class="separator:a60447c6b1b87cf8dbd7d8353023d07ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6413d8a046ae897350da12ac493292e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#ad6413d8a046ae897350da12ac493292e">geopm_comm_split_ppn1</a> (MPI_Comm comm, MPI_Comm *ppn1_comm)</td></tr>
 <tr class="separator:ad6413d8a046ae897350da12ac493292e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062a182d6834143e1a9884ed2b7f9ec0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#a062a182d6834143e1a9884ed2b7f9ec0">geopm_comm_split_ppn1_f</a> (int comm, int *ppn1_comm)</td></tr>
+<tr class="separator:a062a182d6834143e1a9884ed2b7f9ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0145ceb27c0a3f9a939b3cce298e3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#aec0145ceb27c0a3f9a939b3cce298e3b">geopm_comm_split_shared</a> (MPI_Comm comm, MPI_Comm *split_comm)</td></tr>
+<tr class="separator:aec0145ceb27c0a3f9a939b3cce298e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4658a4441fa6b46499ba3c9f1af998"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#afe4658a4441fa6b46499ba3c9f1af998">geopm_comm_split_shared_f</a> (int comm, int *split_comm)</td></tr>
+<tr class="separator:afe4658a4441fa6b46499ba3c9f1af998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5de5ccc097bf2b25a84279f9d50fd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#a4f5de5ccc097bf2b25a84279f9d50fd0">geopm_comm_split</a> (MPI_Comm comm, MPI_Comm *split_comm, int *is_ctl_comm)</td></tr>
+<tr class="separator:a4f5de5ccc097bf2b25a84279f9d50fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5ac13ca2bada69e40e6dbceb041b38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_communicator_8cpp.html#aef5ac13ca2bada69e40e6dbceb041b38">geopm_comm_split_f</a> (int comm, int *split_comm, int *is_ctl_comm)</td></tr>
+<tr class="separator:aef5ac13ca2bada69e40e6dbceb041b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75bc6d08b477daf8c3747eac2a91ea57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeopm.html#a75bc6d08b477daf8c3747eac2a91ea57">geopm::check_mpi</a> (int err)</td></tr>
 <tr class="separator:a75bc6d08b477daf8c3747eac2a91ea57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a8266fe51dbff341ed0149594c2cbc492"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_num_node </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>num_node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60447c6b1b87cf8dbd7d8353023d07ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_num_node_f </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>num_node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f5de5ccc097bf2b25a84279f9d50fd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_split </td>
+          <td>(</td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm *&#160;</td>
+          <td class="paramname"><em>split_comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>is_ctl_comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef5ac13ca2bada69e40e6dbceb041b38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_split_f </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>split_comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>is_ctl_comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad6413d8a046ae897350da12ac493292e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,12 +313,38 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acf7551b75b10dbf1ace5b5a00027c23a"></a>
+<a class="anchor" id="a062a182d6834143e1a9884ed2b7f9ec0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm_num_node </td>
+          <td class="memname">int geopm_comm_split_ppn1_f </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ppn1_comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aec0145ceb27c0a3f9a939b3cce298e3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_split_shared </td>
           <td>(</td>
           <td class="paramtype">MPI_Comm&#160;</td>
           <td class="paramname"><em>comm</em>, </td>
@@ -192,8 +352,34 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">MPI_Comm *&#160;</td>
+          <td class="paramname"><em>split_comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe4658a4441fa6b46499ba3c9f1af998"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_comm_split_shared_f </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>num_node</em>&#160;</td>
+          <td class="paramname"><em>split_comm</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

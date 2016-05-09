@@ -105,32 +105,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;system_error&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="geopm__policy_8h_source.html">geopm_policy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_exception_8hpp_source.html">Exception.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_global_policy_8hpp_source.html">GlobalPolicy.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_platform_8hpp_source.html">Platform.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_platform_factory_8hpp_source.html">PlatformFactory.hpp</a>&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for GlobalPolicy.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_global_policy_8cpp__incl.png" border="0" usemap="#src_2_global_policy_8cpp" alt=""/></div>
 <map name="src_2_global_policy_8cpp" id="src_2_global_policy_8cpp">
-<area shape="rect" id="node14" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="402,445,537,471"/>
-<area shape="rect" id="node20" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="2462,79,2576,104"/>
-<area shape="rect" id="node21" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="1175,519,1281,544"/>
-<area shape="rect" id="node24" href="_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="272,79,393,104"/>
-<area shape="rect" id="node25" href="_platform_8hpp.html" title="Platform.hpp" alt="" coords="997,152,1094,177"/>
-<area shape="rect" id="node38" href="_platform_factory_8hpp.html" title="PlatformFactory.hpp" alt="" coords="1373,79,1513,104"/>
-<area shape="rect" id="node17" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="41,519,147,544"/>
-<area shape="rect" id="node22" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="1174,592,1282,617"/>
-<area shape="rect" id="node27" href="_region_8hpp.html" title="Region.hpp" alt="" coords="682,299,772,324"/>
-<area shape="rect" id="node31" href="_policy_8hpp.html" title="Policy.hpp" alt="" coords="862,372,944,397"/>
-<area shape="rect" id="node33" href="_platform_imp_8hpp.html" title="PlatformImp.hpp" alt="" coords="1066,372,1185,397"/>
-<area shape="rect" id="node37" href="_power_model_8hpp.html" title="PowerModel.hpp" alt="" coords="765,225,886,251"/>
-<area shape="rect" id="node28" href="_observation_8hpp.html" title="Observation.hpp" alt="" coords="667,372,787,397"/>
-<area shape="rect" id="node30" href="_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="920,445,1048,471"/>
-<area shape="rect" id="node36" href="_platform_topology_8hpp.html" title="PlatformTopology.hpp" alt="" coords="1310,445,1459,471"/>
+<area shape="rect" id="node14" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="119,445,233,471"/>
+<area shape="rect" id="node16" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="405,372,510,397"/>
+<area shape="rect" id="node19" href="_global_policy_8hpp.html" title="GlobalPolicy.hpp" alt="" coords="336,79,456,104"/>
+<area shape="rect" id="node22" href="_platform_8hpp.html" title="Platform.hpp" alt="" coords="1010,152,1107,177"/>
+<area shape="rect" id="node42" href="_platform_factory_8hpp.html" title="PlatformFactory.hpp" alt="" coords="687,79,828,104"/>
+<area shape="rect" id="node17" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="441,445,549,471"/>
+<area shape="rect" id="node20" href="geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="242,152,358,177"/>
+<area shape="rect" id="node21" href="_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="215,372,330,397"/>
+<area shape="rect" id="node24" href="_region_8hpp.html" title="Region.hpp" alt="" coords="882,225,972,251"/>
+<area shape="rect" id="node27" href="_policy_8hpp.html" title="Policy.hpp" alt="" coords="1018,299,1100,324"/>
+<area shape="rect" id="node31" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="1453,372,1588,397"/>
+<area shape="rect" id="node38" href="_platform_imp_8hpp.html" title="PlatformImp.hpp" alt="" coords="1399,225,1518,251"/>
+<area shape="rect" id="node37" href="_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="815,299,943,324"/>
+<area shape="rect" id="node33" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="1467,445,1573,471"/>
+<area shape="rect" id="node41" href="_platform_topology_8hpp.html" title="PlatformTopology.hpp" alt="" coords="1175,299,1324,324"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -159,6 +159,12 @@ Functions</h2></td></tr>
 <tr class="separator:aa318d508cf5d70d7041ab198ae29faff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ecf9f107334e440e17bdc3c8eeb314"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#a85ecf9f107334e440e17bdc3c8eeb314">geopm_policy_goal</a> (struct geopm_policy_c *policy, int geo_goal)</td></tr>
 <tr class="separator:a85ecf9f107334e440e17bdc3c8eeb314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a89dd7df6820d3f795db3c3065fb3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#a58a89dd7df6820d3f795db3c3065fb3a">geopm_policy_tree_decider</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:a58a89dd7df6820d3f795db3c3065fb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32b11bc958cf790da7548b11303203f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#ae32b11bc958cf790da7548b11303203f">geopm_policy_leaf_decider</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:ae32b11bc958cf790da7548b11303203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321d5749e044267160ce80231a474b36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#a321d5749e044267160ce80231a474b36">geopm_policy_platform</a> (struct geopm_policy_c *policy, const char *description)</td></tr>
+<tr class="separator:a321d5749e044267160ce80231a474b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1530657286cfe34d83fea5c95f61c052"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#a1530657286cfe34d83fea5c95f61c052">geopm_policy_write</a> (const struct geopm_policy_c *policy)</td></tr>
 <tr class="separator:a1530657286cfe34d83fea5c95f61c052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b7840cfbb4c0e294a9d1e88826fbff0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_global_policy_8cpp.html#a2b7840cfbb4c0e294a9d1e88826fbff0">geopm_policy_enforce_static</a> (const struct geopm_policy_c *policy)</td></tr>
@@ -333,6 +339,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae32b11bc958cf790da7548b11303203f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_leaf_decider </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af9a47060682fd68f8817cd0388071e0d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -348,6 +380,32 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a321d5749e044267160ce80231a474b36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_platform </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -400,6 +458,32 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>percent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a89dd7df6820d3f795db3c3065fb3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm_policy_tree_decider </td>
+          <td>(</td>
+          <td class="paramtype">struct geopm_policy_c *&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

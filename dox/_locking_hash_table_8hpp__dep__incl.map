@@ -1,6 +1,8 @@
 <map id="src/LockingHashTable.hpp" name="src/LockingHashTable.hpp">
-<area shape="rect" id="node2" href="$_profile_8hpp.html" title="src/Profile.hpp" alt="" coords="64,79,171,104"/>
-<area shape="rect" id="node5" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="155,152,261,177"/>
-<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,152,131,177"/>
-<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,225,131,251"/>
+<area shape="rect" id="node2" href="$_profile_8hpp.html" title="src/Profile.hpp" alt="" coords="118,79,225,104"/>
+<area shape="rect" id="node5" href="$_profile_8cpp.html" title="src/Profile.cpp" alt="" coords="5,225,111,251"/>
+<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="306,152,432,177"/>
+<area shape="rect" id="node6" href="$_profile_thread_8hpp.html" title="src/ProfileThread.hpp" alt="" coords="133,152,282,177"/>
+<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="306,225,431,251"/>
+<area shape="rect" id="node7" href="$_profile_thread_8cpp.html" title="src/ProfileThread.cpp" alt="" coords="135,225,283,251"/>
 </map>

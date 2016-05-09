@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="geopm__sched_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2015, Intel Corporation</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2015, 2016, Intel Corporation</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions</span></div>
@@ -123,40 +123,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef __linux__</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structcpu__set__t.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcpu__set__t.html">cpu_set_t</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">   35</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[512];</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <a class="code" href="geopm__sched_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> CPU_SET(<span class="keywordtype">int</span> cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *set)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> array_num = -1;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">long</span> comp_mask;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    array_num = cpu / 64;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    comp_mask = 1 &lt;&lt; (cpu % 64);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    set-&gt;<a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[array_num] |= comp_mask;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span>  CPU_ISSET(<span class="keywordtype">int</span> cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *set)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> array_num = -1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">long</span> comp_mask;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    array_num = cpu / 64;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    comp_mask = 1 &lt;&lt; (cpu % 64);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> set-&gt;<a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[array_num] &amp;= comp_mask;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#ifndef _GNU_SOURCE</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define _GNU_SOURCE</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;sched.h&gt;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structcpu__set__t_html"><div class="ttname"><a href="structcpu__set__t.html">cpu_set_t</a></div><div class="ttdef"><b>Definition:</b> geopm_sched.h:34</div></div>
-<div class="ttc" id="geopm__sched_8h_html_accb04d9888b6f0aa9a48c5d8a6d9b1d9"><div class="ttname"><a href="geopm__sched_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a></div><div class="ttdeci">struct cpu_set_t cpu_set_t</div></div>
-<div class="ttc" id="structcpu__set__t_html_ada08807f7e4d5a4ffcb64b0112b0cd05"><div class="ttname"><a href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">cpu_set_t::x</a></div><div class="ttdeci">long int x[512]</div><div class="ttdef"><b>Definition:</b> geopm_sched.h:35</div></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcpu__set__t.html">cpu_set_t</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">   36</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[512];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="geopm__sched_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> CPU_SET(<span class="keywordtype">int</span> cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *set)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> array_num = -1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">long</span> comp_mask;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    array_num = cpu / 64;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    comp_mask = 1 &lt;&lt; (cpu % 64);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    set-&gt;<a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[array_num] |= comp_mask;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span>  CPU_ISSET(<span class="keywordtype">int</span> cpu, <a class="code" href="structcpu__set__t.html">cpu_set_t</a> *set)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> array_num = -1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">long</span> comp_mask;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    array_num = cpu / 64;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    comp_mask = 1 &lt;&lt; (cpu % 64);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> set-&gt;<a class="code" href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">x</a>[array_num] &amp;= comp_mask;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#ifndef _GNU_SOURCE</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#define _GNU_SOURCE</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;sched.h&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structcpu__set__t_html"><div class="ttname"><a href="structcpu__set__t.html">cpu_set_t</a></div><div class="ttdoc">cpuset definition for non-linux platforms. </div><div class="ttdef"><b>Definition:</b> geopm_sched.h:35</div></div>
+<div class="ttc" id="geopm__sched_8h_html_accb04d9888b6f0aa9a48c5d8a6d9b1d9"><div class="ttname"><a href="geopm__sched_8h.html#accb04d9888b6f0aa9a48c5d8a6d9b1d9">cpu_set_t</a></div><div class="ttdeci">struct cpu_set_t cpu_set_t</div><div class="ttdoc">cpuset definition for non-linux platforms. </div></div>
+<div class="ttc" id="structcpu__set__t_html_ada08807f7e4d5a4ffcb64b0112b0cd05"><div class="ttname"><a href="structcpu__set__t.html#ada08807f7e4d5a4ffcb64b0112b0cd05">cpu_set_t::x</a></div><div class="ttdeci">long int x[512]</div><div class="ttdef"><b>Definition:</b> geopm_sched.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -73,6 +73,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -121,9 +123,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>package()
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a59f08adbcbb63a78c690ed002e8963a0">geopm::PlatformImp</a>
-</li>
 <li>package0_dram_energy
 : <a class="el" href="structgeopm_1_1buffer__index__s.html#a17392238ae3f52173e2f6fa93c85d0df">geopm::buffer_index_s</a>
 </li>
@@ -145,11 +144,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>parse_hw_topology()
 : <a class="el" href="classgeopm_1_1_platform_imp.html#ade1299e904d4e6f8a5bae2c3b156f445">geopm::PlatformImp</a>
 </li>
+<li>platform()
+: <a class="el" href="classgeopm_1_1_global_policy.html#a2a3b4568b9e21f354d6376e3d2e1ffe2">geopm::GlobalPolicy</a>
+</li>
 <li>Platform()
 : <a class="el" href="classgeopm_1_1_platform.html#adcb008b6fb08f56f8bcbe8b1bbc86996">geopm::Platform</a>
 </li>
 <li>platform()
-: <a class="el" href="classgeopm_1_1_platform_factory.html#aa8dfb5ed3ed41d4156dc8bb6d95da490">geopm::PlatformFactory</a>
+: <a class="el" href="classgeopm_1_1_platform_factory.html#a9ea80b90ee176b3635a45dce13ab9cc1">geopm::PlatformFactory</a>
+, <a class="el" href="structgeopm__plugin__description__s.html#a9ed81f00acf7135959b9837c0a22703b">geopm_plugin_description_s</a>
 </li>
 <li>platform_name()
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a7c2795a0640033fcf438b1779de1a1e3">geopm::HSXPlatformImp</a>
@@ -165,41 +168,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>PlatformTopology()
 : <a class="el" href="classgeopm_1_1_platform_topology.html#a19080812ae634c524c2b6e9bc42c837c">geopm::PlatformTopology</a>
 </li>
+<li>plugin
+: <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html#a6bd09e42b5ee40f267dcb705de222cfa">geopm::GlobalPolicy::m_policy_shmem_s</a>
+</li>
+<li>plugin_path()
+: <a class="el" href="classgeopm_1_1_environment.html#a820135c8cc0b3237d8633d431c3b8565">geopm::Environment</a>
+</li>
 <li>pointer()
 : <a class="el" href="classgeopm_1_1_shared_memory.html#ab87ebbff627e162800a118179037dd7b">geopm::SharedMemory</a>
 , <a class="el" href="classgeopm_1_1_shared_memory_user.html#a080df42c453e9d468c746cd409bfe42b">geopm::SharedMemoryUser</a>
 </li>
-<li>Policy()
-: <a class="el" href="classgeopm_1_1_policy.html#a948b4888de3c954ce2a442cf5daf7e70">geopm::Policy</a>
-</li>
 <li>policy()
-: <a class="el" href="classgeopm_1_1_region.html#a4131597c10d1d4bd138abfe6dd6b0429">geopm::Region</a>
-, <a class="el" href="structgeopm__policy__shmem__s.html#a753a5c658be59a1c4ce9979851cebd8b">geopm_policy_shmem_s</a>
+: <a class="el" href="classgeopm_1_1_environment.html#a33c20217ce133e05bd1d172cfa9a9724">geopm::Environment</a>
+, <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html#abe8a180e37b0ae029a934b1413d73bea">geopm::GlobalPolicy::m_policy_shmem_s</a>
+</li>
+<li>Policy()
+: <a class="el" href="classgeopm_1_1_policy.html#a051beaa9c088c11c6233fbd2b5fa4df0">geopm::Policy</a>
+</li>
+<li>policy_flags()
+: <a class="el" href="classgeopm_1_1_policy.html#afae804926e7d4a345173530a0035c996">geopm::Policy</a>
 </li>
 <li>policy_message()
-: <a class="el" href="classgeopm_1_1_global_policy.html#ab224b56ff801afeb0834d5b95f7e23f6">geopm::GlobalPolicy</a>
-, <a class="el" href="classgeopm_1_1_policy.html#a0cd614dd3aff951349149bf5f5ac2a57">geopm::Policy</a>
+: <a class="el" href="classgeopm_1_1_global_policy.html#aaec28d6124d53bca2d582476fc17bff6">geopm::GlobalPolicy</a>
+, <a class="el" href="classgeopm_1_1_policy.html#ae2b2e8d36a40d1b37cabf2491c3085ba">geopm::Policy</a>
+, <a class="el" href="classgeopm_1_1_region_policy.html#af9eb3f5720338763ccf5fe21e7cc967e">geopm::RegionPolicy</a>
 </li>
-<li>power()
-: <a class="el" href="classgeopm_1_1_power_model.html#aa5d4f7cad5282fd70e6b02fd6dd839c3">geopm::PowerModel</a>
+<li>PolicyFlags()
+: <a class="el" href="classgeopm_1_1_policy_flags.html#ada9c925275e76fab9a816f3a71159785">geopm::PolicyFlags</a>
 </li>
 <li>power_budget
 : <a class="el" href="structgeopm__policy__message__s.html#a6d3e851d2b9aa9f727c1ea38b757ca60">geopm_policy_message_s</a>
 </li>
-<li>power_model()
-: <a class="el" href="classgeopm_1_1_platform.html#aa2fe5e365cabde1e0527fecd86a38b1a">geopm::Platform</a>
-</li>
-<li>PowerModel()
-: <a class="el" href="classgeopm_1_1_power_model.html#acdb0918fda1b76afb80d7aa9a49c51d5">geopm::PowerModel</a>
+<li>power_control_domain()
+: <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#afac843ec7863e5265227e6d8fa5eeddb">geopm::HSXPlatformImp</a>
+, <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a5d8d9c504af81e5ba0fd087aa3d5f221">geopm::IVTPlatformImp</a>
+, <a class="el" href="classgeopm_1_1_platform_imp.html#a050a471d6bae048202058d7a701b7789">geopm::PlatformImp</a>
 </li>
 <li>print()
 : <a class="el" href="classgeopm_1_1_profile.html#a475d40fe650541dcddff335b10f73485">geopm::Profile</a>
 </li>
-<li>process_samples()
-: <a class="el" href="classgeopm_1_1_controller.html#ad50210231b56b3b1c67ff66c51f76011">geopm::Controller</a>
-</li>
 <li>Profile()
-: <a class="el" href="classgeopm_1_1_profile.html#a321eee8c9809e9c5a6a7fea3e9344bf9">geopm::Profile</a>
+: <a class="el" href="classgeopm_1_1_profile.html#aa715fab28dbd9383580a69acf6a486d9">geopm::Profile</a>
+</li>
+<li>profile_name()
+: <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a9af9f6ee3fbea9b7a5599b82aab27b10">geopm::ProfileRankSampler</a>
+, <a class="el" href="classgeopm_1_1_profile_sampler.html#af61e5f3c8dbcb67ee83e1894d483cbe9">geopm::ProfileSampler</a>
 </li>
 <li>ProfileRankSampler()
 : <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#a6884e086edc659d546a1a572932fd284">geopm::ProfileRankSampler</a>
@@ -207,8 +220,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ProfileSampler()
 : <a class="el" href="classgeopm_1_1_profile_sampler.html#ab6d4334184579fdde6ac6aaca6e5c15a">geopm::ProfileSampler</a>
 </li>
+<li>ProfileTable()
+: <a class="el" href="classgeopm_1_1_profile_table.html#ac38ef18ea542f30af586c15d60d6cbff">geopm::ProfileTable</a>
+</li>
+<li>ProfileThread()
+: <a class="el" href="classgeopm_1_1_profile_thread.html#a6c1f0dbbe66a7fffb25e91da9666f856">geopm::ProfileThread</a>
+</li>
 <li>progress()
 : <a class="el" href="classgeopm_1_1_profile.html#abac1cf3e464c72d4ba6cc56012934f94">geopm::Profile</a>
+, <a class="el" href="structgeopm_1_1_sample_regulator_1_1m__rank__sample__s.html#a9ae900d39068d6120add43e9be1f56af">geopm::SampleRegulator::m_rank_sample_s</a>
 , <a class="el" href="structgeopm__prof__message__s.html#a7dbd72a10155ea533d13ddcd17d7cf44">geopm_prof_message_s</a>
 </li>
 <li>pthread()

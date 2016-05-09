@@ -96,17 +96,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;dlfcn.h&gt;</code><br />
 <code>#include &lt;fts.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="geopm__plugin_8h_source.html">geopm_plugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="geopm__env_8h_source.html">geopm_env.h</a>&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for geopm_plugin.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="geopm__plugin_8c__incl.png" border="0" usemap="#src_2geopm__plugin_8c" alt=""/></div>
 <map name="src_2geopm__plugin_8c" id="src_2geopm__plugin_8c">
-<area shape="rect" id="node9" href="geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="635,79,751,104"/>
+<area shape="rect" id="node10" href="geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="723,79,839,104"/>
+<area shape="rect" id="node11" href="geopm__env_8h.html" title="geopm_env.h" alt="" coords="864,79,965,104"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -114,13 +118,27 @@ Include dependency graph for geopm_plugin.c:</div>
 Macros</h2></td></tr>
 <tr class="memitem:ab89b0350a4213b1dee3daebf4d196f7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__plugin_8c.html#ab89b0350a4213b1dee3daebf4d196f7f">u_short</a>&#160;&#160;&#160;unsigned short</td></tr>
 <tr class="separator:ab89b0350a4213b1dee3daebf4d196f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64541bdd81c961304b9babef1402640"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__plugin_8c.html#ac64541bdd81c961304b9babef1402640">NAME_MAX</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:ac64541bdd81c961304b9babef1402640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acce736bb79260db01829d5bfe8d0fdcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__plugin_8c.html#acce736bb79260db01829d5bfe8d0fdcf">geopm_plugins_load</a> (const char *func_name, struct geopm_factory_c *factory)</td></tr>
-<tr class="separator:acce736bb79260db01829d5bfe8d0fdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f33c76913b2b2a8bdce51189654d3dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="geopm__plugin_8c.html#a0f33c76913b2b2a8bdce51189654d3dc">geopm_plugin_load</a> (int plugin_type, struct geopm_factory_c *factory)</td></tr>
+<tr class="separator:a0f33c76913b2b2a8bdce51189654d3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ac64541bdd81c961304b9babef1402640"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAME_MAX&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab89b0350a4213b1dee3daebf4d196f7f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -134,15 +152,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="acce736bb79260db01829d5bfe8d0fdcf"></a>
+<a class="anchor" id="a0f33c76913b2b2a8bdce51189654d3dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm_plugins_load </td>
+          <td class="memname">int geopm_plugin_load </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>func_name</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>plugin_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

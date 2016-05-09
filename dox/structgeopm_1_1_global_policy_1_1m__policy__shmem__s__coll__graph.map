@@ -1,0 +1,4 @@
+<map id="geopm::GlobalPolicy::m_policy_shmem_s" name="geopm::GlobalPolicy::m_policy_shmem_s">
+<area shape="rect" id="node2" href="$structgeopm__plugin__description__s.html" title="Structure holding plugin selection strings. " alt="" coords="5,5,196,31"/>
+<area shape="rect" id="node3" href="$structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="221,5,400,31"/>
+</map>

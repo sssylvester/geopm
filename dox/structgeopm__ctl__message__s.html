@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Structure intended to be shared between the geopm runtime and the application in order to convey status and control information.  
  <a href="structgeopm__ctl__message__s.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_profile_8hpp_source.html">Profile.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -105,9 +105,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af3025f72d71f2451ff744b2c0c1f7efe"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__ctl__message__s.html#af3025f72d71f2451ff744b2c0c1f7efe">app_status</a></td></tr>
 <tr class="memdesc:af3025f72d71f2451ff744b2c0c1f7efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the application.  <a href="#af3025f72d71f2451ff744b2c0c1f7efe">More...</a><br /></td></tr>
 <tr class="separator:af3025f72d71f2451ff744b2c0c1f7efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cf6996952387f0e5d99d5e91f71159b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__ctl__message__s.html#a4cf6996952387f0e5d99d5e91f71159b">cpu_rank</a> [<a class="el" href="geopm__message_8h.html#a755017dd816ccb93b184a4f60ede2fe9">GEOPM_CONST_MAX_NUM_CPU</a>]</td></tr>
-<tr class="memdesc:a4cf6996952387f0e5d99d5e91f71159b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds affinities of all application ranks on the local compute node.  <a href="#a4cf6996952387f0e5d99d5e91f71159b">More...</a><br /></td></tr>
-<tr class="separator:a4cf6996952387f0e5d99d5e91f71159b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1674324493212d117ca80a48ca05cd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm__ctl__message__s.html#ac1674324493212d117ca80a48ca05cd7">cpu_rank</a> [<a class="el" href="_profile_8hpp.html#ac8613b275336411d1034c870ad1e20a3a2fe76422b8a96cb9a48bdf0413c9268b">GEOPM_MAX_NUM_CPU</a>]</td></tr>
+<tr class="memdesc:ac1674324493212d117ca80a48ca05cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds affinities of all application ranks on the local compute node.  <a href="#ac1674324493212d117ca80a48ca05cd7">More...</a><br /></td></tr>
+<tr class="separator:ac1674324493212d117ca80a48ca05cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure intended to be shared between the geopm runtime and the application in order to convey status and control information. </p>
@@ -126,12 +126,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4cf6996952387f0e5d99d5e91f71159b"></a>
+<a class="anchor" id="ac1674324493212d117ca80a48ca05cd7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm_ctl_message_s::cpu_rank[<a class="el" href="geopm__message_8h.html#a755017dd816ccb93b184a4f60ede2fe9">GEOPM_CONST_MAX_NUM_CPU</a>]</td>
+          <td class="memname">int geopm_ctl_message_s::cpu_rank[<a class="el" href="_profile_8hpp.html#ac8613b275336411d1034c870ad1e20a3a2fe76422b8a96cb9a48bdf0413c9268b">GEOPM_MAX_NUM_CPU</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,7 +155,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a></li>
+<li>src/<a class="el" href="_profile_8hpp_source.html">Profile.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

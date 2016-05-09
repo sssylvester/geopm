@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -107,11 +108,19 @@ Collaboration diagram for geopm::GlobalPolicy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_global_policy__coll__graph.png" border="0" usemap="#geopm_1_1_global_policy_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_global_policy_coll__map" id="geopm_1_1_global_policy_coll__map">
-<area shape="rect" id="node2" href="structgeopm__policy__shmem__s.html" title="Structure intended to be shared between the resource manager and the geopm runtime in order to convey..." alt="" coords="11,92,179,117"/>
-<area shape="rect" id="node3" href="structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="5,5,185,31"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_policy_flags.html" title="PolicyFlags class encapsulated functioality around packing and unpacking policy settings into/from a ..." alt="" coords="5,99,143,124"/>
+<area shape="rect" id="node3" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html" title="Structure intended to be shared between the resource manager and the geopm runtime in order to convey..." alt="" coords="168,92,314,131"/>
+<area shape="rect" id="node4" href="structgeopm__plugin__description__s.html" title="Structure holding plugin selection strings. " alt="" coords="40,5,231,31"/>
+<area shape="rect" id="node5" href="structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="255,5,434,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">m_policy_shmem_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure intended to be shared between the resource manager and the geopm runtime in order to convey job wide power policy changes to the geopm runtime.  <a href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c109b4b728f217121ad999b4c58d0f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a8c109b4b728f217121ad999b4c58d0f2">GlobalPolicy</a> (const std::string in_config, const std::string out_config)</td></tr>
@@ -141,12 +150,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a68de7c2a986992198b86ebd9abc1ae40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a68de7c2a986992198b86ebd9abc1ae40">num_max_perf</a> (void) const </td></tr>
 <tr class="memdesc:a68de7c2a986992198b86ebd9abc1ae40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of 'big' cores.  <a href="#a68de7c2a986992198b86ebd9abc1ae40">More...</a><br /></td></tr>
 <tr class="separator:a68de7c2a986992198b86ebd9abc1ae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61187a2449571f7ca1add88ad64fefa9"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a61187a2449571f7ca1add88ad64fefa9">flags</a> (void) const </td></tr>
-<tr class="memdesc:a61187a2449571f7ca1add88ad64fefa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the policy flags.  <a href="#a61187a2449571f7ca1add88ad64fefa9">More...</a><br /></td></tr>
-<tr class="separator:a61187a2449571f7ca1add88ad64fefa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab224b56ff801afeb0834d5b95f7e23f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ab224b56ff801afeb0834d5b95f7e23f6">policy_message</a> (struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_message) const </td></tr>
-<tr class="memdesc:ab224b56ff801afeb0834d5b95f7e23f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a policy message from the policy object.  <a href="#ab224b56ff801afeb0834d5b95f7e23f6">More...</a><br /></td></tr>
-<tr class="separator:ab224b56ff801afeb0834d5b95f7e23f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8ede96bb0fddd8c870c4d9520a51bc"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a4e8ede96bb0fddd8c870c4d9520a51bc">tree_decider</a> () const </td></tr>
+<tr class="memdesc:a4e8ede96bb0fddd8c870c4d9520a51bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the TreeDecider description.  <a href="#a4e8ede96bb0fddd8c870c4d9520a51bc">More...</a><br /></td></tr>
+<tr class="separator:a4e8ede96bb0fddd8c870c4d9520a51bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af0765e56af3afd8c3609da8354c18d"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a2af0765e56af3afd8c3609da8354c18d">leaf_decider</a> () const </td></tr>
+<tr class="memdesc:a2af0765e56af3afd8c3609da8354c18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LeafDecider description.  <a href="#a2af0765e56af3afd8c3609da8354c18d">More...</a><br /></td></tr>
+<tr class="separator:a2af0765e56af3afd8c3609da8354c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3b4568b9e21f354d6376e3d2e1ffe2"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a2a3b4568b9e21f354d6376e3d2e1ffe2">platform</a> () const </td></tr>
+<tr class="memdesc:a2a3b4568b9e21f354d6376e3d2e1ffe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> description.  <a href="#a2a3b4568b9e21f354d6376e3d2e1ffe2">More...</a><br /></td></tr>
+<tr class="separator:a2a3b4568b9e21f354d6376e3d2e1ffe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec28d6124d53bca2d582476fc17bff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aaec28d6124d53bca2d582476fc17bff6">policy_message</a> (struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_message)</td></tr>
+<tr class="memdesc:aaec28d6124d53bca2d582476fc17bff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a policy message from the policy object.  <a href="#aaec28d6124d53bca2d582476fc17bff6">More...</a><br /></td></tr>
+<tr class="separator:aaec28d6124d53bca2d582476fc17bff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863ff4a0677afde1419f783c35e89592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a863ff4a0677afde1419f783c35e89592">mode</a> (int mode)</td></tr>
 <tr class="memdesc:a863ff4a0677afde1419f783c35e89592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the policy power mode.  <a href="#a863ff4a0677afde1419f783c35e89592">More...</a><br /></td></tr>
 <tr class="separator:a863ff4a0677afde1419f783c35e89592"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +183,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d5cb44116185661cf8953c52a87d472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a4d5cb44116185661cf8953c52a87d472">num_max_perf</a> (int num_big_cores)</td></tr>
 <tr class="memdesc:a4d5cb44116185661cf8953c52a87d472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of 'big' cores.  <a href="#a4d5cb44116185661cf8953c52a87d472">More...</a><br /></td></tr>
 <tr class="separator:a4d5cb44116185661cf8953c52a87d472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f95ed601950cece6fe2a91122c18e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a69f95ed601950cece6fe2a91122c18e3">tree_decider</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:a69f95ed601950cece6fe2a91122c18e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the requested TreeDecider.  <a href="#a69f95ed601950cece6fe2a91122c18e3">More...</a><br /></td></tr>
+<tr class="separator:a69f95ed601950cece6fe2a91122c18e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231a348ab187998411925cb83c0f1147"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a231a348ab187998411925cb83c0f1147">leaf_decider</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:a231a348ab187998411925cb83c0f1147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the requested LeafDecider.  <a href="#a231a348ab187998411925cb83c0f1147">More...</a><br /></td></tr>
+<tr class="separator:a231a348ab187998411925cb83c0f1147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae42d13d1ebb52a66b66fe2c0df7bcd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aae42d13d1ebb52a66b66fe2c0df7bcd9">platform</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:aae42d13d1ebb52a66b66fe2c0df7bcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the requested <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a>.  <a href="#aae42d13d1ebb52a66b66fe2c0df7bcd9">More...</a><br /></td></tr>
+<tr class="separator:aae42d13d1ebb52a66b66fe2c0df7bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107776876cd23d6c2870b47861e9eecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a107776876cd23d6c2870b47861e9eecc">write</a> (void)</td></tr>
 <tr class="memdesc:a107776876cd23d6c2870b47861e9eecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write out a policy file from the current state.  <a href="#a107776876cd23d6c2870b47861e9eecc">More...</a><br /></td></tr>
 <tr class="separator:a107776876cd23d6c2870b47861e9eecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,9 +222,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ac8db93057abb8d47c909447097c07efa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ac8db93057abb8d47c909447097c07efa">m_power_budget_watts</a></td></tr>
 <tr class="memdesc:ac8db93057abb8d47c909447097c07efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">power budget in watts  <a href="#ac8db93057abb8d47c909447097c07efa">More...</a><br /></td></tr>
 <tr class="separator:ac8db93057abb8d47c909447097c07efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb9811e93b72d96751354548e91ae197"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#adb9811e93b72d96751354548e91ae197">m_flags</a></td></tr>
-<tr class="memdesc:adb9811e93b72d96751354548e91ae197"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags encapsulates frequency, number of 'big'cpus, 'small' core affinity, TDP percentage, and power goal  <a href="#adb9811e93b72d96751354548e91ae197">More...</a><br /></td></tr>
-<tr class="separator:adb9811e93b72d96751354548e91ae197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18631cf7ae3ad369879ce3fbe6a31521"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_policy_flags.html">PolicyFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a18631cf7ae3ad369879ce3fbe6a31521">m_flags</a></td></tr>
+<tr class="memdesc:a18631cf7ae3ad369879ce3fbe6a31521"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags encapsulates frequency, number of 'big'cpus, 'small' core affinity, TDP percentage, and power goal  <a href="#a18631cf7ae3ad369879ce3fbe6a31521">More...</a><br /></td></tr>
+<tr class="separator:a18631cf7ae3ad369879ce3fbe6a31521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe5cf9ebaa4966cf3ab0d92aa2e6bf3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aefe5cf9ebaa4966cf3ab0d92aa2e6bf3">m_tree_decider</a></td></tr>
+<tr class="memdesc:aefe5cf9ebaa4966cf3ab0d92aa2e6bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">description string for selecting the tree decider  <a href="#aefe5cf9ebaa4966cf3ab0d92aa2e6bf3">More...</a><br /></td></tr>
+<tr class="separator:aefe5cf9ebaa4966cf3ab0d92aa2e6bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff5404a13581225c18cb8c24d68f13e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aeff5404a13581225c18cb8c24d68f13e">m_leaf_decider</a></td></tr>
+<tr class="memdesc:aeff5404a13581225c18cb8c24d68f13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">description string for selecting the leaf decider  <a href="#aeff5404a13581225c18cb8c24d68f13e">More...</a><br /></td></tr>
+<tr class="separator:aeff5404a13581225c18cb8c24d68f13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c68af935d94314f3b66d9585fd654c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a4c68af935d94314f3b66d9585fd654c3">m_platform</a></td></tr>
+<tr class="memdesc:a4c68af935d94314f3b66d9585fd654c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">description string for selecting the platform  <a href="#a4c68af935d94314f3b66d9585fd654c3">More...</a><br /></td></tr>
+<tr class="separator:a4c68af935d94314f3b66d9585fd654c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ace8b6eb030b40b0f52433bfcf7e5871e">m_is_shm_in</a></td></tr>
 <tr class="memdesc:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if reading policy from shared memory, else false  <a href="#ace8b6eb030b40b0f52433bfcf7e5871e">More...</a><br /></td></tr>
 <tr class="separator:ace8b6eb030b40b0f52433bfcf7e5871e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,18 +246,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#aa5bda90ebc84d5a6b3a65f0e390edf4b">m_do_write</a></td></tr>
 <tr class="memdesc:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the output file is valid, else false  <a href="#aa5bda90ebc84d5a6b3a65f0e390edf4b">More...</a><br /></td></tr>
 <tr class="separator:aa5bda90ebc84d5a6b3a65f0e390edf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5633b15c95e3568a517ee68d2a013415"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a5633b15c95e3568a517ee68d2a013415">m_policy_shmem_in</a></td></tr>
-<tr class="memdesc:a5633b15c95e3568a517ee68d2a013415"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if reading in from shared memory  <a href="#a5633b15c95e3568a517ee68d2a013415">More...</a><br /></td></tr>
-<tr class="separator:a5633b15c95e3568a517ee68d2a013415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad891bd78831f771e7fb29ade9abaffad"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ad891bd78831f771e7fb29ade9abaffad">m_policy_shmem_out</a></td></tr>
-<tr class="memdesc:ad891bd78831f771e7fb29ade9abaffad"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if writing out to shared memory  <a href="#ad891bd78831f771e7fb29ade9abaffad">More...</a><br /></td></tr>
-<tr class="separator:ad891bd78831f771e7fb29ade9abaffad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="memItemLeft" align="right" valign="top">std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a84a0ccc307df1b97b3f02bdf6204bf04">m_config_file_in</a></td></tr>
-<tr class="memdesc:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="mdescLeft">&#160;</td><td class="mdescRight">file stream for input file  <a href="#a84a0ccc307df1b97b3f02bdf6204bf04">More...</a><br /></td></tr>
-<tr class="separator:a84a0ccc307df1b97b3f02bdf6204bf04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a211c685b0367524f3ffa3f5d3a0b335f"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#a211c685b0367524f3ffa3f5d3a0b335f">m_config_file_out</a></td></tr>
-<tr class="memdesc:a211c685b0367524f3ffa3f5d3a0b335f"><td class="mdescLeft">&#160;</td><td class="mdescRight">file stream for output file  <a href="#a211c685b0367524f3ffa3f5d3a0b335f">More...</a><br /></td></tr>
-<tr class="separator:a211c685b0367524f3ffa3f5d3a0b335f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03b477459ed1a0eb6b68bea1b0ef2b1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">m_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ad03b477459ed1a0eb6b68bea1b0ef2b1">m_policy_shmem_in</a></td></tr>
+<tr class="memdesc:ad03b477459ed1a0eb6b68bea1b0ef2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if reading in from shared memory  <a href="#ad03b477459ed1a0eb6b68bea1b0ef2b1">More...</a><br /></td></tr>
+<tr class="separator:ad03b477459ed1a0eb6b68bea1b0ef2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60d501e81d150b26ccc61783415d325"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">m_policy_shmem_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html#ab60d501e81d150b26ccc61783415d325">m_policy_shmem_out</a></td></tr>
+<tr class="memdesc:ab60d501e81d150b26ccc61783415d325"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to use if writing out to shared memory  <a href="#ab60d501e81d150b26ccc61783415d325">More...</a><br /></td></tr>
+<tr class="separator:ab60d501e81d150b26ccc61783415d325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates the power policy that is applied across the entire MPI job allocation being managed by geopm. </p>
@@ -437,25 +464,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a61187a2449571f7ca1add88ad64fefa9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long int geopm::GlobalPolicy::flags </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the policy flags. </p>
-<dl class="section return"><dt>Returns</dt><dd>32-bit flags </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="aed2e6202cc53733c1ff94067a0dffd37"></a>
 <div class="memitem">
 <div class="memproto">
@@ -536,6 +544,48 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">geo_goal</td><td>enum power goal </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2af0765e56af3afd8c3609da8354c18d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; geopm::GlobalPolicy::leaf_decider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the LeafDecider description. </p>
+<dl class="section return"><dt>Returns</dt><dd>String reference containing the description of the requested leaf decider </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a231a348ab187998411925cb83c0f1147"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::GlobalPolicy::leaf_decider </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the requested LeafDecider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Set</td><td>the description string for the requested leaf decider. </td></tr>
   </table>
   </dd>
 </dl>
@@ -628,7 +678,49 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab224b56ff801afeb0834d5b95f7e23f6"></a>
+<a class="anchor" id="a2a3b4568b9e21f354d6376e3d2e1ffe2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; geopm::GlobalPolicy::platform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> description. </p>
+<dl class="section return"><dt>Returns</dt><dd>String reference containing the description of the requested platform </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae42d13d1ebb52a66b66fe2c0df7bcd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::GlobalPolicy::platform </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the requested <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Set</td><td>the description string for the requested platform. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaec28d6124d53bca2d582476fc17bff6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -637,7 +729,7 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;&#160;</td>
           <td class="paramname"><em>policy_message</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -713,6 +805,48 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4e8ede96bb0fddd8c870c4d9520a51bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; geopm::GlobalPolicy::tree_decider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the TreeDecider description. </p>
+<dl class="section return"><dt>Returns</dt><dd>String reference containing the description of the requested tree decider </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69f95ed601950cece6fe2a91122c18e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::GlobalPolicy::tree_decider </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the requested TreeDecider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Set</td><td>the description string for the requested tree decider. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a107776876cd23d6c2870b47861e9eecc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -732,50 +866,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a84a0ccc307df1b97b3f02bdf6204bf04"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ifstream geopm::GlobalPolicy::m_config_file_in</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>file stream for input file </p>
-
-</div>
-</div>
-<a class="anchor" id="a211c685b0367524f3ffa3f5d3a0b335f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ofstream geopm::GlobalPolicy::m_config_file_out</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>file stream for output file </p>
-
-</div>
-</div>
 <a class="anchor" id="abc06a7219da3536f37e498a96e7726d1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -820,7 +910,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb9811e93b72d96751354548e91ae197"></a>
+<a class="anchor" id="a18631cf7ae3ad369879ce3fbe6a31521"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -828,7 +918,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long int geopm::GlobalPolicy::m_flags</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_policy_flags.html">PolicyFlags</a> geopm::GlobalPolicy::m_flags</td>
         </tr>
       </table>
   </td>
@@ -908,6 +998,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aeff5404a13581225c18cb8c24d68f13e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string geopm::GlobalPolicy::m_leaf_decider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>description string for selecting the leaf decider </p>
+
+</div>
+</div>
 <a class="anchor" id="ada7cdb5d94ac53ad0a6d67a37abd5769"></a>
 <div class="memitem">
 <div class="memproto">
@@ -952,7 +1064,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5633b15c95e3568a517ee68d2a013415"></a>
+<a class="anchor" id="a4c68af935d94314f3b66d9585fd654c3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -960,7 +1072,29 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a>* geopm::GlobalPolicy::m_policy_shmem_in</td>
+          <td class="memname">std::string geopm::GlobalPolicy::m_platform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>description string for selecting the platform </p>
+
+</div>
+</div>
+<a class="anchor" id="ad03b477459ed1a0eb6b68bea1b0ef2b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">m_policy_shmem_s</a>* geopm::GlobalPolicy::m_policy_shmem_in</td>
         </tr>
       </table>
   </td>
@@ -974,7 +1108,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad891bd78831f771e7fb29ade9abaffad"></a>
+<a class="anchor" id="ab60d501e81d150b26ccc61783415d325"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -982,7 +1116,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structgeopm__policy__shmem__s.html">geopm_policy_shmem_s</a>* geopm::GlobalPolicy::m_policy_shmem_out</td>
+          <td class="memname">struct <a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">m_policy_shmem_s</a>* geopm::GlobalPolicy::m_policy_shmem_out</td>
         </tr>
       </table>
   </td>
@@ -1015,6 +1149,28 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>power budget in watts </p>
+
+</div>
+</div>
+<a class="anchor" id="aefe5cf9ebaa4966cf3ab0d92aa2e6bf3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string geopm::GlobalPolicy::m_tree_decider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>description string for selecting the tree decider </p>
 
 </div>
 </div>

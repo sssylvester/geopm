@@ -1,13 +1,16 @@
 var searchData=
 [
   ['table_5flength',['table_length',['../classgeopm_1_1_locking_hash_table.html#a0130f4c53999fc7a4197716840e9543b',1,'geopm::LockingHashTable']]],
-  ['target',['target',['../classgeopm_1_1_policy.html#abc20b27abc8eb2e0198ed763af1b27d3',1,'geopm::Policy::target(std::vector&lt; double &gt; &amp;target)'],['../classgeopm_1_1_policy.html#a6f1ab43ab6d0cbddeeca9cf1e998b602',1,'geopm::Policy::target(int domain, double &amp;target)']]],
+  ['target',['target',['../classgeopm_1_1_region_policy.html#a045a289f3b04d5c3e88cf771b8c16311',1,'geopm::RegionPolicy::target(std::vector&lt; double &gt; &amp;target)'],['../classgeopm_1_1_region_policy.html#aeb1d1fe471f89eb994a10830476ede33',1,'geopm::RegionPolicy::target(int domain_idx, double &amp;target)'],['../classgeopm_1_1_policy.html#a872a9f8c0bb5a5f134cfb2b63c2896b3',1,'geopm::Policy::target(uint64_t region_id, std::vector&lt; double &gt; &amp;target)'],['../classgeopm_1_1_policy.html#ae3a9961b374546c0e19ea5cc964b0068',1,'geopm::Policy::target(uint64_t region_id, int domain, double &amp;target)']]],
+  ['target_5fupdated',['target_updated',['../classgeopm_1_1_region_policy.html#a668194723b7b6472fa348b346e07a126',1,'geopm::RegionPolicy::target_updated()'],['../classgeopm_1_1_policy.html#ac91364a76402cd67b387f1ce354f2226',1,'geopm::Policy::target_updated()']]],
+  ['target_5fvalid',['target_valid',['../classgeopm_1_1_region_policy.html#a3d6b83fd3a7897740eb35f8091a8cb08',1,'geopm::RegionPolicy::target_valid()'],['../classgeopm_1_1_policy.html#afaaebb3278a0a4098854977dee38c617',1,'geopm::Policy::target_valid()']]],
   ['tdp_5flimit',['tdp_limit',['../classgeopm_1_1_platform.html#a18ed1b5340119f66211e93e88c64e2a6',1,'geopm::Platform']]],
-  ['tdp_5fpercent',['tdp_percent',['../classgeopm_1_1_global_policy.html#a3f20c51da3a618ace9aef50a16d92c22',1,'geopm::GlobalPolicy::tdp_percent(void) const '],['../classgeopm_1_1_global_policy.html#a406db85f994ce65acadf599953b85262',1,'geopm::GlobalPolicy::tdp_percent(int percentage)']]],
-  ['tile',['tile',['../classgeopm_1_1_platform_imp.html#a61c7aadf5da29f72594f298c94d70d3d',1,'geopm::PlatformImp']]],
-  ['topology',['topology',['../classgeopm_1_1_platform.html#a1880f20ae2a79e72e2d2213af4e99048',1,'geopm::Platform::topology()'],['../classgeopm_1_1_platform_imp.html#a9fbab8b93b6dbada190e22345bd0249c',1,'geopm::PlatformImp::topology()']]],
-  ['tree_5fdecider',['tree_decider',['../classgeopm_1_1_controller.html#ad6f701b94fde7480dc207e5cb9b8d712',1,'geopm::Controller']]],
-  ['treecommunicator',['TreeCommunicator',['../classgeopm_1_1_tree_communicator.html#a6f8812e4e1c080049a20fc80d0944456',1,'geopm::TreeCommunicator']]],
-  ['treecommunicatorlevel',['TreeCommunicatorLevel',['../classgeopm_1_1_tree_communicator_level.html#a3dfe8e290d57fa47d9b29e9abd8383b5',1,'geopm::TreeCommunicatorLevel']]],
-  ['treedecider',['TreeDecider',['../classgeopm_1_1_tree_decider.html#a7db38f8123fb327de7abcc2452d140c0',1,'geopm::TreeDecider']]]
+  ['tdp_5fpercent',['tdp_percent',['../classgeopm_1_1_global_policy.html#a3f20c51da3a618ace9aef50a16d92c22',1,'geopm::GlobalPolicy::tdp_percent(void) const '],['../classgeopm_1_1_global_policy.html#a406db85f994ce65acadf599953b85262',1,'geopm::GlobalPolicy::tdp_percent(int percentage)'],['../classgeopm_1_1_policy.html#aac0ceb4c060d2b9eb084a1db0c596c41',1,'geopm::Policy::tdp_percent()'],['../classgeopm_1_1_policy_flags.html#a7a8e3f5e51363018c553380b369b9ae3',1,'geopm::PolicyFlags::tdp_percent(void) const '],['../classgeopm_1_1_policy_flags.html#af66e6c4bb98e83a21fd5bbcf4ca4e384',1,'geopm::PolicyFlags::tdp_percent(int percentage)']]],
+  ['topology',['topology',['../classgeopm_1_1_platform.html#ad6d975868dcc4f15b48658a7bb7834f2',1,'geopm::Platform::topology()'],['../classgeopm_1_1_platform_imp.html#a247024a5a154573c164293b2b734cf6d',1,'geopm::PlatformImp::topology()']]],
+  ['trace',['trace',['../classgeopm_1_1_environment.html#afe650c650af1a38656e97a80669acb9d',1,'geopm::Environment']]],
+  ['tracer',['Tracer',['../classgeopm_1_1_tracer.html#a3e01c3cefe1350429d542b8278399350',1,'geopm::Tracer']]],
+  ['transform_5frank_5fdata',['transform_rank_data',['../classgeopm_1_1_platform.html#a000f72f7b4773d088622fd41dae85871',1,'geopm::Platform']]],
+  ['tree_5fdecider',['tree_decider',['../classgeopm_1_1_global_policy.html#a4e8ede96bb0fddd8c870c4d9520a51bc',1,'geopm::GlobalPolicy::tree_decider() const '],['../classgeopm_1_1_global_policy.html#a69f95ed601950cece6fe2a91122c18e3',1,'geopm::GlobalPolicy::tree_decider(const std::string &amp;description)']]],
+  ['treecommunicator',['TreeCommunicator',['../classgeopm_1_1_tree_communicator.html#a179fe4b1193496c444c021ca0291df27',1,'geopm::TreeCommunicator']]],
+  ['treecommunicatorlevel',['TreeCommunicatorLevel',['../classgeopm_1_1_tree_communicator_level.html#a3dfe8e290d57fa47d9b29e9abd8383b5',1,'geopm::TreeCommunicatorLevel']]]
 ];

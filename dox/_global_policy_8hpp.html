@@ -95,14 +95,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
-<code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="geopm__plugin_8h_source.html">geopm_plugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_policy_flags_8hpp_source.html">PolicyFlags.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for GlobalPolicy.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_global_policy_8hpp__incl.png" border="0" usemap="#src_2_global_policy_8hpp" alt=""/></div>
 <map name="src_2_global_policy_8hpp" id="src_2_global_policy_8hpp">
-<area shape="rect" id="node4" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="173,79,308,104"/>
-<area shape="rect" id="node7" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="297,152,403,177"/>
+<area shape="rect" id="node4" href="geopm__plugin_8h.html" title="geopm_plugin.h" alt="" coords="173,79,289,104"/>
+<area shape="rect" id="node5" href="_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="313,79,429,104"/>
+<area shape="rect" id="node6" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="314,152,428,177"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -123,6 +125,9 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_global_policy.html">geopm::GlobalPolicy</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates the power policy that is applied across the entire MPI job allocation being managed by geopm.  <a href="classgeopm_1_1_global_policy.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html">geopm::GlobalPolicy::m_policy_shmem_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure intended to be shared between the resource manager and the geopm runtime in order to convey job wide power policy changes to the geopm runtime.  <a href="structgeopm_1_1_global_policy_1_1m__policy__shmem__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

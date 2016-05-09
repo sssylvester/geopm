@@ -74,7 +74,7 @@
 <h2 id="SYNOPSIS">SYNOPSIS</h2>
 
 <dl>
-<dt><code>geopmctl</code> [<code>--help</code>] [<code>--version</code>]</dt><dd>(<code>-c</code> policy_config | <code>-k</code> policy_key) <br />
+<dt><code>geopmctl</code> [<code>--help</code>] [<code>--version</code>]</dt><dd><code>-c</code> policy_config <br />
 [<code>-s</code> sample_key] [<code>-r</code> report]</dd>
 </dl>
 
@@ -91,13 +91,9 @@ computation MPI application.
 <dl>
 <dt class="flush"><code>--help</code></dt><dd><p><br />Print brief summary of the command line usage information, then exit.</p></dd>
 <dt><code>--version</code></dt><dd><p>Print version of geopm to standard output, then exit.</p></dd>
-<dt><code>-c</code> policy_config</dt><dd><p>Policy configuration file which may be created with the
-<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> interface or the <strong><span class="man-ref">geopmpolicy<span class="s">(3)</span></span></strong> application.
-If <code>-c</code> is specified then <code>-k</code>  should not be specified.  If both are
-specified <code>-k</code> is ignored and a warning is printed.</p></dd>
-<dt><code>-k</code> control_key</dt><dd><p>POSIX shared memory key which determines policy for geopmctl.  See
-<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> for information on how to create and modify a shared
-memory region for control.</p></dd>
+<dt><code>-c</code> policy_config</dt><dd><p>Policy configuration file or POSIX shared memory key which may be
+created with the <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> interface or the
+<strong><span class="man-ref">geopmpolicy<span class="s">(3)</span></span></strong> application.</p></dd>
 <dt><code>-s</code> sample_key</dt><dd><p>POSIX shared memory key referencing memory written to by the compute
 application to provide the geopmctl application with performance profile
 information.  See
@@ -110,11 +106,13 @@ terminates.</p></dd>
 
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
-<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+<p>Copyright (C) 2015, 2016, Intel Corporation. All rights reserved.</p>
 
 <p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
+<strong><span class="man-ref">geopm_comm<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><span class="man-ref">geopm_fortran<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
@@ -125,7 +123,7 @@ terminates.</p></dd>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>December 2015</li>
+    <li class='tc'>May 2016</li>
     <li class='tr'>geopmctl(1)</li>
   </ol>
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv='content-type' value='text/html;charset=utf8'>
+  <meta name='generator' value='Ronn/v0.7.3 (http://github.com/rtomayko/ronn/tree/0.7.3)'>
+  <title>geopm_fortran(3) - geopm fortran interface</title>
+  <style type='text/css' media='all'>
+  /* style: man */
+  body#manpage {margin:0}
+  .mp {max-width:100ex;padding:0 9ex 1ex 4ex}
+  .mp p,.mp pre,.mp ul,.mp ol,.mp dl {margin:0 0 20px 0}
+  .mp h2 {margin:10px 0 0 0}
+  .mp > p,.mp > pre,.mp > ul,.mp > ol,.mp > dl {margin-left:8ex}
+  .mp h3 {margin:0 0 0 4ex}
+  .mp dt {margin:0;clear:left}
+  .mp dt.flush {float:left;width:8ex}
+  .mp dd {margin:0 0 0 9ex}
+  .mp h1,.mp h2,.mp h3,.mp h4 {clear:left}
+  .mp pre {margin-bottom:20px}
+  .mp pre+h2,.mp pre+h3 {margin-top:22px}
+  .mp h2+pre,.mp h3+pre {margin-top:5px}
+  .mp img {display:block;margin:auto}
+  .mp h1.man-title {display:none}
+  .mp,.mp code,.mp pre,.mp tt,.mp kbd,.mp samp,.mp h3,.mp h4 {font-family:monospace;font-size:14px;line-height:1.42857142857143}
+  .mp h2 {font-size:16px;line-height:1.25}
+  .mp h1 {font-size:20px;line-height:2}
+  .mp {text-align:justify;background:#fff}
+  .mp,.mp code,.mp pre,.mp pre code,.mp tt,.mp kbd,.mp samp {color:#131211}
+  .mp h1,.mp h2,.mp h3,.mp h4 {color:#030201}
+  .mp u {text-decoration:underline}
+  .mp code,.mp strong,.mp b {font-weight:bold;color:#131211}
+  .mp em,.mp var {font-style:italic;color:#232221;text-decoration:none}
+  .mp a,.mp a:link,.mp a:hover,.mp a code,.mp a pre,.mp a tt,.mp a kbd,.mp a samp {color:#0000ff}
+  .mp b.man-ref {font-weight:normal;color:#434241}
+  .mp pre {padding:0 4ex}
+  .mp pre code {font-weight:normal;color:#434241}
+  .mp h2+pre,h3+pre {padding-left:0}
+  ol.man-decor,ol.man-decor li {margin:3px 0 10px 0;padding:0;float:left;width:33%;list-style-type:none;text-transform:uppercase;color:#999;letter-spacing:1px}
+  ol.man-decor {width:100%}
+  ol.man-decor li.tl {text-align:left}
+  ol.man-decor li.tc {text-align:center;letter-spacing:4px}
+  ol.man-decor li.tr {text-align:right;float:right}
+  </style>
+</head>
+<!--
+  The following styles are deprecated and will be removed at some point:
+  div#man, div#man ol.man, div#man ol.head, div#man ol.man.
+
+  The .man-page, .man-decor, .man-head, .man-foot, .man-title, and
+  .man-navigation should be used instead.
+-->
+<body id='manpage'>
+  <div class='mp' id='man'>
+
+  <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#FORTRAN-MODULE">FORTRAN MODULE</a>
+    <a href="#COPYRIGHT">COPYRIGHT</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
+  </div>
+
+  <ol class='man-decor man-head man head'>
+    <li class='tl'>geopm_fortran(3)</li>
+    <li class='tc'></li>
+    <li class='tr'>geopm_fortran(3)</li>
+  </ol>
+
+  <h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>geopm_fortran</code> - <span class="man-whatis">geopm fortran interface</span>
+</p>
+
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
+
+<p><code>use geopm</code></p>
+
+<p><code>Link with -lgeopmfort</code></p>
+
+<dl>
+<dt><code>integer(kind=c_int) function geopm_ctl_create(</code><em>policy</em><code>,</code> <em>shm_key</em><code>,</code> <em>comm</em><code>,</code> <em>ctl</em>)</dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>policy</em> <br />
+<code>character(kind=c_char), intent(in) ::</code> <em>sample_key</em><code>(*)</code> <br />
+<code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>type(c_ptr), intent(out) ::</code> <em>ctl</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_ctl_destroy(</code><em>ctl</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>ctl</em> <br /></p></dd>
+<dt><code>integer(kind=c_int) function geopm_ctl_step(</code><em>ctl</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>ctl</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_ctl_run(</code><em>ctl</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>ctl</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_ctl_spawn(</code><em>ctl</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>ctl</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_create(</code><em>prof_name</em><code>,</code> <em>shm_key</em><code>,</code> <em>comm</em><code>,</code> <em>prof</em><code>)</code></dt><dd><p><code>character(kind=c_char), intent(in) ::</code> <em>prof_name</em><code>(*)</code> <br />
+<code>character(kind=c_char), intent(in) ::</code> <em>shm_key</em><code>(*)</code> <br />
+<code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>type(c_ptr), intent(out) ::</code> <em>prof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_destroy(</code><em>prof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_default(</code><em>prof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_region(</code><em>prof</em><code>,</code> <em>region_name</em><code>,</code> <em>policy_hint</em><code>,</code> <em>region_id</em>)</dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>character(kind=c_char), intent(in) ::</code> <em>region_name</em><code>(*)</code> <br />
+<code>integer(kind=c_int), value, intent(in) ::</code> <em>policy_hint</em> <br />
+<code>integer(kind=c_int64_t), intent(out) ::</code> <em>region_id</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_enter(</code><em>prof</em><code>,</code> <em>region_id</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>integer(kind=c_int64_t), value, intent(in) ::</code> <em>region_id</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_exit(</code><em>prof</em><code>,</code> <em>region_id</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>integer(kind=c_int64_t), value, intent(in) ::</code> <em>region_id</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_progress(</code><em>prof</em><code>,</code> <em>region_id</em><code>,</code> <em>fraction</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>integer(kind=c_int64_t), value, intent(in) ::</code> <em>region_id</em> <br />
+<code>real(kind=c_double), value, intent(in) ::</code> <em>fraction</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_outer_sync(</code><em>prof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_disable(</code><em>prof</em><code>,</code> <em>feature_name</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>character(kind=c_char), intent(in) ::</code> <em>feature_name</em><code>(*)</code></p></dd>
+<dt><code>integer(kind=c_int) function geopm_prof_print(</code><em>prof</em><code>,</code> <em>file_name</em><code>,</code> <em>depth</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>character(kind=c_char), intent(in) ::</code> <em>file_name</em><code>(*)</code> <br />
+<code>integer(kind=c_int), value, intent(in) ::</code> <em>depth</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_tprof_create(</code><em>num_thread</em><code>,</code> <em>num_iter</em><code>,</code> <em>chunk_size</em><code>,</code> <em>tprof</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>num_thread</em> <br />
+<code>integer(kind=c_size_t), value, intent(in) ::</code> <em>num_iter</em> <br />
+<code>integer(kind=c_size_t), value, intent(in) ::</code> <em>chunk_size</em> <br />
+<code>type(c_ptr), intent(out) ::</code> <em>tprof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_tprof_destroy(</code><em>tprof</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>tprof</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_tprof_increment(</code><em>tprof</em><code>,</code> <em>prof</em><code>,</code> <em>region_id</em><code>,</code> <em>thread_idx</em><code>)</code></dt><dd><p><code>type(c_ptr), value, intent(in) ::</code> <em>tprof</em> <br />
+<code>type(c_ptr), value, intent(in) ::</code> <em>prof</em> <br />
+<code>integer(kind=c_int64_t), value, intent(in) ::</code> <em>region_id</em> <br />
+<code>integer(kind=c_int), value, intent(in) ::</code> <em>thread_idx</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_comm_num_node(</code><em>comm</em><code>,</code> <em>num_node</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>integer(kind=c_int), intent(out) ::</code> <em>num_node</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_comm_split(</code><em>comm</em><code>,</code> <em>split_comm</em><code>,</code> <em>is_ctl_comm</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>integer(kind=c_int), intent(out) ::</code> <em>split_comm</em> <br />
+<code>integer(kind=c_int), intent(out) ::</code> <em>is_ctl_comm</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_comm_split_shared(</code><em>comm</em><code>,</code> <em>split_comm</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>integer(kind=c_int), intent(out) ::</code> <em>split_comm</em></p></dd>
+<dt><code>integer(kind=c_int) function geopm_comm_split_ppn1(</code><em>comm</em><code>,</code> <em>ppn1_comm</em><code>)</code></dt><dd><p><code>integer(kind=c_int), value, intent(in) ::</code> <em>comm</em> <br />
+<code>integer(kind=c_int), intent(out) ::</code> <em>ppn1_comm</em></p></dd>
+</dl>
+
+
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>This is the Fortran interface to the geopm library.  The documentation
+for each function can found in the associated man page for the C
+interface.  If the <code>--disable-fortran</code> flag is passed to the geopm
+build then the Fortran interface will not be enabled.</p>
+
+<p>Currently most of these Fortran functions call directly through to the
+C interface through the ISO C bindings.  For this reason care needs to
+be taken when passing strings to the Fortran interface.  It is
+important to wrap the Fortran string with <code>char_c_</code> and
+<code>//c_null_char</code> when passing to as follows:</p>
+
+<p><code>ierr = geopm_prof_create(c_char_'profile_name'//c_null_char, c_char_''//c_null_char, MPI_COMM_WORLD, prof)</code></p>
+
+<p>When using the default profile object pass the <code>c_null_ptr</code> for
+the profile:</p>
+
+<p><code>ierr = geopm_prof_enter(c_null_ptr, region_id)</code></p>
+
+<p>For interfaces that accept of return a MPI communicator, the
+translation of the communicator from Fortran to C is done
+transparently.  In the future similar techniques may be used for
+converting Fortran strings.</p>
+
+<h2 id="FORTRAN-MODULE">FORTRAN MODULE</h2>
+
+<p>The geopm package installs a Fortran 90 module file which defines
+these interfaces and can be imported with the <code>use geopm</code> command.
+The install path for such modules has not been GNU standardized.  We
+install the geopm Fortran 90 module to:</p>
+
+<p><code>&lt;LIBDIR>/&lt;FC>/modules/geopm-&lt;ARCH>/geopm.mod</code></p>
+
+<p>where <code>&lt;LIBDIR></code> is the install location for libraries (e.g.
+<code>/usr/lib64</code>), <code>&lt;FC></code> is the Fortran compiler executable name
+(e.g. gfortran), and <code>&lt;ARCH></code> is the processor architecture
+(e.g. x86_64).</p>
+
+<h2 id="COPYRIGHT">COPYRIGHT</h2>
+
+<p>Copyright (C) 2015, 2016, Intel Corporation. All rights reserved.</p>
+
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>
+<strong><a class="man-ref" href="geopmkey.1.html">geopmkey<span class="s">(1)</span></a></strong>,
+<strong><span class="man-ref">geopm_comm<span class="s">(3)</span></span></strong>,
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_fortran.3.html">geopm_fortran<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
+
+
+  <ol class='man-decor man-foot man foot'>
+    <li class='tl'>Intel Corporation</li>
+    <li class='tc'>May 2016</li>
+    <li class='tr'>geopm_fortran(3)</li>
+  </ol>
+
+  </div>
+</body>
+</html>

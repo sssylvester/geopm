@@ -73,6 +73,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -124,8 +126,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>capacity()
 : <a class="el" href="classgeopm_1_1_circular_buffer.html#a7775aa9d42727ed843fb3d85c787bf50">geopm::CircularBuffer&lt; type &gt;</a>
 , <a class="el" href="classgeopm_1_1_locking_hash_table.html#a102a414c443114e4db63458e1019215e">geopm::LockingHashTable&lt; type &gt;</a>
+, <a class="el" href="classgeopm_1_1_platform.html#a84b1d029b201b926fecd10c75e0a0b7b">geopm::Platform</a>
 , <a class="el" href="classgeopm_1_1_profile_rank_sampler.html#ac06df8c668692b15cd2fad8a04760ed4">geopm::ProfileRankSampler</a>
 , <a class="el" href="classgeopm_1_1_profile_sampler.html#ae00529830245f88260a4c37eab4b3f31">geopm::ProfileSampler</a>
+, <a class="el" href="classgeopm_1_1_r_a_p_l_platform.html#ab9d0588d2a1b0259597e13db2766dac8">geopm::RAPLPlatform</a>
 </li>
 <li>cbo_counters_init()
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a8ced5ae998fb576afe201e4b4933982b">geopm::HSXPlatformImp</a>
@@ -135,15 +139,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classgeopm_1_1_h_s_x_platform_imp.html#a8cedbaceea4507c0d16b0b1fcde181b1">geopm::HSXPlatformImp</a>
 , <a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a71b056ea4592192f3686df5fd759557e">geopm::IVTPlatformImp</a>
 </li>
-<li>child_sample()
-: <a class="el" href="classgeopm_1_1_region.html#a1f027f2f3d49b5b8b6651c82e9546105">geopm::Region</a>
+<li>check_bounds()
+: <a class="el" href="classgeopm_1_1_region.html#a0153f865e4391b5c673060f82c24e7c6">geopm::Region</a>
+</li>
+<li>children_by_type()
+: <a class="el" href="classgeopm_1_1_platform_topology.html#a5c8aa6013e4ca67bc1f106b3465252ed">geopm::PlatformTopology</a>
 </li>
 <li>CircularBuffer()
-: <a class="el" href="classgeopm_1_1_circular_buffer.html#af9ea349c8c5219e268b24df4c4d03cbe">geopm::CircularBuffer&lt; type &gt;</a>
+: <a class="el" href="classgeopm_1_1_circular_buffer.html#aff85e32127a631d564c08a1dfb9ec2b6">geopm::CircularBuffer&lt; type &gt;</a>
 </li>
 <li>clear()
 : <a class="el" href="classgeopm_1_1_circular_buffer.html#adb962f933f1848a9f8ff604652aaefd0">geopm::CircularBuffer&lt; type &gt;</a>
-, <a class="el" href="classgeopm_1_1_policy.html#afd19dc177f9b034c6ac20b5664f456dd">geopm::Policy</a>
+, <a class="el" href="classgeopm_1_1_region.html#a2368a709e5f2aa99e7b176b0685f017d">geopm::Region</a>
+, <a class="el" href="classgeopm_1_1_sample_scheduler.html#ab7ed4d66b471584e34aaa8cdc350030a">geopm::SampleScheduler</a>
 </li>
 <li>clk_unhalted_core_base
 : <a class="el" href="structgeopm_1_1buffer__index__s.html#ac770e7016ebc2472a985880c9b44a944">geopm::buffer_index_s</a>
@@ -151,8 +159,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>clk_unhalted_ref_base
 : <a class="el" href="structgeopm_1_1buffer__index__s.html#a9032b9b1cad3582747151effe410fdd5">geopm::buffer_index_s</a>
 </li>
-<li>close_msr()
-: <a class="el" href="classgeopm_1_1_platform_imp.html#a5bb1b65b1b38de16df4cabbf20a83d40">geopm::PlatformImp</a>
+<li>clone()
+: <a class="el" href="classgeopm_1_1_balancing_decider.html#a719742425ac602f32c8dfc4e74416246">geopm::BalancingDecider</a>
+, <a class="el" href="classgeopm_1_1_decider.html#a34cbd2dd0500b42bbf980d68440f2c56">geopm::Decider</a>
+, <a class="el" href="classgeopm_1_1_governing_decider.html#a61e1d80cb1e4c3303dd84df2dadecd54">geopm::GoverningDecider</a>
 </li>
 <li>close_recv()
 : <a class="el" href="classgeopm_1_1_tree_communicator_level.html#a115e78a2011505536622f88fe7683f23">geopm::TreeCommunicatorLevel</a>
@@ -163,17 +173,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>comm_destroy()
 : <a class="el" href="classgeopm_1_1_tree_communicator.html#ae465d897b43881e9d409f047772dd847">geopm::TreeCommunicator</a>
 </li>
-<li>Controller()
-: <a class="el" href="classgeopm_1_1_controller.html#a29782bf611a1061384f799b9a0ab74e2">geopm::Controller</a>
+<li>connect()
+: <a class="el" href="classgeopm_1_1_controller.html#ab495e3978a0add42ec25b09bbb093582">geopm::Controller</a>
 </li>
-<li>cpu_rank
-: <a class="el" href="structgeopm__ctl__message__s.html#a4cf6996952387f0e5d99d5e91f71159b">geopm_ctl_message_s</a>
+<li>control_latency_ms()
+: <a class="el" href="classgeopm_1_1_platform.html#a0ec5059500ab5360301c2d425b2a6fb0">geopm::Platform</a>
+, <a class="el" href="classgeopm_1_1_platform_imp.html#a4ca0e936c2d8c836a3ca7b22b9d5a0c4">geopm::PlatformImp</a>
+</li>
+<li>Controller()
+: <a class="el" href="classgeopm_1_1_controller.html#a768e38cce11f46ba80df68e91d2194f0">geopm::Controller</a>
+</li>
+<li>cpu_rank()
+: <a class="el" href="classgeopm_1_1_profile_sampler.html#a2a615ec73f5ff7ee18e1c022fe663d9c">geopm::ProfileSampler</a>
+, <a class="el" href="structgeopm__ctl__message__s.html#ac1674324493212d117ca80a48ca05cd7">geopm_ctl_message_s</a>
 </li>
 <li>ctl_status
 : <a class="el" href="structgeopm__ctl__message__s.html#aa0d1ca8fda353de0fc74eadc6a5e8d99">geopm_ctl_message_s</a>
-</li>
-<li>cur_region()
-: <a class="el" href="classgeopm_1_1_platform.html#a00c694cc423f86d52ce216e02a9591b3">geopm::Platform</a>
 </li>
 </ul>
 </div><!-- contents -->

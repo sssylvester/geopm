@@ -1,4 +1,6 @@
 <map id="src/Policy.hpp" name="src/Policy.hpp">
-<area shape="rect" id="node4" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="157,79,292,104"/>
-<area shape="rect" id="node7" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="281,152,387,177"/>
+<area shape="rect" id="node5" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="239,79,374,104"/>
+<area shape="rect" id="node12" href="$_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="410,79,525,104"/>
+<area shape="rect" id="node8" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="267,152,372,177"/>
+<area shape="rect" id="node13" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="423,152,536,177"/>
 </map>

@@ -134,46 +134,71 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b2898a4a1ea7091096873c13549d524"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a0b2898a4a1ea7091096873c13549d524">platform_name</a> ()</td></tr>
 <tr class="memdesc:a0b2898a4a1ea7091096873c13549d524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the string name of the underlying platform.  <a href="#a0b2898a4a1ea7091096873c13549d524">More...</a><br /></td></tr>
 <tr class="separator:a0b2898a4a1ea7091096873c13549d524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8c846f880a8453ac0b0d934cb0cac0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#aef8c846f880a8453ac0b0d934cb0cac0">initialize_msrs</a> ()</td></tr>
-<tr class="memdesc:aef8c846f880a8453ac0b0d934cb0cac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the per cpu special files, initializes the MSR offset map, initialize RAPL, CBO and fixed counter MSRs.  <a href="#aef8c846f880a8453ac0b0d934cb0cac0">More...</a><br /></td></tr>
-<tr class="separator:aef8c846f880a8453ac0b0d934cb0cac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1060e0f646b66d122dc57dd23dd6d5a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a1060e0f646b66d122dc57dd23dd6d5a4">reset_msrs</a> ()</td></tr>
-<tr class="memdesc:a1060e0f646b66d122dc57dd23dd6d5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset MSRs to a default state.  <a href="#a1060e0f646b66d122dc57dd23dd6d5a4">More...</a><br /></td></tr>
-<tr class="separator:a1060e0f646b66d122dc57dd23dd6d5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3124dd82de98d2e3e3426b42bc46ee"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a7b3124dd82de98d2e3e3426b42bc46ee">read_signal</a> (int device_type, int device_index, int signal_type)</td></tr>
+<tr class="memdesc:a7b3124dd82de98d2e3e3426b42bc46ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and transform a signal. Read a signal value from the hw platform and do any transformation needed to convert it to the expected output format and units.  <a href="#a7b3124dd82de98d2e3e3426b42bc46ee">More...</a><br /></td></tr>
+<tr class="separator:a7b3124dd82de98d2e3e3426b42bc46ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c34efca0ea081b0b476731e4d8f4d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ac7c34efca0ea081b0b476731e4d8f4d1">write_control</a> (int device_type, int device_index, int signal_type, double value)</td></tr>
+<tr class="memdesc:ac7c34efca0ea081b0b476731e4d8f4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform and write a value to a hw platform control. Transform a given a control value from the given format to the format and units expected by the hw platform. Write the transformed value to a controll on the hw platform.  <a href="#ac7c34efca0ea081b0b476731e4d8f4d1">More...</a><br /></td></tr>
+<tr class="separator:ac7c34efca0ea081b0b476731e4d8f4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50712ce72d31ff19f32d02312187833"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ad50712ce72d31ff19f32d02312187833">msr_initialize</a> ()</td></tr>
+<tr class="memdesc:ad50712ce72d31ff19f32d02312187833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the per cpu special files, initializes the MSR offset map, initialize RAPL, CBO and fixed counter MSRs.  <a href="#ad50712ce72d31ff19f32d02312187833">More...</a><br /></td></tr>
+<tr class="separator:ad50712ce72d31ff19f32d02312187833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdefd059be2326c08899e7b10b407c73"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#acdefd059be2326c08899e7b10b407c73">msr_reset</a> ()</td></tr>
+<tr class="memdesc:acdefd059be2326c08899e7b10b407c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset MSRs to a default state.  <a href="#acdefd059be2326c08899e7b10b407c73">More...</a><br /></td></tr>
+<tr class="separator:acdefd059be2326c08899e7b10b407c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8d9c504af81e5ba0fd087aa3d5f221"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a5d8d9c504af81e5ba0fd087aa3d5f221">power_control_domain</a> (void) const </td></tr>
+<tr class="memdesc:a5d8d9c504af81e5ba0fd087aa3d5f221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the domain of control for power.  <a href="#a5d8d9c504af81e5ba0fd087aa3d5f221">More...</a><br /></td></tr>
+<tr class="separator:a5d8d9c504af81e5ba0fd087aa3d5f221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91236fcb891374b7d34b0b226440808"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#af91236fcb891374b7d34b0b226440808">frequency_control_domain</a> (void) const </td></tr>
+<tr class="memdesc:af91236fcb891374b7d34b0b226440808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the domain of control for frequency.  <a href="#af91236fcb891374b7d34b0b226440808">More...</a><br /></td></tr>
+<tr class="separator:af91236fcb891374b7d34b0b226440808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgeopm_1_1_platform_imp"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgeopm_1_1_platform_imp')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgeopm_1_1_platform_imp.html">geopm::PlatformImp</a></td></tr>
 <tr class="memitem:a3f4b86c5e5f96550da62e0bfac560b9f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a3f4b86c5e5f96550da62e0bfac560b9f">PlatformImp</a> ()</td></tr>
 <tr class="memdesc:a3f4b86c5e5f96550da62e0bfac560b9f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">default <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> constructor  <a href="#a3f4b86c5e5f96550da62e0bfac560b9f">More...</a><br /></td></tr>
 <tr class="separator:a3f4b86c5e5f96550da62e0bfac560b9f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7204f85b26ba990b1dac6f92709e66 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a0c7204f85b26ba990b1dac6f92709e66">PlatformImp</a> (int <a class="el" href="classgeopm_1_1_platform_imp.html#a4423ed5ea3aeac2b15a781e50d934bbc">num_package_signal</a>, int <a class="el" href="classgeopm_1_1_platform_imp.html#a5db12243a8b95791bdd634522851c196">num_cpu_signal</a>, double control_latency)</td></tr>
+<tr class="separator:a0c7204f85b26ba990b1dac6f92709e66 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e83d9998d809302a8353e6579c3bab inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a78e83d9998d809302a8353e6579c3bab">~PlatformImp</a> ()</td></tr>
 <tr class="memdesc:a78e83d9998d809302a8353e6579c3bab inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">default <a class="el" href="classgeopm_1_1_platform_imp.html" title="This class provides an abstraction of specific functionality and attributes of different hardware imp...">PlatformImp</a> destructor  <a href="#a78e83d9998d809302a8353e6579c3bab">More...</a><br /></td></tr>
 <tr class="separator:a78e83d9998d809302a8353e6579c3bab inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f08adbcbb63a78c690ed002e8963a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a59f08adbcbb63a78c690ed002e8963a0">package</a> (void) const </td></tr>
-<tr class="memdesc:a59f08adbcbb63a78c690ed002e8963a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of packages present on the platform.  <a href="#a59f08adbcbb63a78c690ed002e8963a0">More...</a><br /></td></tr>
-<tr class="separator:a59f08adbcbb63a78c690ed002e8963a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61c7aadf5da29f72594f298c94d70d3d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a61c7aadf5da29f72594f298c94d70d3d">tile</a> (void) const </td></tr>
-<tr class="memdesc:a61c7aadf5da29f72594f298c94d70d3d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of tiles present on the platform.  <a href="#a61c7aadf5da29f72594f298c94d70d3d">More...</a><br /></td></tr>
-<tr class="separator:a61c7aadf5da29f72594f298c94d70d3d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedee27e00325289ba505e31b7a2c707a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aedee27e00325289ba505e31b7a2c707a">hw_cpu</a> (void) const </td></tr>
-<tr class="memdesc:aedee27e00325289ba505e31b7a2c707a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of physical CPUs present on the platform.  <a href="#aedee27e00325289ba505e31b7a2c707a">More...</a><br /></td></tr>
-<tr class="separator:aedee27e00325289ba505e31b7a2c707a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa90a020c3fe38027075e3fa9f92f2f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a7fa90a020c3fe38027075e3fa9f92f2f">logical_cpu</a> (void) const </td></tr>
-<tr class="memdesc:a7fa90a020c3fe38027075e3fa9f92f2f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of logical CPUs present on the platform.  <a href="#a7fa90a020c3fe38027075e3fa9f92f2f">More...</a><br /></td></tr>
-<tr class="separator:a7fa90a020c3fe38027075e3fa9f92f2f inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fbab8b93b6dbada190e22345bd0249c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9fbab8b93b6dbada190e22345bd0249c">topology</a> (void) const </td></tr>
-<tr class="memdesc:a9fbab8b93b6dbada190e22345bd0249c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology tree for the platform.  <a href="#a9fbab8b93b6dbada190e22345bd0249c">More...</a><br /></td></tr>
-<tr class="separator:a9fbab8b93b6dbada190e22345bd0249c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a387b336606a891aad29a9d09b4d1a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9a387b336606a891aad29a9d09b4d1a0">write_msr</a> (int device_type, int device_index, const std::string &amp;msr_name, uint64_t value)</td></tr>
-<tr class="memdesc:a9a387b336606a891aad29a9d09b4d1a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to a Model Specific Register.  <a href="#a9a387b336606a891aad29a9d09b4d1a0">More...</a><br /></td></tr>
-<tr class="separator:a9a387b336606a891aad29a9d09b4d1a0 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c63dba43fe103e910fab7a43957f9a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a99c63dba43fe103e910fab7a43957f9a">write_msr</a> (int device_type, int device_index, off_t <a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">msr_offset</a>, uint64_t value)</td></tr>
-<tr class="memdesc:a99c63dba43fe103e910fab7a43957f9a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to a Model Specific Register.  <a href="#a99c63dba43fe103e910fab7a43957f9a">More...</a><br /></td></tr>
-<tr class="separator:a99c63dba43fe103e910fab7a43957f9a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa727a2160ae29070d780ac261d30db05 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aa727a2160ae29070d780ac261d30db05">read_msr</a> (int device_type, int device_index, const std::string &amp;msr_name)</td></tr>
-<tr class="memdesc:aa727a2160ae29070d780ac261d30db05 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a value from a Model Specific Register.  <a href="#aa727a2160ae29070d780ac261d30db05">More...</a><br /></td></tr>
-<tr class="separator:aa727a2160ae29070d780ac261d30db05 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d0b77739bf048db040d0e46da6f2b9c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a7d0b77739bf048db040d0e46da6f2b9c">read_msr</a> (int device_type, int device_index, off_t <a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">msr_offset</a>)</td></tr>
-<tr class="memdesc:a7d0b77739bf048db040d0e46da6f2b9c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a value from a Model Specific Register.  <a href="#a7d0b77739bf048db040d0e46da6f2b9c">More...</a><br /></td></tr>
-<tr class="separator:a7d0b77739bf048db040d0e46da6f2b9c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe031823a71f423e81183bbe6e924e0b inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#abe031823a71f423e81183bbe6e924e0b">num_package</a> (void) const </td></tr>
+<tr class="memdesc:abe031823a71f423e81183bbe6e924e0b inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of packages present on the platform.  <a href="#abe031823a71f423e81183bbe6e924e0b">More...</a><br /></td></tr>
+<tr class="separator:abe031823a71f423e81183bbe6e924e0b inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f835d53190be0a3b950fb29f531e570 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9f835d53190be0a3b950fb29f531e570">num_tile</a> (void) const </td></tr>
+<tr class="memdesc:a9f835d53190be0a3b950fb29f531e570 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of tiles present on the platform.  <a href="#a9f835d53190be0a3b950fb29f531e570">More...</a><br /></td></tr>
+<tr class="separator:a9f835d53190be0a3b950fb29f531e570 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e682f362e9aaa5f1f5ba7010396bc1a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a0e682f362e9aaa5f1f5ba7010396bc1a">num_tile_group</a> (void) const </td></tr>
+<tr class="memdesc:a0e682f362e9aaa5f1f5ba7010396bc1a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of tile groups present on the platform.  <a href="#a0e682f362e9aaa5f1f5ba7010396bc1a">More...</a><br /></td></tr>
+<tr class="separator:a0e682f362e9aaa5f1f5ba7010396bc1a inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376eb0bae80e708f04629e63d53fd3c3 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a376eb0bae80e708f04629e63d53fd3c3">num_hw_cpu</a> (void) const </td></tr>
+<tr class="memdesc:a376eb0bae80e708f04629e63d53fd3c3 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of physical CPUs present on the platform.  <a href="#a376eb0bae80e708f04629e63d53fd3c3">More...</a><br /></td></tr>
+<tr class="separator:a376eb0bae80e708f04629e63d53fd3c3 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9d762b6164751adb1ed44da29d4ea2 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a7d9d762b6164751adb1ed44da29d4ea2">num_logical_cpu</a> (void) const </td></tr>
+<tr class="memdesc:a7d9d762b6164751adb1ed44da29d4ea2 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of logical CPUs present on the platform.  <a href="#a7d9d762b6164751adb1ed44da29d4ea2">More...</a><br /></td></tr>
+<tr class="separator:a7d9d762b6164751adb1ed44da29d4ea2 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4423ed5ea3aeac2b15a781e50d934bbc inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a4423ed5ea3aeac2b15a781e50d934bbc">num_package_signal</a> (void) const </td></tr>
+<tr class="memdesc:a4423ed5ea3aeac2b15a781e50d934bbc inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of per-package signals.  <a href="#a4423ed5ea3aeac2b15a781e50d934bbc">More...</a><br /></td></tr>
+<tr class="separator:a4423ed5ea3aeac2b15a781e50d934bbc inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db12243a8b95791bdd634522851c196 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a5db12243a8b95791bdd634522851c196">num_cpu_signal</a> (void) const </td></tr>
+<tr class="memdesc:a5db12243a8b95791bdd634522851c196 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of per-cpu signals.  <a href="#a5db12243a8b95791bdd634522851c196">More...</a><br /></td></tr>
+<tr class="separator:a5db12243a8b95791bdd634522851c196 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca0e936c2d8c836a3ca7b22b9d5a0c4 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a4ca0e936c2d8c836a3ca7b22b9d5a0c4">control_latency_ms</a> (void) const </td></tr>
+<tr class="separator:a4ca0e936c2d8c836a3ca7b22b9d5a0c4 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247024a5a154573c164293b2b734cf6d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a247024a5a154573c164293b2b734cf6d">topology</a> (void) const </td></tr>
+<tr class="memdesc:a247024a5a154573c164293b2b734cf6d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the topology tree for the platform.  <a href="#a247024a5a154573c164293b2b734cf6d">More...</a><br /></td></tr>
+<tr class="separator:a247024a5a154573c164293b2b734cf6d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e643e7b7ac735b587d975950d5af25 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a29e643e7b7ac735b587d975950d5af25">msr_write</a> (int device_type, int device_index, const std::string &amp;msr_name, uint64_t value)</td></tr>
+<tr class="memdesc:a29e643e7b7ac735b587d975950d5af25 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to a Model Specific Register.  <a href="#a29e643e7b7ac735b587d975950d5af25">More...</a><br /></td></tr>
+<tr class="separator:a29e643e7b7ac735b587d975950d5af25 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1359bdd5f08f9e2cedf3d9db274c6999 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a1359bdd5f08f9e2cedf3d9db274c6999">msr_write</a> (int device_type, int device_index, off_t <a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">msr_offset</a>, uint64_t value)</td></tr>
+<tr class="memdesc:a1359bdd5f08f9e2cedf3d9db274c6999 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to a Model Specific Register.  <a href="#a1359bdd5f08f9e2cedf3d9db274c6999">More...</a><br /></td></tr>
+<tr class="separator:a1359bdd5f08f9e2cedf3d9db274c6999 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bf99e9735407c8769c9495e977745d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a46bf99e9735407c8769c9495e977745d">msr_read</a> (int device_type, int device_index, const std::string &amp;msr_name)</td></tr>
+<tr class="memdesc:a46bf99e9735407c8769c9495e977745d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a value from a Model Specific Register.  <a href="#a46bf99e9735407c8769c9495e977745d">More...</a><br /></td></tr>
+<tr class="separator:a46bf99e9735407c8769c9495e977745d inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ad882ba0c26ab9365ac0662bf38251 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a73ad882ba0c26ab9365ac0662bf38251">msr_read</a> (int device_type, int device_index, off_t <a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">msr_offset</a>)</td></tr>
+<tr class="memdesc:a73ad882ba0c26ab9365ac0662bf38251 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a value from a Model Specific Register.  <a href="#a73ad882ba0c26ab9365ac0662bf38251">More...</a><br /></td></tr>
+<tr class="separator:a73ad882ba0c26ab9365ac0662bf38251 inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf497f3f1fa9d089574801659afcc5c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aebf497f3f1fa9d089574801659afcc5c">msr_offset</a> (std::string msr_name)</td></tr>
 <tr class="memdesc:aebf497f3f1fa9d089574801659afcc5c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the address offset of a Model Specific Register.  <a href="#aebf497f3f1fa9d089574801659afcc5c">More...</a><br /></td></tr>
 <tr class="separator:aebf497f3f1fa9d089574801659afcc5c inherit pub_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,7 +215,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4cb8ac831ff707e36d7e04a4815611bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a4cb8ac831ff707e36d7e04a4815611bb">load_msr_offsets</a> ()</td></tr>
-<tr class="memdesc:a4cb8ac831ff707e36d7e04a4815611bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load SNB/IVB specific MSR offsets into MSR offset map.  <a href="#a4cb8ac831ff707e36d7e04a4815611bb">More...</a><br /></td></tr>
+<tr class="memdesc:a4cb8ac831ff707e36d7e04a4815611bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load IVT specific MSR offsets into MSR offset map.  <a href="#a4cb8ac831ff707e36d7e04a4815611bb">More...</a><br /></td></tr>
 <tr class="separator:a4cb8ac831ff707e36d7e04a4815611bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21de2a9a02c563fbace939aa67726faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a21de2a9a02c563fbace939aa67726faa">rapl_init</a> ()</td></tr>
 <tr class="memdesc:a21de2a9a02c563fbace939aa67726faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Running Average Power Limiting (RAPL) controls.  <a href="#a21de2a9a02c563fbace939aa67726faa">More...</a><br /></td></tr>
@@ -211,15 +236,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a2ab4b0199105e42d1d358d7e58243582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset free running counters to default state.  <a href="#a2ab4b0199105e42d1d358d7e58243582">More...</a><br /></td></tr>
 <tr class="separator:a2ab4b0199105e42d1d358d7e58243582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classgeopm_1_1_platform_imp"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgeopm_1_1_platform_imp')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classgeopm_1_1_platform_imp.html">geopm::PlatformImp</a></td></tr>
-<tr class="memitem:a993749c91f61307c5e090166dfa0a197 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a993749c91f61307c5e090166dfa0a197">open_msr</a> (int cpu)</td></tr>
-<tr class="memdesc:a993749c91f61307c5e090166dfa0a197 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a MSR special file.  <a href="#a993749c91f61307c5e090166dfa0a197">More...</a><br /></td></tr>
-<tr class="separator:a993749c91f61307c5e090166dfa0a197 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb1b65b1b38de16df4cabbf20a83d40 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a5bb1b65b1b38de16df4cabbf20a83d40">close_msr</a> (int cpu)</td></tr>
-<tr class="memdesc:a5bb1b65b1b38de16df4cabbf20a83d40 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a MSR special file.  <a href="#a5bb1b65b1b38de16df4cabbf20a83d40">More...</a><br /></td></tr>
-<tr class="separator:a5bb1b65b1b38de16df4cabbf20a83d40 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7bbea019cb866bc0e605c94d2570804 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#aa7bbea019cb866bc0e605c94d2570804">msr_open</a> (int cpu)</td></tr>
+<tr class="memdesc:aa7bbea019cb866bc0e605c94d2570804 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a MSR special file.  <a href="#aa7bbea019cb866bc0e605c94d2570804">More...</a><br /></td></tr>
+<tr class="separator:aa7bbea019cb866bc0e605c94d2570804 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae2cfb2d605f90a9bf10408c1cbe4fa inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a3ae2cfb2d605f90a9bf10408c1cbe4fa">msr_close</a> (int cpu)</td></tr>
+<tr class="memdesc:a3ae2cfb2d605f90a9bf10408c1cbe4fa inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a MSR special file.  <a href="#a3ae2cfb2d605f90a9bf10408c1cbe4fa">More...</a><br /></td></tr>
+<tr class="separator:a3ae2cfb2d605f90a9bf10408c1cbe4fa inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1299e904d4e6f8a5bae2c3b156f445 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ade1299e904d4e6f8a5bae2c3b156f445">parse_hw_topology</a> (void)</td></tr>
 <tr class="memdesc:ade1299e904d4e6f8a5bae2c3b156f445 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up topology information to set member variables.  <a href="#ade1299e904d4e6f8a5bae2c3b156f445">More...</a><br /></td></tr>
 <tr class="separator:ade1299e904d4e6f8a5bae2c3b156f445 inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7070e25f005a8200f5e2aa4d0efcdd inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a5a7070e25f005a8200f5e2aa4d0efcdd">msr_overflow</a> (int signal_idx, uint32_t msr_size, double value)</td></tr>
+<tr class="memdesc:a5a7070e25f005a8200f5e2aa4d0efcdd inherit pro_methods_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the overflow of fixed size counters.  <a href="#a5a7070e25f005a8200f5e2aa4d0efcdd">More...</a><br /></td></tr>
+<tr class="separator:a5a7070e25f005a8200f5e2aa4d0efcdd inherit pro_methods_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -250,31 +278,90 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a1b5b50d6f856d4537f8d766ec6b937b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a1b5b50d6f856d4537f8d766ec6b937b6">m_platform_id</a></td></tr>
 <tr class="memdesc:a1b5b50d6f856d4537f8d766ec6b937b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the platform identifier.  <a href="#a1b5b50d6f856d4537f8d766ec6b937b6">More...</a><br /></td></tr>
 <tr class="separator:a1b5b50d6f856d4537f8d766ec6b937b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b16df89eb6f040bd47b723787cac05"><td class="memItemLeft" align="right" valign="top">std::vector&lt; off_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ad3b16df89eb6f040bd47b723787cac05">m_signal_msr_offset</a></td></tr>
+<tr class="memdesc:ad3b16df89eb6f040bd47b723787cac05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of MSR offsets for reading.  <a href="#ad3b16df89eb6f040bd47b723787cac05">More...</a><br /></td></tr>
+<tr class="separator:ad3b16df89eb6f040bd47b723787cac05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef924a410d8e6588369edba8d28a50ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; off_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#aef924a410d8e6588369edba8d28a50ff">m_control_msr_offset</a></td></tr>
+<tr class="memdesc:aef924a410d8e6588369edba8d28a50ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of MSR offsets to writing.  <a href="#aef924a410d8e6588369edba8d28a50ff">More...</a><br /></td></tr>
+<tr class="separator:aef924a410d8e6588369edba8d28a50ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2956b2f9f30fa188baab35f8ac781a82"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a2956b2f9f30fa188baab35f8ac781a82">M_SNB_PLATFORM_ID</a></td></tr>
+<tr class="memdesc:a2956b2f9f30fa188baab35f8ac781a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constants.  <a href="#a2956b2f9f30fa188baab35f8ac781a82">More...</a><br /></td></tr>
+<tr class="separator:a2956b2f9f30fa188baab35f8ac781a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2755774a75d0b4dd0f59cba1ea7042ac"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a2755774a75d0b4dd0f59cba1ea7042ac">M_IVT_PLATFORM_ID</a></td></tr>
+<tr class="separator:a2755774a75d0b4dd0f59cba1ea7042ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7badc2cb83ec15aed143d986c9f2785"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ad7badc2cb83ec15aed143d986c9f2785">M_SNB_MODEL_NAME</a></td></tr>
+<tr class="separator:ad7badc2cb83ec15aed143d986c9f2785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7607aeda4e933383ef82c093738a40ed"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a7607aeda4e933383ef82c093738a40ed">M_IVT_MODEL_NAME</a></td></tr>
+<tr class="separator:a7607aeda4e933383ef82c093738a40ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb45c1b88bff1aaca97954b4528e2673"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#adb45c1b88bff1aaca97954b4528e2673">M_BOX_FRZ_EN</a></td></tr>
+<tr class="separator:adb45c1b88bff1aaca97954b4528e2673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8a3040f70750237045b5aea924853c"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ada8a3040f70750237045b5aea924853c">M_BOX_FRZ</a></td></tr>
+<tr class="separator:ada8a3040f70750237045b5aea924853c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf703115207a3a59d0e15ccc9b46cbb1"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#acf703115207a3a59d0e15ccc9b46cbb1">M_CTR_EN</a></td></tr>
+<tr class="separator:acf703115207a3a59d0e15ccc9b46cbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b5c3b3935efe5338a2a0a61cddf52c"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ab8b5c3b3935efe5338a2a0a61cddf52c">M_RST_CTRS</a></td></tr>
+<tr class="separator:ab8b5c3b3935efe5338a2a0a61cddf52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0481786522ee0c521534a277bfb2d5c1"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a0481786522ee0c521534a277bfb2d5c1">M_LLC_FILTER_MASK</a></td></tr>
+<tr class="separator:a0481786522ee0c521534a277bfb2d5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af324d99fb56f4f1592c5170dce105539"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#af324d99fb56f4f1592c5170dce105539">M_LLC_VICTIMS_EV_SEL</a></td></tr>
+<tr class="separator:af324d99fb56f4f1592c5170dce105539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2300339f97aa65c06f2e6a5356e5a8c"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#aa2300339f97aa65c06f2e6a5356e5a8c">M_LLC_VICTIMS_UMASK</a></td></tr>
+<tr class="separator:aa2300339f97aa65c06f2e6a5356e5a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cf53fc90dfb6601b76c2030456e9a8"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a99cf53fc90dfb6601b76c2030456e9a8">M_EVENT_SEL_0</a></td></tr>
+<tr class="separator:a99cf53fc90dfb6601b76c2030456e9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d58608cf0c89603e94990dc8c70638"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#ad4d58608cf0c89603e94990dc8c70638">M_UMASK_0</a></td></tr>
+<tr class="separator:ad4d58608cf0c89603e94990dc8c70638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57110aeb00ac759ecae2f3c427a6119e"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a57110aeb00ac759ecae2f3c427a6119e">M_PKG_POWER_LIMIT_MASK_MAGIC</a></td></tr>
+<tr class="separator:a57110aeb00ac759ecae2f3c427a6119e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559854ca605f867c5049291e34bf6e48"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a559854ca605f867c5049291e34bf6e48">M_DRAM_POWER_LIMIT_MASK_MAGIC</a></td></tr>
+<tr class="separator:a559854ca605f867c5049291e34bf6e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188dee6e6f2e35d54693970c3309d43c"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_i_v_t_platform_imp.html#a188dee6e6f2e35d54693970c3309d43c">M_PP0_POWER_LIMIT_MASK_MAGIC</a></td></tr>
+<tr class="separator:a188dee6e6f2e35d54693970c3309d43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classgeopm_1_1_platform_imp"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classgeopm_1_1_platform_imp')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classgeopm_1_1_platform_imp.html">geopm::PlatformImp</a></td></tr>
 <tr class="memitem:ae4f2f56f40e9ed014b009a78902f87ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_platform_topology.html">PlatformTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ae4f2f56f40e9ed014b009a78902f87ee">m_topology</a></td></tr>
 <tr class="memdesc:ae4f2f56f40e9ed014b009a78902f87ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the underlying hardware topology.  <a href="#ae4f2f56f40e9ed014b009a78902f87ee">More...</a><br /></td></tr>
 <tr class="separator:ae4f2f56f40e9ed014b009a78902f87ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a315523c6db721ce2b1ef19d56de46f7a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a315523c6db721ce2b1ef19d56de46f7a">m_cpu_file_descs</a></td></tr>
-<tr class="memdesc:a315523c6db721ce2b1ef19d56de46f7a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the file descriptors for the per-cpu special files.  <a href="#a315523c6db721ce2b1ef19d56de46f7a">More...</a><br /></td></tr>
-<tr class="separator:a315523c6db721ce2b1ef19d56de46f7a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff220da09d5fde3080d5582925c7f28 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a4ff220da09d5fde3080d5582925c7f28">m_cpu_file_desc</a></td></tr>
+<tr class="memdesc:a4ff220da09d5fde3080d5582925c7f28 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the file descriptors for the per-cpu special files.  <a href="#a4ff220da09d5fde3080d5582925c7f28">More...</a><br /></td></tr>
+<tr class="separator:a4ff220da09d5fde3080d5582925c7f28 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3428cd77f42ba1e24180b011d97c9cc inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::pair&lt; off_t, unsigned long &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ac3428cd77f42ba1e24180b011d97c9cc">m_msr_offset_map</a></td></tr>
 <tr class="memdesc:ac3428cd77f42ba1e24180b011d97c9cc inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of MSR string name to address offset.  <a href="#ac3428cd77f42ba1e24180b011d97c9cc">More...</a><br /></td></tr>
 <tr class="separator:ac3428cd77f42ba1e24180b011d97c9cc inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496582d5e634ac362f8e09ff07e079ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a496582d5e634ac362f8e09ff07e079ee">m_logical_cpus</a></td></tr>
-<tr class="memdesc:a496582d5e634ac362f8e09ff07e079ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logical CPUs.  <a href="#a496582d5e634ac362f8e09ff07e079ee">More...</a><br /></td></tr>
-<tr class="separator:a496582d5e634ac362f8e09ff07e079ee inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a376b3d3052b8911d6fdcaa58aee2573c inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a376b3d3052b8911d6fdcaa58aee2573c">m_hw_cpus</a></td></tr>
-<tr class="memdesc:a376b3d3052b8911d6fdcaa58aee2573c inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of hardware CPUs.  <a href="#a376b3d3052b8911d6fdcaa58aee2573c">More...</a><br /></td></tr>
-<tr class="separator:a376b3d3052b8911d6fdcaa58aee2573c inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44082c159720b0e3d00fc19b3e0ff484 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a44082c159720b0e3d00fc19b3e0ff484">m_tiles</a></td></tr>
-<tr class="memdesc:a44082c159720b0e3d00fc19b3e0ff484 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tiles.  <a href="#a44082c159720b0e3d00fc19b3e0ff484">More...</a><br /></td></tr>
-<tr class="separator:a44082c159720b0e3d00fc19b3e0ff484 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af162f71cc3b87b2550acdf3c40ce45a0 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#af162f71cc3b87b2550acdf3c40ce45a0">m_packages</a></td></tr>
-<tr class="memdesc:af162f71cc3b87b2550acdf3c40ce45a0 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of packages.  <a href="#af162f71cc3b87b2550acdf3c40ce45a0">More...</a><br /></td></tr>
-<tr class="separator:af162f71cc3b87b2550acdf3c40ce45a0 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72137250af1621915377c6dd2f82a00b inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a72137250af1621915377c6dd2f82a00b">m_num_logical_cpu</a></td></tr>
+<tr class="memdesc:a72137250af1621915377c6dd2f82a00b inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logical CPUs.  <a href="#a72137250af1621915377c6dd2f82a00b">More...</a><br /></td></tr>
+<tr class="separator:a72137250af1621915377c6dd2f82a00b inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84697dd6253ac0b3f0dc7111216f25f inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ae84697dd6253ac0b3f0dc7111216f25f">m_num_hw_cpu</a></td></tr>
+<tr class="memdesc:ae84697dd6253ac0b3f0dc7111216f25f inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of hardware CPUs.  <a href="#ae84697dd6253ac0b3f0dc7111216f25f">More...</a><br /></td></tr>
+<tr class="separator:ae84697dd6253ac0b3f0dc7111216f25f inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a8d9768a34820fdc19962b0f513967 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ac4a8d9768a34820fdc19962b0f513967">m_num_cpu_per_core</a></td></tr>
+<tr class="memdesc:ac4a8d9768a34820fdc19962b0f513967 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of logical cpus per hardware core.  <a href="#ac4a8d9768a34820fdc19962b0f513967">More...</a><br /></td></tr>
+<tr class="separator:ac4a8d9768a34820fdc19962b0f513967 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6035e8294867fa99577ffd440ee5be inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a3b6035e8294867fa99577ffd440ee5be">m_num_tile</a></td></tr>
+<tr class="memdesc:a3b6035e8294867fa99577ffd440ee5be inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tiles.  <a href="#a3b6035e8294867fa99577ffd440ee5be">More...</a><br /></td></tr>
+<tr class="separator:a3b6035e8294867fa99577ffd440ee5be inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf80f2cbbf8348b166d1a27eaa800bba inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#adf80f2cbbf8348b166d1a27eaa800bba">m_num_tile_group</a></td></tr>
+<tr class="memdesc:adf80f2cbbf8348b166d1a27eaa800bba inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tiles.  <a href="#adf80f2cbbf8348b166d1a27eaa800bba">More...</a><br /></td></tr>
+<tr class="separator:adf80f2cbbf8348b166d1a27eaa800bba inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7636adb42d27924a2be4a023531f349a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a7636adb42d27924a2be4a023531f349a">m_num_package</a></td></tr>
+<tr class="memdesc:a7636adb42d27924a2be4a023531f349a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of packages.  <a href="#a7636adb42d27924a2be4a023531f349a">More...</a><br /></td></tr>
+<tr class="separator:a7636adb42d27924a2be4a023531f349a inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cecff1fd9fb4ec00104b487d9a3ac45 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9cecff1fd9fb4ec00104b487d9a3ac45">m_msr_path</a> [<a class="el" href="_platform_imp_8hpp.html#ac64541bdd81c961304b9babef1402640">NAME_MAX</a>]</td></tr>
 <tr class="memdesc:a9cecff1fd9fb4ec00104b487d9a3ac45 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">File path to MSR special files.  <a href="#a9cecff1fd9fb4ec00104b487d9a3ac45">More...</a><br /></td></tr>
 <tr class="separator:a9cecff1fd9fb4ec00104b487d9a3ac45 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d1605ea080a2bdf13fa92bc29ebe5d inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a61d1605ea080a2bdf13fa92bc29ebe5d">m_num_package_signal</a></td></tr>
+<tr class="memdesc:a61d1605ea080a2bdf13fa92bc29ebe5d inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of signals per package.  <a href="#a61d1605ea080a2bdf13fa92bc29ebe5d">More...</a><br /></td></tr>
+<tr class="separator:a61d1605ea080a2bdf13fa92bc29ebe5d inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca5196166f94e9f79fe70c8a0771ea1 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a9ca5196166f94e9f79fe70c8a0771ea1">m_num_cpu_signal</a></td></tr>
+<tr class="memdesc:a9ca5196166f94e9f79fe70c8a0771ea1 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of signals per CPU.  <a href="#a9ca5196166f94e9f79fe70c8a0771ea1">More...</a><br /></td></tr>
+<tr class="separator:a9ca5196166f94e9f79fe70c8a0771ea1 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83814151bf986c111b7140dc389946b inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#ac83814151bf986c111b7140dc389946b">m_control_latency_ms</a></td></tr>
+<tr class="separator:ac83814151bf986c111b7140dc389946b inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700382842434d7a67f299dfd6e4e1398 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a700382842434d7a67f299dfd6e4e1398">m_msr_value_last</a></td></tr>
+<tr class="memdesc:a700382842434d7a67f299dfd6e4e1398 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last values read from all counters.  <a href="#a700382842434d7a67f299dfd6e4e1398">More...</a><br /></td></tr>
+<tr class="separator:a700382842434d7a67f299dfd6e4e1398 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1362e1b22f858546127920c4bf4c5182 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_imp.html#a1362e1b22f858546127920c4bf4c5182">m_msr_overflow_offset</a></td></tr>
+<tr class="memdesc:a1362e1b22f858546127920c4bf4c5182 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current aggregated overflow for all the counters.  <a href="#a1362e1b22f858546127920c4bf4c5182">More...</a><br /></td></tr>
+<tr class="separator:a1362e1b22f858546127920c4bf4c5182 inherit pro_attribs_classgeopm_1_1_platform_imp"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides a concrete platform implementation of Sandybridge E and IvyBridge E processors. (cpuid 0x62D and 0x63E). </p>
@@ -344,7 +431,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize per-CPU counters. </p>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000007">Bug:</a></b></dt><dd>is this needed??? </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000002">Bug:</a></b></dt><dd>is this needed??? </dd></dl>
 
 </div>
 </div>
@@ -423,7 +510,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef8c846f880a8453ac0b0d934cb0cac0"></a>
+<a class="anchor" id="af91236fcb891374b7d34b0b226440808"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -431,10 +518,11 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::IVTPlatformImp::initialize_msrs </td>
+          <td class="memname">int geopm::IVTPlatformImp::frequency_control_domain </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -444,9 +532,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Opens the per cpu special files, initializes the MSR offset map, initialize RAPL, CBO and fixed counter MSRs. </p>
+<p>Retrieve the domain of control for frequency. </p>
 
-<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#aa512121a19942a4c18c73207c351d4e4">geopm::PlatformImp</a>.</p>
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#af6af141931649c2f1b231a433c1c0825">geopm::PlatformImp</a>.</p>
 
 </div>
 </div>
@@ -471,7 +559,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load SNB/IVB specific MSR offsets into MSR offset map. </p>
+<p>Load IVT specific MSR offsets into MSR offset map. </p>
 
 </div>
 </div>
@@ -510,6 +598,60 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad50712ce72d31ff19f32d02312187833"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::IVTPlatformImp::msr_initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Opens the per cpu special files, initializes the MSR offset map, initialize RAPL, CBO and fixed counter MSRs. </p>
+
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a0bd549c40844c6be2f64e47194a66407">geopm::PlatformImp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdefd059be2326c08899e7b10b407c73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::IVTPlatformImp::msr_reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset MSRs to a default state. </p>
+
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a0aa4a38949a822d3b8ae2f8597fa45a1">geopm::PlatformImp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0b2898a4a1ea7091096873c13549d524"></a>
 <div class="memitem">
 <div class="memproto">
@@ -535,6 +677,34 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Underlying platform name. </dd></dl>
 
 <p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a2be0673836d8d32da848d36190666d0e">geopm::PlatformImp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d8d9c504af81e5ba0fd087aa3d5f221"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::IVTPlatformImp::power_control_domain </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the domain of control for power. </p>
+
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a050a471d6bae048202058d7a701b7789">geopm::PlatformImp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +758,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1060e0f646b66d122dc57dd23dd6d5a4"></a>
+<a class="anchor" id="a7b3124dd82de98d2e3e3426b42bc46ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -596,10 +766,27 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::IVTPlatformImp::reset_msrs </td>
+          <td class="memname">double geopm::IVTPlatformImp::read_signal </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -609,13 +796,183 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset MSRs to a default state. </p>
+<p>Read and transform a signal. Read a signal value from the hw platform and do any transformation needed to convert it to the expected output format and units. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">device_type</td><td>enum device type can be one of GEOPM_DOMAIN_PACKAGE, GEOPM_DOMAIN_CPU, GEOPM_DOMAIN_TILE, or GEOPM_DOMAIN_BOARD_MEMORY. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">device_index</td><td>Numbered index of the specified type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>enum signal type of geopm_telemetry_type_e. The signal typr to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The read and transformed value. </dd></dl>
 
-<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a479da2405b90ca2509c7729e37b49a86">geopm::PlatformImp</a>.</p>
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#aa354ee047cd7358b9e56a3a87da933c1">geopm::PlatformImp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7c34efca0ea081b0b476731e4d8f4d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::IVTPlatformImp::write_control </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transform and write a value to a hw platform control. Transform a given a control value from the given format to the format and units expected by the hw platform. Write the transformed value to a controll on the hw platform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">device_type</td><td>enum device type can be one of GEOPM_DOMAIN_PACKAGE, GEOPM_DOMAIN_CPU, GEOPM_DOMAIN_TILE, or GEOPM_DOMAIN_BOARD_MEMORY. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">device_index</td><td>Numbered index of the specified type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>enum signal type of geopm_telemetry_type_e. The control type to write to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value to be transformed and written. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classgeopm_1_1_platform_imp.html#a27569845f55f659c8942b6a7e64f8b72">geopm::PlatformImp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ada8a3040f70750237045b5aea924853c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_BOX_FRZ</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb45c1b88bff1aaca97954b4528e2673"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_BOX_FRZ_EN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef924a410d8e6588369edba8d28a50ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;off_t&gt; geopm::IVTPlatformImp::m_control_msr_offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of MSR offsets to writing. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf703115207a3a59d0e15ccc9b46cbb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_CTR_EN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a559854ca605f867c5049291e34bf6e48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t geopm::IVTPlatformImp::M_DRAM_POWER_LIMIT_MASK_MAGIC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa9661d3d1b8524cafda3d330ce704dea"></a>
 <div class="memitem">
 <div class="memproto">
@@ -635,6 +992,126 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Store the units of energy read from RAPL. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99cf53fc90dfb6601b76c2030456e9a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_EVENT_SEL_0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7607aeda4e933383ef82c093738a40ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string geopm::IVTPlatformImp::M_IVT_MODEL_NAME</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2755774a75d0b4dd0f59cba1ea7042ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int geopm::IVTPlatformImp::M_IVT_PLATFORM_ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0481786522ee0c521534a277bfb2d5c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_LLC_FILTER_MASK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af324d99fb56f4f1592c5170dce105539"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_LLC_VICTIMS_EV_SEL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa2300339f97aa65c06f2e6a5356e5a8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_LLC_VICTIMS_UMASK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -770,6 +1247,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a57110aeb00ac759ecae2f3c427a6119e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t geopm::IVTPlatformImp::M_PKG_POWER_LIMIT_MASK_MAGIC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1b5b50d6f856d4537f8d766ec6b937b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -811,6 +1308,130 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Store the units of power read from RAPL. </p>
+
+</div>
+</div>
+<a class="anchor" id="a188dee6e6f2e35d54693970c3309d43c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t geopm::IVTPlatformImp::M_PP0_POWER_LIMIT_MASK_MAGIC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8b5c3b3935efe5338a2a0a61cddf52c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_RST_CTRS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad3b16df89eb6f040bd47b723787cac05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;off_t&gt; geopm::IVTPlatformImp::m_signal_msr_offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of MSR offsets for reading. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7badc2cb83ec15aed143d986c9f2785"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string geopm::IVTPlatformImp::M_SNB_MODEL_NAME</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2956b2f9f30fa188baab35f8ac781a82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int geopm::IVTPlatformImp::M_SNB_PLATFORM_ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constants. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4d58608cf0c89603e94990dc8c70638"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int geopm::IVTPlatformImp::M_UMASK_0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

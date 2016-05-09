@@ -128,23 +128,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a494464a390683c50f795b55397c87a21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a494464a390683c50f795b55397c87a21">do_shutdown</a> (void)</td></tr>
 <tr class="memdesc:a494464a390683c50f795b55397c87a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the application is shutting down.  <a href="#a494464a390683c50f795b55397c87a21">More...</a><br /></td></tr>
 <tr class="separator:a494464a390683c50f795b55397c87a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72a3f7ec863ebfa396756e319e7d702c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a72a3f7ec863ebfa396756e319e7d702c">report</a> (void)</td></tr>
-<tr class="memdesc:a72a3f7ec863ebfa396756e319e7d702c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a post-run report for a single node.  <a href="#a72a3f7ec863ebfa396756e319e7d702c">More...</a><br /></td></tr>
-<tr class="separator:a72a3f7ec863ebfa396756e319e7d702c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64cd9aad3bd29dac9586ef03fcbaa72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ae64cd9aad3bd29dac9586ef03fcbaa72">do_report</a> (void)</td></tr>
+<tr class="separator:ae64cd9aad3bd29dac9586ef03fcbaa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015f23150cec00cc62e14527830d0c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a015f23150cec00cc62e14527830d0c0d">region_names</a> (void)</td></tr>
+<tr class="memdesc:a015f23150cec00cc62e14527830d0c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a post-run report for a single node.  <a href="#a015f23150cec00cc62e14527830d0c0d">More...</a><br /></td></tr>
+<tr class="separator:a015f23150cec00cc62e14527830d0c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1dd472adcec803f55f34a9db32b0322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ab1dd472adcec803f55f34a9db32b0322">initialize</a> (void)</td></tr>
 <tr class="memdesc:ab1dd472adcec803f55f34a9db32b0322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize shared memory regions.  <a href="#ab1dd472adcec803f55f34a9db32b0322">More...</a><br /></td></tr>
 <tr class="separator:ab1dd472adcec803f55f34a9db32b0322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a615ec73f5ff7ee18e1c022fe663d9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a2a615ec73f5ff7ee18e1c022fe663d9c">cpu_rank</a> (std::vector&lt; int &gt; &amp;cpu_rank)</td></tr>
+<tr class="memdesc:a2a615ec73f5ff7ee18e1c022fe663d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a vector to the affinities of all application ranks.  <a href="#a2a615ec73f5ff7ee18e1c022fe663d9c">More...</a><br /></td></tr>
+<tr class="separator:a2a615ec73f5ff7ee18e1c022fe663d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0f52f9cbf738d8c4d5e5a16ce66bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a6a0f52f9cbf738d8c4d5e5a16ce66bbd">name_set</a> (std::set&lt; std::string &gt; &amp;region_name)</td></tr>
+<tr class="separator:a6a0f52f9cbf738d8c4d5e5a16ce66bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a58bae858e6ee120fceb882a8f6ac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ae3a58bae858e6ee120fceb882a8f6ac1">report_name</a> (std::string &amp;report_str)</td></tr>
+<tr class="separator:ae3a58bae858e6ee120fceb882a8f6ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61e5f3c8dbcb67ee83e1894d483cbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#af61e5f3c8dbcb67ee83e1894d483cbe9">profile_name</a> (std::string &amp;prof_str)</td></tr>
+<tr class="separator:af61e5f3c8dbcb67ee83e1894d483cbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ab9556118bd58d494791defe1dabbb925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_shared_memory.html">SharedMemory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ab9556118bd58d494791defe1dabbb925">m_ctl_shmem</a></td></tr>
-<tr class="separator:ab9556118bd58d494791defe1dabbb925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be980490986db8e551c42a0ced42951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_shared_memory.html">SharedMemory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a7be980490986db8e551c42a0ced42951">m_ctl_shmem</a></td></tr>
+<tr class="separator:a7be980490986db8e551c42a0ced42951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab23bdbf7544dedfd0d9ca449461d9f24"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__ctl__message__s.html">geopm_ctl_message_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ab23bdbf7544dedfd0d9ca449461d9f24">m_ctl_msg</a></td></tr>
 <tr class="separator:ab23bdbf7544dedfd0d9ca449461d9f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2fdfb1a369caea530056d6c845ab00d"><td class="memItemLeft" align="right" valign="top">std::forward_list&lt; <a class="el" href="classgeopm_1_1_profile_rank_sampler.html">ProfileRankSampler</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ad2fdfb1a369caea530056d6c845ab00d">m_rank_sampler</a></td></tr>
 <tr class="separator:ad2fdfb1a369caea530056d6c845ab00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a028032c7686114bce1082e6616357139"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a028032c7686114bce1082e6616357139">m_table_size</a></td></tr>
-<tr class="separator:a028032c7686114bce1082e6616357139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6748c9f49b7161b73029b7b766848f3"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ae6748c9f49b7161b73029b7b766848f3">m_table_size</a></td></tr>
+<tr class="separator:ae6748c9f49b7161b73029b7b766848f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e495ad5ebf7ca4575d047368de38e5"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ac9e495ad5ebf7ca4575d047368de38e5">m_name_set</a></td></tr>
+<tr class="separator:ac9e495ad5ebf7ca4575d047368de38e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ac13ae3ce246c306e52924b02ed835"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a54ac13ae3ce246c306e52924b02ed835">m_report_name</a></td></tr>
+<tr class="separator:a54ac13ae3ce246c306e52924b02ed835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83da1771e792665d9adbf54c17b8cb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#ad83da1771e792665d9adbf54c17b8cb2">m_profile_name</a></td></tr>
+<tr class="separator:ad83da1771e792665d9adbf54c17b8cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109a25a35023f3d687ca14f38e52f78a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_profile_sampler.html#a109a25a35023f3d687ca14f38e52f78a">m_do_report</a></td></tr>
+<tr class="separator:a109a25a35023f3d687ca14f38e52f78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Retrieves sample data from the set of application ranks on a single node. </p>
@@ -232,6 +251,47 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2a615ec73f5ff7ee18e1c022fe663d9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileSampler::cpu_rank </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cpu_rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve a vector to the affinities of all application ranks. </p>
+<p>Resizes the input vector cpu_rank to number of Linux online CPUs in the system. Each element of the vector is indexed by the Linux CPU ID, and the value assigned is the MPI rank running on the CPU (or -1 if no rank has been affinitized).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cpu_rank</td><td>Vector to be filled with the MPI rank for each Linux CPU, set to -1 if no MPI rank is affinitized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae64cd9aad3bd29dac9586ef03fcbaa72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::ProfileSampler::do_report </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a494464a390683c50f795b55397c87a21"></a>
 <div class="memitem">
 <div class="memproto">
@@ -271,12 +331,44 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a72a3f7ec863ebfa396756e319e7d702c"></a>
+<a class="anchor" id="a6a0f52f9cbf738d8c4d5e5a16ce66bbd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::ProfileSampler::report </td>
+          <td class="memname">void geopm::ProfileSampler::name_set </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>region_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af61e5f3c8dbcb67ee83e1894d483cbe9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileSampler::profile_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>prof_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a015f23150cec00cc62e14527830d0c0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileSampler::region_names </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -287,6 +379,22 @@ Protected Attributes</h2></td></tr>
 
 <p>Generate a post-run report for a single node. </p>
 <p>Generates a post-run report by telling each <a class="el" href="classgeopm_1_1_profile_rank_sampler.html" title="Retrieves sample data from a single application rank through a shared memory interface. ">ProfileRankSampler</a> to dump its per-region statistics to a file descriptor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae3a58bae858e6ee120fceb882a8f6ac1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::ProfileSampler::report_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>report_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -348,7 +456,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab9556118bd58d494791defe1dabbb925"></a>
+<a class="anchor" id="a7be980490986db8e551c42a0ced42951"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -356,7 +464,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_shared_memory.html">SharedMemory</a> geopm::ProfileSampler::m_ctl_shmem</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_shared_memory.html">SharedMemory</a>* geopm::ProfileSampler::m_ctl_shmem</td>
         </tr>
       </table>
   </td>
@@ -366,6 +474,66 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Holds the shared memory region used for application coordination and control. </p>
+
+</div>
+</div>
+<a class="anchor" id="a109a25a35023f3d687ca14f38e52f78a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::ProfileSampler::m_do_report</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac9e495ad5ebf7ca4575d047368de38e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;std::string&gt; geopm::ProfileSampler::m_name_set</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad83da1771e792665d9adbf54c17b8cb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string geopm::ProfileSampler::m_profile_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -390,7 +558,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a028032c7686114bce1082e6616357139"></a>
+<a class="anchor" id="a54ac13ae3ce246c306e52924b02ed835"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -398,7 +566,27 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t geopm::ProfileSampler::m_table_size</td>
+          <td class="memname">std::string geopm::ProfileSampler::m_report_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6748c9f49b7161b73029b7b766848f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t geopm::ProfileSampler::m_table_size</td>
         </tr>
       </table>
   </td>

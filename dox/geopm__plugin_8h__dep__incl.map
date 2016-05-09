@@ -1,7 +1,14 @@
 <map id="src/geopm_plugin.h" name="src/geopm_plugin.h">
-<area shape="rect" id="node2" href="$_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="5,79,163,104"/>
-<area shape="rect" id="node3" href="$geopm__plugin_8c.html" title="src/geopm_plugin.c" alt="" coords="186,79,323,104"/>
-<area shape="rect" id="node4" href="$_governing_decider_8cpp.html" title="src/GoverningDecider.cpp" alt="" coords="335,152,510,177"/>
-<area shape="rect" id="node5" href="$_governing_decider_8hpp.html" title="src/GoverningDecider.hpp" alt="" coords="398,79,573,104"/>
-<area shape="rect" id="node6" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="597,79,758,104"/>
+<area shape="rect" id="node2" href="$_global_policy_8hpp.html" title="src/GlobalPolicy.hpp" alt="" coords="141,79,283,104"/>
+<area shape="rect" id="node3" href="$_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="5,152,131,177"/>
+<area shape="rect" id="node7" href="$_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="307,79,464,104"/>
+<area shape="rect" id="node8" href="$geopm__plugin_8c.html" title="src/geopm_plugin.c" alt="" coords="488,79,625,104"/>
+<area shape="rect" id="node9" href="$_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="649,79,810,104"/>
+<area shape="rect" id="node10" href="$_balancing_decider_8cpp.html" title="plugin/BalancingDecider.cpp" alt="" coords="776,152,966,177"/>
+<area shape="rect" id="node11" href="$_balancing_decider_8hpp.html" title="plugin/BalancingDecider.hpp" alt="" coords="884,79,1074,104"/>
+<area shape="rect" id="node12" href="$_governing_decider_8cpp.html" title="plugin/GoverningDecider.cpp" alt="" coords="1081,152,1274,177"/>
+<area shape="rect" id="node13" href="$_governing_decider_8hpp.html" title="plugin/GoverningDecider.hpp" alt="" coords="1148,79,1341,104"/>
+<area shape="rect" id="node5" href="$_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="155,152,296,177"/>
+<area shape="rect" id="node6" href="$_tree_communicator_8cpp.html" title="src/TreeCommunicator.cpp" alt="" coords="320,152,501,177"/>
+<area shape="rect" id="node4" href="$_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="6,225,131,251"/>
 </map>

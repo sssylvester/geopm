@@ -170,12 +170,16 @@ cases this will match the OpenMP environment. All other keys are ignored.</p></d
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>DYNAMIC MODES</code> section.  The
 only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
 which is the power budget in units of Watts for all compute nodes
-allocated to the job. All other keys are ignored.</p></dd>
+allocated to the job. Optional keys that can be set are the <em>tree_decider</em>,
+<em>leaf_decider</em>, and the <em>platform</em> keys which are used to select custom
+plugins. All other keys are ignored.</p></dd>
 <dt><code>freq_uniform_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_UNIFORM_DYNAMIC mode described in the
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>  man page in the <code>DYNAMIC MODES</code> section.  The
 only key required to be passed to the <code>-d</code> flag is the <em>power_budget</em>
 which is the power budget in units of Watts for all compute nodes
-allocated to the job. All other keys are ignored.</p></dd>
+allocated to the job. Optional keys that can be set are the <em>tree_decider</em>,
+<em>leaf_decider</em>, and the <em>platform</em> keys which are used to select custom
+plugins. All other keys are ignored.</p></dd>
 <dt><code>freq_hybrid_dynamic</code></dt><dd><p>Implements the GEOPM_MODE_FREQ_HYBRID_DYNAMIC mode described in the
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong> man page in the <code>DYNAMIC MODES</code> section.  There
 are three keys required to be passed to the <code>-d</code> flag for the freq_hybrid
@@ -183,8 +187,10 @@ mode: <em>power_budget</em> which is the power budget in units of Watts for all
 compute nodes allocated to the job, <em>num_cpu_max_perf</em> giving the number
 of CPUs running at maximum performance, and <em>affinity</em> which can have a
 value of "compact" or "scatter" describing the distribution of the non-maximum
-performance CPUs. In most cases this will match the OpenMP environment. All
-other keys are ignored.</p></dd>
+performance CPUs. In most cases this will match the OpenMP environment.
+Optional keys that can be set are the <em>tree_decider</em>, <em>leaf_decider</em>, and the
+<em>platform</em> keys which are used to select custom plugins. All other keys are
+ignored.</p></dd>
 </dl>
 
 
@@ -201,6 +207,10 @@ other keys are ignored.</p></dd>
 -d tdp_percent:75</p></dd>
 <dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
 -d power_budget:1000000</p></dd>
+<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt and use a custom platform plugin:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+-d power_budget:1000000,platform:broadwell_platform</p></dd>
+<dt>Create a configuration file for global energy optimization with a power budget of 1 MWatt and use custom decider plugins:</dt><dd><p>$ geopmpolicy -c -f geopm.conf -m perf_balance_dynamic \ <br />
+-d power_budget:1000000,tree_decider:uniform_frequency,leaf_decider:max_efficiency</p></dd>
 <dt>Enforce a static policy defined in a preexisting configuration file:</dt><dd><p>$ geopmpolicy -e -f geopm.conf</p></dd>
 <dt>Enforce a static policy where all processors to run at 75% of the Thermal Design Power:</dt><dd><p>$ geopmpolicy -e -m tdp_balance_static -d tdp_percent:75</p></dd>
 <dt>Save off the current state of the system MSRs:</dt><dd><p>$ geopmpolicy -s -f geopm_restore.log</p></dd>
@@ -211,13 +221,15 @@ other keys are ignored.</p></dd>
 
 <h2 id="COPYRIGHT">COPYRIGHT</h2>
 
-<p>Copyright (C) 2015 Intel Corporation. All rights reserved.</p>
+<p>Copyright (C) 2015, 2016, Intel Corporation. All rights reserved.</p>
 
 <h2 id="SEE-ALSO">SEE ALSO</h2>
 
 <p><strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong>,
+<strong><span class="man-ref">geopm_comm<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>,
+<strong><span class="man-ref">geopm_fortran<span class="s">(3)</span></span></strong>,
 <strong><a class="man-ref" href="geopm_omp.3.html">geopm_omp<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_policy_c.3.html">geopm_policy_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
@@ -228,7 +240,7 @@ other keys are ignored.</p></dd>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'>Intel Corporation</li>
-    <li class='tc'>December 2015</li>
+    <li class='tc'>May 2016</li>
     <li class='tr'>geopmpolicy(1)</li>
   </ol>
 

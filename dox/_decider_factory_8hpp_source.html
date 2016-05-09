@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_decider_factory_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2015, Intel Corporation</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2015, 2016, Intel Corporation</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions</span></div>
@@ -125,39 +125,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef DECIDERFACTORY_HPP_INCLUDE</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define DECIDERFACTORY_HPP_INCLUDE</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_decider_8hpp.html">Decider.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegeopm.html">geopm</a></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classgeopm_1_1_decider_factory.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">DeciderFactory</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">DeciderFactory</a>(std::unique_ptr&lt;Decider&gt; <a class="code" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgeopm_1_1_decider_factory.html#aa3c8e9522a8419ba05facf0d5a52e6c0">~DeciderFactory</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="classgeopm_1_1_decider.html">Decider</a> *<a class="code" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>(<span class="keyword">const</span> std::string &amp;description);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4">register_decider</a>(std::unique_ptr&lt;Decider&gt; decider);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">// Holds all registered concrete Decider instances</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            std::vector&lt;Decider*&gt; deciders;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classgeopm_1_1_decider_factory.html">   51</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgeopm_1_1_decider_factory.html">DeciderFactory</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">DeciderFactory</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">DeciderFactory</a>(std::unique_ptr&lt;Decider&gt; <a class="code" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgeopm_1_1_decider_factory.html#aa3c8e9522a8419ba05facf0d5a52e6c0">~DeciderFactory</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="classgeopm_1_1_decider.html">Decider</a> *<a class="code" href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">decider</a>(<span class="keyword">const</span> std::string &amp;description);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4">register_decider</a>(std::unique_ptr&lt;Decider&gt; decider);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">// @brief Holds all registered concrete Decider instances</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            std::list&lt;Decider*&gt; decider_list;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="_decider_8hpp_html"><div class="ttname"><a href="_decider_8hpp.html">Decider.hpp</a></div></div>
-<div class="ttc" id="classgeopm_1_1_decider_factory_html_ab26707391950878dd47400227a10e0e4"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4">geopm::DeciderFactory::register_decider</a></div><div class="ttdeci">void register_decider(std::unique_ptr&lt; Decider &gt; decider)</div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:85</div></div>
-<div class="ttc" id="classgeopm_1_1_decider_factory_html_ab31fa11874600fe47db5a1616e28910f"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">geopm::DeciderFactory::decider</a></div><div class="ttdeci">Decider * decider(const std::string &amp;description)</div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:67</div></div>
-<div class="ttc" id="classgeopm_1_1_decider_html"><div class="ttname"><a href="classgeopm_1_1_decider.html">geopm::Decider</a></div><div class="ttdef"><b>Definition:</b> Decider.hpp:43</div></div>
-<div class="ttc" id="classgeopm_1_1_decider_factory_html_abc63a278317b35e752696f22ece89916"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">geopm::DeciderFactory::DeciderFactory</a></div><div class="ttdeci">DeciderFactory()</div><div class="ttdoc">DeciderFactory constructors. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:48</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_factory_html_ab26707391950878dd47400227a10e0e4"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#ab26707391950878dd47400227a10e0e4">geopm::DeciderFactory::register_decider</a></div><div class="ttdeci">void register_decider(std::unique_ptr&lt; Decider &gt; decider)</div><div class="ttdoc">Concrete Deciders register with the factory through this API. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:97</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_factory_html_ab31fa11874600fe47db5a1616e28910f"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#ab31fa11874600fe47db5a1616e28910f">geopm::DeciderFactory::decider</a></div><div class="ttdeci">Decider * decider(const std::string &amp;description)</div><div class="ttdoc">Returns an abstract Decider pointer to a concrete decider. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:78</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_html"><div class="ttname"><a href="classgeopm_1_1_decider.html">geopm::Decider</a></div><div class="ttdoc">Abstract base class for power/frequency steering algorithms. </div><div class="ttdef"><b>Definition:</b> Decider.hpp:48</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_factory_html_abc63a278317b35e752696f22ece89916"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#abc63a278317b35e752696f22ece89916">geopm::DeciderFactory::DeciderFactory</a></div><div class="ttdeci">DeciderFactory()</div><div class="ttdoc">DeciderFactory default constructor. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:59</div></div>
 <div class="ttc" id="namespacegeopm_html"><div class="ttname"><a href="namespacegeopm.html">geopm</a></div><div class="ttdef"><b>Definition:</b> CircularBuffer.hpp:41</div></div>
-<div class="ttc" id="classgeopm_1_1_decider_factory_html"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html">geopm::DeciderFactory</a></div><div class="ttdef"><b>Definition:</b> DeciderFactory.hpp:44</div></div>
-<div class="ttc" id="classgeopm_1_1_decider_factory_html_aa3c8e9522a8419ba05facf0d5a52e6c0"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#aa3c8e9522a8419ba05facf0d5a52e6c0">geopm::DeciderFactory::~DeciderFactory</a></div><div class="ttdeci">virtual ~DeciderFactory()</div><div class="ttdoc">DeciderFactory destructor. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:59</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_factory_html"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html">geopm::DeciderFactory</a></div><div class="ttdoc">Factory object managing decider objects. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.hpp:51</div></div>
+<div class="ttc" id="classgeopm_1_1_decider_factory_html_aa3c8e9522a8419ba05facf0d5a52e6c0"><div class="ttname"><a href="classgeopm_1_1_decider_factory.html#aa3c8e9522a8419ba05facf0d5a52e6c0">geopm::DeciderFactory::~DeciderFactory</a></div><div class="ttdeci">virtual ~DeciderFactory()</div><div class="ttdoc">DeciderFactory destructor, virtual. </div><div class="ttdef"><b>Definition:</b> DeciderFactory.cpp:70</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

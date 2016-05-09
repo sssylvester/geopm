@@ -90,12 +90,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classgeopm_1_1_decider-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">geopm::Decider Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class for power/frequency steering algorithms.  
+ <a href="classgeopm_1_1_decider.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_decider_8hpp_source.html">Decider.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -103,37 +105,39 @@ Inheritance diagram for geopm::Decider:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_decider__inherit__graph.png" border="0" usemap="#geopm_1_1_decider_inherit__map" alt="Inheritance graph"/></div>
 <map name="geopm_1_1_decider_inherit__map" id="geopm_1_1_decider_inherit__map">
-<area shape="rect" id="node2" href="classgeopm_1_1_leaf_decider.html" title="geopm::LeafDecider" alt="" coords="23,79,165,104"/>
-<area shape="rect" id="node4" href="classgeopm_1_1_tree_decider.html" title="geopm::TreeDecider" alt="" coords="188,79,330,104"/>
-<area shape="rect" id="node3" href="classgeopm_1_1_governing_decider.html" title="geopm::GoverningDecider" alt="" coords="5,152,182,177"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_balancing_decider.html" title="Simple implementation of a power balancing tree decider. " alt="" coords="5,79,179,104"/>
+<area shape="rect" id="node3" href="classgeopm_1_1_governing_decider.html" title="Simple implementation of a power governing leaf decider. " alt="" coords="204,79,381,104"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab21573eacef1087d0a6eef6e1fa5777c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#ab21573eacef1087d0a6eef6e1fa5777c">Decider</a> ()</td></tr>
+<tr class="memdesc:ab21573eacef1087d0a6eef6e1fa5777c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> default constructor.  <a href="#ab21573eacef1087d0a6eef6e1fa5777c">More...</a><br /></td></tr>
 <tr class="separator:ab21573eacef1087d0a6eef6e1fa5777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeecdc00a0f6aab4f13b020d4d61696e5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#aeecdc00a0f6aab4f13b020d4d61696e5">~Decider</a> ()</td></tr>
+<tr class="memdesc:aeecdc00a0f6aab4f13b020d4d61696e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> destructor, virtual.  <a href="#aeecdc00a0f6aab4f13b020d4d61696e5">More...</a><br /></td></tr>
 <tr class="separator:aeecdc00a0f6aab4f13b020d4d61696e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f1ad0ddf0b4430d16541ef3d8fb8524"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a8f1ad0ddf0b4430d16541ef3d8fb8524">update_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_msg, <a class="el" href="classgeopm_1_1_region.html">Region</a> *curr_region)</td></tr>
-<tr class="separator:a8f1ad0ddf0b4430d16541ef3d8fb8524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c7e9593a53336bb38513db0b2f52d84"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a9c7e9593a53336bb38513db0b2f52d84">is_converged</a> (void)</td></tr>
-<tr class="separator:a9c7e9593a53336bb38513db0b2f52d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5ce3839a347fe3c57824983d246141"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a0d5ce3839a347fe3c57824983d246141">get_policy</a> (<a class="el" href="classgeopm_1_1_platform.html">Platform</a> const *platform, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;policy)=0</td></tr>
-<tr class="separator:a0d5ce3839a347fe3c57824983d246141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cbd2dd0500b42bbf980d68440f2c56"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgeopm_1_1_decider.html">Decider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a34cbd2dd0500b42bbf980d68440f2c56">clone</a> () const  =0</td></tr>
+<tr class="memdesc:a34cbd2dd0500b42bbf980d68440f2c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a pointer of the derived class, virtual.  <a href="#a34cbd2dd0500b42bbf980d68440f2c56">More...</a><br /></td></tr>
+<tr class="separator:a34cbd2dd0500b42bbf980d68440f2c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d139375ddf051b32c08637eecddc621"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a5d139375ddf051b32c08637eecddc621">update_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;policy_msg, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)</td></tr>
+<tr class="memdesc:a5d139375ddf051b32c08637eecddc621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the power split among power control domains when recieving a new global budget, vitual.  <a href="#a5d139375ddf051b32c08637eecddc621">More...</a><br /></td></tr>
+<tr class="separator:a5d139375ddf051b32c08637eecddc621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96696acf33b2eb4a1d4cd1ca815bd164"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a96696acf33b2eb4a1d4cd1ca815bd164">update_policy</a> (<a class="el" href="classgeopm_1_1_region.html">Region</a> &amp;curr_region, <a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;curr_policy)=0</td></tr>
+<tr class="memdesc:a96696acf33b2eb4a1d4cd1ca815bd164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a new power policy for the region based on telemery data, virtual.  <a href="#a96696acf33b2eb4a1d4cd1ca815bd164">More...</a><br /></td></tr>
+<tr class="separator:a96696acf33b2eb4a1d4cd1ca815bd164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168515a8fedef04521a4a8a4b83d969b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a168515a8fedef04521a4a8a4b83d969b">decider_supported</a> (const std::string &amp;descripton)=0</td></tr>
+<tr class="memdesc:a168515a8fedef04521a4a8a4b83d969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if th edescription string matches capabilities of decider, virtual.  <a href="#a168515a8fedef04521a4a8a4b83d969b">More...</a><br /></td></tr>
 <tr class="separator:a168515a8fedef04521a4a8a4b83d969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a0dfc0c04fd7ae5e81aafb0782e13e921">name</a> (void) const  =0</td></tr>
+<tr class="memdesc:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the decider, virtual.  <a href="#a0dfc0c04fd7ae5e81aafb0782e13e921">More...</a><br /></td></tr>
 <tr class="separator:a0dfc0c04fd7ae5e81aafb0782e13e921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a6635a5229b2466df845f8a42fd001dfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#a6635a5229b2466df845f8a42fd001dfa">m_is_converged</a></td></tr>
-<tr class="separator:a6635a5229b2466df845f8a42fd001dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfdd6e69b59ff5cf86878824c851122f"><td class="memItemLeft" align="right" valign="top">std::map&lt; long, <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_decider.html#abfdd6e69b59ff5cf86878824c851122f">m_region_policy_msg_map</a></td></tr>
-<tr class="separator:abfdd6e69b59ff5cf86878824c851122f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class for power/frequency steering algorithms. </p>
+<p>Defines the interfaces for any power/frequency steering algorithms. These can be implemented as part of the geopm library or as plugins to be loaded at runtime. There are two types of deciders. The first is a leaf decider which controls power/frequency within a single node. The second is a tree decider ehich controls power/frequency across a set of nodes that are direct decendants of it in the geopm tree hierarchy. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab21573eacef1087d0a6eef6e1fa5777c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +150,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> default constructor. </p>
 
 </div>
 </div>
@@ -170,9 +176,38 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classgeopm_1_1_decider.html" title="Abstract base class for power/frequency steering algorithms. ">Decider</a> destructor, virtual. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a34cbd2dd0500b42bbf980d68440f2c56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classgeopm_1_1_decider.html">Decider</a>* geopm::Decider::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a pointer of the derived class, virtual. </p>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a719742425ac602f32c8dfc4e74416246">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a61e1d80cb1e4c3303dd84df2dadecd54">geopm::GoverningDecider</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a168515a8fedef04521a4a8a4b83d969b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -195,67 +230,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_tree_decider.html#af2d43c29d4eec09bdcaa80c8367c5bae">geopm::TreeDecider</a>, <a class="el" href="classgeopm_1_1_leaf_decider.html#ada813ce2f5e2afe1c7a3675c79c3685b">geopm::LeafDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#aeca819ccecbad441299818c8766bc698">geopm::GoverningDecider</a>.</p>
+<p>Return true if th edescription string matches capabilities of decider, virtual. </p>
 
-</div>
-</div>
-<a class="anchor" id="a0d5ce3839a347fe3c57824983d246141"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void geopm::Decider::get_policy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_platform.html">Platform</a> const *&#160;</td>
-          <td class="paramname"><em>platform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
-          <td class="paramname"><em>policy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgeopm_1_1_tree_decider.html#a9bde070585a7ec24f9f5e7003ee6c3bc">geopm::TreeDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a12634d53fa92c36da9117e993216d724">geopm::GoverningDecider</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9c7e9593a53336bb38513db0b2f52d84"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool geopm::Decider::is_converged </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a887acd09b70f9d10af529136f4b0bb92">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#aeca819ccecbad441299818c8766bc698">geopm::GoverningDecider</a>.</p>
 
 </div>
 </div>
@@ -281,11 +258,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_tree_decider.html#a7b47a82a3f55c3f565ae83e554399a64">geopm::TreeDecider</a>, <a class="el" href="classgeopm_1_1_leaf_decider.html#a17bfac904520bdfea45643e95fd6e1a3">geopm::LeafDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a5a7b3b8573b3f6af6e874860bb95c7fe">geopm::GoverningDecider</a>.</p>
+<p>Return the name of the decider, virtual. </p>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a50f1e8108bb05e6c37505501ac66bb1d">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a5a7b3b8573b3f6af6e874860bb95c7fe">geopm::GoverningDecider</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8f1ad0ddf0b4430d16541ef3d8fb8524"></a>
+<a class="anchor" id="a5d139375ddf051b32c08637eecddc621"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -293,7 +272,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::Decider::update_policy </td>
+          <td class="memname">bool geopm::Decider::update_policy </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;&#160;</td>
           <td class="paramname"><em>policy_msg</em>, </td>
@@ -301,8 +280,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_region.html">Region</a> *&#160;</td>
-          <td class="paramname"><em>curr_region</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
+          <td class="paramname"><em>curr_policy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -317,10 +296,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Updates the power split among power control domains when recieving a new global budget, vitual. </p>
+
+<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a10c4726f62b90df5a8a513592cb7a341">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a806d1d02fd7ca1563fc21fff37c841fe">geopm::GoverningDecider</a>.</p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a6635a5229b2466df845f8a42fd001dfa"></a>
+<a class="anchor" id="a96696acf33b2eb4a1d4cd1ca815bd164"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -328,35 +310,33 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::Decider::m_is_converged</td>
+          <td class="memname">virtual bool geopm::Decider::update_policy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgeopm_1_1_region.html">Region</a> &amp;&#160;</td>
+          <td class="paramname"><em>curr_region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> &amp;&#160;</td>
+          <td class="paramname"><em>curr_policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="abfdd6e69b59ff5cf86878824c851122f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;long, <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&gt; geopm::Decider::m_region_policy_msg_map</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Calculate a new power policy for the region based on telemery data, virtual. </p>
+
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a6228496fb6beb0b2581ff8764c70b71b">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#add5feebbd6b9947631f6ff81f0cdbcd7">geopm::GoverningDecider</a>.</p>
 
 </div>
 </div>

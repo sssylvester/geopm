@@ -10,8 +10,10 @@ var searchData=
   ['platformtopology_2ehpp',['PlatformTopology.hpp',['../_platform_topology_8hpp.html',1,'']]],
   ['policy_2ecpp',['Policy.cpp',['../_policy_8cpp.html',1,'']]],
   ['policy_2ehpp',['Policy.hpp',['../_policy_8hpp.html',1,'']]],
-  ['powermodel_2ecpp',['PowerModel.cpp',['../_power_model_8cpp.html',1,'']]],
-  ['powermodel_2ehpp',['PowerModel.hpp',['../_power_model_8hpp.html',1,'']]],
+  ['policyflags_2ecpp',['PolicyFlags.cpp',['../_policy_flags_8cpp.html',1,'']]],
+  ['policyflags_2ehpp',['PolicyFlags.hpp',['../_policy_flags_8hpp.html',1,'']]],
   ['profile_2ecpp',['Profile.cpp',['../_profile_8cpp.html',1,'']]],
-  ['profile_2ehpp',['Profile.hpp',['../_profile_8hpp.html',1,'']]]
+  ['profile_2ehpp',['Profile.hpp',['../_profile_8hpp.html',1,'']]],
+  ['profilethread_2ecpp',['ProfileThread.cpp',['../_profile_thread_8cpp.html',1,'']]],
+  ['profilethread_2ehpp',['ProfileThread.hpp',['../_profile_thread_8hpp.html',1,'']]]
 ];

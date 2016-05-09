@@ -1,6 +1,4 @@
 <map id="src/geopm_ctl_spawn.c" name="src/geopm_ctl_spawn.c">
-<area shape="rect" id="node4" href="$geopm_8h.html" title="geopm.h" alt="" coords="226,79,300,104"/>
-<area shape="rect" id="node8" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="429,152,543,177"/>
-<area shape="rect" id="node9" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="134,152,269,177"/>
-<area shape="rect" id="node10" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="159,225,265,251"/>
+<area shape="rect" id="node4" href="$geopm_8h.html" title="geopm.h" alt="" coords="143,79,216,104"/>
+<area shape="rect" id="node8" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="338,152,451,177"/>
 </map>

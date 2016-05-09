@@ -95,21 +95,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="geopm__message_8h_source.html">geopm_message.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_observation_8hpp_source.html">Observation.hpp</a>&quot;</code><br />
+<code>#include &lt;stack&gt;</code><br />
 <code>#include &quot;<a class="el" href="_policy_8hpp_source.html">Policy.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_circular_buffer_8hpp_source.html">CircularBuffer.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Region.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_region_8hpp__incl.png" border="0" usemap="#src_2_region_8hpp" alt=""/></div>
 <map name="src_2_region_8hpp" id="src_2_region_8hpp">
-<area shape="rect" id="node4" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="78,152,213,177"/>
-<area shape="rect" id="node9" href="_observation_8hpp.html" title="Observation.hpp" alt="" coords="314,79,433,104"/>
-<area shape="rect" id="node16" href="_policy_8hpp.html" title="Policy.hpp" alt="" coords="209,79,290,104"/>
-<area shape="rect" id="node6" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="94,225,200,251"/>
-<area shape="rect" id="node11" href="_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="411,152,539,177"/>
-<area shape="rect" id="node13" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="534,225,640,251"/>
-<area shape="rect" id="node15" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="469,299,577,324"/>
+<area shape="rect" id="node5" href="_policy_8hpp.html" title="Policy.hpp" alt="" coords="570,79,652,104"/>
+<area shape="rect" id="node18" href="_circular_buffer_8hpp.html" title="CircularBuffer.hpp" alt="" coords="322,79,450,104"/>
+<area shape="rect" id="node9" href="geopm__message_8h.html" title="geopm_message.h" alt="" coords="693,152,828,177"/>
+<area shape="rect" id="node15" href="_policy_flags_8hpp.html" title="PolicyFlags.hpp" alt="" coords="553,152,669,177"/>
+<area shape="rect" id="node11" href="geopm__time_8h.html" title="geopm_time.h" alt="" coords="673,225,779,251"/>
+<area shape="rect" id="node16" href="geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="525,225,639,251"/>
+<area shape="rect" id="node20" href="_exception_8hpp.html" title="Exception.hpp" alt="" coords="143,152,249,177"/>
+<area shape="rect" id="node22" href="geopm__error_8h.html" title="geopm_error.h" alt="" coords="206,225,314,251"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -117,24 +118,24 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_region_8hpp__dep__incl.png" border="0" usemap="#src_2_region_8hppdep" alt=""/></div>
 <map name="src_2_region_8hppdep" id="src_2_region_8hppdep">
-<area shape="rect" id="node2" href="_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="693,152,811,177"/>
-<area shape="rect" id="node4" href="_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="525,372,651,397"/>
-<area shape="rect" id="node15" href="_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="982,225,1135,251"/>
-<area shape="rect" id="node17" href="_power_model_8hpp.html" title="src/PowerModel.hpp" alt="" coords="822,79,965,104"/>
-<area shape="rect" id="node19" href="_region_8cpp.html" title="src/Region.cpp" alt="" coords="1051,79,1162,104"/>
-<area shape="rect" id="node3" href="_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="789,225,951,251"/>
-<area shape="rect" id="node6" href="_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="767,299,908,324"/>
-<area shape="rect" id="node7" href="_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="625,299,743,324"/>
-<area shape="rect" id="node9" href="_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="277,225,391,251"/>
-<area shape="rect" id="node8" href="_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="982,299,1143,324"/>
-<area shape="rect" id="node5" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="525,445,650,471"/>
-<area shape="rect" id="node10" href="_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="255,299,414,324"/>
-<area shape="rect" id="node11" href="_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="230,372,388,397"/>
-<area shape="rect" id="node12" href="_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="438,299,551,324"/>
-<area shape="rect" id="node13" href="_governing_decider_8hpp.html" title="src/GoverningDecider.hpp" alt="" coords="5,299,181,324"/>
-<area shape="rect" id="node14" href="_governing_decider_8cpp.html" title="src/GoverningDecider.cpp" alt="" coords="6,372,180,397"/>
-<area shape="rect" id="node16" href="_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="1168,299,1320,324"/>
-<area shape="rect" id="node18" href="_power_model_8cpp.html" title="src/PowerModel.cpp" alt="" coords="835,152,977,177"/>
+<area shape="rect" id="node2" href="_platform_8hpp.html" title="src/Platform.hpp" alt="" coords="298,79,417,104"/>
+<area shape="rect" id="node4" href="_controller_8hpp.html" title="src/Controller.hpp" alt="" coords="673,225,799,251"/>
+<area shape="rect" id="node9" href="_r_a_p_l_platform_8hpp.html" title="src/RAPLPlatform.hpp" alt="" coords="472,152,625,177"/>
+<area shape="rect" id="node11" href="_decider_8hpp.html" title="src/Decider.hpp" alt="" coords="842,79,956,104"/>
+<area shape="rect" id="node19" href="_region_8cpp.html" title="src/Region.cpp" alt="" coords="980,79,1090,104"/>
+<area shape="rect" id="node3" href="_platform_factory_8hpp.html" title="src/PlatformFactory.hpp" alt="" coords="277,152,438,177"/>
+<area shape="rect" id="node6" href="_global_policy_8cpp.html" title="src/GlobalPolicy.cpp" alt="" coords="147,225,288,251"/>
+<area shape="rect" id="node7" href="_platform_8cpp.html" title="src/Platform.cpp" alt="" coords="5,225,123,251"/>
+<area shape="rect" id="node8" href="_platform_factory_8cpp.html" title="src/PlatformFactory.cpp" alt="" coords="312,225,473,251"/>
+<area shape="rect" id="node5" href="_controller_8cpp.html" title="src/Controller.cpp" alt="" coords="674,299,799,324"/>
+<area shape="rect" id="node10" href="_r_a_p_l_platform_8cpp.html" title="src/RAPLPlatform.cpp" alt="" coords="497,225,650,251"/>
+<area shape="rect" id="node12" href="_decider_factory_8hpp.html" title="src/DeciderFactory.hpp" alt="" coords="704,152,862,177"/>
+<area shape="rect" id="node13" href="_decider_factory_8cpp.html" title="src/DeciderFactory.cpp" alt="" coords="823,225,980,251"/>
+<area shape="rect" id="node14" href="_decider_8cpp.html" title="src/Decider.cpp" alt="" coords="936,152,1049,177"/>
+<area shape="rect" id="node15" href="_balancing_decider_8hpp.html" title="plugin/BalancingDecider.hpp" alt="" coords="1073,152,1263,177"/>
+<area shape="rect" id="node17" href="_governing_decider_8hpp.html" title="plugin/GoverningDecider.hpp" alt="" coords="1288,152,1481,177"/>
+<area shape="rect" id="node16" href="_balancing_decider_8cpp.html" title="plugin/BalancingDecider.cpp" alt="" coords="1073,225,1263,251"/>
+<area shape="rect" id="node18" href="_governing_decider_8cpp.html" title="plugin/GoverningDecider.cpp" alt="" coords="1288,225,1480,251"/>
 </map>
 </div>
 </div>
@@ -143,7 +144,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html">geopm::Region</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class encapsulates all state data for a specific application execution region.  <a href="classgeopm_1_1_region.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class encapsulates all recorded data for a specific application execution region.  <a href="classgeopm_1_1_region.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

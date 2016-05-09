@@ -1,7 +1,5 @@
 <map id="src/geopmpolicy_main.c" name="src/geopmpolicy_main.c">
-<area shape="rect" id="node12" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="914,79,1028,104"/>
-<area shape="rect" id="node13" href="$geopm__message_8h.html" title="geopm_message.h" alt="" coords="1250,79,1385,104"/>
-<area shape="rect" id="node18" href="$geopm__version_8h.html" title="geopm_version.h" alt="" coords="1102,79,1226,104"/>
-<area shape="rect" id="node19" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="381,79,489,104"/>
-<area shape="rect" id="node15" href="$geopm__time_8h.html" title="geopm_time.h" alt="" coords="1319,152,1425,177"/>
+<area shape="rect" id="node12" href="$geopm__policy_8h.html" title="geopm_policy.h" alt="" coords="5,79,119,104"/>
+<area shape="rect" id="node13" href="$geopm__version_8h.html" title="geopm_version.h" alt="" coords="1014,79,1137,104"/>
+<area shape="rect" id="node14" href="$geopm__error_8h.html" title="geopm_error.h" alt="" coords="1162,79,1270,104"/>
 </map>

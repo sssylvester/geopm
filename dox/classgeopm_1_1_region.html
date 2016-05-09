@@ -89,7 +89,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classgeopm_1_1_region-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -97,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>This class encapsulates all state data for a specific application execution region.  
+<p>This class encapsulates all recorded data for a specific application execution region.  
  <a href="classgeopm_1_1_region.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_region_8hpp_source.html">Region.hpp</a>&gt;</code></p>
@@ -106,94 +108,170 @@ Collaboration diagram for geopm::Region:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgeopm_1_1_region__coll__graph.png" border="0" usemap="#geopm_1_1_region_coll__map" alt="Collaboration graph"/></div>
 <map name="geopm_1_1_region_coll__map" id="geopm_1_1_region_coll__map">
-<area shape="rect" id="node2" href="structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="5,5,185,31"/>
-<area shape="rect" id="node3" href="classgeopm_1_1_policy.html" title="geopm::Policy" alt="" coords="209,5,314,31"/>
-<area shape="rect" id="node4" href="classgeopm_1_1_observation.html" title="geopm::Observation" alt="" coords="338,5,479,31"/>
+<area shape="rect" id="node2" href="classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; struct geopm_time_s \&gt;" alt="" coords="15,5,183,44"/>
+<area shape="rect" id="node3" href="classgeopm_1_1_circular_buffer.html" title="geopm::CircularBuffer\l\&lt; std::vector\&lt; double \&gt; \&gt;" alt="" coords="15,68,184,107"/>
+<area shape="rect" id="node4" href="structgeopm__sample__message__s.html" title="MPI message structure for sending sample telemetry data up the tree. " alt="" coords="5,132,193,157"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a23955e4ae777d6db04761ce3420e746c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a23955e4ae777d6db04761ce3420e746c">m_const_e</a> { <a class="el" href="classgeopm_1_1_region.html#a23955e4ae777d6db04761ce3420e746cabe95e24131c6a308ed2252a468000e7b">M_NUM_SAMPLE_HISTORY</a> = 8
+ }<tr class="separator:a23955e4ae777d6db04761ce3420e746c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3506cdb3cfb39c3c6a9126e7c2a2b740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a3506cdb3cfb39c3c6a9126e7c2a2b740">Region</a> (uint64_t <a class="el" href="classgeopm_1_1_region.html#a0626c391bab623869b213f1c1a3ebba7">identifier</a>, int <a class="el" href="classgeopm_1_1_region.html#a727a035f9752b53bcf87f89ddf7ac119">hint</a>, int size)</td></tr>
-<tr class="memdesc:a3506cdb3cfb39c3c6a9126e7c2a2b740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a3506cdb3cfb39c3c6a9126e7c2a2b740">More...</a><br /></td></tr>
-<tr class="separator:a3506cdb3cfb39c3c6a9126e7c2a2b740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3532bf29d34e4bd3aced1c734d2a5343"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a3532bf29d34e4bd3aced1c734d2a5343">Region</a> (uint64_t <a class="el" href="classgeopm_1_1_region.html#a0626c391bab623869b213f1c1a3ebba7">identifier</a>, int <a class="el" href="classgeopm_1_1_region.html#a727a035f9752b53bcf87f89ddf7ac119">hint</a>, int num_domain, int level)</td></tr>
+<tr class="memdesc:a3532bf29d34e4bd3aced1c734d2a5343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a3532bf29d34e4bd3aced1c734d2a5343">More...</a><br /></td></tr>
+<tr class="separator:a3532bf29d34e4bd3aced1c734d2a5343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a89eda6d9924b07b03fe017565e860e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a6a89eda6d9924b07b03fe017565e860e">~Region</a> ()</td></tr>
 <tr class="memdesc:a6a89eda6d9924b07b03fe017565e860e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a6a89eda6d9924b07b03fe017565e860e">More...</a><br /></td></tr>
 <tr class="separator:a6a89eda6d9924b07b03fe017565e860e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ac44359d7f60c496cf8a8bb2c16fc4475">insert</a> (std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;telemetry)</td></tr>
+<tr class="memdesc:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert signal data into internal buffers.  <a href="#ac44359d7f60c496cf8a8bb2c16fc4475">More...</a><br /></td></tr>
+<tr class="separator:ac44359d7f60c496cf8a8bb2c16fc4475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142e3b305be4dba19009e0170fa76ba5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a142e3b305be4dba19009e0170fa76ba5">insert</a> (const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;sample)</td></tr>
+<tr class="memdesc:a142e3b305be4dba19009e0170fa76ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert signal data into internal buffers.  <a href="#a142e3b305be4dba19009e0170fa76ba5">More...</a><br /></td></tr>
+<tr class="separator:a142e3b305be4dba19009e0170fa76ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2368a709e5f2aa99e7b176b0685f017d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a2368a709e5f2aa99e7b176b0685f017d">clear</a> (void)</td></tr>
+<tr class="memdesc:a2368a709e5f2aa99e7b176b0685f017d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear data from internal buffers.  <a href="#a2368a709e5f2aa99e7b176b0685f017d">More...</a><br /></td></tr>
+<tr class="separator:a2368a709e5f2aa99e7b176b0685f017d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0626c391bab623869b213f1c1a3ebba7"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a0626c391bab623869b213f1c1a3ebba7">identifier</a> (void) const </td></tr>
 <tr class="memdesc:a0626c391bab623869b213f1c1a3ebba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the unique region identifier.  <a href="#a0626c391bab623869b213f1c1a3ebba7">More...</a><br /></td></tr>
 <tr class="separator:a0626c391bab623869b213f1c1a3ebba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1aff7cf6c4618c94f1c4f0672e2d606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#af1aff7cf6c4618c94f1c4f0672e2d606">observation_insert</a> (int buffer_index, double value)</td></tr>
-<tr class="memdesc:af1aff7cf6c4618c94f1c4f0672e2d606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a single observation sample for this region.  <a href="#af1aff7cf6c4618c94f1c4f0672e2d606">More...</a><br /></td></tr>
-<tr class="separator:af1aff7cf6c4618c94f1c4f0672e2d606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a727a035f9752b53bcf87f89ddf7ac119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a727a035f9752b53bcf87f89ddf7ac119">hint</a> (void) const </td></tr>
 <tr class="memdesc:a727a035f9752b53bcf87f89ddf7ac119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the compute characteristic hint for this region.  <a href="#a727a035f9752b53bcf87f89ddf7ac119">More...</a><br /></td></tr>
 <tr class="separator:a727a035f9752b53bcf87f89ddf7ac119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4131597c10d1d4bd138abfe6dd6b0429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a4131597c10d1d4bd138abfe6dd6b0429">policy</a> (<a class="el" href="classgeopm_1_1_policy.html">Policy</a> *policy)</td></tr>
-<tr class="memdesc:a4131597c10d1d4bd138abfe6dd6b0429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the power policy for this region.  <a href="#a4131597c10d1d4bd138abfe6dd6b0429">More...</a><br /></td></tr>
-<tr class="separator:a4131597c10d1d4bd138abfe6dd6b0429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b0d71e1483771dfefbeea6f95973153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a1b0d71e1483771dfefbeea6f95973153">policy</a> (void)</td></tr>
-<tr class="memdesc:a1b0d71e1483771dfefbeea6f95973153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the power policy for this region.  <a href="#a1b0d71e1483771dfefbeea6f95973153">More...</a><br /></td></tr>
-<tr class="separator:a1b0d71e1483771dfefbeea6f95973153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe4101948c23bd31034fb24877fefa97"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#afe4101948c23bd31034fb24877fefa97">last_policy</a> ()</td></tr>
-<tr class="memdesc:afe4101948c23bd31034fb24877fefa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve The last policy message sent down for this region. Used to compare with new incoming message to see if the policy has changed.  <a href="#afe4101948c23bd31034fb24877fefa97">More...</a><br /></td></tr>
-<tr class="separator:afe4101948c23bd31034fb24877fefa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c285ff71f26768da48b6229101efea4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a2c285ff71f26768da48b6229101efea4">split_policy</a> (void)</td></tr>
-<tr class="memdesc:a2c285ff71f26768da48b6229101efea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split this regions power policy budget and create new policy messages for each child control domain.  <a href="#a2c285ff71f26768da48b6229101efea4">More...</a><br /></td></tr>
-<tr class="separator:a2c285ff71f26768da48b6229101efea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f027f2f3d49b5b8b6651c82e9546105"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a1f027f2f3d49b5b8b6651c82e9546105">child_sample</a> (void)</td></tr>
-<tr class="memdesc:a1f027f2f3d49b5b8b6651c82e9546105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a set of sample message for each child control domain.  <a href="#a1f027f2f3d49b5b8b6651c82e9546105">More...</a><br /></td></tr>
-<tr class="separator:a1f027f2f3d49b5b8b6651c82e9546105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bd200bfb5c2f58574e773c5dde894b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a8bd200bfb5c2f58574e773c5dde894b6">last_policy</a> (const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;<a class="el" href="classgeopm_1_1_region.html#a4131597c10d1d4bd138abfe6dd6b0429">policy</a>)</td></tr>
-<tr class="memdesc:a8bd200bfb5c2f58574e773c5dde894b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set our saved copy of the last updated policy message for this region.  <a href="#a8bd200bfb5c2f58574e773c5dde894b6">More...</a><br /></td></tr>
-<tr class="separator:a8bd200bfb5c2f58574e773c5dde894b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5765848e8203b7c5e4ff284b0d541b2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a5765848e8203b7c5e4ff284b0d541b2f">observation_mean</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:a5765848e8203b7c5e4ff284b0d541b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the mean of all values in the requested buffer.  <a href="#a5765848e8203b7c5e4ff284b0d541b2f">More...</a><br /></td></tr>
-<tr class="separator:a5765848e8203b7c5e4ff284b0d541b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d3777efa1a8952fc5cb6f10405ed0f8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a0d3777efa1a8952fc5cb6f10405ed0f8">observation_median</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:a0d3777efa1a8952fc5cb6f10405ed0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the mean of all values in the requested buffer.  <a href="#a0d3777efa1a8952fc5cb6f10405ed0f8">More...</a><br /></td></tr>
-<tr class="separator:a0d3777efa1a8952fc5cb6f10405ed0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11470943ee2ba59157f7c9daba9ef545"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a11470943ee2ba59157f7c9daba9ef545">observation_stddev</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:a11470943ee2ba59157f7c9daba9ef545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the standard deviation of all values in the requested buffer.  <a href="#a11470943ee2ba59157f7c9daba9ef545">More...</a><br /></td></tr>
-<tr class="separator:a11470943ee2ba59157f7c9daba9ef545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c84318a5cdd9d75fc623ce298af9232"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a7c84318a5cdd9d75fc623ce298af9232">observation_max</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:a7c84318a5cdd9d75fc623ce298af9232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the maximum value of all values in the requested buffer.  <a href="#a7c84318a5cdd9d75fc623ce298af9232">More...</a><br /></td></tr>
-<tr class="separator:a7c84318a5cdd9d75fc623ce298af9232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6bdf57478841c9c12ab5e42ba4d7ae5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ae6bdf57478841c9c12ab5e42ba4d7ae5">observation_min</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:ae6bdf57478841c9c12ab5e42ba4d7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the minimum value of all values in the requested buffer.  <a href="#ae6bdf57478841c9c12ab5e42ba4d7ae5">More...</a><br /></td></tr>
-<tr class="separator:ae6bdf57478841c9c12ab5e42ba4d7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c12e9dadc7165439c39001e83f407fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a3c12e9dadc7165439c39001e83f407fe">observation_integrate_time</a> (int buffer_index) const </td></tr>
-<tr class="memdesc:a3c12e9dadc7165439c39001e83f407fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the integrated time over all values in the requested buffer.  <a href="#a3c12e9dadc7165439c39001e83f407fe">More...</a><br /></td></tr>
-<tr class="separator:a3c12e9dadc7165439c39001e83f407fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe900f8b143f03c063f3caac01fa67f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#abe900f8b143f03c063f3caac01fa67f7">sample_message</a> (struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;sample)</td></tr>
+<tr class="memdesc:abe900f8b143f03c063f3caac01fa67f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an aggregated sample to send up the tree. Called once this region has converged to send a sample up to the next level of the tree.  <a href="#abe900f8b143f03c063f3caac01fa67f7">More...</a><br /></td></tr>
+<tr class="separator:abe900f8b143f03c063f3caac01fa67f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8630271f2f3a84c3079d83d08f67a04d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a8630271f2f3a84c3079d83d08f67a04d">signal</a> (int domain_idx, int signal_type)</td></tr>
+<tr class="memdesc:a8630271f2f3a84c3079d83d08f67a04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the latest value.  <a href="#a8630271f2f3a84c3079d83d08f67a04d">More...</a><br /></td></tr>
+<tr class="separator:a8630271f2f3a84c3079d83d08f67a04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455bae5a3314aed0e6145cbe0f259b41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a455bae5a3314aed0e6145cbe0f259b41">num_sample</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a455bae5a3314aed0e6145cbe0f259b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of valid samples for a domain of control.  <a href="#a455bae5a3314aed0e6145cbe0f259b41">More...</a><br /></td></tr>
+<tr class="separator:a455bae5a3314aed0e6145cbe0f259b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b69e891be411e39f691e662ce7ca28"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a67b69e891be411e39f691e662ce7ca28">mean</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a67b69e891be411e39f691e662ce7ca28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the mean signal value for a domain of control.  <a href="#a67b69e891be411e39f691e662ce7ca28">More...</a><br /></td></tr>
+<tr class="separator:a67b69e891be411e39f691e662ce7ca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98fcd6f00b6378c86640683de5c93e78"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a98fcd6f00b6378c86640683de5c93e78">median</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a98fcd6f00b6378c86640683de5c93e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the median signal value for a domain of control.  <a href="#a98fcd6f00b6378c86640683de5c93e78">More...</a><br /></td></tr>
+<tr class="separator:a98fcd6f00b6378c86640683de5c93e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5520eb871a971e1f8fa2b06d004d3363"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a5520eb871a971e1f8fa2b06d004d3363">std_deviation</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a5520eb871a971e1f8fa2b06d004d3363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the standard deviation of the signal values for a domain of control.  <a href="#a5520eb871a971e1f8fa2b06d004d3363">More...</a><br /></td></tr>
+<tr class="separator:a5520eb871a971e1f8fa2b06d004d3363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6050750ed2bf8d1fe796f4a869a5e353"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a6050750ed2bf8d1fe796f4a869a5e353">min</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a6050750ed2bf8d1fe796f4a869a5e353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the min signal value for a domain of control.  <a href="#a6050750ed2bf8d1fe796f4a869a5e353">More...</a><br /></td></tr>
+<tr class="separator:a6050750ed2bf8d1fe796f4a869a5e353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64eb38503be5c929ad2e4a8dce0e76a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ae64eb38503be5c929ad2e4a8dce0e76a">max</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:ae64eb38503be5c929ad2e4a8dce0e76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the max signal value for a domain of control.  <a href="#ae64eb38503be5c929ad2e4a8dce0e76a">More...</a><br /></td></tr>
+<tr class="separator:ae64eb38503be5c929ad2e4a8dce0e76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad0c4e837c151d5be9fbd24fcd81bb5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a8ad0c4e837c151d5be9fbd24fcd81bb5">derivative</a> (int domain_idx, int signal_type) const </td></tr>
+<tr class="memdesc:a8ad0c4e837c151d5be9fbd24fcd81bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the derivative of the signal values for a domain of control.  <a href="#a8ad0c4e837c151d5be9fbd24fcd81bb5">More...</a><br /></td></tr>
+<tr class="separator:a8ad0c4e837c151d5be9fbd24fcd81bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a984286abe1ed1b79cd9e5b6fcaa0a839">integral</a> (int domain_idx, int signal_type, double &amp;delta_time, double &amp;integral) const </td></tr>
+<tr class="memdesc:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate a signal over time.  <a href="#a984286abe1ed1b79cd9e5b6fcaa0a839">More...</a><br /></td></tr>
+<tr class="separator:a984286abe1ed1b79cd9e5b6fcaa0a839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca61d70c5e060c5d8947f987a436f08e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aca61d70c5e060c5d8947f987a436f08e">report</a> (std::ofstream &amp;file_stream, const std::string &amp;name) const </td></tr>
+<tr class="separator:aca61d70c5e060c5d8947f987a436f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0153f865e4391b5c673060f82c24e7c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a0153f865e4391b5c673060f82c24e7c6">check_bounds</a> (int domain_idx, int signal_type, const char *file, int line) const </td></tr>
+<tr class="memdesc:a0153f865e4391b5c673060f82c24e7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bound testing of input parameters.  <a href="#a0153f865e4391b5c673060f82c24e7c6">More...</a><br /></td></tr>
+<tr class="separator:a0153f865e4391b5c673060f82c24e7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89db2dc141ca43f557c2d3ad657594be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a89db2dc141ca43f557c2d3ad657594be">domain_buffer_value</a> (int buffer_idx, int domain_idx, int signal_type)</td></tr>
+<tr class="separator:a89db2dc141ca43f557c2d3ad657594be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5eda64ef996498f9961ebcda6ee0d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a8c5eda64ef996498f9961ebcda6ee0d7">is_telemetry_entry</a> (const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;telemetry, int domain_idx)</td></tr>
+<tr class="separator:a8c5eda64ef996498f9961ebcda6ee0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675a01f459b68323a9721d3d65c571af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a675a01f459b68323a9721d3d65c571af">is_telemetry_exit</a> (const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;telemetry, int domain_idx)</td></tr>
+<tr class="separator:a675a01f459b68323a9721d3d65c571af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969d6e9153c258529c2f6f53845c4499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a969d6e9153c258529c2f6f53845c4499">update_domain_sample</a> (const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;telemetry, int domain_idx)</td></tr>
+<tr class="separator:a969d6e9153c258529c2f6f53845c4499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebb70395977dcd261fb7e55e5052076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a2ebb70395977dcd261fb7e55e5052076">update_signal_matrix</a> (const double *<a class="el" href="classgeopm_1_1_region.html#a8630271f2f3a84c3079d83d08f67a04d">signal</a>, int domain_idx)</td></tr>
+<tr class="separator:a2ebb70395977dcd261fb7e55e5052076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9701cefcf6f337ca3d6912ef4bce8419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a9701cefcf6f337ca3d6912ef4bce8419">update_valid_entries</a> (const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;telemetry, int domain_idx)</td></tr>
+<tr class="separator:a9701cefcf6f337ca3d6912ef4bce8419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9303e85a557ca387d632b2cd5bdf50c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a9303e85a557ca387d632b2cd5bdf50c7">update_stats</a> (const double *<a class="el" href="classgeopm_1_1_region.html#a8630271f2f3a84c3079d83d08f67a04d">signal</a>, int domain_idx)</td></tr>
+<tr class="separator:a9303e85a557ca387d632b2cd5bdf50c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3d4b2714dfaadd02e8a1bc7f57d29c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aed3d4b2714dfaadd02e8a1bc7f57d29c">update_curr_sample</a> (void)</td></tr>
+<tr class="separator:aed3d4b2714dfaadd02e8a1bc7f57d29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ab6406ace3a8b23ced7cc976a391e02f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_observation.html">Observation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ab6406ace3a8b23ced7cc976a391e02f0">m_obs</a></td></tr>
-<tr class="memdesc:ab6406ace3a8b23ced7cc976a391e02f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the <a class="el" href="classgeopm_1_1_observation.html">Observation</a> object which contains samples for this region.  <a href="#ab6406ace3a8b23ced7cc976a391e02f0">More...</a><br /></td></tr>
-<tr class="separator:ab6406ace3a8b23ced7cc976a391e02f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14bbd326e1edcc94318e0f7eeb1ce72b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_policy.html">Policy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a14bbd326e1edcc94318e0f7eeb1ce72b">m_policy</a></td></tr>
-<tr class="memdesc:a14bbd326e1edcc94318e0f7eeb1ce72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the current power policy for this region.  <a href="#a14bbd326e1edcc94318e0f7eeb1ce72b">More...</a><br /></td></tr>
-<tr class="separator:a14bbd326e1edcc94318e0f7eeb1ce72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e7b7c83ed0001786ba16aa1ab21eb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ab1e7b7c83ed0001786ba16aa1ab21eb8">m_split_policy</a></td></tr>
-<tr class="memdesc:ab1e7b7c83ed0001786ba16aa1ab21eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a policy message for each child control domain.  <a href="#ab1e7b7c83ed0001786ba16aa1ab21eb8">More...</a><br /></td></tr>
-<tr class="separator:ab1e7b7c83ed0001786ba16aa1ab21eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a054da75ce888294552cbf6b235163cd0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a054da75ce888294552cbf6b235163cd0">m_child_sample</a></td></tr>
-<tr class="memdesc:a054da75ce888294552cbf6b235163cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a sample message from each child control domain.  <a href="#a054da75ce888294552cbf6b235163cd0">More...</a><br /></td></tr>
-<tr class="separator:a054da75ce888294552cbf6b235163cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8597eee1674d71eb5c99022a9e77fc15"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a8597eee1674d71eb5c99022a9e77fc15">m_last_policy</a></td></tr>
-<tr class="memdesc:a8597eee1674d71eb5c99022a9e77fc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold Saved policy message from last time one was sent.  <a href="#a8597eee1674d71eb5c99022a9e77fc15">More...</a><br /></td></tr>
-<tr class="separator:a8597eee1674d71eb5c99022a9e77fc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77da388bf1e59e0e6fee8f74b9fae96d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a77da388bf1e59e0e6fee8f74b9fae96d">m_identifier</a></td></tr>
-<tr class="memdesc:a77da388bf1e59e0e6fee8f74b9fae96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold unique 64 bit region identifier.  <a href="#a77da388bf1e59e0e6fee8f74b9fae96d">More...</a><br /></td></tr>
-<tr class="separator:a77da388bf1e59e0e6fee8f74b9fae96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27bc4427e843a1ddf3db3ddb6cfdbac6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a27bc4427e843a1ddf3db3ddb6cfdbac6">m_hint</a></td></tr>
-<tr class="memdesc:a27bc4427e843a1ddf3db3ddb6cfdbac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold the compute characteristic hint for this region.  <a href="#a27bc4427e843a1ddf3db3ddb6cfdbac6">More...</a><br /></td></tr>
-<tr class="separator:a27bc4427e843a1ddf3db3ddb6cfdbac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48177f1eec61211cdf71b4c90f3b4a4e"><td class="memItemLeft" align="right" valign="top">const uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a48177f1eec61211cdf71b4c90f3b4a4e">m_identifier</a></td></tr>
+<tr class="memdesc:a48177f1eec61211cdf71b4c90f3b4a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds a unique 64 bit region identifier.  <a href="#a48177f1eec61211cdf71b4c90f3b4a4e">More...</a><br /></td></tr>
+<tr class="separator:a48177f1eec61211cdf71b4c90f3b4a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad866be18512207f44dd91b094cadd8d1"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ad866be18512207f44dd91b094cadd8d1">m_hint</a></td></tr>
+<tr class="memdesc:ad866be18512207f44dd91b094cadd8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the compute characteristic hint for this region.  <a href="#ad866be18512207f44dd91b094cadd8d1">More...</a><br /></td></tr>
+<tr class="separator:ad866be18512207f44dd91b094cadd8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331f11992d350f967774908d876440a9"><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a331f11992d350f967774908d876440a9">m_num_domain</a></td></tr>
+<tr class="memdesc:a331f11992d350f967774908d876440a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numnber of domains reporting to the region.  <a href="#a331f11992d350f967774908d876440a9">More...</a><br /></td></tr>
+<tr class="separator:a331f11992d350f967774908d876440a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af933b29684dbc1cc640a1cf47acf6167"><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#af933b29684dbc1cc640a1cf47acf6167">m_level</a></td></tr>
+<tr class="memdesc:af933b29684dbc1cc640a1cf47acf6167"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level of the tree where the region resides.  <a href="#af933b29684dbc1cc640a1cf47acf6167">More...</a><br /></td></tr>
+<tr class="separator:af933b29684dbc1cc640a1cf47acf6167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b4fcb1431f4faca5d66b68ef8faefb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a09b4fcb1431f4faca5d66b68ef8faefb">m_num_signal</a></td></tr>
+<tr class="memdesc:a09b4fcb1431f4faca5d66b68ef8faefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of distinct signal in a single domain.  <a href="#a09b4fcb1431f4faca5d66b68ef8faefb">More...</a><br /></td></tr>
+<tr class="separator:a09b4fcb1431f4faca5d66b68ef8faefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780cbfd97f7d7e4c3f17d8f3a7902622"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a780cbfd97f7d7e4c3f17d8f3a7902622">m_signal_matrix</a></td></tr>
+<tr class="memdesc:a780cbfd97f7d7e4c3f17d8f3a7902622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary signal matrix storeage used before insertion.  <a href="#a780cbfd97f7d7e4c3f17d8f3a7902622">More...</a><br /></td></tr>
+<tr class="separator:a780cbfd97f7d7e4c3f17d8f3a7902622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3caffea0bfd16bae20cf7d7ba58a624"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ad3caffea0bfd16bae20cf7d7ba58a624">m_entry_telemetry</a></td></tr>
+<tr class="memdesc:ad3caffea0bfd16bae20cf7d7ba58a624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holder for telemerty state on region entry.  <a href="#ad3caffea0bfd16bae20cf7d7ba58a624">More...</a><br /></td></tr>
+<tr class="separator:ad3caffea0bfd16bae20cf7d7ba58a624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6064621e291948f8f87182dfa81b7e66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a6064621e291948f8f87182dfa81b7e66">m_domain_sample</a></td></tr>
+<tr class="memdesc:a6064621e291948f8f87182dfa81b7e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holder for sample data calculated after a domain exits a region.  <a href="#a6064621e291948f8f87182dfa81b7e66">More...</a><br /></td></tr>
+<tr class="separator:a6064621e291948f8f87182dfa81b7e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28954d13c32e4f58072d99900183adb5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a28954d13c32e4f58072d99900183adb5">m_curr_sample</a></td></tr>
+<tr class="memdesc:a28954d13c32e4f58072d99900183adb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current sample message to be sent up the tree.  <a href="#a28954d13c32e4f58072d99900183adb5">More...</a><br /></td></tr>
+<tr class="separator:a28954d13c32e4f58072d99900183adb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbeee93d9bb37f9144945620e4739450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a>&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#abbeee93d9bb37f9144945620e4739450">m_domain_buffer</a></td></tr>
+<tr class="memdesc:abbeee93d9bb37f9144945620e4739450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circular buffer is over time, vector is indexed over both domains and signals.  <a href="#abbeee93d9bb37f9144945620e4739450">More...</a><br /></td></tr>
+<tr class="separator:abbeee93d9bb37f9144945620e4739450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa908df163201a3d88ac7231b65cbe0ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a>&lt; struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aa908df163201a3d88ac7231b65cbe0ce">m_time_buffer</a></td></tr>
+<tr class="memdesc:aa908df163201a3d88ac7231b65cbe0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">time stamp for each entry in the m_domain_buffer.  <a href="#aa908df163201a3d88ac7231b65cbe0ce">More...</a><br /></td></tr>
+<tr class="separator:aa908df163201a3d88ac7231b65cbe0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ae89ac5e2cb510c026de31b372f7e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ae1ae89ac5e2cb510c026de31b372f7e6">m_valid_entries</a></td></tr>
+<tr class="memdesc:ae1ae89ac5e2cb510c026de31b372f7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of valid samples per domain and signal type.  <a href="#ae1ae89ac5e2cb510c026de31b372f7e6">More...</a><br /></td></tr>
+<tr class="separator:ae1ae89ac5e2cb510c026de31b372f7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae3f6d04394b36c347a91a7002b0bdf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a0ae3f6d04394b36c347a91a7002b0bdf">m_min</a></td></tr>
+<tr class="memdesc:a0ae3f6d04394b36c347a91a7002b0bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current minimum signal value per domain and signal type.  <a href="#a0ae3f6d04394b36c347a91a7002b0bdf">More...</a><br /></td></tr>
+<tr class="separator:a0ae3f6d04394b36c347a91a7002b0bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57b9c6b51697286eaa77a107ef5f453"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#ac57b9c6b51697286eaa77a107ef5f453">m_max</a></td></tr>
+<tr class="memdesc:ac57b9c6b51697286eaa77a107ef5f453"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current maximum signal value per domain and signal type.  <a href="#ac57b9c6b51697286eaa77a107ef5f453">More...</a><br /></td></tr>
+<tr class="separator:ac57b9c6b51697286eaa77a107ef5f453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93939e2f7f4ff80549cab0e940198bb5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a93939e2f7f4ff80549cab0e940198bb5">m_sum</a></td></tr>
+<tr class="memdesc:a93939e2f7f4ff80549cab0e940198bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current sum of signal values per domain and signal type.  <a href="#a93939e2f7f4ff80549cab0e940198bb5">More...</a><br /></td></tr>
+<tr class="separator:a93939e2f7f4ff80549cab0e940198bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a64676ec42862e0c3e3def4eb019a0a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#a2a64676ec42862e0c3e3def4eb019a0a">m_sum_squares</a></td></tr>
+<tr class="memdesc:a2a64676ec42862e0c3e3def4eb019a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current sum of squares of signal values per domain and signal type.  <a href="#a2a64676ec42862e0c3e3def4eb019a0a">More...</a><br /></td></tr>
+<tr class="separator:a2a64676ec42862e0c3e3def4eb019a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9560bff6728d35a2212cfe914f202da"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_region.html#aa9560bff6728d35a2212cfe914f202da">m_agg_stats</a></td></tr>
+<tr class="separator:aa9560bff6728d35a2212cfe914f202da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class encapsulates all state data for a specific application execution region. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3506cdb3cfb39c3c6a9126e7c2a2b740"></a>
+<div class="textblock"><p>This class encapsulates all recorded data for a specific application execution region. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a23955e4ae777d6db04761ce3420e746c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classgeopm_1_1_region.html#a23955e4ae777d6db04761ce3420e746c">geopm::Region::m_const_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a23955e4ae777d6db04761ce3420e746cabe95e24131c6a308ed2252a468000e7b"></a>M_NUM_SAMPLE_HISTORY&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3532bf29d34e4bd3aced1c734d2a5343"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -213,7 +291,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>num_domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,7 +312,7 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">identifier</td><td>Unique 64 bit region identifier. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hint</td><td>geopm_policy_hint_e describing the compute characteristics of this region </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of control domains. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_domain</td><td>Number of control domains. </td></tr>
   </table>
   </dd>
 </dl>
@@ -261,12 +345,70 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1f027f2f3d49b5b8b6651c82e9546105"></a>
+<a class="anchor" id="a0153f865e4391b5c673060f82c24e7c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::check_bounds </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bound testing of input parameters. </p>
+<p>Checks the requested domain index and signal type to make sure thay are within bounds of our internal data structures. If they are not an exception is thrown.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>Name of source file where exception was thrown, e.g. preprocessor <b>FILE</b>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Line number in source file where exception was thrown, e.g. preprocessor <b>LINE</b>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2368a709e5f2aa99e7b176b0685f017d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; * geopm::Region::child_sample </td>
+          <td class="memname">void geopm::Region::clear </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -275,8 +417,85 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve a set of sample message for each child control domain. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of sample messages from each child control domain. </dd></dl>
+<p>Clear data from internal buffers. </p>
+<p>Clears aggregated data from the internal buffers. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ad0c4e837c151d5be9fbd24fcd81bb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::derivative </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the derivative of the signal values for a domain of control. </p>
+<p>Get the derivative of the signal values for a given domain of control and a signal type for the buffered data associated with the application region. There must be at least 2 valid samples recorded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If there are 2 valid samples then return he derivative of the signal values, else return NAN. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a89db2dc141ca43f557c2d3ad657594be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::domain_buffer_value </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>buffer_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -318,64 +537,422 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe4101948c23bd31034fb24877fefa97"></a>
+<a class="anchor" id="ac44359d7f60c496cf8a8bb2c16fc4475"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> * geopm::Region::last_policy </td>
+          <td class="memname">void geopm::Region::insert </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::vector&lt; struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve The last policy message sent down for this region. Used to compare with new incoming message to see if the policy has changed. </p>
-<dl class="section return"><dt>Returns</dt><dd>Saved policy message from last time one was sent. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a8bd200bfb5c2f58574e773c5dde894b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Region::last_policy </td>
-          <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &amp;&#160;</td>
-          <td class="paramname"><em>policy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set our saved copy of the last updated policy message for this region. </p>
+<p>Insert signal data into internal buffers. </p>
+<p>Inserts hw telemetry and per-domain application data into the internal buffers for the region. This API is used by leaf level objects.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td><a class="el" href="classgeopm_1_1_policy.html">Policy</a> message to save as last update. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>vector of telemetry samples to be inserted. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="af1aff7cf6c4618c94f1c4f0672e2d606"></a>
+<a class="anchor" id="a142e3b305be4dba19009e0170fa76ba5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void geopm::Region::observation_insert </td>
+          <td class="memname">void geopm::Region::insert </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert signal data into internal buffers. </p>
+<p>Inserts aggregated sample message and data into the internal buffers for the region. This API is used by tree level objects.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>vector of sample messages to be inserted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a984286abe1ed1b79cd9e5b6fcaa0a839"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::integral </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em>, </td>
+          <td class="paramname"><em>domain_idx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>delta_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>integral</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Integrate a signal over time. </p>
+<p>Computes the integral of the signal over the interval of time spanned by the samples stored in the region which where gathered since the applications most recent entry into the region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8c5eda64ef996498f9961ebcda6ee0d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::Region::is_telemetry_entry </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a675a01f459b68323a9721d3d65c571af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool geopm::Region::is_telemetry_exit </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae64eb38503be5c929ad2e4a8dce0e76a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::max </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the max signal value for a domain of control. </p>
+<p>Get the max signal value for a given domain of control and a signal type for the buffered data associated with the application region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The max signal value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a67b69e891be411e39f691e662ce7ca28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::mean </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the mean signal value for a domain of control. </p>
+<p>Get the mean signal value for a given domain of control and a signal type for the buffered data associated with the application region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The mean signal value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98fcd6f00b6378c86640683de5c93e78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::median </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the median signal value for a domain of control. </p>
+<p>Get the median signal value for a given domain of control and a signal type for the buffered data associated with the application region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The median signal value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6050750ed2bf8d1fe796f4a869a5e353"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::min </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the min signal value for a domain of control. </p>
+<p>Get the min signal value for a given domain of control and a signal type for the buffered data associated with the application region.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The min signal value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a455bae5a3314aed0e6145cbe0f259b41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Region::num_sample </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the number of valid samples for a domain of control. </p>
+<p>Get the number of valid samples for a given domain of control and a signal type for the buffered data associated with the application region. This is the number of samples used to calculate the other statistics.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of valid samples. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca61d70c5e060c5d8947f987a436f08e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::report </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>file_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abe900f8b143f03c063f3caac01fa67f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::sample_message </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return an aggregated sample to send up the tree. Called once this region has converged to send a sample up to the next level of the tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">Sample</td><td>message structure to fill in. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8630271f2f3a84c3079d83d08f67a04d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double geopm::Region::signal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -385,225 +962,210 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Insert a single observation sample for this region. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the buffer to insert into. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The sample value to insert. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the latest value. </p>
 
 </div>
 </div>
-<a class="anchor" id="a3c12e9dadc7165439c39001e83f407fe"></a>
+<a class="anchor" id="a5520eb871a971e1f8fa2b06d004d3363"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double geopm::Region::observation_integrate_time </td>
+          <td class="memname">double geopm::Region::std_deviation </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>domain_idx</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the integrated time over all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a7c84318a5cdd9d75fc623ce298af9232"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">double geopm::Region::observation_max </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the maximum value of all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a5765848e8203b7c5e4ff284b0d541b2f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double geopm::Region::observation_mean </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the mean of all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a0d3777efa1a8952fc5cb6f10405ed0f8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double geopm::Region::observation_median </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the mean of all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ae6bdf57478841c9c12ab5e42ba4d7ae5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double geopm::Region::observation_min </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the minimum value of all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a11470943ee2ba59157f7c9daba9ef545"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double geopm::Region::observation_stddev </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>buffer_index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the standard deviation of all values in the requested buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_index</td><td>Index of the requested buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a4131597c10d1d4bd138abfe6dd6b0429"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void geopm::Region::policy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> *&#160;</td>
-          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the power policy for this region. </p>
+<p>Retrieve the standard deviation of the signal values for a domain of control. </p>
+<p>Get the standard deviation of the signal values for a given domain of control and a signal type for the buffered data associated with the application region.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td><a class="el" href="classgeopm_1_1_policy.html">Policy</a> object for this region. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_idx</td><td>The index to the domain of control as ordered in the <a class="el" href="classgeopm_1_1_platform.html" title="This class provides an abstraction of specific functionality and attributes of classes of hardware im...">Platform</a> and the <a class="el" href="classgeopm_1_1_policy.html" title="Class defines the per-domain power settings and policy state. ">Policy</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signal_type</td><td>The signal type requested as enumerated in geopm_signal_type_e in <a class="el" href="geopm__message_8h.html">geopm_message.h</a>.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The standard deviation of the signal values. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a1b0d71e1483771dfefbeea6f95973153"></a>
+<a class="anchor" id="aed3d4b2714dfaadd02e8a1bc7f57d29c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> * geopm::Region::policy </td>
+          <td class="memname">void geopm::Region::update_curr_sample </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Retrieve the power policy for this region. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classgeopm_1_1_policy.html">Policy</a> object for this region. </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="a2c285ff71f26768da48b6229101efea4"></a>
+<a class="anchor" id="a969d6e9153c258529c2f6f53845c4499"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> &gt; * geopm::Region::split_policy </td>
+          <td class="memname">void geopm::Region::update_domain_sample </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>why does the <a class="el" href="classgeopm_1_1_region.html" title="This class encapsulates all recorded data for a specific application execution region. ">Region</a> get telemetry data for a different region id? </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ebb70395977dcd261fb7e55e5052076"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::update_signal_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Split this regions power policy budget and create new policy messages for each child control domain. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of policy messages for each child control domain. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a9303e85a557ca387d632b2cd5bdf50c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::update_stats </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9701cefcf6f337ca3d6912ef4bce8419"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::Region::update_valid_entries </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a> &amp;&#160;</td>
+          <td class="paramname"><em>telemetry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a054da75ce888294552cbf6b235163cd0"></a>
+<a class="anchor" id="aa9560bff6728d35a2212cfe914f202da"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -611,7 +1173,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&gt; geopm::Region::m_child_sample</td>
+          <td class="memname">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> geopm::Region::m_agg_stats</td>
         </tr>
       </table>
   </td>
@@ -621,11 +1183,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold a sample message from each child control domain. </p>
-
 </div>
 </div>
-<a class="anchor" id="a27bc4427e843a1ddf3db3ddb6cfdbac6"></a>
+<a class="anchor" id="a28954d13c32e4f58072d99900183adb5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -633,7 +1193,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int geopm::Region::m_hint</td>
+          <td class="memname">struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a> geopm::Region::m_curr_sample</td>
         </tr>
       </table>
   </td>
@@ -643,11 +1203,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold the compute characteristic hint for this region. </p>
+<p>the current sample message to be sent up the tree. </p>
 
 </div>
 </div>
-<a class="anchor" id="a77da388bf1e59e0e6fee8f74b9fae96d"></a>
+<a class="anchor" id="abbeee93d9bb37f9144945620e4739450"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -655,7 +1215,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t geopm::Region::m_identifier</td>
+          <td class="memname"><a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a>&lt;std::vector&lt;double&gt; &gt; geopm::Region::m_domain_buffer</td>
         </tr>
       </table>
   </td>
@@ -665,11 +1225,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold unique 64 bit region identifier. </p>
+<p>Circular buffer is over time, vector is indexed over both domains and signals. </p>
 
 </div>
 </div>
-<a class="anchor" id="a8597eee1674d71eb5c99022a9e77fc15"></a>
+<a class="anchor" id="a6064621e291948f8f87182dfa81b7e66"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -677,7 +1237,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a> geopm::Region::m_last_policy</td>
+          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__sample__message__s.html">geopm_sample_message_s</a>&gt; geopm::Region::m_domain_sample</td>
         </tr>
       </table>
   </td>
@@ -687,11 +1247,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold Saved policy message from last time one was sent. </p>
+<p>Holder for sample data calculated after a domain exits a region. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab6406ace3a8b23ced7cc976a391e02f0"></a>
+<a class="anchor" id="ad3caffea0bfd16bae20cf7d7ba58a624"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -699,7 +1259,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_observation.html">Observation</a> geopm::Region::m_obs</td>
+          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__telemetry__message__s.html">geopm_telemetry_message_s</a>&gt; geopm::Region::m_entry_telemetry</td>
         </tr>
       </table>
   </td>
@@ -709,11 +1269,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold the <a class="el" href="classgeopm_1_1_observation.html">Observation</a> object which contains samples for this region. </p>
+<p>Holder for telemerty state on region entry. </p>
 
 </div>
 </div>
-<a class="anchor" id="a14bbd326e1edcc94318e0f7eeb1ce72b"></a>
+<a class="anchor" id="ad866be18512207f44dd91b094cadd8d1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -721,7 +1281,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgeopm_1_1_policy.html">Policy</a> geopm::Region::m_policy</td>
+          <td class="memname">const int geopm::Region::m_hint</td>
         </tr>
       </table>
   </td>
@@ -731,11 +1291,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold the current power policy for this region. </p>
+<p>Holds the compute characteristic hint for this region. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab1e7b7c83ed0001786ba16aa1ab21eb8"></a>
+<a class="anchor" id="a48177f1eec61211cdf71b4c90f3b4a4e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -743,7 +1303,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;struct <a class="el" href="structgeopm__policy__message__s.html">geopm_policy_message_s</a>&gt; geopm::Region::m_split_policy</td>
+          <td class="memname">const uint64_t geopm::Region::m_identifier</td>
         </tr>
       </table>
   </td>
@@ -753,7 +1313,227 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Hold a policy message for each child control domain. </p>
+<p>Holds a unique 64 bit region identifier. </p>
+
+</div>
+</div>
+<a class="anchor" id="af933b29684dbc1cc640a1cf47acf6167"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned geopm::Region::m_level</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The level of the tree where the region resides. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac57b9c6b51697286eaa77a107ef5f453"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; geopm::Region::m_max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the current maximum signal value per domain and signal type. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ae3f6d04394b36c347a91a7002b0bdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; geopm::Region::m_min</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the current minimum signal value per domain and signal type. </p>
+
+</div>
+</div>
+<a class="anchor" id="a331f11992d350f967774908d876440a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned geopm::Region::m_num_domain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Numnber of domains reporting to the region. </p>
+
+</div>
+</div>
+<a class="anchor" id="a09b4fcb1431f4faca5d66b68ef8faefb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int geopm::Region::m_num_signal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of distinct signal in a single domain. </p>
+
+</div>
+</div>
+<a class="anchor" id="a780cbfd97f7d7e4c3f17d8f3a7902622"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; geopm::Region::m_signal_matrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Temporary signal matrix storeage used before insertion. </p>
+
+</div>
+</div>
+<a class="anchor" id="a93939e2f7f4ff80549cab0e940198bb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; geopm::Region::m_sum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the current sum of signal values per domain and signal type. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a64676ec42862e0c3e3def4eb019a0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; geopm::Region::m_sum_squares</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the current sum of squares of signal values per domain and signal type. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa908df163201a3d88ac7231b65cbe0ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgeopm_1_1_circular_buffer.html">CircularBuffer</a>&lt;struct <a class="el" href="structgeopm__time__s.html">geopm_time_s</a>&gt; geopm::Region::m_time_buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>time stamp for each entry in the m_domain_buffer. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1ae89ac5e2cb510c026de31b372f7e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; geopm::Region::m_valid_entries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the number of valid samples per domain and signal type. </p>
 
 </div>
 </div>

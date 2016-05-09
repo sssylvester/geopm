@@ -1,0 +1,4 @@
+<map id="geopm::Tracer" name="geopm::Tracer">
+<area shape="rect" id="node2" href="$structgeopm__time__s.html" title="structure to abstract the difference between a timespec on linux or a timeval on OSX. " alt="" coords="5,5,114,31"/>
+<area shape="rect" id="node3" href="$structgeopm__policy__message__s.html" title="MPI message structure for sending power policies down the tree. " alt="" coords="138,5,317,31"/>
+</map>

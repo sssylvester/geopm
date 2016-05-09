@@ -106,15 +106,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19080812ae634c524c2b6e9bc42c837c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a19080812ae634c524c2b6e9bc42c837c">PlatformTopology</a> ()</td></tr>
 <tr class="memdesc:a19080812ae634c524c2b6e9bc42c837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor initializes and builds the hwloc tree.  <a href="#a19080812ae634c524c2b6e9bc42c837c">More...</a><br /></td></tr>
 <tr class="separator:a19080812ae634c524c2b6e9bc42c837c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5085bcdd550b0c70ff376029407d09af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a5085bcdd550b0c70ff376029407d09af">~PlatformTopology</a> ()</td></tr>
+<tr class="memitem:a5085bcdd550b0c70ff376029407d09af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a5085bcdd550b0c70ff376029407d09af">~PlatformTopology</a> ()</td></tr>
 <tr class="memdesc:a5085bcdd550b0c70ff376029407d09af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor destroys the hwloc tree.  <a href="#a5085bcdd550b0c70ff376029407d09af">More...</a><br /></td></tr>
 <tr class="separator:a5085bcdd550b0c70ff376029407d09af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a0106e1a1f49efb65c0d628120dbd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a69a0106e1a1f49efb65c0d628120dbd6">num_domain</a> (int domain_type) const </td></tr>
+<tr class="memitem:a69a0106e1a1f49efb65c0d628120dbd6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a69a0106e1a1f49efb65c0d628120dbd6">num_domain</a> (int domain_type) const </td></tr>
 <tr class="memdesc:a69a0106e1a1f49efb65c0d628120dbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the count of a specific hwloc resource type.  <a href="#a69a0106e1a1f49efb65c0d628120dbd6">More...</a><br /></td></tr>
 <tr class="separator:a69a0106e1a1f49efb65c0d628120dbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#aa73ee1d775f6c98e6681e69ceee68e2e">domain_by_type</a> (int type, std::vector&lt; hwloc_obj_t &gt; &amp;domain) const </td></tr>
+<tr class="memitem:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#aa73ee1d775f6c98e6681e69ceee68e2e">domain_by_type</a> (int type, std::vector&lt; hwloc_obj_t &gt; &amp;domain) const </td></tr>
 <tr class="memdesc:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve all members of a specific hwloc resource type.  <a href="#aa73ee1d775f6c98e6681e69ceee68e2e">More...</a><br /></td></tr>
 <tr class="separator:aa73ee1d775f6c98e6681e69ceee68e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8aa6013e4ca67bc1f106b3465252ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeopm_1_1_platform_topology.html#a5c8aa6013e4ca67bc1f106b3465252ed">children_by_type</a> (int type, hwloc_obj_t obj, std::vector&lt; hwloc_obj_t &gt; &amp;children) const </td></tr>
+<tr class="separator:a5c8aa6013e4ca67bc1f106b3465252ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is a wrapper around hwloc. It holds the topology of hardware resources of the platform. </p>
@@ -139,6 +141,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a5085bcdd550b0c70ff376029407d09af"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">geopm::PlatformTopology::~PlatformTopology </td>
@@ -147,6 +152,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Default destructor destroys the hwloc tree. </p>
@@ -154,9 +164,52 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5c8aa6013e4ca67bc1f106b3465252ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void geopm::PlatformTopology::children_by_type </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">hwloc_obj_t&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; hwloc_obj_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>children</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa73ee1d775f6c98e6681e69ceee68e2e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void geopm::PlatformTopology::domain_by_type </td>
@@ -176,6 +229,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve all members of a specific hwloc resource type. </p>
@@ -192,6 +250,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a69a0106e1a1f49efb65c0d628120dbd6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int geopm::PlatformTopology::num_domain </td>
@@ -201,6 +262,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Retrieve the count of a specific hwloc resource type. </p>
