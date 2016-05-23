@@ -30,6 +30,7 @@ var searchData=
   ['_7esamplescheduler',['~SampleScheduler',['../classgeopm_1_1_sample_scheduler.html#ae1973bf5f1f2656848570a304fb0515f',1,'geopm::SampleScheduler']]],
   ['_7esharedmemory',['~SharedMemory',['../classgeopm_1_1_shared_memory.html#a6e0409f616ef3925aefd658bb8292398',1,'geopm::SharedMemory']]],
   ['_7esharedmemoryuser',['~SharedMemoryUser',['../classgeopm_1_1_shared_memory_user.html#a8abed57d7ae3813b471fa9357b1b5f44',1,'geopm::SharedMemoryUser']]],
+  ['_7estaticpolicydecider',['~StaticPolicyDecider',['../classgeopm_1_1_static_policy_decider.html#aff64ad2910e3ce276fe5af537cb44dd4',1,'geopm::StaticPolicyDecider']]],
   ['_7etracer',['~Tracer',['../classgeopm_1_1_tracer.html#ae50d387faa7a1496c28f45d489044381',1,'geopm::Tracer']]],
   ['_7etreecommunicator',['~TreeCommunicator',['../classgeopm_1_1_tree_communicator.html#aae0d2881adab45bee43152922e7b0219',1,'geopm::TreeCommunicator']]],
   ['_7etreecommunicatorlevel',['~TreeCommunicatorLevel',['../classgeopm_1_1_tree_communicator_level.html#a927f8a8d418cac8fc985a6ad2adfce70',1,'geopm::TreeCommunicatorLevel']]]

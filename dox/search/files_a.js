@@ -5,5 +5,7 @@ var searchData=
   ['samplescheduler_2ecpp',['SampleScheduler.cpp',['../_sample_scheduler_8cpp.html',1,'']]],
   ['samplescheduler_2ehpp',['SampleScheduler.hpp',['../_sample_scheduler_8hpp.html',1,'']]],
   ['sharedmemory_2ecpp',['SharedMemory.cpp',['../_shared_memory_8cpp.html',1,'']]],
-  ['sharedmemory_2ehpp',['SharedMemory.hpp',['../_shared_memory_8hpp.html',1,'']]]
+  ['sharedmemory_2ehpp',['SharedMemory.hpp',['../_shared_memory_8hpp.html',1,'']]],
+  ['staticpolicydecider_2ecpp',['StaticPolicyDecider.cpp',['../_static_policy_decider_8cpp.html',1,'']]],
+  ['staticpolicydecider_2ehpp',['StaticPolicyDecider.hpp',['../_static_policy_decider_8hpp.html',1,'']]]
 ];

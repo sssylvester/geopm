@@ -1,4 +1,5 @@
 <map id="geopm::Decider" name="geopm::Decider">
 <area shape="rect" id="node2" href="$classgeopm_1_1_balancing_decider.html" title="Simple implementation of a power balancing tree decider. " alt="" coords="5,79,179,104"/>
 <area shape="rect" id="node3" href="$classgeopm_1_1_governing_decider.html" title="Simple implementation of a power governing leaf decider. " alt="" coords="204,79,381,104"/>
+<area shape="rect" id="node4" href="$classgeopm_1_1_static_policy_decider.html" title="Decider which does not update the policy. " alt="" coords="405,79,590,104"/>
 </map>

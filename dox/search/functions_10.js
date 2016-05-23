@@ -15,6 +15,7 @@ var searchData=
   ['signal',['signal',['../classgeopm_1_1_region.html#a8630271f2f3a84c3079d83d08f67a04d',1,'geopm::Region']]],
   ['size',['size',['../classgeopm_1_1_circular_buffer.html#a7764c8c9e882face8adbbe1fb83bae1b',1,'geopm::CircularBuffer::size()'],['../classgeopm_1_1_locking_hash_table.html#a083b721cd56ed567727b00e9d7fd0c84',1,'geopm::LockingHashTable::size()'],['../classgeopm_1_1_shared_memory.html#a2607e2317c14460638af8e16ce716845',1,'geopm::SharedMemory::size()'],['../classgeopm_1_1_shared_memory_user.html#a5027512d4e4642d36ec1223799ab42b1',1,'geopm::SharedMemoryUser::size()']]],
   ['spawn',['spawn',['../classgeopm_1_1_controller.html#aadc4e542b0bb2e87b217f5101dfaf07e',1,'geopm::Controller']]],
+  ['staticpolicydecider',['StaticPolicyDecider',['../classgeopm_1_1_static_policy_decider.html#a241a652b94a9396cf36476f5c8996331',1,'geopm::StaticPolicyDecider']]],
   ['std_5fdeviation',['std_deviation',['../classgeopm_1_1_region.html#a5520eb871a971e1f8fa2b06d004d3363',1,'geopm::Region']]],
   ['step',['step',['../classgeopm_1_1_controller.html#a7ba16e56cfb95c8216d1d715bb860c19',1,'geopm::Controller']]],
   ['sticky',['sticky',['../classgeopm_1_1_locking_hash_table.html#a63a1e62d3c241276441e03d049e01922',1,'geopm::LockingHashTable::sticky()'],['../classgeopm_1_1_profile_table.html#a359146c2b1d4368e606ab758fa0888c7',1,'geopm::ProfileTable::sticky()']]]

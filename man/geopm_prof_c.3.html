@@ -158,7 +158,7 @@ POSIX shared memory key that is used to comminicate with the
 control process on the node.  It must start with the '/' character
 and have no other occurances of the '/'.  If no key is provided
 (NULL or empty string), then the environment is queried for
-GEOPM_SHMKEY (see <code>geopm</code>(7) for description of environment
+GEOPM_SHMKEY (see <strong><a class="man-ref" href="geopm.7.html">geopm<span class="s">(7)</span></a></strong> for description of environment
 variables) and if set this value is used, otherwise the default
 key '/geopm-default' is used.  The <em>comm</em> is an MPI communicator
 that the calling MPI application is running on (probably

@@ -107,6 +107,7 @@ Inheritance diagram for geopm::Decider:</div>
 <map name="geopm_1_1_decider_inherit__map" id="geopm_1_1_decider_inherit__map">
 <area shape="rect" id="node2" href="classgeopm_1_1_balancing_decider.html" title="Simple implementation of a power balancing tree decider. " alt="" coords="5,79,179,104"/>
 <area shape="rect" id="node3" href="classgeopm_1_1_governing_decider.html" title="Simple implementation of a power governing leaf decider. " alt="" coords="204,79,381,104"/>
+<area shape="rect" id="node4" href="classgeopm_1_1_static_policy_decider.html" title="Decider which does not update the policy. " alt="" coords="405,79,590,104"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -204,7 +205,7 @@ Public Member Functions</h2></td></tr>
 
 <p>return a pointer of the derived class, virtual. </p>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a719742425ac602f32c8dfc4e74416246">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a61e1d80cb1e4c3303dd84df2dadecd54">geopm::GoverningDecider</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a719742425ac602f32c8dfc4e74416246">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#a61e1d80cb1e4c3303dd84df2dadecd54">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#a8d4bbaac6c2f4b4ba85db1dc92f7dc81">geopm::StaticPolicyDecider</a>.</p>
 
 </div>
 </div>
@@ -232,7 +233,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return true if th edescription string matches capabilities of decider, virtual. </p>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a887acd09b70f9d10af529136f4b0bb92">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#aeca819ccecbad441299818c8766bc698">geopm::GoverningDecider</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a887acd09b70f9d10af529136f4b0bb92">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#aeca819ccecbad441299818c8766bc698">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#a924883ea432703ae1ea9a948df6b2230">geopm::StaticPolicyDecider</a>.</p>
 
 </div>
 </div>
@@ -260,7 +261,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the name of the decider, virtual. </p>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a50f1e8108bb05e6c37505501ac66bb1d">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a5a7b3b8573b3f6af6e874860bb95c7fe">geopm::GoverningDecider</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a50f1e8108bb05e6c37505501ac66bb1d">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#a5a7b3b8573b3f6af6e874860bb95c7fe">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#a8d01a55b06c9d5f95c15908acb58d2e1">geopm::StaticPolicyDecider</a>.</p>
 
 </div>
 </div>
@@ -298,7 +299,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Updates the power split among power control domains when recieving a new global budget, vitual. </p>
 
-<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a10c4726f62b90df5a8a513592cb7a341">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#a806d1d02fd7ca1563fc21fff37c841fe">geopm::GoverningDecider</a>.</p>
+<p>Reimplemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a10c4726f62b90df5a8a513592cb7a341">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#a806d1d02fd7ca1563fc21fff37c841fe">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#ae0233368c709dee4fe135e3e2d4b0838">geopm::StaticPolicyDecider</a>.</p>
 
 </div>
 </div>
@@ -336,7 +337,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Calculate a new power policy for the region based on telemery data, virtual. </p>
 
-<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a6228496fb6beb0b2581ff8764c70b71b">geopm::BalancingDecider</a>, and <a class="el" href="classgeopm_1_1_governing_decider.html#add5feebbd6b9947631f6ff81f0cdbcd7">geopm::GoverningDecider</a>.</p>
+<p>Implemented in <a class="el" href="classgeopm_1_1_balancing_decider.html#a6228496fb6beb0b2581ff8764c70b71b">geopm::BalancingDecider</a>, <a class="el" href="classgeopm_1_1_governing_decider.html#add5feebbd6b9947631f6ff81f0cdbcd7">geopm::GoverningDecider</a>, and <a class="el" href="classgeopm_1_1_static_policy_decider.html#aa97a4fcd821ca71cd5277a23222ba6fb">geopm::StaticPolicyDecider</a>.</p>
 
 </div>
 </div>

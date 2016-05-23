@@ -115,8 +115,8 @@ make install
 <h2>TESTING </h2>
 <p>From within the source code directory, tests can be executed with the "make check" target. Some tests must be run as MPI applications, and in order support these tests you must define the "MPIEXEC" environment variable to whatever is appropriate for your your MPI runtime (default is mpiexec). The tests assume that this application will respect the '-n' flag to set the number of MPI processes. Note that '-n' is defined by the MPI standard. Each MPI dependent test is run with 16 MPI processes.</p>
 <h2>STATUS </h2>
-<p>This software is pre-alpha quality and largely incomplete. The software is being provided for collaborative purposes. The static modes are supported by geopmpolicy and libgeopmpolicy. The MPI runtime support of the geopmctl and libgeopm is incomplete.</p>
-<p>Test coverage is limited. The line coverage results from gcov as reported by gcovr for a recent build are below:</p>
+<p>This software is pre-alpha quality and is provided for collaborative purposes. We are very interested in feedback from the community. The static modes are supported by geopmpolicy and libgeopmpolicy. The MPI runtime support of geopmctl and libgeopm is complete. Basic profiling features like creating reports and traces are complete. See TODO file for more information on forthcoming work.</p>
+<p>Test coverage is incomplete. The line coverage results from gcov as reported by gcovr for a recent build are below:</p>
 <p><b>GCC Code Coverage Report</b></p>
 <p><b>Directories: src, plugin</b></p>
 <table class="doxtable">

@@ -115,15 +115,15 @@ will be in conflict.  The geopm runtime can create a application
 performance profile report and a trace of the application runtime.  As
 such, geopm serves the role of an application profiler in addition to
 management of power resources.  The report is generated with the
-<code>geopm_prof_print</code>() interface described in <code>geopm_prof_c</code>(3).  To
+<code>geopm_prof_print</code>() interface described in <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>.  To
 enable the generation of the application trace see the <code>GEOPM_TRACE</code>
 environment variable below.</p>
 
 <h2 id="LAUNCHING-THE-RUNTIME">LAUNCHING THE RUNTIME</h2>
 
 <p>There are many ways to launch the geopm runtime programatically (see
-<code>geopm_ctl_c</code>(3)), or by command line (see
-<code>geopmctl</code>(1)). Alternatively the PMPI interposition by geopm enables
+<strong><a class="man-ref" href="geopm_ctl_c.3.html">geopm_ctl_c<span class="s">(3)</span></a></strong>), or by command line (see
+<strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>). Alternatively the PMPI interposition by geopm enables
 the geopm runtime to be launched implicitly by the MPI runtime.  This
 launch method is enabled by the <code>GEOPM_PMPI_CTL</code> environment variable
 documented below.  The PMPI method for launching the geopm runtime is
@@ -133,7 +133,7 @@ time users.</p>
 <h2 id="INTERPRETING-THE-REPORT">INTERPRETING THE REPORT</h2>
 
 <p>If the application calls the <code>geopm_prof_print</code>() documented in the
-<code>geopm_prof_c</code>(3) man page then a report will be generated.  In the
+<strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong> man page then a report will be generated.  In the
 current implementation there is a separate report file for each
 compute node.  These report files give information about runtime and
 energy use for each region marked in the code.  Additionally time
@@ -228,7 +228,7 @@ all ranks on a node then enabling this feature will cause a
 deadlock and the application will hang.</p></dd>
 <dt><code>GEOPM_ERROR_AFFINITY_IGNORE</code></dt><dd><p>If set, errors of the type GEOPM_ERROR_AFFINITY are ignored by
 geopm.  This is useful for testing on systems where CPU affinity
-requirements cannot be met (e.g. Mac OS X). See <code>geopm_error</code>(3)
+requirements cannot be met (e.g. Mac OS X). See <strong><a class="man-ref" href="geopm_error.3.html">geopm_error<span class="s">(3)</span></a></strong>
 for more information on this error condition.</p></dd>
 </dl>
 
