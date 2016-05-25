@@ -109,12 +109,14 @@ including support for static control.</p>
 
 <p>Linking to libgeopm will define symbols that intercept the MPI
 interface through PMPI.  This can be disabled with the configure time
-option <code>--disable-pmpi</code>, but is enabled by default.  When using the
-geopm PMPI interposition other profilers which use the same method
-will be in conflict.  The geopm runtime can create a application
-performance profile report and a trace of the application runtime.  As
-such, geopm serves the role of an application profiler in addition to
-management of power resources.  The report is generated with the
+option <code>--disable-pmpi</code>, but is enabled by default.  See
+<code>LD_DYNAMIC_WEAK</code> environment variable description below for the
+runtime requirements of the PMPI design.  When using the geopm PMPI
+interposition other profilers which use the same method will be in
+conflict.  The geopm runtime can create a application performance
+profile report and a trace of the application runtime.  As such, geopm
+serves the role of an application profiler in addition to management
+of power resources.  The report is generated with the
 <code>geopm_prof_print</code>() interface described in <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>.  To
 enable the generation of the application trace see the <code>GEOPM_TRACE</code>
 environment variable below.</p>
@@ -170,6 +172,15 @@ simple method for selecting fields from the trace file is with the
 <h2 id="ENVIRONMENT">ENVIRONMENT</h2>
 
 <dl>
+<dt><code>LD_DYNAMIC_WEAK</code></dt><dd><p>When dynamically linking an application to libgeopm for any
+features supported by the PMPI profiling of the MPI runtime it may
+be required that the LD_DYNAMIC_WEAK environment variable be set
+at runtime as is documented in the <strong><a class="man-ref" href="http://linux.die.net/man/8/ld.so">ld.so<span class="s">(8)</span></a></strong> man page.  When
+dynamically linking an application, if care is taken to link the
+libgeopm library before linking the library providing the weak MPI
+symbols, e.g. "-lgeopm -lmpi", linking order precedence will
+enforce the required override of the MPI interface symbols and the
+LD_DYNAMIC_WEAK environment variable is not required at runtime.</p></dd>
 <dt><code>GEOPM_TRACE</code></dt><dd><p>Enables geopm tracing capability.  Setting this variable enables
 the creation of a trace output file. The value of the variable
 is used as the base of the output trace file path.  Currently one
@@ -207,7 +218,9 @@ application MPI_COMM_WORLD appears to have one fewer rank per node
 than was allocated to the job.  In the case of specifying
 'pthread' the lowest rank on each node will launch a pthread
 running the controller.  The pthread launch mechanism requires an
-MPI runtime that can support MPI_THREAD_MULTIPLE.</p></dd>
+MPI runtime that can support MPI_THREAD_MULTIPLE.  Support for
+this feature may require the LD_DYNAMIC_WEAK variable as
+documented above.</p></dd>
 <dt><code>GEOPM_PLUGIN_PATH</code></dt><dd><p>The search path for geopm plugins.  It is a colon-separated list
 of directories used by geopm to search for shared objects which
 contain geopm plugins.  A zero-length directory name indicates the
@@ -249,7 +262,8 @@ for more information on this error condition.</p></dd>
 <strong><a class="man-ref" href="geopm_prof_c.3.html">geopm_prof_c<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopm_version.3.html">geopm_version<span class="s">(3)</span></a></strong>,
 <strong><a class="man-ref" href="geopmctl.1.html">geopmctl<span class="s">(1)</span></a></strong>,
-<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong></p>
+<strong><a class="man-ref" href="geopmpolicy.1.html">geopmpolicy<span class="s">(1)</span></a></strong>
+<strong><a class="man-ref" href="http://linux.die.net/man/8/ld.so">ld.so<span class="s">(8)</span></a></strong></p>
 
 
   <ol class='man-decor man-foot man foot'>
