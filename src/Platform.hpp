@@ -112,16 +112,14 @@ namespace geopm
             /// @param [in] policy A Policy object containing the policy information
             ///        to be enforced.
             virtual void enforce_policy(uint64_t region_id, Policy &policy) const = 0;
-            /// @brief Return the upper and lower bounds of the control.
+            /// @brief Return the upper and lower bounds of all controls.
             ///
-            /// For a RAPL platform this would be the package power limit,
-            /// for a frequency platform this would be the p-state bounds.
+            /// For a RAPL domain this would be the package power limit,
+            /// for a frequency domain this would be the p-state bounds.
             ///
-            /// @param [out] upper_bound The upper control bound.
-            ///
-            /// @param [out] lower_bound The lower control bound.
-            ///
-            virtual void bound(double &upper_bound, double &lower_bound) = 0;
+            /// @param [out] map from control domain to the lower and upper
+            ///        control bounds for each control.
+            virtual void bound(std::map<int, std::pair<double, double> > &bound) = 0;
             /// @brief Retrieve the topology of the current platform.
             /// @return PlatformTopology object containing the current
             ///         topology information.

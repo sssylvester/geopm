@@ -139,17 +139,9 @@ namespace geopm
         return m_imp->num_domain(m_imp->power_control_domain()) * (m_imp->num_energy_signal() + m_imp->num_counter_signal());
     }
 
-    void RAPLPlatform::bound(double &upper_bound, double &lower_bound)
+    void RAPLPlatform::bound(std::map<int, std::pair<double, double> > &bound)
     {
-        double min_pkg;
-        double max_pkg;
-        double min_dram;
-        double max_dram;
-
-        m_imp->bound(GEOPM_TELEMETRY_TYPE_PKG_ENERGY, max_pkg, min_pkg);
-        m_imp->bound(GEOPM_TELEMETRY_TYPE_DRAM_ENERGY, max_dram, min_dram);
-        upper_bound = max_pkg + max_dram;
-        lower_bound = min_pkg + min_dram;
+        m_imp->bound(bound);
     }
 
     void RAPLPlatform::sample(std::vector<struct geopm_msr_message_s> &msr_values)

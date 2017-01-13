@@ -289,9 +289,8 @@ namespace geopm
                     m_counter_energy_start += (*it).signal;
                 }
             }
-            double upper_bound;
-            double lower_bound;
-            m_platform->bound(upper_bound, lower_bound);
+            std::map<int, std::pair<double, double> > bound;
+            m_platform->bound(bound);
             // convert rate limit from ms to seconds
             m_control_rate_limit = m_platform->control_latency_ms() * 1E-3;
             geopm_time(&m_control_loop_t0);
@@ -299,9 +298,11 @@ namespace geopm
 
             m_decider_factory = new DeciderFactory;
             m_leaf_decider = m_decider_factory->decider(std::string(plugin_desc.leaf_decider));
-            m_leaf_decider->bound(upper_bound, lower_bound);
+            m_leaf_decider->bound(bound);
 
             int num_domain;
+            double lower_bound = DBL_MIN;
+            double upper_bound = DBL_MAX;
             for (int level = 0; level < num_level; ++level) {
                 if (level == 0) {
                     num_domain = m_platform->num_control_domain();
@@ -323,7 +324,10 @@ namespace geopm
                     }
                 }
                 m_tree_decider[level] = m_decider_factory->decider(std::string(plugin_desc.tree_decider));
-                m_tree_decider[level]->bound(upper_bound, lower_bound);
+                std::map<int, std::pair<double, double> > power_bound;
+                power_bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+                                       std::pair<double,double>(lower_bound, upper_bound)));
+                m_tree_decider[level]->bound(power_bound);
                 m_region[level].insert(std::pair<uint64_t, Region *>
                                        (GEOPM_REGION_ID_EPOCH,
                                         new Region(GEOPM_REGION_ID_EPOCH,

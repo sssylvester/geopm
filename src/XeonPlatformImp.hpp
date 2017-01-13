@@ -80,7 +80,7 @@ namespace geopm
             /// @brief Reset free running counters to default state.
             virtual void fixed_counters_reset(void);
             /// @brief Return the upper and lower bounds of the control.
-            virtual void bound(int control_type, double &upper_bound, double &lower_bound);
+            virtual void bound(std::map<int, std::pair<double, double> > &bound);
 
             /// @brief Store the units of energy read from RAPL.
             double m_energy_units;
@@ -100,6 +100,12 @@ namespace geopm
             double m_min_dram_watts;
             /// @brief Maximum value for DRAM power read from RAPL.
             double m_max_dram_watts;
+            /// @brief Minimum supported p-state.
+            double m_min_freq_mhz;
+            /// @brief Maximum supported p-state.
+            double m_max_freq_mhz;
+            /// @brief Step size in between supported p-states.
+            double m_freq_step_mhz;
             /// @brief Vector of MSR offsets for reading.
             std::vector<off_t> m_signal_msr_offset;
             ///@brief Vector of MSR data containing pairs of offsets and write masks.

@@ -55,7 +55,7 @@ namespace geopm
             virtual size_t capacity(void);
             virtual void sample(std::vector<struct geopm_msr_message_s> &msr_values);
             virtual void enforce_policy(uint64_t region_id, Policy &policy) const;
-            virtual void bound(double &upper_bound, double &lower_bound);
+            virtual void bound(std::map<int, std::pair<double, double> > &bound);
         protected:
             /// @brief structure to hold buffer indicies for platform signals.
             struct m_buffer_index_s {

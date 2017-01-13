@@ -62,6 +62,8 @@ namespace geopm
         , m_min_num_converged(5)
         , m_last_power_budget(DBL_MIN)
         , m_num_sample(5)
+        , m_lower_bound(DBL_MIN)
+        , m_upper_bound(DBL_MAX)
         , m_num_out_of_range(0)
     {
     }
@@ -84,6 +86,19 @@ namespace geopm
     const std::string& GoverningDecider::name(void) const
     {
         return m_name;
+    }
+
+    void GoverningDecider::bound(std::map<int, std::pair<double, double> > &bound)
+    {
+        auto rapl_bound = bound.find(GEOPM_CONTROL_DOMAIN_POWER);
+        if (rapl_bound != bound.end()) {
+            m_lower_bound = (*rapl_bound).second.first;
+            m_upper_bound = (*rapl_bound).second.second;
+        }
+        else {
+            throw Exception("GoverningDecider::bound(): Platform and Decider are not compatable, Power controls not found",
+                            GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+        }
     }
 
     bool GoverningDecider::update_policy(const struct geopm_policy_message_s &policy_msg, Policy &curr_policy)

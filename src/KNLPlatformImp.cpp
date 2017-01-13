@@ -51,12 +51,15 @@ namespace geopm
         , m_energy_units(1.0)
         , m_power_units(1.0)
         , m_dram_energy_units(1.5258789063E-5)
-        , m_min_pkg_watts(1)
-        , m_max_pkg_watts(100)
-        , m_min_pp0_watts(1)
-        , m_max_pp0_watts(100)
-        , m_min_dram_watts(1)
+        , m_min_pkg_watts(1.0)
+        , m_max_pkg_watts(100.0)
+        , m_min_pp0_watts(1.0)
+        , m_max_pp0_watts(100.0)
+        , m_min_dram_watts(1.0)
         , m_max_dram_watts(100)
+        , m_min_freq_mhz(1000.0)
+        , m_max_freq_mhz(1200.0)
+        , m_freq_step_mhz(100.0)
         , m_signal_msr_offset(M_L2_MISSES)
         , m_control_msr_pair(M_NUM_CONTROL)
         , M_KNL_MODEL_NAME("Knights Landing")
@@ -111,25 +114,12 @@ namespace geopm
         return GEOPM_DOMAIN_TILE;
     }
 
-    void KNLPlatformImp::bound(int control_type, double &upper_bound, double &lower_bound)
+    void KNLPlatformImp::bound(std::map<int, std::pair<double, double> > &bound)
     {
-        switch (control_type) {
-            case GEOPM_TELEMETRY_TYPE_PKG_ENERGY:
-                upper_bound = m_max_pkg_watts;
-                lower_bound = m_min_pkg_watts;
-                break;
-            case GEOPM_TELEMETRY_TYPE_DRAM_ENERGY:
-                upper_bound = m_max_dram_watts;
-                lower_bound = m_min_dram_watts;
-                break;
-            case GEOPM_TELEMETRY_TYPE_FREQUENCY:
-                throw Exception("KNLPlatformImp::bound(GEOPM_TELEMETRY_TYPE_FREQUENCY)", GEOPM_ERROR_NOT_IMPLEMENTED, __FILE__, __LINE__);
-                break;
-            default:
-                throw geopm::Exception("KNLPlatformImp::bound(): Invalid control type", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
-                break;
-        }
-
+        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+                               std::pair<double, double>(m_min_pkg_watts + m_max_dram_watts, m_max_pkg_watts + m_max_dram_watts)));
+        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_FREQUENCY,
+                               std::pair<double, double>(m_min_freq_mhz, m_max_freq_mhz)));
     }
 
     double KNLPlatformImp::read_signal(int device_type, int device_index, int signal_type)
@@ -430,6 +420,13 @@ namespace geopm
         m_control_msr_pair[M_RAPL_PKG_LIMIT] = std::make_pair(msr_offset("PKG_POWER_LIMIT"), msr_mask("PKG_POWER_LIMIT") );
         m_control_msr_pair[M_RAPL_DRAM_LIMIT] = std::make_pair(msr_offset("DRAM_POWER_LIMIT"), msr_mask("DRAM_POWER_LIMIT") );
         m_control_msr_pair[M_IA32_PERF_CTL] = std::make_pair(msr_offset("IA32_PERF_CTL"), msr_mask("IA32_PERF_CTL") );
+
+        // Get supported p-state bounds
+        uint64_t tmp = msr_read(GEOPM_DOMAIN_PACKAGE, 0, "IA32_PLATFORM_INFO");
+        m_min_freq_mhz = ((tmp >> 40) | 0xFF) * 100.0;
+        tmp = msr_read(GEOPM_DOMAIN_PACKAGE, 0, "TURBO_RATIO_LIMIT");
+        // This value is single core turbo
+        m_max_freq_mhz = (tmp >> 8 | 0xFF) * 100.0;
     }
 
     void KNLPlatformImp::msr_reset()
@@ -593,8 +590,10 @@ namespace geopm
     static const std::map<std::string, std::pair<off_t, unsigned long> > &knl_msr_map(void)
     {
         static const std::map<std::string, std::pair<off_t, unsigned long> > msr_map({
+            {"IA32_PLATFORM_INFO",      {0x00CE, 0x0000000000000000}},
             {"IA32_PERF_STATUS",        {0x0198, 0x0000000000000000}},
             {"IA32_PERF_CTL",           {0x0199, 0x000000010000ffff}},
+            {"TURBO_RATIO_LIMIT",       {0x01AD, 0x0000000000000000}},
             {"RAPL_POWER_UNIT",         {0x0606, 0x0000000000000000}},
             {"PKG_POWER_LIMIT",         {0x0610, 0x00ffffff00ffffff}},
             {"PKG_ENERGY_STATUS",       {0x0611, 0x0000000000000000}},

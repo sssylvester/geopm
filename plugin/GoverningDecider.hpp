@@ -52,6 +52,7 @@ namespace geopm
             /// @ brief GoverningDecider destructor, virtual.
             virtual ~GoverningDecider();
             virtual Decider *clone(void) const;
+            virtual void bound(std::map<int, std::pair<double, double> > &bound);
             virtual bool update_policy(const struct geopm_policy_message_s &policy_msg, Policy &curr_policy);
             virtual bool update_policy(Region &curr_region, Policy &curr_policy);
             virtual bool decider_supported(const std::string &descripton);
@@ -62,6 +63,8 @@ namespace geopm
             const unsigned m_min_num_converged;
             double m_last_power_budget;
             int m_num_sample;
+            double m_lower_bound;
+            double m_upper_bound;
             unsigned m_num_out_of_range;
             std::map<uint64_t, unsigned> m_num_converged;
     };

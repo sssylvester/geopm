@@ -97,6 +97,11 @@ bool DumbDecider::update_policy(Region &curr_region, Policy &curr_policy)
     return false;
 }
 
+void DumbDecider::bound(std::map<int, std::pair<double, double> > &bound)
+{
+    return;
+}
+
 DumbPlatform::DumbPlatform()
     : m_name("dumb")
 {
@@ -133,10 +138,10 @@ int DumbPlatform::control_domain(void)
     return GEOPM_CONTROL_DOMAIN_POWER;
 }
 
-void DumbPlatform::bound(double &upper_bound, double &lower_bound)
+void DumbPlatform::bound(std::map<int, std::pair<double, double> > &bound)
 {
-    upper_bound = DBL_MAX;
-    lower_bound = DBL_MIN;
+    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+                 std::pair<double, double>(DBL_MIN, DBL_MAX)));
 }
 
 ShmemFreqPlatformImp::ShmemFreqPlatformImp()
@@ -250,9 +255,9 @@ void ShmemFreqPlatformImp::write_control(int device_type, int device_idx, int si
     cpu_freq(device_idx, value);
 }
 
-void ShmemFreqPlatformImp::bound(int control_type, double &upper_bound, double &lower_bound)
+void ShmemFreqPlatformImp::bound(std::map<int, std::pair<double, double> > &bound)
 {
-    upper_bound = 4000.0 ;
-    lower_bound = 2500.0;
+    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+                 std::pair<double, double>(2500.0, 4000.0)));
 }
 

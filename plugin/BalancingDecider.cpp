@@ -71,6 +71,8 @@ namespace geopm
         , m_num_converged(0)
         , m_last_power_budget(DBL_MIN)
         , m_num_sample(8)
+        , m_lower_bound(DBL_MIN)
+        , m_upper_bound(DBL_MAX)
         , m_num_out_of_range(0)
         , m_slope_modifier(3.0)
         , M_GUARD_BAND(1.15)
@@ -98,10 +100,17 @@ namespace geopm
         return m_name;
     }
 
-    void BalancingDecider::bound(double upper_bound, double lower_bound)
+    void BalancingDecider::bound(std::map<int, std::pair<double, double> > &bound)
     {
-        m_upper_bound = upper_bound / M_GUARD_BAND;
-        m_lower_bound = lower_bound * M_GUARD_BAND;
+        auto rapl_bound = bound.find(GEOPM_CONTROL_DOMAIN_POWER);
+        if (rapl_bound != bound.end()) {
+            m_lower_bound = (*rapl_bound).second.first * M_GUARD_BAND;
+            m_upper_bound = (*rapl_bound).second.second / M_GUARD_BAND;
+        }
+        else {
+            throw Exception("BalancingDecider::bound(): Platform and Decider are not compatable, Power controls not found",
+                            GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+        }
     }
 
     bool BalancingDecider::update_policy(const struct geopm_policy_message_s &policy_msg, Policy &curr_policy)

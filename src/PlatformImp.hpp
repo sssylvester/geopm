@@ -209,18 +209,14 @@ namespace geopm
             virtual int frequency_control_domain(void) const = 0;
             /// @brief Retrieve the domain for performance counter collection.
             virtual int performance_counter_domain(void) const = 0;
-            /// @brief Return the upper and lower bounds of the control.
+            /// @brief Return the upper and lower bounds for each control.
             ///
             /// For a RAPL platform this would be the package power limit,
-            /// for a frequency platform tis would be the p-state bounds.
+            /// as well as the frequency p-state bounds.
             ///
-            /// @param [in] control_type The control to get the bounds for.
-            ///
-            /// @param [out] upper_bound The upper control bound.
-            ///
-            /// @param [out] lower_bound The lower control bound.
-            ///
-            virtual void bound(int control_type, double &upper_bound, double &lower_bound) = 0;
+            /// @param [out] map from control domain to the lower and upper
+            ///        control bounds for each control.
+            virtual void bound(std::map<int, std::pair<double, double> > &bound) = 0;
             /// @brief Return the path used for the MSR default save file.
             std::string msr_save_file_path(void);
 
