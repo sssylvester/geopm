@@ -103,6 +103,7 @@ namespace geopm
             /// acceptance state.
             /// @return true if converged else false.
             bool is_converged(uint64_t region_id);
+            static const double INVALID_TARGET;
         protected:
             PolicyFlags m_policy_flags;
             RegionPolicy *region_policy(uint64_t region_id);

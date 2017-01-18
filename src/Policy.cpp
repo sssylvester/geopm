@@ -40,6 +40,8 @@
 
 namespace geopm
 {
+    const double Policy::INVALID_TARGET = -DBL_MAX;
+
     /// @brief RegionPolicy class encapsulated functionality for policy accounting
     /// at the per-rank level.
     class RegionPolicy
@@ -65,7 +67,6 @@ namespace geopm
             /// @return true if converged else false.
             bool is_converged(void);
         protected:
-            const double m_invalid_target;
             const int m_num_domain;
             std::map<int, std::vector<double> > m_target;
             bool m_is_converged;
@@ -198,8 +199,7 @@ namespace geopm
     }
 
     RegionPolicy::RegionPolicy(int num_domain)
-        : m_invalid_target(-DBL_MAX)
-        , m_num_domain(num_domain)
+        : m_num_domain(num_domain)
         , m_is_converged(false)
     {
 
@@ -215,7 +215,7 @@ namespace geopm
         if (domain_idx >= 0 && domain_idx < m_num_domain) {
             auto target_it = m_target.emplace(std::piecewise_construct,
                                               std::forward_as_tuple(control_type),
-                                              std::forward_as_tuple(m_num_domain, m_invalid_target)).first;
+                                              std::forward_as_tuple(m_num_domain, Policy::INVALID_TARGET)).first;
             (*target_it).second[domain_idx] = target;
         }
         else {
@@ -244,7 +244,7 @@ namespace geopm
                 target = (*it).second;
             }
             else {
-                std::fill(target.begin(), target.end(), m_invalid_target);
+                std::fill(target.begin(), target.end(), Policy::INVALID_TARGET);
             }
         }
         else {
@@ -260,7 +260,7 @@ namespace geopm
                 target = (*it).second[domain_idx];
             }
             else {
-                target = m_invalid_target;
+                target = Policy::INVALID_TARGET;
             }
         }
         else {
@@ -280,7 +280,7 @@ namespace geopm
             }
             else {
                 for (int domain_idx = 0; domain_idx != m_num_domain; ++domain_idx) {
-                    child_msg[domain_idx].power_budget = m_invalid_target;
+                    child_msg[domain_idx].power_budget = Policy::INVALID_TARGET;
                 }
             }
         }
