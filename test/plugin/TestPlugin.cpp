@@ -135,12 +135,12 @@ void DumbPlatform::enforce_policy(uint64_t region_id, Policy &policy) const
 
 int DumbPlatform::control_domain(void)
 {
-    return GEOPM_CONTROL_DOMAIN_POWER;
+    return GEOPM_CONTROL_TYPE_POWER;
 }
 
 void DumbPlatform::bound(std::map<int, std::pair<double, double> > &bound)
 {
-    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                  std::pair<double, double>(DBL_MIN, DBL_MAX)));
 }
 
@@ -257,7 +257,7 @@ void ShmemFreqPlatformImp::write_control(int device_type, int device_idx, int si
 
 void ShmemFreqPlatformImp::bound(std::map<int, std::pair<double, double> > &bound)
 {
-    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                  std::pair<double, double>(2500.0, 4000.0)));
 }
 

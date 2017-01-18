@@ -90,7 +90,7 @@ namespace geopm
 
     void GoverningDecider::bound(std::map<int, std::pair<double, double> > &bound)
     {
-        auto rapl_bound = bound.find(GEOPM_CONTROL_DOMAIN_POWER);
+        auto rapl_bound = bound.find(GEOPM_CONTROL_TYPE_POWER);
         if (rapl_bound != bound.end()) {
             m_lower_bound = (*rapl_bound).second.first;
             m_upper_bound = (*rapl_bound).second.second;
@@ -112,7 +112,7 @@ namespace geopm
             std::vector<uint64_t> region_id;
             curr_policy.region_id(region_id);
             for (auto region = region_id.begin(); region != region_id.end(); ++region) {
-                curr_policy.update((*region), domain_budget);
+                curr_policy.update((*region), GEOPM_CONTROL_TYPE_POWER, domain_budget);
                 auto it = m_num_converged.lower_bound((*region));
                 if (it != m_num_converged.end() && (*it).first == (*region)) {
                     (*it).second = 0;
@@ -144,8 +144,8 @@ namespace geopm
 
             std::vector<double> limit(num_domain);
             std::vector<double> target(num_domain);
-            curr_policy.target(GEOPM_REGION_ID_EPOCH, limit);
-            curr_policy.target(region_id, target);
+            curr_policy.target(GEOPM_REGION_ID_EPOCH, GEOPM_CONTROL_TYPE_POWER, limit);
+            curr_policy.target(region_id, GEOPM_CONTROL_TYPE_POWER, target);
             for (int domain_idx = 0; domain_idx < num_domain; ++domain_idx) {
                 double pkg_power = curr_region.derivative(domain_idx, GEOPM_TELEMETRY_TYPE_PKG_ENERGY);
                 double dram_power = curr_region.derivative(domain_idx, GEOPM_TELEMETRY_TYPE_DRAM_ENERGY);
@@ -166,7 +166,7 @@ namespace geopm
                 }
             }
             if (is_updated && curr_policy.is_converged(region_id)) {
-                curr_policy.update(region_id, target);
+                curr_policy.update(region_id, GEOPM_CONTROL_TYPE_POWER, target);
                 if (is_greater) {
                     auto it = m_num_converged.lower_bound(region_id);
                     if (it != m_num_converged.end() && (*it).first == region_id) {

@@ -83,9 +83,10 @@ static inline uint64_t geopm_region_id_unset_mpi(uint64_t rid)
     return (rid & (~GEOPM_REGION_ID_MPI));
 }
 
-enum geopm_control_e {
-    GEOPM_CONTROL_DOMAIN_POWER = 0,
-    GEOPM_CONTROL_DOMAIN_FREQUENCY = 1,
+enum geopm_control_type_e {
+    GEOPM_CONTROL_TYPE_POWER,
+    GEOPM_CONTROL_TYPE_FREQUENCY,
+    GEOPM_NUM_CONTROL_TYPE // Control counter, must be last
 };
 
 enum geopm_sample_type_e {

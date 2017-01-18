@@ -187,7 +187,7 @@ void TestPlatformImp::write_control(int device_type, int device_index, int signa
 
 void TestPlatformImp::bound(std::map<int, std::pair<double, double> > &bound)
 {
-    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+    bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                  std::pair<double, double>(DBL_MIN, DBL_MAX)));
 }
 
@@ -244,7 +244,7 @@ class TestPlatformImp2 : public geopm::PlatformImp
         virtual std::string platform_name();
         virtual void bound(std::map<int, std::pair<double, double> > &bound)
         {
-            bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+            bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                          std::pair<double, double>(DBL_MIN, DBL_MAX)));
         }
         std::vector<std::string> m_msr_list;
@@ -405,7 +405,7 @@ class TestPlatformImp4 : public geopm::PlatformImp
         }
         virtual void bound(std::map<int, std::pair<double, double> > &bound)
         {
-            bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+            bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                          std::pair<double, double>(DBL_MIN, DBL_MAX)));
         }
         virtual std::string platform_name();

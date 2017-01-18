@@ -312,7 +312,7 @@ namespace geopm
                     num_domain = m_tree_comm->level_size(level - 1);
                 }
                 m_policy[level] = new Policy(num_domain);
-                if (m_platform->control_domain() == GEOPM_CONTROL_DOMAIN_POWER && level == 1) {
+                if (m_platform->control_domain() == GEOPM_CONTROL_TYPE_POWER && level == 1) {
                     upper_bound *= m_platform->num_control_domain();
                     lower_bound *= m_platform->num_control_domain();
                     if (level > 1) {
@@ -325,7 +325,7 @@ namespace geopm
                 }
                 m_tree_decider[level] = m_decider_factory->decider(std::string(plugin_desc.tree_decider));
                 std::map<int, std::pair<double, double> > power_bound;
-                power_bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+                power_bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                                        std::pair<double,double>(lower_bound, upper_bound)));
                 m_tree_decider[level]->bound(power_bound);
                 m_region[level].insert(std::pair<uint64_t, Region *>

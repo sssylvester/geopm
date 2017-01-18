@@ -39,7 +39,7 @@
 namespace geopm
 {
     RAPLPlatform::RAPLPlatform()
-        : Platform(GEOPM_CONTROL_DOMAIN_POWER)
+        : Platform(GEOPM_CONTROL_TYPE_POWER)
         , m_description("rapl")
         , M_HSX_ID(0x63F)
         , M_IVT_ID(0x63E)
@@ -57,7 +57,7 @@ namespace geopm
 
     int RAPLPlatform::control_domain()
     {
-        return GEOPM_CONTROL_DOMAIN_POWER;
+        return GEOPM_CONTROL_TYPE_POWER;
     }
 
     bool RAPLPlatform::model_supported(int platform_id, const std::string &description) const
@@ -230,9 +230,9 @@ namespace geopm
     {
         int control_type;
         std::vector<double> target(m_num_energy_domain);
-        policy.target(region_id, target);
+        policy.target(region_id, GEOPM_CONTROL_TYPE_POWER, target);
 
-        if ((m_control_domain_type == GEOPM_CONTROL_DOMAIN_POWER) &&
+        if ((m_control_domain_type == GEOPM_CONTROL_TYPE_POWER) &&
             (m_num_energy_domain == (int)target.size())) {
             control_type = GEOPM_TELEMETRY_TYPE_PKG_ENERGY;
             for (int i = 0; i < m_num_package; ++i) {
@@ -240,7 +240,7 @@ namespace geopm
             }
         }
         else {
-            if (m_control_domain_type != GEOPM_CONTROL_DOMAIN_POWER) {
+            if (m_control_domain_type != GEOPM_CONTROL_TYPE_POWER) {
                 throw geopm::Exception("RAPLPlatform::enforce_policy: RAPLPlatform Only handles power control domains", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
             }
             if (m_num_energy_domain != (int)target.size()) {

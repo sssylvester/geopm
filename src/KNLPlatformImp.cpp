@@ -116,9 +116,9 @@ namespace geopm
 
     void KNLPlatformImp::bound(std::map<int, std::pair<double, double> > &bound)
     {
-        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_POWER,
+        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_POWER,
                                std::pair<double, double>(m_min_pkg_watts + m_max_dram_watts, m_max_pkg_watts + m_max_dram_watts)));
-        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_DOMAIN_FREQUENCY,
+        bound.insert(std::pair<int, std::pair<double, double> >(GEOPM_CONTROL_TYPE_FREQUENCY,
                                std::pair<double, double>(m_min_freq_mhz, m_max_freq_mhz)));
     }
 

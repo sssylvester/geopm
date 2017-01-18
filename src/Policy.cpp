@@ -31,6 +31,8 @@
  */
 
 #include <float.h>
+#include <tuple>
+#include <utility>
 
 #include "Exception.hpp"
 #include "Policy.hpp"
@@ -45,12 +47,10 @@ namespace geopm
         public:
             RegionPolicy(int num_domain);
             virtual ~RegionPolicy();
-            void update(int domain_idx, double target);
-            void update(const std::vector<double> &target);
-            void target(std::vector<double> &target);
-            void target(int domain_idx, double &target);
-            void target_updated(std::map<int, double> &target); // map from domain index to updated target value
-            void target_valid(std::map<int, double> &target);
+            void update(int ctl_type, int domain_idx, double target);
+            void update(int ctl_type, const std::vector<double> &target);
+            void target(int ctl_type, std::vector<double> &target);
+            void target(int ctl_type, int domain_idx, double &target);
             void policy_message(const struct geopm_policy_message_s &parent_msg,
                                 std::vector<struct geopm_policy_message_s> &message);
             /// @brief Set the convergence state.
@@ -67,8 +67,7 @@ namespace geopm
         protected:
             const double m_invalid_target;
             const int m_num_domain;
-            std::vector<double> m_target;
-            std::vector<bool> m_updated;
+            std::map<int, std::vector<double> > m_target;
             bool m_is_converged;
 
     };
@@ -102,8 +101,8 @@ namespace geopm
             m_region_policy.insert(std::pair<uint64_t, RegionPolicy *>(region_id, result));
             // Give the new region the global power targets
             std::vector<double> budget(m_num_domain);
-            target(GEOPM_REGION_ID_EPOCH, budget);
-            update(region_id, budget);
+            target(GEOPM_REGION_ID_EPOCH, GEOPM_CONTROL_TYPE_POWER, budget);
+            update(region_id, GEOPM_CONTROL_TYPE_POWER, budget);
         }
         else {
             result = (*result_it).second;
@@ -120,14 +119,14 @@ namespace geopm
         }
     }
 
-    void Policy::update(uint64_t region_id, int domain_idx, double target)
+    void Policy::update(uint64_t region_id, int control_type, int domain_idx, double target)
     {
-        region_policy(region_id)->update(domain_idx, target);
+        region_policy(region_id)->update(control_type, domain_idx, target);
     }
 
-    void Policy::update(uint64_t region_id, const std::vector <double> &target)
+    void Policy::update(uint64_t region_id, int control_type, const std::vector <double> &target)
     {
-        region_policy(region_id)->update(target);
+        region_policy(region_id)->update(control_type, target);
     }
 
     void Policy::mode(int mode)
@@ -140,19 +139,15 @@ namespace geopm
         m_policy_flags.flags(flags);
     }
 
-    void Policy::target_updated(uint64_t region_id, std::map <int, double> &target)
+
+    void Policy::target(uint64_t region_id, int control_type, std::vector <double> &target)
     {
-        region_policy(region_id)->target_updated(target);
+        region_policy(region_id)->target(control_type, target);
     }
 
-    void Policy::target(uint64_t region_id, std::vector <double> &target)
+    void Policy::target(uint64_t region_id, int control_type, int domain_idx, double &target)
     {
-        region_policy(region_id)->target(target);
-    }
-
-    void Policy::target(uint64_t region_id, int domain_idx, double &target)
-    {
-        region_policy(region_id)->target(domain_idx, target);
+        region_policy(region_id)->target(control_type, domain_idx, target);
     }
 
     int Policy::mode(void) const
@@ -185,11 +180,6 @@ namespace geopm
         return m_policy_flags.num_max_perf();
     }
 
-    void Policy::target_valid(uint64_t region_id, std::map<int, double> &target)
-    {
-        region_policy(region_id)->target_valid(target);
-    }
-
     void Policy::policy_message(uint64_t region_id,
                                 const struct geopm_policy_message_s &parent_msg,
                                 std::vector<struct geopm_policy_message_s> &child_msg)
@@ -210,12 +200,9 @@ namespace geopm
     RegionPolicy::RegionPolicy(int num_domain)
         : m_invalid_target(-DBL_MAX)
         , m_num_domain(num_domain)
-        , m_target(m_num_domain)
-        , m_updated(m_num_domain)
         , m_is_converged(false)
     {
-        std::fill(m_target.begin(), m_target.end(), m_invalid_target);
-        std::fill(m_updated.begin(), m_updated.end(), false);
+
     }
 
     RegionPolicy::~RegionPolicy()
@@ -223,69 +210,61 @@ namespace geopm
 
     }
 
-    void RegionPolicy::update(int domain_idx, double target)
+    void RegionPolicy::update(int control_type, int domain_idx, double target)
     {
         if (domain_idx >= 0 && domain_idx < m_num_domain) {
-            m_target[domain_idx] = target;
-            m_updated[domain_idx] = true;
+            auto target_it = m_target.emplace(std::piecewise_construct,
+                                              std::forward_as_tuple(control_type),
+                                              std::forward_as_tuple(m_num_domain, m_invalid_target)).first;
+            (*target_it).second[domain_idx] = target;
         }
         else {
             throw Exception("RegionPolicy::update(): domain_index out of range", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
         }
     }
 
-    void RegionPolicy::update(const std::vector <double> &target)
+    void RegionPolicy::update(int control_type, const std::vector <double> &target)
     {
         if ((int)target.size() == m_num_domain) {
-            m_target = target;
-            std::fill(m_updated.begin(), m_updated.end(), true);
+            auto empl_ret = m_target.emplace(control_type, target);
+            if (!empl_ret.second) {
+                (*(empl_ret.first)).second = target;
+            }
         }
         else {
             throw Exception("RegionPolicy::update(): target vector not properly sized", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
         }
     }
 
-    void RegionPolicy::target(std::vector<double> &target)
+    void RegionPolicy::target(int control_type, std::vector<double> &target)
     {
         if ((int)target.size() == m_num_domain) {
-            target = m_target;
-            std::fill(m_updated.begin(), m_updated.end(), false);
+            auto it = m_target.find(control_type);
+            if (it != m_target.end()) {
+                target = (*it).second;
+            }
+            else {
+                std::fill(target.begin(), target.end(), m_invalid_target);
+            }
         }
         else {
             throw Exception("RegionPolicy::target() target vector not properly sized", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
         }
     }
 
-    void RegionPolicy::target(int domain_idx, double &target)
+    void RegionPolicy::target(int control_type, int domain_idx, double &target)
     {
         if (domain_idx >= 0 && domain_idx < m_num_domain) {
-            target = m_target[domain_idx];
-            m_updated[domain_idx] = false;
+            auto it = m_target.find(control_type);
+            if (it != m_target.end()) {
+                target = (*it).second[domain_idx];
+            }
+            else {
+                target = m_invalid_target;
+            }
         }
         else {
             throw Exception("PolicyRegion::target() domain_idx index out of range", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
-        }
-    }
-
-    void RegionPolicy::target_updated(std::map<int, double> &target)
-    {
-        target.clear();
-        for (int domain_idx = 0; domain_idx < (int)m_target.size(); ++domain_idx) {
-            if (m_updated[domain_idx] == true &&
-                m_target[domain_idx] != m_invalid_target) {
-                target.insert(std::pair<int, double>(domain_idx, m_target[domain_idx]));
-                m_updated[domain_idx] = false;
-            }
-        }
-    }
-
-    void RegionPolicy::target_valid(std::map<int, double> &target)
-    {
-        target.clear();
-        for (int domain_idx = 0; domain_idx < m_num_domain; ++domain_idx) {
-            if (m_target[domain_idx] != m_invalid_target) {
-                target.insert(std::pair <int, double>(domain_idx, m_target[domain_idx]));
-            }
         }
     }
 
@@ -293,9 +272,16 @@ namespace geopm
     {
         if ((int)child_msg.size() >= m_num_domain) {
             std::fill(child_msg.begin(), child_msg.begin() + m_num_domain, parent_msg);
-            std::fill(child_msg.begin() + m_num_domain, child_msg.end(), GEOPM_POLICY_UNKNOWN);
-            for (int domain_idx = 0; domain_idx != m_num_domain; ++domain_idx) {
-                child_msg[domain_idx].power_budget = m_target[domain_idx];
+            auto it = m_target.find(GEOPM_CONTROL_TYPE_POWER);
+            if (it != m_target.end()) {
+                for (int domain_idx = 0; domain_idx != m_num_domain; ++domain_idx) {
+                    child_msg[domain_idx].power_budget = (*it).second[domain_idx];
+                }
+            }
+            else {
+                for (int domain_idx = 0; domain_idx != m_num_domain; ++domain_idx) {
+                    child_msg[domain_idx].power_budget = m_invalid_target;
+                }
             }
         }
         else {

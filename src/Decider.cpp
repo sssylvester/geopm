@@ -59,7 +59,7 @@ namespace geopm
             double split_budget = policy.power_budget / num_domain;
             std::vector<double> domain_budget(num_domain);
             std::fill(domain_budget.begin(), domain_budget.end(), split_budget);
-            curr_policy.update(GEOPM_REGION_ID_EPOCH, domain_budget);
+            curr_policy.update(GEOPM_REGION_ID_EPOCH, GEOPM_CONTROL_TYPE_POWER, domain_budget);
             m_last_power_budget = policy.power_budget;
             result = true;
         }
