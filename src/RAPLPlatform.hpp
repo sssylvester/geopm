@@ -49,7 +49,6 @@ namespace geopm
             RAPLPlatform();
             /// @brief Default destructor
             virtual ~RAPLPlatform();
-            virtual int control_domain(void);
             virtual void set_implementation(PlatformImp* platform_imp);
             virtual bool model_supported(int platform_id, const std::string &description) const;
             virtual size_t capacity(void);

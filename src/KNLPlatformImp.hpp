@@ -68,9 +68,9 @@ namespace geopm
             virtual void write_control(int device_type, int device_index, int signal_type, double value);
             virtual void msr_initialize();
             virtual void msr_reset();
-            virtual int power_control_domain(void) const;
-            virtual int frequency_control_domain(void) const;
+            virtual int control_domain(void) const;
             virtual int performance_counter_domain(void) const;
+
             /// @brief Return the upper and lower bounds of the control.
             virtual void bound(std::map<int, std::pair<double, double> > &bound);
             static int platform_id(void);

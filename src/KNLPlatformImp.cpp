@@ -99,12 +99,7 @@ namespace geopm
         return M_KNL_MODEL_NAME;
     }
 
-    int KNLPlatformImp::power_control_domain(void) const
-    {
-        return GEOPM_DOMAIN_PACKAGE;
-    }
-
-    int KNLPlatformImp::frequency_control_domain(void) const
+    int KNLPlatformImp::control_domain(void) const
     {
         return GEOPM_DOMAIN_PACKAGE;
     }

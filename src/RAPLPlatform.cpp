@@ -55,11 +55,6 @@ namespace geopm
 
     }
 
-    int RAPLPlatform::control_domain()
-    {
-        return GEOPM_CONTROL_TYPE_POWER;
-    }
-
     bool RAPLPlatform::model_supported(int platform_id, const std::string &description) const
     {
         return ((platform_id == M_IVT_ID ||
@@ -78,15 +73,15 @@ namespace geopm
         m_num_cpu = m_imp->num_hw_cpu();
         m_num_package = m_imp->num_package();
         m_num_tile = m_imp->num_tile();
-        m_num_energy_domain = m_imp->num_domain(m_imp->power_control_domain());
+        m_num_control_domain = m_imp->num_domain(m_imp->control_domain());
         m_num_counter_domain = m_imp->num_domain(m_imp->performance_counter_domain());
-        m_batch_desc.resize(m_num_energy_domain * m_imp->num_energy_signal() + m_num_counter_domain * m_imp->num_counter_signal());
+        m_batch_desc.resize(m_num_control_domain * m_imp->num_energy_signal() + m_num_counter_domain * m_imp->num_counter_signal());
 
         int count = 0;
-        int counter_domain_per_energy_domain = m_num_counter_domain / m_num_energy_domain;
+        int counter_domain_per_energy_domain = m_num_counter_domain / m_num_control_domain;
         int energy_domain = m_imp->power_control_domain();
         int counter_domain = m_imp->performance_counter_domain();
-        for (int i = 0; i < m_num_energy_domain; i++) {
+        for (int i = 0; i < m_num_control_domain; i++) {
             m_batch_desc[count].device_type = energy_domain;
             m_batch_desc[count].device_index = i;
             m_batch_desc[count].signal_type = GEOPM_TELEMETRY_TYPE_PKG_ENERGY;
@@ -136,7 +131,7 @@ namespace geopm
 
     size_t RAPLPlatform::capacity(void)
     {
-        return m_imp->num_domain(m_imp->power_control_domain()) * (m_imp->num_energy_signal() + m_imp->num_counter_signal());
+        return m_imp->num_domain(m_imp->control_domain()) * (m_imp->num_energy_signal() + m_imp->num_counter_signal());
     }
 
     void RAPLPlatform::bound(std::map<int, std::pair<double, double> > &bound)
@@ -153,22 +148,22 @@ namespace geopm
         double accum_clk_core;
         double accum_clk_ref;
         double accum_read_bw;
-        int counter_domain_per_energy_domain = m_num_counter_domain / m_num_energy_domain;
-        int energy_domain = m_imp->power_control_domain();
+        int counter_domain_per_control_domain = m_num_counter_domain / m_num_control_domain;
+        int control_domain = m_imp->control_domain();
         struct geopm_time_s time;
 
         m_imp->batch_read_signal(m_batch_desc, false);
         geopm_time(&time);
         //record per package energy readings
-        for (int i = 0; i < m_num_energy_domain; i++) {
-            msr_values[count].domain_type = energy_domain;
+        for (int i = 0; i < m_num_control_domain; i++) {
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_PKG_ENERGY;
             msr_values[count].signal = m_batch_desc[signal_index++].value;
 
             count++;
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_DRAM_ENERGY;
@@ -181,7 +176,7 @@ namespace geopm
             accum_read_bw = 0.0;
             accum_freq = 0.0;
 
-            for (int j = i * counter_domain_per_energy_domain; j < i * counter_domain_per_energy_domain + counter_domain_per_energy_domain; ++j) {
+            for (int j = i * counter_domain_per_control_domain; j < i * counter_domain_per_control_domain + counter_domain_per_control_domain; ++j) {
                 accum_freq += m_batch_desc[signal_index++].value;
                 accum_inst += m_batch_desc[signal_index++].value;
                 accum_clk_core += m_batch_desc[signal_index++].value;
@@ -189,35 +184,35 @@ namespace geopm
                 accum_read_bw += m_batch_desc[signal_index++].value;
             }
 
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_FREQUENCY;
-            msr_values[count].signal = accum_freq / counter_domain_per_energy_domain;
+            msr_values[count].signal = accum_freq / counter_domain_per_control_domain;
             count++;
 
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_INST_RETIRED;
             msr_values[count].signal = accum_inst;
             count++;
 
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_CORE;
             msr_values[count].signal = accum_clk_core;
             count++;
 
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_REF;
             msr_values[count].signal = accum_clk_ref;
             count++;
 
-            msr_values[count].domain_type = energy_domain;
+            msr_values[count].domain_type = control_domain;
             msr_values[count].domain_index = i;
             msr_values[count].timestamp = time;
             msr_values[count].signal_type = GEOPM_TELEMETRY_TYPE_READ_BANDWIDTH;
@@ -229,11 +224,11 @@ namespace geopm
     void RAPLPlatform::enforce_policy(uint64_t region_id, Policy &policy) const
     {
         int control_type;
-        std::vector<double> target(m_num_energy_domain);
+        std::vector<double> target(m_num_control_domain);
         policy.target(region_id, GEOPM_CONTROL_TYPE_POWER, target);
 
         if ((m_control_domain_type == GEOPM_CONTROL_TYPE_POWER) &&
-            (m_num_energy_domain == (int)target.size())) {
+            (m_num_control_domain == (int)target.size())) {
             control_type = GEOPM_TELEMETRY_TYPE_PKG_ENERGY;
             for (int i = 0; i < m_num_package; ++i) {
                 m_imp->write_control(m_imp->power_control_domain(), i, control_type, target[i]);
@@ -243,7 +238,7 @@ namespace geopm
             if (m_control_domain_type != GEOPM_CONTROL_TYPE_POWER) {
                 throw geopm::Exception("RAPLPlatform::enforce_policy: RAPLPlatform Only handles power control domains", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
             }
-            if (m_num_energy_domain != (int)target.size()) {
+            if (m_num_control_domain != (int)target.size()) {
                 throw geopm::Exception("RAPLPlatform::enforce_policy: Policy size does not match domains of control", GEOPM_ERROR_INVALID, __FILE__, __LINE__);
             }
         }

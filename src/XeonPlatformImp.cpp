@@ -178,22 +178,17 @@ namespace geopm
         return M_MODEL_NAME;
     }
 
-    int XeonPlatformImp::power_control_domain(void) const
-    {
-        return GEOPM_DOMAIN_PACKAGE;
-    }
-
-    int XeonPlatformImp::frequency_control_domain(void) const
+    int XeonPlatformImp::control_domain(void) const
     {
         return GEOPM_DOMAIN_CPU;
     }
 
-    int SNBPlatformImp::frequency_control_domain(void) const
+    int SNBPlatformImp::control_domain(void) const
     {
         return GEOPM_DOMAIN_PACKAGE;
     }
 
-    int IVTPlatformImp::frequency_control_domain(void) const
+    int IVTPlatformImp::control_domain(void) const
     {
         return GEOPM_DOMAIN_PACKAGE;
     }

@@ -312,7 +312,7 @@ namespace geopm
                     num_domain = m_tree_comm->level_size(level - 1);
                 }
                 m_policy[level] = new Policy(num_domain);
-                if (m_platform->control_domain() == GEOPM_CONTROL_TYPE_POWER && level == 1) {
+                if (level == 1) {
                     upper_bound *= m_platform->num_control_domain();
                     lower_bound *= m_platform->num_control_domain();
                     if (level > 1) {

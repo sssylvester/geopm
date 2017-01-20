@@ -58,9 +58,6 @@ namespace geopm
             /// @param [in] platform_imp A PlatformImp object that is compatible
             ///        with this platform and the underlying hardware.
             virtual void set_implementation(PlatformImp* platform_imp);
-            /// @brief Retrieve the number of power domains.
-            /// @return Number of power domains.
-            int num_domain(void) const;
             /// @brief Retrieve the string name of the hw platform.
             /// @return The hw platform name.
             void name(std::string &plat_name) const;
@@ -90,8 +87,6 @@ namespace geopm
             void write_msr_whitelist(FILE *file_desc) const;
             /// @brief Revert the MSR values to their initial state.
             void revert_msr_state(void) const;
-            /// @brief Return the domain of control;
-            virtual int control_domain(void) = 0;
             /// @brief Number of MSR values returned from sample().
             virtual size_t capacity(void) = 0;
             /// @brief Record telemetry from counters and RAPL MSRs.
@@ -161,7 +156,7 @@ namespace geopm
             /// @brief The geopm_domain_type_e of the finest domain of control
             /// on the hw platform.
             int m_control_domain_type;
-            int m_num_energy_domain;
+            int m_num_control_domain;
             int m_num_counter_domain;
             /// @brief The matrix that transforms the per package,
             /// per-cpu, and per-rank signals into the domain of control.

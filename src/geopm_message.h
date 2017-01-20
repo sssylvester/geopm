@@ -99,17 +99,23 @@ enum geopm_sample_type_e {
 
 /// @brief Enum encompassing msr data types.
 enum geopm_telemetry_type_e {
-    GEOPM_TELEMETRY_TYPE_PKG_ENERGY,
-    GEOPM_TELEMETRY_TYPE_DRAM_ENERGY,
-    GEOPM_TELEMETRY_TYPE_FREQUENCY,
-    GEOPM_TELEMETRY_TYPE_INST_RETIRED,
-    GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_CORE,
-    GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_REF,
-    GEOPM_TELEMETRY_TYPE_READ_BANDWIDTH,
-    GEOPM_TELEMETRY_TYPE_PROGRESS,
-    GEOPM_TELEMETRY_TYPE_RUNTIME,
+    GEOPM_TELEMETRY_TYPE_PKG_ENERGY,           // Energy
+    GEOPM_TELEMETRY_TYPE_DRAM_ENERGY,          // Energy
+    GEOPM_TELEMETRY_TYPE_FREQUENCY,            // Counter
+    GEOPM_TELEMETRY_TYPE_INST_RETIRED,         // Counter
+    GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_CORE,    // Counter
+    GEOPM_TELEMETRY_TYPE_CLK_UNHALTED_REF,     // Counter
+    GEOPM_TELEMETRY_TYPE_READ_BANDWIDTH,       // Counter
+    GEOPM_TELEMETRY_TYPE_PROGRESS,             // Rank
+    GEOPM_TELEMETRY_TYPE_RUNTIME,              // Rank
     GEOPM_NUM_TELEMETRY_TYPE // Signal counter, must be last
 };
+
+enum geopm_telemetry_count_e {
+    GEOPM_NUM_TELEMETRY_TYPE_ENERGY = 2,
+    GEOPM_NUM_TELEMETRY_TYPE_COUNTER = 5,
+    GEOPM_NUM_TELEMETRY_TYPE_RANK = 2,
+}
 
 /// @brief MPI message structure for sending
 /// power policies down the tree.

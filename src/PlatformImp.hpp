@@ -115,6 +115,9 @@ namespace geopm
             virtual int num_counter_signal(void) const;
             virtual int num_domain(int domain_type);
             virtual double control_latency_ms(void) const;
+            /// @brief Create map from cpu index to control domain.
+            /// @return vector control domain indices ordered by cpu number.
+            virtual void cpu_control_domain_map(std::vector<int> &control_map) = 0;
             /// @brief Return the TDP of a single package.
             double package_tdp(void) const;
             /// @brief Retrieve the topology tree for the platform.
@@ -204,9 +207,7 @@ namespace geopm
             /// @brief Reset MSRs to a default state.
             virtual void msr_reset(void) = 0;
             /// @brief Retrieve the domain of control for power.
-            virtual int power_control_domain(void) const = 0;
-            /// @brief Retrieve the domain of control for frequency.
-            virtual int frequency_control_domain(void) const = 0;
+            virtual int control_domain(void) const = 0;
             /// @brief Retrieve the domain for performance counter collection.
             virtual int performance_counter_domain(void) const = 0;
             /// @brief Return the upper and lower bounds for each control.

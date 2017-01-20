@@ -62,8 +62,7 @@ namespace geopm
             virtual void write_control(int device_type, int device_index, int signal_type, double value);
             virtual void msr_initialize(void);
             virtual void msr_reset(void);
-            virtual int power_control_domain(void) const;
-            virtual int frequency_control_domain(void) const;
+            virtual int control_domain(void) const;
             virtual int performance_counter_domain(void) const;
 
         protected:
@@ -167,7 +166,7 @@ namespace geopm
             SNBPlatformImp(int platform_id, const std::string &model_name);
             /// @brief Default destructor.
             virtual ~SNBPlatformImp();
-            virtual int frequency_control_domain(void) const;
+            virtual int control_domain(void) const;
             static int platform_id(void);
     };
 
@@ -180,7 +179,7 @@ namespace geopm
             IVTPlatformImp();
             /// @brief Default destructor.
             virtual ~IVTPlatformImp();
-            virtual int frequency_control_domain(void) const;
+            virtual int control_domain(void) const;
             static int platform_id(void);
     };
 
