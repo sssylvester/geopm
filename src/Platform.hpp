@@ -49,9 +49,6 @@ namespace geopm
         public:
             /// @brief Default constructor.
             Platform();
-            /// @param [in] control_domain_type enum geopm_domain_type_e
-            ///        describing the finest grain domain of control.
-            Platform(int control_domain_type);
             /// @brief Default destructor.
             virtual ~Platform();
             /// @brief Set our member variable pointing to a PlatformImp object.
@@ -115,10 +112,6 @@ namespace geopm
             /// @param [out] map from control domain to the lower and upper
             ///        control bounds for each control.
             virtual void bound(std::map<int, std::pair<double, double> > &bound) = 0;
-            /// @brief Retrieve the topology of the current platform.
-            /// @return PlatformTopology object containing the current
-            ///         topology information.
-            const PlatformTopology *topology(void) const;
             ////////////////////////////////////////
             /// signals are expected as follows: ///
             /// per socket signals               ///
@@ -142,8 +135,8 @@ namespace geopm
             void init_transform(const std::vector<int> &cpu_rank);
             /// @brief Retrieve the number of control domains
             /// @return The number of control domains on the hw platform.
-            int num_control_domain(void) const;
-            double control_latency_ms(void) const;
+            int num_domain(void);
+            double control_latency_ms(int control_type) const;
             void transform_rank_data(uint64_t region_id, const struct geopm_time_s &aligned_time,
                                      const std::vector<double> &aligned_data,
                                      std::vector<struct geopm_telemetry_message_s> &telemetry);
@@ -151,13 +144,8 @@ namespace geopm
             /// @brief Pointer to a PlatformImp object that supports the target
             /// hardware platform.
             PlatformImp *m_imp;
-            /// @brief The number of power domains
+            /// @brief The number of control domains
             int m_num_domain;
-            /// @brief The geopm_domain_type_e of the finest domain of control
-            /// on the hw platform.
-            int m_control_domain_type;
-            int m_num_control_domain;
-            int m_num_counter_domain;
             /// @brief The matrix that transforms the per package,
             /// per-cpu, and per-rank signals into the domain of control.
             std::vector<std::vector<int> > m_rank_cpu;

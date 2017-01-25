@@ -106,6 +106,22 @@ namespace geopm
 
     }
 
+    int SNBPlatformImp::control_domain(int control_type) const
+    {
+        int result = -1;
+        switch (control_type) {
+            case GEOPM_CONTROL_TYPE_POWER:
+            case GEOPM_CONTROL_TYPE_FREQUENCY:
+                result = GEOPM_DOMAIN_PACKAGE;
+                break;
+            default:
+                throw Exception("SNBPlatformImp::control_domain() unknown control type:" +
+                                std::to_string(control_type),
+                                GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+                break;
+        }
+        return result;
+    }
 
     int IVTPlatformImp::platform_id(void)
     {
@@ -121,6 +137,23 @@ namespace geopm
     IVTPlatformImp::~IVTPlatformImp()
     {
 
+    }
+
+    int IVTPlatformImp::control_domain(int control_type) const
+    {
+        int result = -1;
+        switch (control_type) {
+            case GEOPM_CONTROL_TYPE_POWER:
+            case GEOPM_CONTROL_TYPE_FREQUENCY:
+                result = GEOPM_DOMAIN_PACKAGE;
+                break;
+            default:
+                throw Exception("IVTPlatformImp::control_domain() unknown control type:" +
+                                std::to_string(control_type),
+                                GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+                break;
+        }
+        return result;
     }
 
     int HSXPlatformImp::platform_id(void)
@@ -152,6 +185,25 @@ namespace geopm
 
     }
 
+    int HSXPlatformImp::control_domain(int control_type) const
+    {
+        int result = -1;
+        switch (control_type) {
+            case GEOPM_CONTROL_TYPE_POWER:
+                result = GEOPM_DOMAIN_PACKAGE;
+                break;
+            case GEOPM_CONTROL_TYPE_FREQUENCY:
+                result = GEOPM_DOMAIN_CPU;
+                break;
+            default:
+                throw Exception("HSXPlatformImp::control_domain() unknown control type:" +
+                                std::to_string(control_type),
+                                GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+                break;
+        }
+        return result;
+    }
+
     int BDXPlatformImp::platform_id(void)
     {
         return 0x64F;
@@ -168,6 +220,25 @@ namespace geopm
 
     }
 
+    int BDXPlatformImp::control_domain(int control_type) const
+    {
+        int result = -1;
+        switch (control_type) {
+            case GEOPM_CONTROL_TYPE_POWER:
+                result = GEOPM_DOMAIN_PACKAGE;
+                break;
+            case GEOPM_CONTROL_TYPE_FREQUENCY:
+                result = GEOPM_DOMAIN_CPU;
+                break;
+            default:
+                throw Exception("BDXPlatformImp::control_domain() unknown control type:" +
+                                std::to_string(control_type),
+                                GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+                break;
+        }
+        return result;
+    }
+
     bool XeonPlatformImp::model_supported(int platform_id)
     {
         return (platform_id == M_PLATFORM_ID);
@@ -178,20 +249,6 @@ namespace geopm
         return M_MODEL_NAME;
     }
 
-    int XeonPlatformImp::control_domain(void) const
-    {
-        return GEOPM_DOMAIN_CPU;
-    }
-
-    int SNBPlatformImp::control_domain(void) const
-    {
-        return GEOPM_DOMAIN_PACKAGE;
-    }
-
-    int IVTPlatformImp::control_domain(void) const
-    {
-        return GEOPM_DOMAIN_PACKAGE;
-    }
 
     int XeonPlatformImp::performance_counter_domain(void) const
     {

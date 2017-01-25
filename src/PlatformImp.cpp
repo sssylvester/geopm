@@ -46,6 +46,7 @@
 #include <fstream>
 #include <iomanip>
 
+#include "geopm_message.h"
 #include "Exception.hpp"
 #include "PlatformImp.hpp"
 #include "config.h"
@@ -60,7 +61,7 @@ namespace geopm
         , m_num_tile_group(0)
         , m_num_package(0)
         , m_num_core_per_tile(0)
-        , m_control_latency_ms(10.0)
+        , m_control_latency_ms({{GEOPM_CONTROL_TYPE_POWER,10.0}})
         , m_tdp_pkg_watts(DBL_MIN)
         , m_msr_batch_desc(-1)
         , m_is_batch_enabled(false)
@@ -70,7 +71,9 @@ namespace geopm
 
     }
 
-    PlatformImp::PlatformImp(int num_energy_signal, int num_counter_signal, double control_latency, const std::map<std::string, std::pair<off_t, unsigned long> > *msr_map_ptr)
+    PlatformImp::PlatformImp(int num_energy_signal, int num_counter_signal,
+                             const std::map<int, double> &control_latency,
+                             const std::map<std::string, std::pair<off_t, unsigned long> > *msr_map_ptr)
         : m_msr_map_ptr(msr_map_ptr)
         , m_num_logical_cpu(0)
         , m_num_hw_cpu(0)
@@ -160,10 +163,10 @@ namespace geopm
         return m_tdp_pkg_watts;
     }
 
-    int PlatformImp::num_domain(int domain_type)
+    int PlatformImp::num_control_domain(int control_type) const
     {
         int count;
-        switch (domain_type) {
+        switch (control_domain(control_type)) {
             case GEOPM_DOMAIN_PACKAGE:
                 count = m_num_package;
                 break;
@@ -183,9 +186,15 @@ namespace geopm
         return count;
     }
 
-    double PlatformImp::control_latency_ms(void) const
+    double PlatformImp::control_latency_ms(int control_type) const
     {
-        return m_control_latency_ms;
+        auto it = m_control_latency_ms.find(control_type);
+        if (it == m_control_latency_ms.end()) {
+            throw Exception("PlatformImp::control_latency_ms(): unknown control type: " +
+                            std::to_string(control_type),
+                            GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+        }
+        return (*it).second;
     }
 
     const PlatformTopology *PlatformImp::topology(void) const
@@ -366,11 +375,11 @@ namespace geopm
 
     void PlatformImp::parse_hw_topology(void)
     {
-        m_num_logical_cpu = m_topology.num_domain(GEOPM_DOMAIN_CPU);
-        m_num_package = m_topology.num_domain(GEOPM_DOMAIN_PACKAGE);
-        m_num_hw_cpu = m_topology.num_domain(GEOPM_DOMAIN_PACKAGE_CORE);
+        m_num_logical_cpu = m_topology.num_control_domain(GEOPM_DOMAIN_CPU);
+        m_num_package = m_topology.num_control_domain(GEOPM_DOMAIN_PACKAGE);
+        m_num_hw_cpu = m_topology.num_control_domain(GEOPM_DOMAIN_PACKAGE_CORE);
         m_num_cpu_per_core = m_num_logical_cpu / m_num_hw_cpu;
-        m_num_tile = m_topology.num_domain(GEOPM_DOMAIN_TILE);
+        m_num_tile = m_topology.num_control_domain(GEOPM_DOMAIN_TILE);
         m_num_core_per_tile = m_num_hw_cpu / m_num_tile;
     }
 

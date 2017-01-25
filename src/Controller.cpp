@@ -300,18 +300,18 @@ namespace geopm
             m_leaf_decider = m_decider_factory->decider(std::string(plugin_desc.leaf_decider));
             m_leaf_decider->bound(bound);
 
-            int num_domain;
+            int num_control_domain;
             double lower_bound = DBL_MIN;
             double upper_bound = DBL_MAX;
             for (int level = 0; level < num_level; ++level) {
                 if (level == 0) {
-                    num_domain = m_platform->num_control_domain();
-                    m_telemetry_sample.resize(num_domain, {0, {{0, 0}}, {0}});
+                    num_control_domain = m_platform->num_control_domain();
+                    m_telemetry_sample.resize(num_control_domain, {0, {{0, 0}}, {0}});
                 }
                 else {
-                    num_domain = m_tree_comm->level_size(level - 1);
+                    num_control_domain = m_tree_comm->level_size(level - 1);
                 }
-                m_policy[level] = new Policy(num_domain);
+                m_policy[level] = new Policy(num_control_domain);
                 if (level == 1) {
                     upper_bound *= m_platform->num_control_domain();
                     lower_bound *= m_platform->num_control_domain();
@@ -332,7 +332,7 @@ namespace geopm
                                        (GEOPM_REGION_ID_EPOCH,
                                         new Region(GEOPM_REGION_ID_EPOCH,
                                                    GEOPM_POLICY_HINT_UNKNOWN,
-                                                   num_domain,
+                                                   num_control_domain,
                                                    level)));
                 if (m_tree_comm->level_size(level) > m_max_fanout) {
                     m_max_fanout = m_tree_comm->level_size(level);

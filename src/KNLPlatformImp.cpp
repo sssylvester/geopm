@@ -47,7 +47,7 @@ namespace geopm
     }
 
     KNLPlatformImp::KNLPlatformImp()
-        : PlatformImp(2, 5, 8.0, &(knl_msr_map()))
+        : PlatformImp(2, 5, {{GEOPM_CONTROL_TYPE_POWER, 8.0}}, &(knl_msr_map()))
         , m_energy_units(1.0)
         , m_power_units(1.0)
         , m_dram_energy_units(1.5258789063E-5)
@@ -99,9 +99,21 @@ namespace geopm
         return M_KNL_MODEL_NAME;
     }
 
-    int KNLPlatformImp::control_domain(void) const
+    int KNLPlatformImp::control_domain(int control_type) const
     {
-        return GEOPM_DOMAIN_PACKAGE;
+        int result = -1;
+        switch (control_type) {
+            case GEOPM_CONTROL_TYPE_POWER:
+            case GEOPM_CONTROL_TYPE_FREQUENCY:
+                result = GEOPM_DOMAIN_PACKAGE;
+                break;
+            default:
+                throw Exception("KNLPlatformImp::control_domain() unknown control type:" +
+                                std::to_string(control_type),
+                                GEOPM_ERROR_INVALID, __FILE__, __LINE__);
+                break;
+        }
+        return result;
     }
 
     int KNLPlatformImp::performance_counter_domain(void) const
@@ -462,7 +474,7 @@ namespace geopm
         //Set time window 1 to 1 sec
         m_pkg_time_window = m_pkg_time_window | (0xaul << 17);
         //Set time window 2 to the m_control_latency_ms
-        m_pkg_time_window = (uint64_t)(log(m_control_latency_ms)/log(2)) << 49;
+        m_pkg_time_window = (uint64_t)(log(control_latency_ms(GEOPM_CONTROL_TYPE_POWER))/log(2)) << 49;
 
         for (int i = 1; i < m_num_package; i++) {
             tmp = msr_read(GEOPM_DOMAIN_PACKAGE, i, "PKG_POWER_INFO");

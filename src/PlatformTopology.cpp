@@ -77,7 +77,7 @@ namespace geopm
         hwloc_topology_destroy(m_topo);
     }
 
-    int PlatformTopology::num_domain(int domain_type) const
+    int PlatformTopology::num_control_domain(int domain_type) const
     {
         int result = 0;
 
@@ -110,7 +110,7 @@ namespace geopm
     {
         auto it = domain_hwloc_map().find(domain_type);
         if (it == domain_hwloc_map().end()) {
-            throw Exception("PlatformTopology::num_domain: Domain type unknown: " + std::to_string(domain_type),
+            throw Exception("PlatformTopology::num_control_domain: Domain type unknown: " + std::to_string(domain_type),
                             GEOPM_ERROR_INVALID, __FILE__, __LINE__);
         }
         return (*it).second;

@@ -50,13 +50,13 @@ namespace geopm
     {
         public:
             /// @brief Policy constructor.
-            /// @param [in] num_domain number of control domains the policy regulates.
-            Policy(int num_domain);
+            /// @param [in] num_control_domain number of control domains the policy regulates.
+            Policy(int num_control_domain);
             /// @brief Policy destructor, virtual
             virtual ~Policy();
             /// @brief Get number of control domains for the policy.
             /// @returns number of domains under control.
-            int num_domain(void);
+            int num_control_domain(void);
             void region_id(std::vector<uint64_t> &region_id);
             void update(uint64_t region_id, int ctl_type, int domain_idx, double target);
             void update(uint64_t region_id, int ctl_type, const std::vector<double> &target);
@@ -107,7 +107,7 @@ namespace geopm
         protected:
             PolicyFlags m_policy_flags;
             RegionPolicy *region_policy(uint64_t region_id);
-            int m_num_domain;
+            int m_num_control_domain;
             int m_mode;
             int m_num_sample;
             std::map<uint64_t, RegionPolicy *> m_region_policy;

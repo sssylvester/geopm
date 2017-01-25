@@ -79,7 +79,7 @@ namespace geopm
             /// @param [in] domain_type Enum of type domain_type_e representing the
             /// type of resource to query.
             /// @return Count of the specified resource type.
-            virtual int num_domain(int domain_type) const;
+            virtual int num_control_domain(int domain_type) const;
         private:
             /// @brief Holds the hwloc topology tree.
             hwloc_topology_t m_topo;

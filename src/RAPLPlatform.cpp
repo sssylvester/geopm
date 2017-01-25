@@ -39,7 +39,7 @@
 namespace geopm
 {
     RAPLPlatform::RAPLPlatform()
-        : Platform(GEOPM_CONTROL_TYPE_POWER)
+        : Platform()
         , m_description("rapl")
         , M_HSX_ID(0x63F)
         , M_IVT_ID(0x63E)
@@ -73,7 +73,6 @@ namespace geopm
         m_num_cpu = m_imp->num_hw_cpu();
         m_num_package = m_imp->num_package();
         m_num_tile = m_imp->num_tile();
-        m_num_control_domain = m_imp->num_domain(m_imp->control_domain());
         m_num_counter_domain = m_imp->num_domain(m_imp->performance_counter_domain());
         m_batch_desc.resize(m_num_control_domain * m_imp->num_energy_signal() + m_num_counter_domain * m_imp->num_counter_signal());
 
@@ -131,7 +130,7 @@ namespace geopm
 
     size_t RAPLPlatform::capacity(void)
     {
-        return m_imp->num_domain(m_imp->control_domain()) * (m_imp->num_energy_signal() + m_imp->num_counter_signal());
+        return m_imp->num_control_domain(m_imp->control_domain()) * (m_imp->num_energy_signal() + m_imp->num_counter_signal());
     }
 
     void RAPLPlatform::bound(std::map<int, std::pair<double, double> > &bound)

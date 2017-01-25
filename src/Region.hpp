@@ -54,8 +54,8 @@ namespace geopm
             /// @param [in] identifier Unique 64 bit region identifier.
             /// @param [in] hint geopm_policy_hint_e describing the compute
             ///             characteristics of this region
-            /// @param [in] num_domain Number of control domains.
-            Region(uint64_t identifier, int hint, int num_domain, int level);
+            /// @param [in] num_control_domain Number of control domains.
+            Region(uint64_t identifier, int hint, int num_control_domain, int level);
             /// @brief Default destructor.
             virtual ~Region();
             /// @brief Record an entry into the region.
@@ -261,7 +261,7 @@ namespace geopm
             /// @brief Holds the compute characteristic hint for this region.
             const int m_hint;
             /// @brief Numnber of domains reporting to the region.
-            const unsigned m_num_domain;
+            const unsigned m_num_control_domain;
             /// @brief The level of the tree where the region resides
             const unsigned m_level;
             /// @brief The number of distinct signal in a single domain.

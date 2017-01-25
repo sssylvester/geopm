@@ -80,7 +80,9 @@ namespace geopm
         public:
             /// @brief default PlatformImp constructor
             PlatformImp();
-            PlatformImp(int num_energy_signal, int num_counter_signal, double control_latency, const std::map<std::string, std::pair<off_t, unsigned long> > *msr_map);
+            PlatformImp(int num_energy_signal, int num_counter_signal,
+                        const std::map<int, double> &control_latency,
+                        const std::map<std::string, std::pair<off_t, unsigned long> > *msr_map);
             /// @brief default PlatformImp destructor
             virtual ~PlatformImp();
 
@@ -113,11 +115,11 @@ namespace geopm
             /// @brief Retrieve the number of per-cpu signals
             /// @return number of per-cpu signals.
             virtual int num_counter_signal(void) const;
-            virtual int num_domain(int domain_type);
-            virtual double control_latency_ms(void) const;
-            /// @brief Create map from cpu index to control domain.
-            /// @return vector control domain indices ordered by cpu number.
-            virtual void cpu_control_domain_map(std::vector<int> &control_map) = 0;
+            virtual int num_control_domain(int control_type) const;
+            virtual double control_latency_ms(int control_type) const;
+            /// @brief Gives the domain type for specified control type.
+            /// @return The domain type.
+            virtual int domain_type(int control_type) const;
             /// @brief Return the TDP of a single package.
             double package_tdp(void) const;
             /// @brief Retrieve the topology tree for the platform.
@@ -206,8 +208,8 @@ namespace geopm
             virtual void write_control(int device_type, int device_index, int signal_type, double value) = 0;
             /// @brief Reset MSRs to a default state.
             virtual void msr_reset(void) = 0;
-            /// @brief Retrieve the domain of control for power.
-            virtual int control_domain(void) const = 0;
+            /// @brief Retrieve the domain of control for the given control type.
+            virtual int control_domain(int control_type) const = 0;
             /// @brief Retrieve the domain for performance counter collection.
             virtual int performance_counter_domain(void) const = 0;
             /// @brief Return the upper and lower bounds for each control.
@@ -234,7 +236,8 @@ namespace geopm
             /// @param [in] msr_offset Address offset of the requested MSR.
             /// @param [in] msr_mask Write mask of the specified MSR.
             /// @param [in] value Value to write to the specified MSR.
-            void msr_write(int device_type, int device_index, off_t msr_offset, unsigned long msr_mask, uint64_t value);
+            void msr_write(int device_type, int device_index, off_t msr_offset,
+                           unsigned long msr_mask, uint64_t value);
             /// @brief Read a value from a Model Specific Register.
             /// @param [in] device_type enum device type can be
             ///        one of GEOPM_DOMAIN_PACKAGE, GEOPM_DOMAIN_CPU,
@@ -317,7 +320,8 @@ namespace geopm
             int m_num_energy_signal;
             /// @brief The number of signals per CPU.
             int m_num_counter_signal;
-            double m_control_latency_ms;
+            /// @brief Map from control type to control latency in miliseconds
+            std::map<int, double> m_control_latency_ms;
             /// @brief TDP value for package (CPU) power read from RAPL.
             double m_tdp_pkg_watts;
             /// @brief Time window that the PCU controls power over.

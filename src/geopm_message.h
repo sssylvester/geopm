@@ -115,7 +115,7 @@ enum geopm_telemetry_count_e {
     GEOPM_NUM_TELEMETRY_TYPE_ENERGY = 2,
     GEOPM_NUM_TELEMETRY_TYPE_COUNTER = 5,
     GEOPM_NUM_TELEMETRY_TYPE_RANK = 2,
-}
+};
 
 /// @brief MPI message structure for sending
 /// power policies down the tree.
