@@ -239,7 +239,7 @@ namespace geopm
         return result;
     }
 
-    bool XeonPlatformImp::model_supported(int platform_id)
+    bool XeonPlatformImp::is_model_supported(int platform_id)
     {
         return (platform_id == M_PLATFORM_ID);
     }

@@ -89,7 +89,7 @@ namespace geopm
         rapl_reset();
     }
 
-    bool KNLPlatformImp::model_supported(int platform_id)
+    bool KNLPlatformImp::is_model_supported(int platform_id)
     {
         return (platform_id == M_PLATFORM_ID);
     }

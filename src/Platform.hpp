@@ -97,7 +97,7 @@ namespace geopm
             ///        platform can fulfill the requirements of the request.
             /// @return true if this Platform supports platform_id,
             ///         else false.
-            virtual bool model_supported(int platform_id, const std::string &description) const = 0;
+            virtual bool is_model_supported(int platform_id, const std::string &description) const = 0;
             /// @brief Enforce a static power management mode including
             /// tdp_balance_static, freq_uniform_static, and
             /// freq_hybrid_static.

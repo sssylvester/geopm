@@ -375,11 +375,11 @@ namespace geopm
 
     void PlatformImp::parse_hw_topology(void)
     {
-        m_num_logical_cpu = m_topology.num_control_domain(GEOPM_DOMAIN_CPU);
-        m_num_package = m_topology.num_control_domain(GEOPM_DOMAIN_PACKAGE);
-        m_num_hw_cpu = m_topology.num_control_domain(GEOPM_DOMAIN_PACKAGE_CORE);
+        m_num_logical_cpu = m_topology.num_domain(GEOPM_DOMAIN_CPU);
+        m_num_package = m_topology.num_domain(GEOPM_DOMAIN_PACKAGE);
+        m_num_hw_cpu = m_topology.num_domain(GEOPM_DOMAIN_PACKAGE_CORE);
         m_num_cpu_per_core = m_num_logical_cpu / m_num_hw_cpu;
-        m_num_tile = m_topology.num_control_domain(GEOPM_DOMAIN_TILE);
+        m_num_tile = m_topology.num_domain(GEOPM_DOMAIN_TILE);
         m_num_core_per_tile = m_num_hw_cpu / m_num_tile;
     }
 

@@ -99,7 +99,7 @@ namespace geopm
 {
     Platform::Platform()
         : m_imp(NULL)
-        , m_num_control_domain(0)
+        , m_num_domain(0)
     {
 
     }
@@ -131,16 +131,16 @@ namespace geopm
         int num_platform_signal = m_imp->num_energy_signal() +
                                   m_imp->num_counter_signal();
 
-        std::vector<double> runtime(m_num_control_domain);
-        std::vector<double> min_progress(m_num_control_domain);
-        std::vector<double> max_progress(m_num_control_domain);
+        std::vector<double> runtime(m_num_domain);
+        std::vector<double> min_progress(m_num_domain);
+        std::vector<double> max_progress(m_num_domain);
 
         std::fill(runtime.begin(), runtime.end(), -DBL_MAX);
         std::fill(min_progress.begin(), min_progress.end(), DBL_MAX);
         std::fill(max_progress.begin(), max_progress.end(), -DBL_MAX);
 
-        int num_cpu_per_domain = num_cpu / m_num_control_domain;
-        int rank_offset = m_num_control_domain * num_platform_signal;
+        int num_cpu_per_domain = num_cpu / m_num_domain;
+        int rank_offset = m_num_domain * num_platform_signal;
         int local_rank = 0; // Rank index local to the compute node
         for (size_t i = rank_offset;  i < aligned_data.size(); i += GEOPM_NUM_TELEMETRY_TYPE_RANK) {
             for (auto it = m_rank_cpu[local_rank].begin(); it != m_rank_cpu[local_rank].end(); ++it) {
@@ -170,7 +170,7 @@ namespace geopm
         }
         // Insert application signals
         int domain_idx = 0;
-        for (int i = 0; i < m_num_control_domain * GEOPM_NUM_TELEMETRY_TYPE_RANK; i += GEOPM_NUM_TELEMETRY_TYPE_RANK) {
+        for (int i = 0; i < m_num_domain * GEOPM_NUM_TELEMETRY_TYPE_RANK; i += GEOPM_NUM_TELEMETRY_TYPE_RANK) {
             // Do not drop a region exit
             if (max_progress[domain_idx] == 1.0) {
                 telemetry[domain_idx].signal[num_platform_signal] = 1.0;
@@ -182,7 +182,7 @@ namespace geopm
             ++domain_idx;
         }
         // Insert region and timestamp
-        for (int i = 0; i < m_num_control_domain; ++i) {
+        for (int i = 0; i < m_num_domain; ++i) {
             telemetry[i].region_id = region_id;
             telemetry[i].timestamp = aligned_time;
         }
@@ -207,19 +207,19 @@ namespace geopm
         }
     }
 
-    int Platform::num_control_domain(void)
+    int Platform::num_domain(void)
     {
-        if (!m_num_control_domain && m_imp) {
-            // Of all available control methods, set m_num_control_domain to the
+        if (!m_num_domain && m_imp) {
+            // Of all available control methods, set m_num_domain to the
             // finest granularity of control.
             for (int ctl_type = 0; ctl_type < GEOPM_NUM_CONTROL_TYPE; ++ctl_type) {
-                int num_control_domain = m_imp->topology()->num_control_domain(m_imp->domain_type(ctl_type));
-                if (num_control_domain > m_num_control_domain) {
-                   m_num_control_domain = num_control_domain;
+                int num_domain = m_imp->topology()->num_domain(m_imp->domain_type(ctl_type));
+                if (num_domain > m_num_domain) {
+                   m_num_domain = num_domain;
                 }
             }
         }
-        return m_num_control_domain;
+        return m_num_domain;
     }
 
     void Platform::tdp_limit(int percentage) const

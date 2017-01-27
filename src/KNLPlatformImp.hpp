@@ -61,7 +61,7 @@ namespace geopm
             //////////////////////////////////////////////
             // KNLPlatformImp dependent implementations //
             //////////////////////////////////////////////
-            virtual bool model_supported(int platform_id);
+            virtual bool is_model_supported(int platform_id);
             virtual std::string platform_name();
             virtual double read_signal(int device_type, int device_index, int signal_type);
             virtual void batch_read_signal(std::vector<struct geopm_signal_descriptor> &signal_desc, bool is_changed);

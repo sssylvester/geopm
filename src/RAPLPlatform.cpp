@@ -55,7 +55,7 @@ namespace geopm
 
     }
 
-    bool RAPLPlatform::model_supported(int platform_id, const std::string &description) const
+    bool RAPLPlatform::is_model_supported(int platform_id, const std::string &description) const
     {
         return ((platform_id == M_IVT_ID ||
                  platform_id == M_SNB_ID ||
@@ -73,7 +73,7 @@ namespace geopm
         m_num_cpu = m_imp->num_hw_cpu();
         m_num_package = m_imp->num_package();
         m_num_tile = m_imp->num_tile();
-        m_num_counter_domain = m_imp->num_domain(m_imp->performance_counter_domain());
+        m_num_counter_domain = m_imp->num_counter_domain(m_imp->performance_counter_domain());
         m_batch_desc.resize(m_num_control_domain * m_imp->num_energy_signal() + m_num_counter_domain * m_imp->num_counter_signal());
 
         int count = 0;

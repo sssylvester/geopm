@@ -55,7 +55,7 @@ namespace geopm
             XeonPlatformImp(int platform_id, const std::string &model_name, const std::map<std::string, std::pair<off_t, unsigned long> > *msr_map);
             /// @brief Default destructor.
             virtual ~XeonPlatformImp();
-            virtual bool model_supported(int platform_id);
+            virtual bool is_model_supported(int platform_id);
             virtual std::string platform_name(void);
             virtual double read_signal(int device_type, int device_index, int signal_type);
             virtual void batch_read_signal(std::vector<struct geopm_signal_descriptor> &signal_desc, bool is_changed);

@@ -172,7 +172,7 @@ namespace geopm
             ///        the cpuid instruction.
             /// @return true if this PlatformImp supports platform_id,
             ///         else false.
-            virtual bool model_supported(int platform_id) = 0;
+            virtual bool is_model_supported(int platform_id) = 0;
             /// @brief Retrieve the string name of the underlying platform.
             /// @return Underlying platform name.
             virtual std::string platform_name(void) = 0;
